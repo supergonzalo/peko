@@ -1,0 +1,11 @@
+python get_report 'xxxx' 'xxxx' .. .. 
+
+xxxx Station code from  /Doc/METAR_Station_Places.txt
+
+Updates weather reports from XXXX station/s to /Stations directory. Supposed to run hourly.
+
+
+python Etoit.py 
+
+Calculates eto for each station in /Stations for the previous day. Supposed to ro run daily. 
+

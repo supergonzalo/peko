@@ -1,0 +1,13 @@
+Metar
+station: LEIB
+type: routine report (automatic report)
+time: Sun May  2 00:00:00 2010
+temperature: 16.0 C
+dew point: 14.0 C
+wind: variable at 1 knots
+visibility: 10000 meters
+pressure: 1013.0 mb
+METAR: LEIB 020000Z VRB01KT CAVOK 16/14 Q1013 NOSIG
+
+Google
+{'current_conditions': ''}

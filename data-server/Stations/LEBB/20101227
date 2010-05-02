@@ -1,0 +1,17 @@
+Metar
+station: LEBB
+type: routine report, cycle 5 (automatic report)
+time: Sun May  2 05:30:00 2010
+temperature: 11.0 C
+dew point: 10.0 C
+wind: variable at 1 knots
+visibility: 3000 meters
+pressure: 1016.0 mb
+weather: light rain
+sky: a few clouds at 1500 feet
+     scattered clouds at 2000 feet
+     broken clouds at 4500 feet
+METAR: LEBB 020530Z VRB01KT 3000 -RA FEW015 SCT020 BKN045 11/10 Q1016 TEMPO 4000 RA BKN015
+
+Google
+{'current_conditions': ''}

@@ -1,0 +1,14 @@
+Metar
+station: GCFV
+type: routine report, cycle 22 (automatic report)
+time: Sat May  1 22:00:00 2010
+temperature: 19.0 C
+dew point: 15.0 C
+wind: NNE at 15 knots
+visibility: greater than 10000 meters
+pressure: 1015.0 mb
+sky: a few clouds at 1800 feet
+METAR: GCFV 012200Z 02015KT 9999 FEW018 19/15 Q1015
+
+Google
+{'current_conditions': ''}

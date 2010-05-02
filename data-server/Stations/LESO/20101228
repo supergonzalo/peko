@@ -1,0 +1,16 @@
+Metar
+station: LESO
+type: routine report, cycle 6 (automatic report)
+time: Sun May  2 06:30:00 2010
+temperature: 12.0 C
+dew point: 10.0 C
+wind: SW at 7 knots
+visibility: 4000 meters
+pressure: 1017.0 mb
+weather: drizzle
+sky: broken clouds at 600 feet
+     broken clouds at 3500 feet
+METAR: LESO 020630Z 22007KT 4000 DZ BKN006 BKN035 12/10 Q1017
+
+Google
+{'current_conditions': ''}

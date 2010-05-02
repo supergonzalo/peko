@@ -1,0 +1,15 @@
+Metar
+station: LEBL
+type: routine report, cycle 3 (automatic report)
+time: Sun May  2 03:30:00 2010
+temperature: 17.0 C
+dew point: 14.0 C
+wind: SW to W at 3 knots
+visibility: 7000 meters
+pressure: 1012.0 mb
+sky: a few clouds at 1800 feet
+     scattered clouds at 4000 feet
+METAR: LEBL 020330Z 25003KT 220V280 7000 FEW018 SCT040 17/14 Q1012 NOSIG
+
+Google
+{'current_conditions': ''}

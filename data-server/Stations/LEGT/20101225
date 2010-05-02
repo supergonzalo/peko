@@ -1,0 +1,15 @@
+Metar
+station: LEGT
+type: routine report, cycle 19 (automatic report)
+time: Sat May  1 19:00:00 2010
+temperature: 20.0 C
+dew point: 8.0 C
+wind: NNE at 4 knots
+visibility: greater than 10000 meters
+pressure: 1012.0 mb
+sky: a few clouds at 5000 feet
+     scattered clouds at 5500 feet
+METAR: LEGT 011900Z 03004KT 9999 FEW050 SCT055 20/08 Q1012
+
+Google
+{'current_conditions': ''}

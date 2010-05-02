@@ -1,0 +1,13 @@
+Metar
+station: LEMG
+type: routine report, cycle 2 (automatic report)
+time: Sun May  2 02:30:00 2010
+temperature: 19.0 C
+dew point: 12.0 C
+wind: WNW at 10 knots
+visibility: 10000 meters
+pressure: 1012.0 mb
+METAR: LEMG 020230Z 30010KT CAVOK 19/12 Q1012 NOSIG
+
+Google
+{'current_conditions': ''}

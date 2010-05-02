@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx>
+  <metadata>
+    <bounds minlat="-46.6233720" minlon="167.3819870" maxlat="-34" maxlon="178"/>
+  </metadata>
+
+  <wpt lat="-39.462547000" lon="176.148087000">
+    <name>AAAAAAAA</name>
+    <cmt>AAAAAAAAa</cmt>
+    <desc>AAAAAAAaa</desc>
+    <sym>AAAAAAaaa</sym>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+    </extensions>
+  </wpt>
+
+</gpx>

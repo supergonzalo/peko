@@ -1,0 +1,16 @@
+Metar
+station: LEMO
+type: routine report, cycle 7 (automatic report)
+time: Sun May  2 07:00:00 2010
+temperature: 14.0 C
+dew point: 14.0 C
+wind: S to W at 5 knots
+visibility: 800 meters
+visual range: on runway 02, 2000 meters
+pressure: 1015.0 mb
+weather: fog
+sky: scattered clouds at 100 feet
+METAR: LEMO 020700Z 22005KT 180V260 0800 R02/2000 FG SCT001 14/14 Q1015 NOSIG
+
+Google
+{'current_conditions': ''}

@@ -1,0 +1,14 @@
+Metar
+station: LEBG
+type: routine report, cycle 19 (automatic report)
+time: Sat May  1 19:00:00 2010
+temperature: 11.0 C
+dew point: 8.0 C
+wind: ENE at 7 knots
+visibility: greater than 10000 meters
+pressure: 1015.0 mb
+sky: scattered clouds at 3000 feet
+METAR: LEBG 011900Z 07007KT 9999 SCT030 11/08 Q1015
+
+Google
+{'current_conditions': ''}

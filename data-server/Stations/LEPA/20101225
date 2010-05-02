@@ -1,0 +1,14 @@
+Metar
+station: LEPA
+type: routine report, cycle 3 (automatic report)
+time: Sun May  2 03:30:00 2010
+temperature: 13.0 C
+dew point: 13.0 C
+wind: calm
+visibility: 7000 meters
+pressure: 1012.0 mb
+sky: a few clouds at 1200 feet
+METAR: LEPA 020330Z 00000KT 7000 FEW012 13/13 Q1012 NOSIG
+
+Google
+{'current_conditions': ''}

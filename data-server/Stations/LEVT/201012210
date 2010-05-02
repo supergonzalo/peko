@@ -1,0 +1,16 @@
+Metar
+station: LEVT
+type: routine report, cycle 8 (automatic report)
+time: Sun May  2 08:30:00 2010
+temperature: 10.0 C
+dew point: 8.0 C
+wind: NW to NNE at 8 knots
+visibility: 8000 meters
+pressure: 1017.0 mb
+sky: a few clouds at 1000 feet
+     scattered clouds at 1400 feet
+     overcast at 2500 feet
+METAR: LEVT 020830Z 34008KT 310V020 8000 FEW010 SCT014 OVC025 10/08 Q1017
+
+Google
+{'current_conditions': ''}

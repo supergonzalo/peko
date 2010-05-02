@@ -1,0 +1,13 @@
+Metar
+station: LETO
+type: routine report (automatic report)
+time: Sun May  2 00:00:00 2010
+temperature: 12.0 C
+dew point: 9.0 C
+wind: N at 6 knots
+visibility: 10000 meters
+pressure: 1015.0 mb
+METAR: LETO 020000Z 01006KT CAVOK 12/09 Q1015 NOSIG
+
+Google
+{'current_conditions': ''}

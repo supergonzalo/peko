@@ -1,0 +1,15 @@
+Metar
+station: LEPP
+type: routine report, cycle 8 (automatic report)
+time: Sun May  2 08:30:00 2010
+temperature: 10.0 C
+dew point: 7.0 C
+wind: W to N at 12 knots
+visibility: greater than 10000 meters
+pressure: 1016.0 mb
+sky: broken clouds at 1800 feet
+     overcast at 3000 feet
+METAR: LEPP 020830Z 32012KT 280V350 9999 BKN018 OVC030 10/07 Q1016
+
+Google
+{'current_conditions': ''}

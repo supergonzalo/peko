@@ -1,0 +1,223 @@
+#! /usr/bin/env python
+
+
+# Librerias para el calculo de la ETO V1.0
+
+
+import math
+import datetime
+
+
+###################################### Atm Pressure
+def atmp (z=0,t=20):
+
+	return 101.3*((273+t-0.0065*z)/(273+t))**(5.26)
+
+
+###################################### Psychrometric constant 
+
+def gamma (p=101.3):
+#Calculates gamma based on atm pressure
+	return (0.665e-3)*p
+
+
+###################################### Slope Vapour Pressure Curve 
+
+def delta (t=20):
+
+	return 4098*edt(t)/((t+237.3)**2)
+
+###################################### (Aux) saturation vapour pressure
+
+def edt(t):
+	return 0.6108*math.exp(17.27*t/(t+237.3))
+
+
+###################################### Saturation vapour pressure
+
+def eda(tmax, tmin, hmax, hmin):
+
+	 return (edt(tmin)*hmax+edt(tmax)*hmin)/200.0
+
+###################################### Actual saturation vapour pressure
+
+def eds(tmax, tmin):
+	return (edt(tmin)+edt(tmax))/2.0
+
+###################################### (Aux) To Radians
+
+def torad(deg,minutes,hemisf):
+
+	rad=(deg+minutes/60.0)*math.pi/180.0
+	if( hemisf=='S'):
+		rad = - rad
+	return rad
+	
+###################################### (Aux) Day of the year-> J
+
+def doy(date):
+	
+	return date.strftime('%j')
+
+
+###################################### Inverse distance Sun-Earth
+
+def dr(j):
+	return 1+0.033*math.cos(2*math.pi*j/365)
+
+###################################### Solar Declination
+
+def dmin(j):
+	return (0.409*math.sin(2*math.pi*j/365-1.39))
+
+###################################### Sunset hour angle
+
+def ws(j, lat):
+	return math.acos(-math.tan(lat)*math.tan(dmin(j)))
+
+###################################### Extraterrestrial radiation
+
+def ra(j,lat):
+
+	return 24*60*0.082*dr(j)*(ws(j,lat)*math.sin(lat)*math.sin(dmin(j))+math.cos(lat)*math.cos(dmin(j))*math.sin(ws(j,lat)))/math.pi
+
+###################################### Daylight hours
+
+def N(j,lat):
+
+		return 24*ws(j,lat)/math.pi
+
+###################################### Solar radiation Rs
+
+def rs(j,lat,n):
+	
+
+	return (0.25+0.5*(n/N(j,lat)))*ra(j,lat)
+
+###################################### RS0
+
+def rso(z,j,lat):
+
+	return (0.75+2*z/100000)*ra(j,lat)
+
+###################################### Rnl 
+
+def rnl(tmed,ea,rs,rso):
+
+	return (tmed*(0.34-0.14*ea)**0.5)*(1.35*rs/rso-0.35)
+
+
+###################################### Rn
+
+def rn(rns,rnl):
+	return rns-rnl
+
+###################################### Wind speed @ ground
+
+def wsp(wsp,altitude):	#Estimates wind speed @ 2m based on a wsp measured @ atitude
+	return wsp*4.87/math.log(67.87*altitude-5.42)
+
+###################################### ETo
+
+def eto(tmed,rn,p,es,ea,ws):
+	#0.9 Estimador Gonzalo, estima G
+	return (0.408*rn*0.95*delta(tmed)+gamma(p)*(900/(tmed+273))*ws*(es-ea))/(delta(tmed)+gamma(p)*(1+0.34*ws))
+
+###################################### 
+
+#j=doy(datetime.datetime.now())
+
+#FECHA:"01/02/10"
+#ETO_PM_FAO (mm):"1,83"
+#HSOL (h):"8,00"
+#HRMAXABS:"88,00"
+#HRMAX:"87,30"
+#HRMED:"63,00"
+#HRMINABS:"30,70"
+#HRMIN:"34,86"
+#PREC :"0,00"
+#RADMED  (w/m2):"133,93"
+#RADNETA  (w/m2):""
+#RRMAX  (w/m2):""
+#RRMED  (w/m2):""
+#TMAXABS :"14,57"
+#TMAX :"14,36"
+#TMED :"9,08"
+#TMINABS :"4,17"
+#TMIN :"5,23"
+
+#station: ENMS
+#type: routine report, cycle 16 (automatic report)
+#time: Thu Apr  1 15:50:00 2010
+#temperature: 7.0 C
+#dew point: 2.0 C
+#wind: ENE to WSW at 7 knots, gusting to 19 knots
+#visibility: greater than 10000 meters
+#pressure: 1001.0 mb
+
+
+def getdata(f):
+
+#Gets a numeric "value" from a string identified as f and has a size of cars characters
+
+	val=''
+	
+	for i in range (len(f)-1):
+		if f[i].isdigit():
+			val=val+f[i]
+		else:
+			if f[i+1].isdigit():
+				val=val+f[i]
+	return val 
+	
+
+
+#######################################Programa################################################
+
+J=90
+deg=38
+minutes=02
+hemisf='N'
+z=100
+TMax=14.36
+TMin=4.23
+HMax=87.3
+HMin=30.7
+TDew=0.0
+wspeed=wsp(1,10) #[m/s] @ x[m]
+SunshineDuration=8.0
+TMean=float(value[3][1].strip())
+
+
+
+DeltaTMean=delta(TMean)
+P=atmp(z,TMean)
+Gamma=gamma(P)
+if TMax ==TMin:
+	Es=edt(TMean)
+else :
+	Es=eds(TMax,TMin)
+if HMax==HMin:
+	Ea=edt(TDew)
+else:
+	Ea=eda(TMax, TMin, HMax, HMin)	
+rad=torad(deg,minutes,"N")
+Ra=ra(J,rad)
+Rs=rs(J,rad,SunshineDuration)
+Rso=rso(z,J,rad)
+Rnl=rnl(TMean, Ea,Rs,Rso)
+Rns = (1-0.23)*Rs		#0.23 Albedo o canopy reflection coefficient para pasto
+Rn=rn(Rns,Rnl)
+print "ETO:" 
+print eto(TMean,Rn,P,Es,Ea,wspeed)
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,13 @@
+Metar
+station: LEMO
+type: routine report (automatic report)
+time: Sun May  2 00:00:00 2010
+temperature: 16.0 C
+dew point: 14.0 C
+wind: S to WSW at 7 knots
+visibility: 10000 meters
+pressure: 1015.0 mb
+METAR: LEMO 020000Z 21007KT 190V250 CAVOK 16/14 Q1015 NOSIG
+
+Google
+{'current_conditions': ''}

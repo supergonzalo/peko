@@ -1,0 +1,14 @@
+Metar
+station: LEIB
+type: routine report, cycle 6 (automatic report)
+time: Sun May  2 06:30:00 2010
+temperature: 19.0 C
+dew point: 16.0 C
+wind: NNW to NE at 4 knots
+visibility: 6000 meters
+pressure: 1013.0 mb
+sky: a few clouds at 800 feet
+METAR: LEIB 020630Z 36004KT 330V040 6000 FEW008 19/16 Q1013 NOSIG
+
+Google
+{'current_conditions': ''}

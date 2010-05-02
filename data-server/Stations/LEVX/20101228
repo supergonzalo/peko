@@ -1,0 +1,14 @@
+Metar
+station: LEVX
+type: routine report, cycle 6 (automatic report)
+time: Sun May  2 06:30:00 2010
+temperature: 10.0 C
+dew point: 9.0 C
+wind: N at 6 knots
+visibility: greater than 10000 meters
+pressure: 1018.0 mb
+sky: scattered clouds at 4300 feet
+METAR: LEVX 020630Z 01006KT 9999 SCT043 10/09 Q1018
+
+Google
+{'current_conditions': ''}

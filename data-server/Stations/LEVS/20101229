@@ -1,0 +1,13 @@
+Metar
+station: LEVS
+type: routine report, cycle 7 (automatic report)
+time: Sun May  2 07:30:00 2010
+temperature: 14.0 C
+dew point: 7.0 C
+wind: variable at 2 knots
+visibility: 10000 meters
+pressure: 1015.0 mb
+METAR: LEVS 020730Z VRB02KT CAVOK 14/07 Q1015
+
+Google
+{'current_conditions': ''}

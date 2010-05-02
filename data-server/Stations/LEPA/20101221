@@ -1,0 +1,14 @@
+Metar
+station: LEPA
+type: routine report (automatic report)
+time: Sun May  2 00:00:00 2010
+temperature: 16.0 C
+dew point: 16.0 C
+wind: variable at 1 knots
+visibility: 8000 meters
+pressure: 1012.0 mb
+sky: broken clouds at 1500 feet
+METAR: LEPA 020000Z VRB01KT 8000 BKN015 16/16 Q1012 NOSIG
+
+Google
+{'current_conditions': ''}

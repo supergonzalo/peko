@@ -1,0 +1,13 @@
+Metar
+station: LEAB
+type: routine report (automatic report)
+time: Sun May  2 00:00:00 2010
+temperature: 13.0 C
+dew point: 12.0 C
+wind: SSW at 5 knots
+visibility: 10000 meters
+pressure: 1014.0 mb
+METAR: LEAB 020000Z 20005KT CAVOK 13/12 Q1014 NOSIG
+
+Google
+{'current_conditions': ''}

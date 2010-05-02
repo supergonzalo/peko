@@ -1,0 +1,17 @@
+Metar
+station: LEGE
+type: routine report, cycle 2 (automatic report)
+time: Sun May  2 02:30:00 2010
+temperature: 14.0 C
+dew point: 13.0 C
+wind: calm
+visibility: 1500 meters
+pressure: 1012.0 mb
+weather: mist
+sky: a few clouds at 200 feet
+     scattered clouds at 2800 feet
+     broken clouds at 6300 feet
+METAR: LEGE 020230Z 00000KT 1500 BR FEW002 SCT028 BKN063 14/13 Q1012
+
+Google
+{'current_conditions': ''}

@@ -1,0 +1,15 @@
+Metar
+station: LEBG
+type: routine report, cycle 5 (automatic report)
+time: Sun May  2 05:00:00 2010
+temperature: 9.0 C
+dew point: 8.0 C
+wind: NE at 2 knots
+visibility: greater than 10000 meters
+pressure: 1015.0 mb
+sky: scattered clouds at 2000 feet
+     broken clouds at 5000 feet
+METAR: LEBG 020500Z 05002KT 9999 SCT020 BKN050 09/08 Q1015
+
+Google
+{'current_conditions': ''}

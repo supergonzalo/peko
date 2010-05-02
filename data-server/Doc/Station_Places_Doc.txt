@@ -1,0 +1,14 @@
+State	 2 character abbreviation (included for stations located in The United States only).
+Country Name	 Country name is ISO short English form.
+WMO Region	 Digits 1 through 6 representing The corresponding WMO region, 7 stands for The WMO Antarctic region.
+Station Latitude	 DD-MM-SSH where DD is degrees, MM is minutes, SS is seconds and H is N for northern hemisphere or S for southern hemisphere. The seconds value is omitted for those stations where The seconds value is unknown.
+Station Longitude	 DDD-MM-SSH where DDD is degrees, MM is minutes, SS is seconds and H is E for eastern hemisphere or W for western hemisphere. The seconds value is omitted for those stations where The seconds value is unknown.
+Upper Air Latitude	 DD-MM-SSH where DD is degrees, MM is minutes, SS is seconds and H is N for northern hemisphere or S for southern hemisphere. The seconds value is omitted for those stations where The seconds value is unknown.
+Upper Air Longitude	 DDD-MM-SSH where DDD is degrees, MM is minutes, SS is seconds and H is E for eastern hemisphere or W for western hemisphere. The seconds value is omitted for those stations where The seconds value is unknown.
+Station Elevation (Ha)	The station elevation in meters. Value is omitted if unknown.
+Upper Air Elevation (Hp)	 The upper air elevation in meters. Value is omitted if unknown.
+RBSN indicator	P if station is defined by The WMO as belonging to The Regional Basic Synoptic Network, omitted otherwise.
+
+
+
+

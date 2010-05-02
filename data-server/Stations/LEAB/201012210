@@ -1,0 +1,15 @@
+Metar
+station: LEAB
+type: routine report, cycle 8 (automatic report)
+time: Sun May  2 08:00:00 2010
+temperature: 13.0 C
+dew point: 12.0 C
+wind: WSW to NW at 4 knots
+visibility: 3000 meters
+pressure: 1015.0 mb
+weather: mist
+sky: broken clouds at 200 feet
+METAR: LEAB 020800Z 28004KT 250V310 3000 BR BKN002 13/12 Q1015 NOSIG
+
+Google
+{'current_conditions': ''}

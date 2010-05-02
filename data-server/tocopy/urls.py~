@@ -1,0 +1,12 @@
+from django.conf.urls.defaults import *
+from site2.views import current_datetime, station_data_available, list_stations, publish_data
+# Uncomment the next two lines to enable the admin:
+# from django.contrib import admin
+# admin.autodiscover()
+
+urlpatterns = patterns('',
+    (r'^time/$', current_datetime),						# Prints current day of the year
+	(r'^station/$', list_stations),						# Lists .dex files available in a STATION directory 
+    (r'^station/([A-Z]{4})/$', station_data_available),	# Lists Stations directories
+	(r'^station/([A-Z]{4})/(\d{5,7})', publish_data),
+)

@@ -1,0 +1,16 @@
+Metar
+station: LERS
+type: routine report, cycle 22 (automatic report)
+time: Sat May  1 22:30:00 2010
+temperature: 14.0 C
+dew point: 13.0 C
+wind: calm
+visibility: 800 meters
+visual range: on runway 25, from 350 to 650 meters
+pressure: 1013.0 mb
+weather: fog
+sky: scattered clouds at 1000 feet
+METAR: LERS 012230Z 00000KT 0800 R25/0350V0650U FG SCT010 14/13 Q1013
+
+Google
+{'current_conditions': ''}

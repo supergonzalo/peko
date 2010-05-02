@@ -1,0 +1,17 @@
+Metar
+station: LEXJ
+type: routine report, cycle 5 (automatic report)
+time: Sun May  2 05:30:00 2010
+temperature: 12.0 C
+dew point: 12.0 C
+wind: E at 1 knots
+visibility: 7000 meters
+pressure: 1017.0 mb
+weather: light rain
+sky: a few clouds at 800 feet
+     scattered clouds at 2000 feet
+     overcast at 3400 feet
+METAR: LEXJ 020530Z 09001KT 7000 -RA FEW008 SCT020 OVC034 12/12 Q1017
+
+Google
+{'current_conditions': ''}

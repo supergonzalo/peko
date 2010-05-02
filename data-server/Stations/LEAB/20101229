@@ -1,0 +1,16 @@
+Metar
+station: LEAB
+type: routine report, cycle 7 (automatic report)
+time: Sun May  2 07:32:00 2010
+temperature: 12.0 C
+dew point: 12.0 C
+wind: SSW to NW at 3 knots
+visibility: 900 meters
+visual range: on runway 09, from 700 to 1100 meters; on runway 27, from 900 to 1400 meters
+pressure: 1015.0 mb
+weather: fog
+sky: indefinite ceilingclouds, visibility to 200 feet
+METAR: LEAB 020732Z 25003KT 200V310 0900 R09/0700V1100U R27/0900V1400U FG VV002 12/12 Q1015 BECMG 3000
+
+Google
+{'current_conditions': ''}

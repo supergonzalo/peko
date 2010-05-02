@@ -1,0 +1,15 @@
+Metar
+station: LELC
+type: routine report, cycle 21 (automatic report)
+time: Sat May  1 21:00:00 2010
+temperature: 19.0 C
+dew point: 16.0 C
+wind: calm
+visibility: 7000 meters
+pressure: 1013.0 mb
+weather: light rain
+sky: scattered clouds at 1000 feet
+METAR: LELC 012100Z 00000KT 7000 -RA SCT010 19/16 Q1013 NOSIG
+
+Google
+{'current_conditions': ''}

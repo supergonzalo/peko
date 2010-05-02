@@ -1,0 +1,14 @@
+Metar
+station: GCTS
+type: routine report, cycle 7 (automatic report)
+time: Sun May  2 07:30:00 2010
+temperature: 19.0 C
+dew point: 14.0 C
+wind: NNE to E at 6 knots
+visibility: greater than 10000 meters
+pressure: 1017.0 mb
+sky: scattered clouds at 2800 feet
+METAR: GCTS 020730Z 06006KT 030V100 9999 SCT028 19/14 Q1017 NOSIG
+
+Google
+{'current_conditions': ''}

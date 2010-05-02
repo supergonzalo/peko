@@ -1,0 +1,15 @@
+Metar
+station: LEST
+type: routine report, cycle 6 (automatic report)
+time: Sun May  2 06:30:00 2010
+temperature: 9.0 C
+dew point: 9.0 C
+wind: variable at 2 knots
+visibility: 9000 meters
+pressure: 1019.0 mb
+sky: a few clouds at 1400 feet
+     broken clouds at 3800 feet
+METAR: LEST 020630Z VRB02KT 9000 FEW014 BKN038 09/09 Q1019 NOSIG
+
+Google
+{'current_conditions': ''}
