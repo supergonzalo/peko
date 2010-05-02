@@ -1,17 +1,13 @@
 from django.conf.urls.defaults import *
-
+from dataserver.views import current_datetime, station_data_available, list_stations, publish_data
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Example:
-    # (r'^dataserver/', include('dataserver.foo.urls')),
-
-    # Uncomment the admin/doc line below and add 'django.contrib.admindocs' 
-    # to INSTALLED_APPS to enable admin documentation:
-    # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
-    # Uncomment the next line to enable the admin:
-    # (r'^admin/', include(admin.site.urls)),
+    (r'^day/$', current_datetime),						# Prints current day of the year
+	(r'^station/$', list_stations),						# Lists .dex files available in a STATION directory 
+    (r'^station/([A-Z]{4})/$', station_data_available),	# Lists Stations directories
+	(r'^station/([A-Z]{4})/(\d{5,7})', publish_data),
 )
+

@@ -17,6 +17,10 @@
 	</style></head><body><div class="note" id="Esquema  de servidores y servicios: peko.tk"><a name="esquema  de servidores y servicios: peko.tk"></a><h1>Esquema  de servidores y servicios: peko.tk</h1>
 V1.0
 
+Programas necesarios:
+	-Django 1.1.1
+	
+
 start_site.py 
 
 	<strike>Inicializador general del sitio, levanta los dos servidores</strike>, <a style="color:#204A87" href="#data-server.py">data-server.py</a> y <a style="color:#204A87" href="#ui-server.py">ui-server.py</a>
@@ -57,7 +61,7 @@ Recibe dos parametros: -run o -stop
 -run:
 	- inicia el servidor de consultas (ver <a style="color:#204A87" href="#esquema  de servidores y servicios: peko.tk">Esquema  de servidores y servicios: peko.tk</a>)
 	- comienza a tomar datos de centrales de forma horaria y ejecuta de forma diaria el calculo de la eto
-	- ejecuta script de limpieza de archivos temporales <a style="color:#204A87" href="#delete_old_files">delete_old_files</a> de acuerdo a lo especificado en  <a style="color:#204A87" href="#dataserver.config">dataserver.config</a>
+	- ejecuta script de limpieza de archivos temporales <a style="color:#204A87" href="#delete_old_files">delete_old_files</a> de acuerdo a lo especificado en  <a style="color:#204A87" href="#config.txt">config.txt</a>
 
 -stop:
 	-detiene los servicios, no borra datos.
@@ -65,7 +69,7 @@ Recibe dos parametros: -run o -stop
 
 Volver a <a style="color:#204A87" href="#esquema  de servidores y servicios: peko.tk">Esquema  de servidores y servicios: peko.tk</a></div>
 <div class="note" id="delete_old_files"><a name="delete_old_files"></a><h1>delete_old_files</h1>
-Servicio que elimina los archivos temporales de los directorios de estaciones climaticas (<a style="color:#204A87" href="#stations/xxxx">Stations/XXXX</a>) luego del periodo en el que se consideran utiles (especificado en <a style="color:#204A87" href="#dataserver.config">dataserver.config</a>)
+Servicio que elimina los archivos temporales de los directorios de estaciones climaticas (<a style="color:#204A87" href="#stations/xxxx">Stations/XXXX</a>) luego del periodo en el que se consideran utiles (especificado en <a style="color:#204A87" href="#config.txt">config.txt</a>)
 
 Volver a <a style="color:#204A87" href="#esquema  de servidores y servicios: peko.tk">Esquema  de servidores y servicios: peko.tk</a></div>
 <div class="note" id="Stations/XXXX"><a name="stations/xxxx"></a><h1>Stations/XXXX</h1>
@@ -73,13 +77,19 @@ Directorio de subdirectorios XXXX donde XXXX representa el codigo de la estacion
 
 
 Volver a <a style="color:#204A87" href="#esquema  de servidores y servicios: peko.tk">Esquema  de servidores y servicios: peko.tk</a></div>
-<div class="note" id="dataserver.config"><a name="dataserver.config"></a><h1>dataserver.config</h1>
-archivo de configuracion de <a style="color:#204A87" href="#data-server.py">data-server.py</a>
+<div class="note" id="config.txt"><a name="config.txt"></a><h1>config.txt</h1>
+archivo de configuracion general.
 
 
 setea:
 	
-	-cantidad de dias a guardar datos temporarios
+	'UI_SERVER_PORT': 'None'					#IP del server de frontend (<a style="color:#204A87" href="#ui-server.py">ui-server.py</a>)
+	'WORKDIR': '/home/aspire/Documents/peko'	#Directorio de instalacion del sistema
+	'DATA_SERVER_IP': '127.0.0.1'				#IP del server de datos (<a style="color:#204A87" href="#data-server.py">data-server.py</a>)
+	'TEMP_FILES_XPIRE': '7'						#Tiempo (dias) a  mantener los archivos de reporte horario (<a style="color:#204A87" href="#aaaadddhh">aaaadddhh</a>)
+	'DATA_SERVER_PORT': '8000'					#Puerto del Server de datos (<a style="color:#204A87" href="#data-server.py">data-server.py</a>)
+	'DEX_FILES_EXPIRE': '400'					#Tiempo (dias) a  mantener los archivos de reporte diario (<a style="color:#204A87" href="#aaaaddd.dex">aaaaddd.dex</a>)
+	'UI_SERVER_IP': 'None'						#Puerto del Server de frontend (<a style="color:#204A87" href="#ui-server.py">ui-server.py</a>)
 
 
 Volver a <a style="color:#204A87" href="#esquema  de servidores y servicios: peko.tk">Esquema  de servidores y servicios: peko.tk</a></div>
@@ -96,22 +106,6 @@ Recibe dos parametros: -run o -stop
 
 
 Volver a <a style="color:#204A87" href="#esquema  de servidores y servicios: peko.tk">Esquema  de servidores y servicios: peko.tk</a></div>
-<div class="note" id="dataserver/Doc/stations.lib"><a name="dataserver/doc/stations.lib"></a><h1>dataserver/Doc/stations.lib</h1>
-Libreria con los codigos de central que va a tratar de buscar get_report.py escritos en formato pickle de python
-
-Los datos de las centrales (altitud, ubicacion, etc.) se encuentran en la libreria general de estaciones <a style="color:#204A87" href="#dataserver/doc/metar_station_places.txt">dataserver/Doc/METAR_Station_Places.txt</a>
-
-volver a <a style="color:#204A87" href="#esquema  de servidores y servicios: peko.tk">Esquema  de servidores y servicios: peko.tk</a></div>
-<div class="note" id="dataserver/Doc/METAR_Station_Places.txt"><a name="dataserver/doc/metar_station_places.txt"></a><h1>dataserver/Doc/METAR_Station_Places.txt</h1>
-ICAO Location
-Indicator	 4 alphanumeric characters.
-Block Number	 2 digits representing The WMO-assigned block. Not all stations in The file have an assigned block number. The value "--" is used for station without an assigned number.
-Station Number	 3 digits representing The WMO-assigned station. Not all stations in The file have an assigned station number. The value "---" is used for station without an assigned number.
-Place Name	 Common name of station location.
-Ex
-AGGH;91;520;Honiara , Henderson;;Solomon Islands;5;09-25S;160-03E;;;8;9;P
-
-volver a <a style="color:#204A87" href="#esquema  de servidores y servicios: peko.tk">Esquema  de servidores y servicios: peko.tk</a></div>
 <div class="note" id="aaaadddhh"><a name="aaaadddhh"></a><h1>aaaadddhh</h1>
 Este archivo deberia considerarse como temporal, se creo con fines de debug y almacenamiento temporario de datos, deberia borrarse luego de un tiempo con el servicio <a style="color:#204A87" href="#delete_old_files">delete_old_files</a>
 Metar -&gt; Datos obtenidos de central Metar
@@ -167,4 +161,20 @@ ETOradTODAY: 1.78491821108
 ETOTODAY: 4.4944826254
 Estimada: 7.65345317469
 
-Volver a <a style="color:#204A87" href="#esquema  de servidores y servicios: peko.tk">Esquema  de servidores y servicios: peko.tk</a></div></body></html>
+Volver a <a style="color:#204A87" href="#esquema  de servidores y servicios: peko.tk">Esquema  de servidores y servicios: peko.tk</a></div>
+<div class="note" id="dataserver/Doc/stations.lib"><a name="dataserver/doc/stations.lib"></a><h1>dataserver/Doc/stations.lib</h1>
+Libreria con los codigos de central que va a tratar de buscar get_report.py escritos en formato pickle de python
+
+Los datos de las centrales (altitud, ubicacion, etc.) se encuentran en la libreria general de estaciones <a style="color:#204A87" href="#dataserver/doc/metar_station_places.txt">dataserver/Doc/METAR_Station_Places.txt</a>
+
+volver a <a style="color:#204A87" href="#esquema  de servidores y servicios: peko.tk">Esquema  de servidores y servicios: peko.tk</a></div>
+<div class="note" id="dataserver/Doc/METAR_Station_Places.txt"><a name="dataserver/doc/metar_station_places.txt"></a><h1>dataserver/Doc/METAR_Station_Places.txt</h1>
+ICAO Location
+Indicator	 4 alphanumeric characters.
+Block Number	 2 digits representing The WMO-assigned block. Not all stations in The file have an assigned block number. The value "--" is used for station without an assigned number.
+Station Number	 3 digits representing The WMO-assigned station. Not all stations in The file have an assigned station number. The value "---" is used for station without an assigned number.
+Place Name	 Common name of station location.
+Ex
+AGGH;91;520;Honiara , Henderson;;Solomon Islands;5;09-25S;160-03E;;;8;9;P
+
+volver a <a style="color:#204A87" href="#esquema  de servidores y servicios: peko.tk">Esquema  de servidores y servicios: peko.tk</a></div></body></html>

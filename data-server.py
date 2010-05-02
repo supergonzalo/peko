@@ -38,8 +38,14 @@ def usage():			#Usage help
 """
 try:
 	if sys.argv[1] == '-stop':
-		print "stop"
+		print "data-server STOPPING!!!!!!!!!!!!"
+
+		# DESCRONEAR data-server.py -run @reboot
+
 		#	- detiene el servidor de consultas (ver Esquema  de servidores y servicios: peko.tk)
+
+		#detener ejecucion de server.py
+
 		#	- descronea datos de centrales
 		tab = CronTab()
 		lst = tab.find_command(hourly_central)
@@ -53,8 +59,15 @@ try:
 
 
 	elif sys.argv[1] == '-run':
+
+		print "data-server STARTING!!!!!!!!!!!!"
+
+		# CRONEAR data-server.py -run @reboot
 		
 		#	- inicia el servidor de consultas (ver Esquema  de servidores y servicios: peko.tk)
+
+		#########Como ejecutar .py?????
+
 		#	- comienza a tomar datos de centrales de acuerdo a lo especificado en dataserver.config
 		tab = CronTab()
 		here=os.getcwd()
@@ -69,6 +82,8 @@ try:
 	
 		tab.write()
 	#	- ejecuta script de limpieza de archivos temporales delete_old_files de acuerdo a lo especificado en  	dataserver.config
+
+		cronear delete_old_files
 
 	else:
 		usage()
