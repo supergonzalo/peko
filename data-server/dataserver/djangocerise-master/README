@@ -1,0 +1,153 @@
+CherryPy Django Server
+======================
+
+This package is just a clean wrapping of the excellent CherryPy WSGI
+server to serve Django webapplication. This has been created as I had
+not the ability to run Django using mod_python for my setup. The goal
+was to be able to run many different Django projects with a single
+wrapper and a configuration file for each project.
+
+If you want more about WSGI, Django and CherryPy check the following
+websites:
+
+CherryPy: http://www.cherrypy.org/
+Django: http://www.djangoproject.com/
+WSGI: http://wsgi.org/wsgi
+
+Author
+======
+
+Loic d'Anterroches <titoo@users.sourceforge.net> for Céondo Ltd.
+
+Little advert: 
+   Do you need some custom Django development?
+   Just contact me: http://www.ceondo.com/
+
+
+Content of the archive
+======================
+
+wsgiserver.py - the excellent WSGI server of the CherryPy project.
+
+webserver.py - a python wrapping of wsgiserver.py to specifically
+	       serve Django applications.
+
+myprojectconf.py-dist - an example of configuration file.
+
+daemon.sh - an example of optional starter script.
+
+README - the file you are reading at the moment.
+
+Installation
+============
+
+The installation is really easy. You only need to have Django
+installed on your system and your Django project settings file
+accessible in your Python path. To test this just open a Python shell
+and type:
+
+>>> import myproject.settings
+
+If no errors, everything is ok and you can go further with
+installation of the webserver.
+
+- Copy the content of this archive in a folder on your server, for
+  example /home/yourlogin/server
+
+- Make a copy of myprojectconf.py-dist to myprojectconf.py
+
+- Make a copy of daemon.sh with the name myproject.sh
+
+Now you need to edit the myprojectconf.py and myproject.sh files to
+reflect the configuration of your Django project and the location of
+the different files on your system.
+
+myprojectconf.py
+----------------
+
+The 3 important variables to change are:
+
+DJANGO_SETTINGS: Same value as the DJANGO_SETTINGS_MODULE of the
+project you want to run.
+
+DJANGO_SERVE_ADMIN: Do you want to server the admin files or not.
+
+PIDFILE: The path to the PID file to control the daemon.
+
+myproject.sh
+------------
+
+DAEMON: The full path to the webserver.py file available in this
+archive.
+
+PIDFILE: The same file as in myprojectconf.py
+
+BASEDIR: The folder in which the myprojectconf.py file is.
+
+CONFIG: If your config is in myprojectconf.py it must be myprojectconf
+without the .py. (Simply the python module name of your configuration
+file)
+
+Running the server
+==================
+
+You can run the server through the myproject.sh daemon wrapper or
+using a direct python call.
+
+Direct python call
+------------------
+
+Run simply:
+
+> python /path/to/webserver.py --conf myprojectconf
+
+If you are not running it as daemon as defined in the myprojectconf.py
+file, simply type CTRL+C to stop the server.
+
+Through myproject.sh
+--------------------
+
+Start the server: ./myproject.sh start
+Stop the server: ./myproject.sh stop
+Restart the server:  ./myproject.sh restart
+
+Running the server proxied by NGINX
+===================================
+
+I am running my website using the NGINX webserver acting as a proxy
+for my CherryPy Django instance. Here is an example of configuration.
+
+http {
+    include       /etc/nginx.mime.types;
+    default_type  application/octet-stream;
+    access_log  /var/log/nginx/access.log combined;
+    sendfile        on;
+    keepalive_timeout  65;
+    tcp_nodelay        on;
+    server {
+        listen 80;
+        server_name yourserver.com;
+        access_log  /var/log/nginx/yourserver.com-access.log combined;
+        error_log  /var/log/nginx/yourserver.com-error.log;
+        location / {
+            proxy_pass http://localhost:8088;
+            proxy_set_header X-Forwarded-Host $server_name;
+            proxy_set_header X-Real-IP $remote_addr;
+        }
+    }
+
+    server {
+    	other... like to serve the media files
+    }
+}
+
+This is just an example, you should adapt it to your
+configuration. 
+
+You can learn more about NGINX here: http://nginx.net/
+
+Getting some help
+=================
+
+Just read the comments and then post your questions here:
+http://xhtml.net/scripts/Django-CherryPy-server-DjangoCerise
