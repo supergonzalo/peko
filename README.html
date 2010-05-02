@@ -17,12 +17,12 @@
 	</style></head><body><div class="note" id="Esquema  de servidores y servicios: peko.tk"><a name="esquema  de servidores y servicios: peko.tk"></a><h1>Esquema  de servidores y servicios: peko.tk</h1>
 V1.0
 
-start_site.py
+start_site.py 
 
-	Inicializador general del sitio, levanta los dos servidores, <a style="color:#204A87" href="#datasever.py">datasever.py</a> y <a style="color:#204A87" href="#ui-server.py">ui-server.py</a>
+	<strike>Inicializador general del sitio, levanta los dos servidores</strike>, <a style="color:#204A87" href="#data-server.py">data-server.py</a> y <a style="color:#204A87" href="#ui-server.py">ui-server.py</a>
 
 
-<a style="color:#204A87" href="#data-server.py">data-server.py</a>: 
+<a style="color:#204A87" href="#data-server.py">data-server.py</a>: <span style="background:yellow">[Operativo]</span>
 
 	- Servidor de backend. Busca datos de forma horaria, de las centrales habilitadas en su libreria <a style="color:#204A87" href="#dataserver/doc/stations.lib">dataserver/Doc/stations.lib</a> . Los datos generales de las estaciones registradas se encuentran en  <a style="color:#204A87" href="#dataserver/doc/metar_station_places.txt">dataserver/Doc/METAR_Station_Places.txt</a>
 	- Calcula la Eto debida a la accion del viento en base a parametros horarios. Escribe dos tipos de archivo en el directorio <a style="color:#204A87" href="#stations/xxxx">Stations/XXXX</a> (XXXX=Codigo de libreria de estaciones) :
@@ -30,7 +30,7 @@ start_site.py
 		+ <a style="color:#204A87" href="#aaaadddhh">aaaadddhh</a>: a=ano, d=dia del ano (1 a 365/6), h=hora de registro
 		+ <a style="color:#204A87" href="#aaaaddd.dex">aaaaddd.dex</a>: a=ano, d=dia del ano (1 a 365/6)
 
-	- Implementa servicio de consultas para el uiserver
+	- <strike>Implementa servicio de consultas para el uiserver</strike>
 
 		+ dataserver/station: lista las estaciones de las que esta tomando datos junto con las coordenadas de las mismas
 		+ dataserver/station/code: lista los ".dex" disponibles ( <a style="color:#204A87" href="#stations/xxxx">Stations/XXXX</a> ) para la estacion de codigo "code" 
@@ -38,31 +38,18 @@ start_site.py
 		+ dataserver/station/code/day: Devuelve el valor ddd para el dia de hoy
 		+ dataserver/station/code/pXXX: Devuelve el valor de Eto para los ultimos XXX dias a partir de hoy (backwards)
 
-	- Implementa script de limpieza de archivos temporales a ejecutarse una vez por semana (<a style="color:#204A87" href="#delete_old_files">delete_old_files</a>)
+	-<strike> Implementa script de limpieza de archivos temporales a ejecutarse una vez por semana</strike> (<a style="color:#204A87" href="#delete_old_files">delete_old_files</a>)
 
 
 
 <a style="color:#204A87" href="#ui-server.py">ui-server.py</a>:
 
-	-Servidor de frontend. 
+	-<strike>Servidor de frontend.</strike> 
  
 </div>
-<div class="note" id="datasever.py"><a name="datasever.py"></a><h1>datasever.py</h1>
-Describe your new note here.</div>
-<div class="note" id="ui-server.py"><a name="ui-server.py"></a><h1>ui-server.py</h1>
-Recibe dos parametros: -run o -stop
- 
-*************	Escribe en crontab	*************
-
--run:
-	- inicia el servidor de frontend de usuario (ver <a style="color:#204A87" href="#esquema  de servidores y servicios: peko.tk">Esquema  de servidores y servicios: peko.tk</a>)
-
--stop:
-	-revierte lo ejecutado en -run, no borra datos.
-
-
-Volver a <a style="color:#204A87" href="#esquema  de servidores y servicios: peko.tk">Esquema  de servidores y servicios: peko.tk</a></div>
 <div class="note" id="data-server.py"><a name="data-server.py"></a><h1>data-server.py</h1>
+<span style="background:yellow">[Operativo]</span>
+
 Recibe dos parametros: -run o -stop
  
 *************	Escribe en crontab	*************
@@ -93,6 +80,19 @@ archivo de configuracion de <a style="color:#204A87" href="#data-server.py">data
 setea:
 	
 	-cantidad de dias a guardar datos temporarios
+
+
+Volver a <a style="color:#204A87" href="#esquema  de servidores y servicios: peko.tk">Esquema  de servidores y servicios: peko.tk</a></div>
+<div class="note" id="ui-server.py"><a name="ui-server.py"></a><h1>ui-server.py</h1>
+Recibe dos parametros: -run o -stop
+ 
+*************	Escribe en crontab	*************
+
+-run:
+	- inicia el servidor de frontend de usuario (ver <a style="color:#204A87" href="#esquema  de servidores y servicios: peko.tk">Esquema  de servidores y servicios: peko.tk</a>)
+
+-stop:
+	-revierte lo ejecutado en -run, no borra datos.
 
 
 Volver a <a style="color:#204A87" href="#esquema  de servidores y servicios: peko.tk">Esquema  de servidores y servicios: peko.tk</a></div>
