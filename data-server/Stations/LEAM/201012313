@@ -1,0 +1,15 @@
+Metar
+station: LEAM
+type: routine report, cycle 11 (automatic report)
+time: Mon May  3 11:30:00 2010
+temperature: 20.0 C
+dew point: 15.0 C
+wind: SW at 11 knots
+visibility: 8000 meters
+pressure: 1004.0 mb
+sky: a few clouds at 1200 feet
+     scattered clouds at 8000 feet
+METAR: LEAM 031130Z 23011KT 8000 FEW012 SCT080 20/15 Q1004
+
+Google
+{'current_conditions': ''}

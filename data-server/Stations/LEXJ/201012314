@@ -1,0 +1,15 @@
+Metar
+station: LEXJ
+type: routine report, cycle 12 (automatic report)
+time: Mon May  3 12:30:00 2010
+temperature: 13.0 C
+dew point: 6.0 C
+wind: NW to ENE at 13 knots
+visibility: greater than 10000 meters
+pressure: 1018.0 mb
+sky: a few clouds at 2100 feet
+     broken clouds at 3300 feet
+METAR: LEXJ 031230Z 02013KT 320V070 9999 FEW021 BKN033 13/06 Q1018
+
+Google
+{'current_conditions': ''}

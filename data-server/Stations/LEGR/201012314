@@ -1,0 +1,14 @@
+Metar
+station: LEGR
+type: routine report, cycle 12 (automatic report)
+time: Mon May  3 12:30:00 2010
+temperature: 18.0 C
+dew point: 1.0 C
+wind: W to NNE at 14 knots
+visibility: greater than 10000 meters
+pressure: 1009.0 mb
+sky: a few clouds at 5000 feet
+METAR: LEGR 031230Z 33014KT 280V020 9999 FEW050 18/01 Q1009
+
+Google
+{'current_conditions': ''}

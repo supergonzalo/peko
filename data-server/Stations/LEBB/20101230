@@ -1,0 +1,16 @@
+Metar
+station: LEBB
+type: routine report, cycle 22 (automatic report)
+time: Sun May  2 22:30:00 2010
+temperature: 9.0 C
+dew point: 8.0 C
+wind: calm
+visibility: 7000 meters
+pressure: 1016.0 mb
+weather: light rain showers
+sky: scattered towering cumulus at 2500 feet
+     broken clouds at 5500 feet
+METAR: LEBB 022230Z 00000KT 7000 -SHRA SCT025TCU BKN055 09/08 Q1016 TEMPO SHRA
+
+Google
+{'current_conditions': ''}

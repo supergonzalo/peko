@@ -1,0 +1,14 @@
+Metar
+station: GCHI
+type: routine report, cycle 12 (automatic report)
+time: Mon May  3 12:00:00 2010
+temperature: 22.0 C
+dew point: 13.0 C
+wind: NNW to ENE at 10 knots
+visibility: greater than 10000 meters
+pressure: 1019.0 mb
+sky: scattered clouds at 4000 feet
+METAR: GCHI 031200Z 02010KT 330V070 9999 SCT040 22/13 Q1019
+
+Google
+{'current_conditions': ''}

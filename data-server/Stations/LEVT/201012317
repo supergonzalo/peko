@@ -1,0 +1,16 @@
+Metar
+station: LEVT
+type: routine report, cycle 16 (automatic report)
+time: Mon May  3 16:00:00 2010
+temperature: 7.0 C
+dew point: 5.0 C
+wind: NNW to NE at 13 knots
+visibility: 5000 meters
+pressure: 1016.0 mb
+weather: light rain
+sky: scattered clouds at 1300 feet
+     broken clouds at 2200 feet
+METAR: LEVT 031600Z 01013KT 340V050 5000 -RA SCT013 BKN022 07/05 Q1016
+
+Google
+{'current_conditions': ''}

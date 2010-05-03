@@ -1,0 +1,16 @@
+Metar
+station: LECV
+type: routine report, cycle 11 (automatic report)
+time: Mon May  3 11:00:00 2010
+temperature: 11.0 C
+dew point: 2.0 C
+wind: W to NE at 20 knots, gusting to 30 knots
+visibility: 8000 meters
+pressure: 1012.0 mb
+weather: nearby showers
+sky: scattered towering cumulus at 2500 feet
+     scattered clouds at 3500 feet
+METAR: LECV 031100Z 36020G30KT 280V040 8000 VCSH SCT025TCU SCT035 11/02 Q1012
+
+Google
+{'current_conditions': ''}

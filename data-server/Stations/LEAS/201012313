@@ -1,0 +1,15 @@
+Metar
+station: LEAS
+type: routine report, cycle 11 (automatic report)
+time: Mon May  3 11:30:00 2010
+temperature: 10.0 C
+dew point: 6.0 C
+wind: NW to E at 12 knots, gusting to 22 knots
+visibility: greater than 10000 meters
+pressure: 1022.0 mb
+sky: a few towering cumulus at 2000 feet
+     broken clouds at 3000 feet
+METAR: LEAS 031130Z 01012G22KT 320V080 9999 FEW020TCU BKN030 10/06 Q1022 TEMPO 4000 TSRA SCT020CB
+
+Google
+{'current_conditions': ''}

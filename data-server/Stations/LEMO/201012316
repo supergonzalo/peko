@@ -1,0 +1,14 @@
+Metar
+station: LEMO
+type: routine report, cycle 15 (automatic report)
+time: Mon May  3 15:00:00 2010
+temperature: 22.0 C
+dew point: 6.0 C
+wind: NW to E at 9 knots
+visibility: greater than 10000 meters
+pressure: 1010.0 mb
+sky: a few clouds at 5000 feet
+METAR: LEMO 031500Z 01009KT 320V080 9999 FEW050 22/06 Q1010 NOSIG
+
+Google
+{'current_conditions': ''}

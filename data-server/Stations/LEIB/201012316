@@ -1,0 +1,17 @@
+Metar
+station: LEIB
+type: routine report, cycle 14 (automatic report)
+time: Mon May  3 14:30:00 2010
+temperature: 14.0 C
+dew point: 12.0 C
+wind: NW to NNE at 14 knots, gusting to 30 knots
+visibility: 9000 meters
+pressure: 1002.0 mb
+weather: thunderstorm; light rain
+sky: a few clouds at 800 feet
+     scattered cumulonimbus at 1200 feet
+     broken clouds at 2500 feet
+METAR: LEIB 031430Z 36014G30KT 310V030 9000 TS -RA FEW008 SCT012CB BKN025 14/12 Q1002 NOSIG
+
+Google
+{'current_conditions': ''}

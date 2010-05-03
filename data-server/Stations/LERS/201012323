@@ -1,0 +1,16 @@
+Metar
+station: LERS
+type: routine report, cycle 21 (automatic report)
+time: Mon May  3 21:30:00 2010
+temperature: 9.0 C
+dew point: 7.0 C
+wind: SSW to WNW at 6 knots
+visibility: 9000 meters
+pressure: 1005.0 mb
+weather: rain
+sky: a few clouds at 1600 feet
+     broken clouds at 4500 feet
+METAR: LERS 032130Z 26006KT 210V300 9000 RA FEW016 BKN045 09/07 Q1005
+
+Google
+{'current_conditions': ''}

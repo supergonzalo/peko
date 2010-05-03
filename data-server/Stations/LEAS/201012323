@@ -1,0 +1,16 @@
+Metar
+station: LEAS
+type: routine report, cycle 21 (automatic report)
+time: Mon May  3 21:30:00 2010
+temperature: 9.0 C
+dew point: 5.0 C
+wind: W to NNE at 4 knots
+visibility: greater than 10000 meters
+pressure: 1024.0 mb
+weather: rain showers
+sky: a few towering cumulus at 2000 feet
+     scattered clouds at 3000 feet
+METAR: LEAS 032130Z 32004KT 260V020 9999 SHRA FEW020TCU SCT030 09/05 Q1024 TEMPO 4000 TSRA SCT020CB
+
+Google
+{'current_conditions': ''}

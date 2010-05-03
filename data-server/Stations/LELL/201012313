@@ -1,0 +1,17 @@
+Metar
+station: LELL
+type: routine report, cycle 11 (automatic report)
+time: Mon May  3 11:30:00 2010
+temperature: 10.0 C
+dew point: 9.0 C
+wind: WNW to E at 3 knots
+visibility: 8000 meters
+pressure: 1008.0 mb
+weather: light rain
+sky: a few clouds at 700 feet
+     scattered clouds at 2000 feet
+     broken clouds at 4600 feet
+METAR: LELL 031130Z 03003KT 300V080 8000 -RA FEW007 SCT020 BKN046 10/09 Q1008
+
+Google
+{'current_conditions': ''}

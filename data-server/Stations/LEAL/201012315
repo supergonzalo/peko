@@ -1,0 +1,17 @@
+Metar
+station: LEAL
+type: routine report, cycle 13 (automatic report)
+time: Mon May  3 13:30:00 2010
+temperature: 13.0 C
+dew point: 12.0 C
+wind: NNE to ESE at 6 knots
+visibility: greater than 10000 meters
+pressure: 1005.0 mb
+weather: light rain
+sky: a few clouds at 1500 feet
+     a few towering cumulus at 2000 feet
+     scattered clouds at 3000 feet
+METAR: LEAL 031330Z 07006KT 020V110 9999 -RA FEW015 FEW020TCU SCT030 13/12 Q1005 NOSIG
+
+Google
+{'current_conditions': ''}

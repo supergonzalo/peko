@@ -1,0 +1,4 @@
+Metar
+
+Google
+{'current_conditions': {'temp_f': u'39', 'temp_c': u'4', 'humidity': u'Humidity: 93%', 'wind_condition': u'Wind: N at 6 mph', 'condition': u'', 'icon': u''}, 'forecast_information': {'city': u'Hinojosa de Jarque, Aragon', 'forecast_date': u'2010-05-03', 'latitude_e6': u'', 'longitude_e6': u'', 'postal_code': u'Hinojosa,Spain', 'unit_system': u'US', 'current_date_time': u'2010-05-03 15:30:18 +0000'}, 'forecasts': [{'high': u'41', 'condition': u'Chance of Rain', 'low': u'32', 'day_of_week': u'Mon', 'icon': u'/ig/images/weather/chance_of_rain.gif'}, {'high': u'35', 'condition': u'Chance of Snow', 'low': u'33', 'day_of_week': u'Tue', 'icon': u'/ig/images/weather/chance_of_snow.gif'}, {'high': u'41', 'condition': u'Chance of Rain', 'low': u'33', 'day_of_week': u'Wed', 'icon': u'/ig/images/weather/chance_of_rain.gif'}, {'high': u'48', 'condition': u'Chance of Rain', 'low': u'37', 'day_of_week': u'Thu', 'icon': u'/ig/images/weather/chance_of_rain.gif'}]}

@@ -1,0 +1,18 @@
+Metar
+station: LEPA
+type: routine report, cycle 14 (automatic report)
+time: Mon May  3 13:45:00 2010
+temperature: 14.0 C
+dew point: 14.0 C
+wind: E at 13 knots
+visibility: 800 meters
+visual range: on runway 24R, greater than 2000 meters
+pressure: 1002.0 mb
+weather: thunderstorm with rain
+sky: a few clouds at 600 feet
+     scattered cumulonimbus at 1600 feet
+     broken clouds at 2500 feet
+METAR: LEPA 031345Z 08013KT 0800 R24R/P2000 TSRA FEW006 SCT016CB BKN025 14/14 Q1002 NOSIG
+
+Google
+{'current_conditions': ''}

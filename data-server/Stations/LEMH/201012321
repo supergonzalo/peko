@@ -1,0 +1,15 @@
+Metar
+station: LEMH
+type: routine report, cycle 20 (automatic report)
+time: Mon May  3 20:00:00 2010
+temperature: 17.0 C
+dew point: 16.0 C
+wind: SSE at 15 knots
+visibility: 7000 meters
+pressure: 998.0 mb
+sky: a few clouds at 400 feet
+     broken clouds at 700 feet
+METAR: LEMH 032000Z 15015KT 7000 FEW004 BKN007 17/16 Q0998
+
+Google
+{'current_conditions': ''}

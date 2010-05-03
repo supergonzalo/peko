@@ -24,7 +24,7 @@ import datetime
 #Datos horarios de centrales
 hourly_central='python get_report.py'
 #Datos diarios de centrales
-daily_central='python etoit.py'
+daily_central='python Etoit.py'
 
 def cday(date):			#Day of the year
 	return date.strftime('%j')
@@ -64,6 +64,7 @@ try:
 
 		# CRONEAR data-server.py -run @reboot
 		
+
 		#	- inicia el servidor de consultas (ver Esquema  de servidores y servicios: peko.tk)
 
 		#########Como ejecutar .py?????

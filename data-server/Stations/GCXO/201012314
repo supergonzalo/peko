@@ -1,0 +1,14 @@
+Metar
+station: GCXO
+type: routine report, cycle 12 (automatic report)
+time: Mon May  3 12:30:00 2010
+temperature: 18.0 C
+dew point: 9.0 C
+wind: W to ENE at 5 knots, gusting to 15 knots
+visibility: greater than 10000 meters
+pressure: 1020.0 mb
+sky: scattered clouds at 2500 feet
+METAR: GCXO 031230Z 33005G15KT 280V060 9999 SCT025 18/09 Q1020 NOSIG
+
+Google
+{'current_conditions': ''}

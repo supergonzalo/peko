@@ -1,0 +1,13 @@
+Metar
+station: LEJR
+type: routine report, cycle 13 (automatic report)
+time: Mon May  3 13:00:00 2010
+temperature: 23.0 C
+dew point: 3.0 C
+wind: WNW to N at 14 knots
+visibility: 10000 meters
+pressure: 1011.0 mb
+METAR: LEJR 031300Z 34014KT 300V010 CAVOK 23/03 Q1011
+
+Google
+{'current_conditions': ''}

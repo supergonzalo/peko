@@ -1,0 +1,15 @@
+Metar
+station: LELC
+type: routine report, cycle 11 (automatic report)
+time: Mon May  3 11:30:00 2010
+temperature: 22.0 C
+dew point: 15.0 C
+wind: E to S at 7 knots
+visibility: 9000 meters
+pressure: 1003.0 mb
+sky: a few clouds at 2000 feet
+     broken clouds at 3000 feet
+METAR: LELC 031130Z 14007KT 080V180 9000 FEW020 BKN030 22/15 Q1003 NOSIG
+
+Google
+{'current_conditions': ''}

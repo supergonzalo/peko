@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 import datetime
-import os, glob,re,pickle
+import time, os, glob,re,pickle
 
 here=os.getcwd()
 os.chdir('../..')
@@ -20,6 +20,22 @@ def current_datetime(request):
 	html = "<html><body>Today is day %s.</body></html>" % now.strftime('%j')
 	return HttpResponse(html)
 
+###########################################################################################Ultimo cambio, testear
+#Sorts .dex files
+def put_some_order(folder):
+	date_file_list=False
+	for file in glob.glob(folder + '/*.dex'):
+		stats = os.stat(file)
+		lastmod_date = time.localtime(stats[8])
+		date_file_tuple = lastmod_date, file
+		date_file_list.append(date_file_tuple)
+		date_file_list.sort()
+		date_file_list.reverse() 	# newest mod date now first
+
+	if date_file_list:
+		return date_file_list[0][1]
+	return '-1'
+
 # Lists .dex files available in a STATION directory 
 def station_data_available(request, offset):
 
@@ -29,10 +45,14 @@ def station_data_available(request, offset):
 	
 	if os.path.exists(station_dir):			
 		os.chdir(station_dir)
-		for file in glob.glob('./*.dex'):
-			data=data+"<p><a href=%s>%s</a></p>"%(file, file)
-		if data == '':
+		dex_files=put_some_order('.')
+		if dex_files == '-1':
 			data='No .dex info for station'
+		else:
+			for file in dex_files:
+			
+				data=data+"<p><a href=%s>%s</a></p>"%(file,file)
+		
 	else:
 		data= "No data for station"	
 	os.chdir(home)
@@ -54,7 +74,7 @@ def list_stations(request):
 		for i in range(len(temp)):
 			if re.findall(element,temp[i]): 
 				foo = temp[i].split(';')
-		ref=" %s, %s"%(foo[3],foo[5])
+		ref=" %s, %s:%s ,%s "%(foo[7],foo[8],foo[3],foo[5])
 
 
 		html=html+"<p><a href=%s>%s</a>%s</p>"%(element, element,ref)

@@ -1,0 +1,15 @@
+Metar
+station: LERI
+type: routine report, cycle 13 (automatic report)
+time: Mon May  3 13:00:00 2010
+temperature: 19.0 C
+dew point: 11.0 C
+wind: N at 5 knots
+visibility: greater than 10000 meters
+pressure: 1004.0 mb
+sky: a few cumulonimbus at 3500 feet
+     scattered clouds at 5000 feet
+METAR: LERI 031300Z 36005KT 9999 FEW035CB SCT050 19/11 Q1004 NOSIG
+
+Google
+{'current_conditions': ''}

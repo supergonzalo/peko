@@ -1,0 +1,13 @@
+Metar
+station: LEZL
+type: routine report, cycle 16 (automatic report)
+time: Mon May  3 16:00:00 2010
+temperature: 23.0 C
+dew point: 2.0 C
+wind: WNW to NNE at 12 knots
+visibility: 10000 meters
+pressure: 1011.0 mb
+METAR: LEZL 031600Z 34012KT 290V020 CAVOK 23/02 Q1011 NOSIG
+
+Google
+{'current_conditions': ''}

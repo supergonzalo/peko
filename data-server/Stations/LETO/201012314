@@ -1,0 +1,15 @@
+Metar
+station: LETO
+type: routine report, cycle 12 (automatic report)
+time: Mon May  3 12:00:00 2010
+temperature: 13.0 C
+dew point: 2.0 C
+wind: NW to NNE at 24 knots
+visibility: greater than 10000 meters
+pressure: 1011.0 mb
+sky: a few clouds at 3000 feet
+     broken clouds at 5500 feet
+METAR: LETO 031200Z 35024KT 310V020 9999 FEW030 BKN055 13/02 Q1011 NOSIG
+
+Google
+{'current_conditions': ''}

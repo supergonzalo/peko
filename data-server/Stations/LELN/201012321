@@ -1,0 +1,14 @@
+Metar
+station: LELN
+type: routine report, cycle 20 (automatic report)
+time: Mon May  3 20:00:00 2010
+temperature: 3.0 C
+dew point: -1.0 C
+wind: W to N at 10 knots
+visibility: greater than 10000 meters
+pressure: 1018.0 mb
+sky: scattered clouds at 2700 feet
+METAR: LELN 032000Z 33010KT 280V360 9999 SCT027 03/M01 Q1018
+
+Google
+{'current_conditions': ''}

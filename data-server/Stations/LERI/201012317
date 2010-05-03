@@ -1,0 +1,14 @@
+Metar
+station: LERI
+type: routine report, cycle 16 (automatic report)
+time: Mon May  3 16:00:00 2010
+temperature: 20.0 C
+dew point: 0.0 C
+wind: N at 18 knots, gusting to 30 knots
+visibility: greater than 10000 meters
+pressure: 1006.0 mb
+sky: a few clouds at 5000 feet
+METAR: LERI 031600Z 35018G30KT 9999 FEW050 20/00 Q1006 NOSIG
+
+Google
+{'current_conditions': ''}

@@ -1,0 +1,15 @@
+Metar
+station: LEGT
+type: routine report, cycle 15 (automatic report)
+time: Mon May  3 15:00:00 2010
+temperature: 15.0 C
+dew point: 0.0 C
+wind: NNW to NE at 20 knots, gusting to 30 knots
+visibility: greater than 10000 meters
+pressure: 1012.0 mb
+sky: a few cumulonimbus at 3000 feet
+     scattered clouds at 4000 feet
+METAR: LEGT 031500Z 01020G30KT 330V050 9999 FEW030CB SCT040 15/00 Q1012
+
+Google
+{'current_conditions': ''}

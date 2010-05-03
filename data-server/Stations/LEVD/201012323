@@ -1,0 +1,14 @@
+Metar
+station: LEVD
+type: routine report, cycle 21 (automatic report)
+time: Mon May  3 21:30:00 2010
+temperature: 3.0 C
+dew point: -1.0 C
+wind: NNE at 8 knots
+visibility: greater than 10000 meters
+pressure: 1017.0 mb
+sky: scattered clouds at 4000 feet
+METAR: LEVD 032130Z 02008KT 9999 SCT040 03/M01 Q1017
+
+Google
+{'current_conditions': ''}

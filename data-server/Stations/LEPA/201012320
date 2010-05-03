@@ -1,0 +1,15 @@
+Metar
+station: LEPA
+type: routine report, cycle 18 (automatic report)
+time: Mon May  3 18:30:00 2010
+temperature: 14.0 C
+dew point: 13.0 C
+wind: N to NE at 12 knots
+visibility: 8000 meters
+pressure: 999.0 mb
+sky: a few clouds at 300 feet
+     scattered clouds at 1800 feet
+METAR: LEPA 031830Z 02012KT 350V050 8000 FEW003 SCT018 14/13 Q0999 NOSIG
+
+Google
+{'current_conditions': ''}

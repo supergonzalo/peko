@@ -1,0 +1,14 @@
+Metar
+station: LECO
+type: routine report, cycle 19 (automatic report)
+time: Mon May  3 19:30:00 2010
+temperature: 11.0 C
+dew point: 6.0 C
+wind: NNE at 13 knots
+visibility: greater than 10000 meters
+pressure: 1024.0 mb
+sky: scattered clouds at 3000 feet
+METAR: LECO 031930Z 03013KT 9999 SCT030 11/06 Q1024
+
+Google
+{'current_conditions': ''}
