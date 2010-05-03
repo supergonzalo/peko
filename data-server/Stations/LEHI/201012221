@@ -1,0 +1,4 @@
+Metar
+
+Google
+{'current_conditions': {'temp_f': u'76', 'temp_c': u'24', 'humidity': u'Humidity: 26%', 'wind_condition': u'Wind: W at 9 mph', 'condition': u'Overcast', 'icon': u'/ig/images/weather/cloudy.gif'}, 'forecast_information': {'city': u'Hinojosa del Duque, AL', 'forecast_date': u'2010-05-02', 'latitude_e6': u'', 'longitude_e6': u'', 'postal_code': u'Hinojosa,Spain', 'unit_system': u'US', 'current_date_time': u'2010-05-02 18:00:00 +0000'}, 'forecasts': [{'high': u'73', 'condition': u'Clear', 'low': u'48', 'day_of_week': u'Sun', 'icon': u'/ig/images/weather/sunny.gif'}, {'high': u'66', 'condition': u'Mostly Sunny', 'low': u'41', 'day_of_week': u'Mon', 'icon': u'/ig/images/weather/mostly_sunny.gif'}, {'high': u'57', 'condition': u'Clear', 'low': u'33', 'day_of_week': u'Tue', 'icon': u'/ig/images/weather/sunny.gif'}, {'high': u'62', 'condition': u'Clear', 'low': u'39', 'day_of_week': u'Wed', 'icon': u'/ig/images/weather/sunny.gif'}]}

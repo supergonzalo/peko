@@ -1,0 +1,14 @@
+Metar
+station: GCLP
+type: routine report, cycle 21 (automatic report)
+time: Sun May  2 21:30:00 2010
+temperature: 21.0 C
+dew point: 13.0 C
+wind: N at 19 knots
+visibility: greater than 10000 meters
+pressure: 1017.0 mb
+sky: broken clouds at 3000 feet
+METAR: GCLP 022130Z 36019KT 9999 BKN030 21/13 Q1017 NOSIG
+
+Google
+{'current_conditions': ''}

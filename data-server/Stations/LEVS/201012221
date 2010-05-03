@@ -1,0 +1,14 @@
+Metar
+station: LEVS
+type: routine report, cycle 19 (automatic report)
+time: Sun May  2 19:30:00 2010
+temperature: 18.0 C
+dew point: 4.0 C
+wind: W to NNW at 4 knots
+visibility: greater than 10000 meters
+pressure: 1010.0 mb
+sky: a few clouds at 5000 feet
+METAR: LEVS 021930Z 31004KT 280V340 9999 FEW050 18/04 Q1010
+
+Google
+{'current_conditions': ''}

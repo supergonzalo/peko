@@ -1,0 +1,14 @@
+Metar
+station: GCTS
+type: routine report, cycle 11 (automatic report)
+time: Sun May  2 11:30:00 2010
+temperature: 23.0 C
+dew point: 13.0 C
+wind: E at 18 knots
+visibility: greater than 10000 meters
+pressure: 1017.0 mb
+sky: a few clouds at 3000 feet
+METAR: GCTS 021130Z 09018KT 9999 FEW030 23/13 Q1017 NOSIG
+
+Google
+{'current_conditions': ''}

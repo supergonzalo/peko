@@ -1,0 +1,13 @@
+Metar
+station: LERT
+type: routine report, cycle 19 (automatic report)
+time: Sun May  2 19:00:00 2010
+temperature: 19.0 C
+dew point: 13.0 C
+wind: WSW to NW at 8 knots
+visibility: 10000 meters
+pressure: 1011.0 mb
+METAR: LERT 021900Z 28008KT 250V310 CAVOK 19/13 Q1011 NOSIG
+
+Google
+{'current_conditions': ''}

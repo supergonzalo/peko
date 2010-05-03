@@ -1,0 +1,15 @@
+Metar
+station: LELL
+type: routine report, cycle 14 (automatic report)
+time: Sun May  2 14:30:00 2010
+temperature: 18.0 C
+dew point: 11.0 C
+wind: E to SE at 9 knots
+visibility: greater than 10000 meters
+pressure: 1011.0 mb
+sky: a few clouds at 1800 feet
+     scattered clouds at 3200 feet
+METAR: LELL 021430Z 11009KT 080V140 9999 FEW018 SCT032 18/11 Q1011
+
+Google
+{'current_conditions': ''}

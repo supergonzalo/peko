@@ -1,0 +1,14 @@
+Metar
+station: LERI
+type: routine report, cycle 14 (automatic report)
+time: Sun May  2 14:00:00 2010
+temperature: 25.0 C
+dew point: 12.0 C
+wind: ENE to SW at 7 knots
+visibility: greater than 10000 meters
+pressure: 1011.0 mb
+sky: scattered clouds at 4000 feet
+METAR: LERI 021400Z 15007KT 060V220 9999 SCT040 25/12 Q1011 NOSIG
+
+Google
+{'current_conditions': ''}

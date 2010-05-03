@@ -1,0 +1,14 @@
+Metar
+station: LEBA
+type: routine report, cycle 18 (automatic report)
+time: Sun May  2 18:00:00 2010
+temperature: 25.0 C
+dew point: 10.0 C
+wind: SW to W at 7 knots
+visibility: greater than 10000 meters
+pressure: 1009.0 mb
+sky: a few clouds at 5000 feet
+METAR: LEBA 021800Z 25007KT 220V280 9999 FEW050 25/10 Q1009
+
+Google
+{'current_conditions': ''}

@@ -1,0 +1,15 @@
+Metar
+station: LEST
+type: routine report, cycle 11 (automatic report)
+time: Sun May  2 11:30:00 2010
+temperature: 14.0 C
+dew point: 7.0 C
+wind: NW to NNE at 10 knots
+visibility: greater than 10000 meters
+pressure: 1019.0 mb
+sky: scattered clouds at 2000 feet
+     scattered clouds at 4500 feet
+METAR: LEST 021130Z 34010KT 310V020 9999 SCT020 SCT045 14/07 Q1019 NOSIG
+
+Google
+{'current_conditions': ''}

@@ -1,0 +1,13 @@
+Metar
+station: LEGA
+type: routine report, cycle 10 (automatic report)
+time: Sun May  2 10:00:00 2010
+temperature: 20.0 C
+dew point: 11.0 C
+wind: NNW at 3 knots
+visibility: 10000 meters
+pressure: 1015.0 mb
+METAR: LEGA 021000Z 34003KT CAVOK 20/11 Q1015
+
+Google
+{'current_conditions': ''}

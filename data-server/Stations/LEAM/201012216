@@ -1,0 +1,14 @@
+Metar
+station: LEAM
+type: routine report, cycle 14 (automatic report)
+time: Sun May  2 14:30:00 2010
+temperature: 19.0 C
+dew point: 16.0 C
+wind: SSE to SSW at 7 knots
+visibility: greater than 10000 meters
+pressure: 1012.0 mb
+sky: broken clouds at 1000 feet
+METAR: LEAM 021430Z 18007KT 150V210 9999 BKN010 19/16 Q1012
+
+Google
+{'current_conditions': ''}

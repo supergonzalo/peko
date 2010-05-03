@@ -1,0 +1,13 @@
+Metar
+station: LEBZ
+type: routine report, cycle 10 (automatic report)
+time: Sun May  2 10:00:00 2010
+temperature: 18.0 C
+dew point: 12.0 C
+wind: S to NNW at 3 knots
+visibility: 10000 meters
+pressure: 1015.0 mb
+METAR: LEBZ 021000Z 28003KT 190V340 CAVOK 18/12 Q1015
+
+Google
+{'current_conditions': ''}

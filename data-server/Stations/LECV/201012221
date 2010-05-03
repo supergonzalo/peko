@@ -1,0 +1,14 @@
+Metar
+station: LECV
+type: routine report, cycle 18 (automatic report)
+time: Sun May  2 18:00:00 2010
+temperature: 18.0 C
+dew point: 5.0 C
+wind: SW to NNW at 9 knots
+visibility: greater than 10000 meters
+pressure: 1011.0 mb
+sky: a few clouds at 6000 feet
+METAR: LECV 021800Z 29009KT 230V330 9999 FEW060 18/05 Q1011
+
+Google
+{'current_conditions': ''}

@@ -1,0 +1,14 @@
+Metar
+station: LEIB
+type: routine report, cycle 10 (automatic report)
+time: Sun May  2 10:00:00 2010
+temperature: 21.0 C
+dew point: 16.0 C
+wind: ENE to ESE at 11 knots
+visibility: 9000 meters
+pressure: 1014.0 mb
+sky: a few clouds at 1000 feet
+METAR: LEIB 021000Z 09011KT 060V120 9000 FEW010 21/16 Q1014 NOSIG
+
+Google
+{'current_conditions': ''}

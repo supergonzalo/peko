@@ -1,0 +1,14 @@
+Metar
+station: LELC
+type: routine report, cycle 14 (automatic report)
+time: Sun May  2 14:00:00 2010
+temperature: 21.0 C
+dew point: 17.0 C
+wind: NE to SSE at 7 knots
+visibility: greater than 10000 meters
+pressure: 1012.0 mb
+sky: a few clouds at 2000 feet
+METAR: LELC 021400Z 09007KT 050V150 9999 FEW020 21/17 Q1012 NOSIG
+
+Google
+{'current_conditions': ''}

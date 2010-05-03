@@ -1,0 +1,14 @@
+Metar
+station: LEAL
+type: routine report, cycle 10 (automatic report)
+time: Sun May  2 10:30:00 2010
+temperature: 22.0 C
+dew point: 15.0 C
+wind: ENE to SE at 9 knots
+visibility: greater than 10000 meters
+pressure: 1014.0 mb
+sky: a few clouds at 1500 feet
+METAR: LEAL 021030Z 10009KT 060V140 9999 FEW015 22/15 Q1014 NOSIG
+
+Google
+{'current_conditions': ''}

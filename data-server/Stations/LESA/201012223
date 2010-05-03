@@ -1,0 +1,13 @@
+Metar
+station: LESA
+type: routine report, cycle 21 (automatic report)
+time: Sun May  2 21:00:00 2010
+temperature: 12.0 C
+dew point: 1.0 C
+wind: W to NW at 8 knots
+visibility: 10000 meters
+pressure: 1013.0 mb
+METAR: LESA 022100Z 29008KT 260V320 CAVOK 12/01 Q1013
+
+Google
+{'current_conditions': ''}
