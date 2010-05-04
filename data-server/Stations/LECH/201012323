@@ -1,4 +1,0 @@
-Metar
-
-Google
-{'current_conditions': {'temp_f': u'34', 'temp_c': u'1', 'humidity': u'Humidity: 75%', 'wind_condition': u'Wind: SE at 12 mph', 'condition': u'', 'icon': u''}, 'forecast_information': {'city': u'Calamocha, Aragon', 'forecast_date': u'2010-05-03', 'latitude_e6': u'', 'longitude_e6': u'', 'postal_code': u'Calamocha,Spain', 'unit_system': u'US', 'current_date_time': u'2010-05-03 21:28:58 +0000'}, 'forecasts': [{'high': u'42', 'condition': u'Chance of Rain', 'low': u'32', 'day_of_week': u'Mon', 'icon': u'/ig/images/weather/chance_of_rain.gif'}, {'high': u'34', 'condition': u'Chance of Snow', 'low': u'32', 'day_of_week': u'Tue', 'icon': u'/ig/images/weather/chance_of_snow.gif'}, {'high': u'37', 'condition': u'Chance of Rain', 'low': u'33', 'day_of_week': u'Wed', 'icon': u'/ig/images/weather/chance_of_rain.gif'}, {'high': u'50', 'condition': u'Chance of Snow', 'low': u'33', 'day_of_week': u'Thu', 'icon': u'/ig/images/weather/chance_of_snow.gif'}]}

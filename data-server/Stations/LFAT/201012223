@@ -1,4 +1,0 @@
-Metar
-
-Google
-{'current_conditions': {'temp_f': u'46', 'temp_c': u'8', 'humidity': u'Humidity: 87%', 'wind_condition': u'Wind: SW at 9 mph', 'condition': u'Cloudy', 'icon': u'/ig/images/weather/cloudy.gif'}, 'forecast_information': {'city': u'Le Touquet, Nord-Pas-de-Calais', 'forecast_date': u'2010-05-02', 'latitude_e6': u'', 'longitude_e6': u'', 'postal_code': u'Le Touquet,France', 'unit_system': u'US', 'current_date_time': u'2010-05-02 21:53:37 +0000'}, 'forecasts': [{'high': u'47', 'condition': u'Rain', 'low': u'43', 'day_of_week': u'Sun', 'icon': u'/ig/images/weather/rain.gif'}, {'high': u'48', 'condition': u'Showers', 'low': u'42', 'day_of_week': u'Mon', 'icon': u'/ig/images/weather/rain.gif'}, {'high': u'53', 'condition': u'Partly Cloudy', 'low': u'42', 'day_of_week': u'Tue', 'icon': u'/ig/images/weather/partly_cloudy.gif'}, {'high': u'54', 'condition': u'Partly Cloudy', 'low': u'42', 'day_of_week': u'Wed', 'icon': u'/ig/images/weather/partly_cloudy.gif'}]}
