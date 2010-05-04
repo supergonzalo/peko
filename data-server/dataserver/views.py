@@ -17,41 +17,41 @@ info_file=config["WORKDIR"]+"/data-server/Doc/METAR_Station_Places.txt"
 # Prints current day of the year
 def current_datetime(request):
 	now = datetime.datetime.now()
-	html = "<html><body>Today is day %s. info file:%s</body></html>" % (now.strftime('%j'),info_file)
+	html = "<html><body>Today is day %s.</body></html>" % (now.strftime('%j'))
 	return HttpResponse(html)
 
 ###########################################################################################Ultimo cambio, testear
 #Sorts .dex files
 def put_some_order(folder):
-	date_file_list=False
-	for file in glob.glob(folder + '/*.dex'):
+	date_file_list=[]
+	for file in glob.glob(folder + '*.dex'):
 		stats = os.stat(file)
 		lastmod_date = time.localtime(stats[8])
-		date_file_tuple = lastmod_date, file
+		date_file_tuple = file, lastmod_date
 		date_file_list.append(date_file_tuple)
-		date_file_list.sort()
-		date_file_list.reverse() 	# newest mod date now first
+	date_file_list.sort()
+	date_file_list.reverse() 	# newest mod date now first
 
 	if date_file_list:
-		return date_file_list[0][1]
+		return date_file_list
 	return '-1'
 
 # Lists .dex files available in a STATION directory 
 def station_data_available(request, offset):
 
 	home=os.getcwd()
-	station_dir="%s/%s"%(workdir,offset)
+	station_dir="%s/%s/"%(workdir,offset)
 	data=''
-	dex_files = '-1'
+	
 	if os.path.exists(station_dir):			
 		os.chdir(station_dir)
-		#dex_files=put_some_order('.')
+		dex_files=put_some_order('./')
 		if dex_files == '-1':
+			
 			data='No .dex info for station'
 		else:
-			for file in dex_files:
-			
-				data=data+"<p><a href=%s>%s</a></p>"%(file,file)
+			for element in range(len(dex_files)):
+				data=data+"<p><a href=%s>%s</a></p>"%(dex_files[element][0],dex_files[element][0])
 		
 	else:
 		data= "No data for station"	
