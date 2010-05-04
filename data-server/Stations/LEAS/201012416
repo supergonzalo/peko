@@ -1,0 +1,16 @@
+Metar
+station: LEAS
+type: routine report, cycle 14 (automatic report)
+time: Tue May  4 14:30:00 2010
+temperature: 9.0 C
+dew point: 5.0 C
+wind: NNW to ENE at 7 knots, gusting to 18 knots
+visibility: 6000 meters
+pressure: 1024.0 mb
+weather: rain showers
+sky: a few clouds at 1800 feet
+     broken towering cumulus at 3300 feet
+METAR: LEAS 041430Z 02007G18KT 330V070 6000 SHRA FEW018 BKN033TCU 09/05 Q1024 BECMG NSW
+
+Google
+{'current_conditions': ''}

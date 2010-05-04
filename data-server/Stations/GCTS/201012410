@@ -1,0 +1,14 @@
+Metar
+station: GCTS
+type: routine report, cycle 8 (automatic report)
+time: Tue May  4 08:30:00 2010
+temperature: 20.0 C
+dew point: 13.0 C
+wind: NE to ESE at 11 knots
+visibility: greater than 10000 meters
+pressure: 1018.0 mb
+sky: a few clouds at 3500 feet
+METAR: GCTS 040830Z 07011KT 050V110 9999 FEW035 20/13 Q1018 NOSIG
+
+Google
+{'current_conditions': ''}

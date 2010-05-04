@@ -1,0 +1,14 @@
+Metar
+station: GCFV
+type: routine report, cycle 14 (automatic report)
+time: Tue May  4 14:30:00 2010
+temperature: 22.0 C
+dew point: 14.0 C
+wind: ENE at 15 knots
+visibility: greater than 10000 meters
+pressure: 1015.0 mb
+sky: a few clouds at 3000 feet
+METAR: GCFV 041430Z 06015KT 9999 FEW030 22/14 Q1015
+
+Google
+{'current_conditions': ''}

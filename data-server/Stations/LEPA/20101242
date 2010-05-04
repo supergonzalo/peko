@@ -1,0 +1,16 @@
+Metar
+station: LEPA
+type: routine report, cycle 1 (automatic report)
+time: Tue May  4 00:46:00 2010
+temperature: 10.0 C
+dew point: 8.0 C
+wind: NW at 19 knots
+visibility: 8000 meters
+pressure: 1002.0 mb
+weather: light rain
+sky: a few clouds at 2000 feet
+     broken clouds at 5000 feet
+METAR: LEPA 040046Z 31019KT 8000 -RA FEW020 BKN050 10/08 Q1002 NOSIG
+
+Google
+{'current_conditions': ''}

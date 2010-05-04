@@ -1,0 +1,15 @@
+Metar
+station: LEBA
+type: routine report, cycle 12 (automatic report)
+time: Tue May  4 12:00:00 2010
+temperature: 18.0 C
+dew point: -2.0 C
+wind: WNW to ENE at 9 knots, gusting to 19 knots
+visibility: greater than 10000 meters
+pressure: 1013.0 mb
+sky: a few clouds at 3000 feet
+     scattered clouds at 7000 feet
+METAR: LEBA 041200Z 01009G19KT 300V060 9999 FEW030 SCT070 18/M02 Q1013
+
+Google
+{'current_conditions': ''}

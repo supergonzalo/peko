@@ -1,0 +1,14 @@
+Metar
+station: LECV
+type: routine report, cycle 15 (automatic report)
+time: Tue May  4 14:58:00 2010
+temperature: 7.0 C
+dew point: -5.0 C
+wind: N to NE at 33 knots, gusting to 47 knots
+visibility: greater than 10000 meters
+pressure: 1010.0 mb
+sky: scattered clouds at 3000 feet
+METAR: LECV 041458Z 01033G47KT 350V050 9999 SCT030 07/M05 Q1010
+
+Google
+{'current_conditions': ''}

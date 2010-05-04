@@ -1,0 +1,13 @@
+Metar
+station: LEBA
+type: routine report, cycle 8 (automatic report)
+time: Tue May  4 08:00:00 2010
+temperature: 13.0 C
+dew point: -2.0 C
+wind: NNW to NNE at 12 knots
+visibility: 10000 meters
+pressure: 1013.0 mb
+METAR: LEBA 040800Z 36012KT 330V030 CAVOK 13/M02 Q1013
+
+Google
+{'current_conditions': ''}

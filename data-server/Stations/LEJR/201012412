@@ -1,0 +1,14 @@
+Metar
+station: LEJR
+type: routine report, cycle 11 (automatic report)
+time: Tue May  4 11:00:00 2010
+temperature: 18.0 C
+dew point: -1.0 C
+wind: NW to NE at 13 knots, gusting to 24 knots
+visibility: greater than 10000 meters
+pressure: 1013.0 mb
+sky: a few clouds at 5000 feet
+METAR: LEJR 041100Z 01013G24KT 310V040 9999 FEW050 18/M01 Q1013
+
+Google
+{'current_conditions': ''}

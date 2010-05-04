@@ -1,0 +1,16 @@
+Metar
+station: LEMH
+type: routine report, cycle 10 (automatic report)
+time: Tue May  4 10:00:00 2010
+temperature: 12.0 C
+dew point: 10.0 C
+wind: SSW to WNW at 10 knots
+visibility: greater than 10000 meters
+pressure: 1002.0 mb
+sky: a few clouds at 1300 feet
+     a few towering cumulus at 2200 feet
+     scattered clouds at 4000 feet
+METAR: LEMH 041000Z 25010KT 210V290 9999 FEW013 FEW022TCU SCT040 12/10 Q1002
+
+Google
+{'current_conditions': ''}

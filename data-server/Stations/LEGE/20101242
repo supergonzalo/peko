@@ -1,0 +1,17 @@
+Metar
+station: LEGE
+type: routine report (automatic report)
+time: Tue May  4 00:30:00 2010
+temperature: 9.0 C
+dew point: 6.0 C
+wind: NNW to NE at 17 knots, gusting to 29 knots
+visibility: 4000 meters
+pressure: 1000.0 mb
+weather: rain
+sky: a few clouds at 600 feet
+     scattered clouds at 2500 feet
+     overcast at 4400 feet
+METAR: LEGE 040030Z 01017G29KT 340V050 4000 RA FEW006 SCT025 OVC044 09/06 Q1000
+
+Google
+{'current_conditions': ''}

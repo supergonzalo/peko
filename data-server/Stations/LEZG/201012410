@@ -1,0 +1,15 @@
+Metar
+station: LEZG
+type: routine report, cycle 9 (automatic report)
+time: Tue May  4 09:00:00 2010
+temperature: 10.0 C
+dew point: 1.0 C
+wind: NW at 32 knots, gusting to 47 knots
+visibility: greater than 10000 meters
+pressure: 1007.0 mb
+sky: scattered clouds at 3000 feet
+     scattered clouds at 8500 feet
+METAR: LEZG 040900Z 31032G47KT 9999 SCT030 SCT085 10/01 Q1007
+
+Google
+{'current_conditions': ''}

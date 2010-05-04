@@ -1,0 +1,17 @@
+Metar
+station: LEPP
+type: routine report, cycle 14 (automatic report)
+time: Tue May  4 14:30:00 2010
+temperature: 5.0 C
+dew point: 2.0 C
+wind: N at 18 knots
+visibility: 5000 meters
+pressure: 1012.0 mb
+weather: drizzle and rain
+sky: a few clouds at 1500 feet
+     scattered clouds at 2000 feet
+     broken clouds at 2500 feet
+METAR: LEPP 041430Z 35018KT 5000 DZRA FEW015 SCT020 BKN025 05/02 Q1012
+
+Google
+{'current_conditions': ''}

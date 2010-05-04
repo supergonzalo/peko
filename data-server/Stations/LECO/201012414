@@ -1,0 +1,15 @@
+Metar
+station: LECO
+type: routine report, cycle 12 (automatic report)
+time: Tue May  4 12:30:00 2010
+temperature: 14.0 C
+dew point: 3.0 C
+wind: NNE to E at 16 knots, gusting to 26 knots
+visibility: greater than 10000 meters
+pressure: 1024.0 mb
+sky: a few clouds at 2500 feet
+     scattered clouds at 3500 feet
+METAR: LECO 041230Z 05016G26KT 020V090 9999 FEW025 SCT035 14/03 Q1024
+
+Google
+{'current_conditions': ''}

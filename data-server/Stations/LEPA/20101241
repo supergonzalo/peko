@@ -1,0 +1,16 @@
+Metar
+station: LEPA
+type: routine report, cycle 23 (automatic report)
+time: Mon May  3 23:30:00 2010
+temperature: 11.0 C
+dew point: 9.0 C
+wind: WNW to N at 15 knots, gusting to 25 knots
+visibility: 9000 meters
+pressure: 1002.0 mb
+weather: light rain
+sky: a few clouds at 2000 feet
+     broken clouds at 4400 feet
+METAR: LEPA 032330Z 33015G25KT 290V360 9000 -RA FEW020 BKN044 11/09 Q1002 NOSIG
+
+Google
+{'current_conditions': ''}

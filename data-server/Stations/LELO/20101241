@@ -1,0 +1,14 @@
+Metar
+station: LELO
+type: routine report, cycle 23 (automatic report)
+time: Mon May  3 23:00:00 2010
+temperature: 7.0 C
+dew point: 3.0 C
+wind: WSW to N at 6 knots
+visibility: greater than 10000 meters
+pressure: 1016.0 mb
+sky: broken clouds at 3700 feet
+METAR: LELO 032300Z 28006KT 240V000 9999 BKN037 07/03 Q1016
+
+Google
+{'current_conditions': ''}

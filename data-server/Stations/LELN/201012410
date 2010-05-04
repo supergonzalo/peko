@@ -1,0 +1,14 @@
+Metar
+station: LELN
+type: routine report, cycle 8 (automatic report)
+time: Tue May  4 08:00:00 2010
+temperature: 4.0 C
+dew point: -1.0 C
+wind: NW to NE at 10 knots
+visibility: greater than 10000 meters
+pressure: 1017.0 mb
+sky: a few clouds at 2500 feet
+METAR: LELN 040800Z 36010KT 320V040 9999 FEW025 04/M01 Q1017
+
+Google
+{'current_conditions': ''}

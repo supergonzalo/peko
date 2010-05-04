@@ -1,0 +1,15 @@
+Metar
+station: GCHI
+type: routine report, cycle 8 (automatic report)
+time: Tue May  4 08:00:00 2010
+temperature: 19.0 C
+dew point: 14.0 C
+wind: NNW to ENE at 13 knots
+visibility: greater than 10000 meters
+pressure: 1018.0 mb
+sky: a few clouds at 2600 feet
+     broken clouds at 3500 feet
+METAR: GCHI 040800Z 02013KT 330V060 9999 FEW026 BKN035 19/14 Q1018
+
+Google
+{'current_conditions': ''}

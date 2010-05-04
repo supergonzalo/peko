@@ -1,0 +1,14 @@
+Metar
+station: LEMG
+type: routine report, cycle 22 (automatic report)
+time: Mon May  3 22:30:00 2010
+temperature: 18.0 C
+dew point: 2.0 C
+wind: W to NW at 9 knots
+visibility: greater than 10000 meters
+pressure: 1011.0 mb
+sky: a few clouds at 5000 feet
+METAR: LEMG 032230Z 29009KT 260V320 9999 FEW050 18/02 Q1011 NOSIG
+
+Google
+{'current_conditions': ''}

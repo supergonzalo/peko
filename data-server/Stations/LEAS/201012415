@@ -1,0 +1,16 @@
+Metar
+station: LEAS
+type: routine report, cycle 13 (automatic report)
+time: Tue May  4 13:30:00 2010
+temperature: 11.0 C
+dew point: 3.0 C
+wind: NW to ENE at 7 knots
+visibility: greater than 10000 meters
+pressure: 1024.0 mb
+weather: nearby showers
+sky: a few towering cumulus at 3600 feet
+     scattered clouds at 4900 feet
+METAR: LEAS 041330Z 02007KT 320V070 9999 VCSH FEW036TCU SCT049 11/03 Q1024 NOSIG
+
+Google
+{'current_conditions': ''}

@@ -1,0 +1,14 @@
+Metar
+station: LEGR
+type: routine report, cycle 13 (automatic report)
+time: Tue May  4 13:30:00 2010
+temperature: 15.0 C
+dew point: -3.0 C
+wind: WNW to NNE at 13 knots, gusting to 25 knots
+visibility: greater than 10000 meters
+pressure: 1011.0 mb
+sky: scattered clouds at 6000 feet
+METAR: LEGR 041330Z 35013G25KT 300V030 9999 SCT060 15/M03 Q1011
+
+Google
+{'current_conditions': ''}

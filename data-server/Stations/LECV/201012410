@@ -1,0 +1,16 @@
+Metar
+station: LECV
+type: routine report, cycle 8 (automatic report)
+time: Tue May  4 08:00:00 2010
+temperature: 6.0 C
+dew point: -2.0 C
+wind: N at 14 knots
+visibility: 8000 meters
+pressure: 1010.0 mb
+weather: nearby showers
+sky: a few towering cumulus at 3000 feet
+     scattered clouds at 4000 feet
+METAR: LECV 040800Z 36014KT 8000 VCSH FEW030TCU SCT040 06/M02 Q1010
+
+Google
+{'current_conditions': ''}

@@ -1,0 +1,16 @@
+Metar
+station: LEBL
+type: routine report, cycle 12 (automatic report)
+time: Tue May  4 12:30:00 2010
+temperature: 11.0 C
+dew point: 7.0 C
+wind: S at 6 knots
+visibility: greater than 10000 meters
+pressure: 1002.0 mb
+weather: drizzle
+sky: a few clouds at 1000 feet
+     scattered clouds at 4000 feet
+METAR: LEBL 041230Z 19006KT 9999 DZ FEW010 SCT040 11/07 Q1002 NOSIG
+
+Google
+{'current_conditions': ''}

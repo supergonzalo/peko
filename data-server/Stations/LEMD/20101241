@@ -1,0 +1,13 @@
+Metar
+station: LEMD
+type: routine report, cycle 23 (automatic report)
+time: Mon May  3 23:30:00 2010
+temperature: 6.0 C
+dew point: -2.0 C
+wind: NNW to NNE at 16 knots
+visibility: 10000 meters
+pressure: 1014.0 mb
+METAR: LEMD 032330Z 36016KT 330V030 CAVOK 06/M02 Q1014 NOSIG
+
+Google
+{'current_conditions': ''}

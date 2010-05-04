@@ -1,0 +1,17 @@
+Metar
+station: LEGE
+type: routine report, cycle 12 (automatic report)
+time: Tue May  4 12:30:00 2010
+temperature: 10.0 C
+dew point: 8.0 C
+wind: SE to SSW at 10 knots
+visibility: 8000 meters
+pressure: 1001.0 mb
+weather: drizzle
+sky: a few clouds at 1500 feet
+     scattered clouds at 4000 feet
+     broken clouds at 5500 feet
+METAR: LEGE 041230Z 17010KT 140V200 8000 DZ FEW015 SCT040 BKN055 10/08 Q1001
+
+Google
+{'current_conditions': ''}

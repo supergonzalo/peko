@@ -1,0 +1,14 @@
+Metar
+station: LERI
+type: routine report, cycle 8 (automatic report)
+time: Tue May  4 08:00:00 2010
+temperature: 14.0 C
+dew point: -1.0 C
+wind: W to N at 15 knots
+visibility: greater than 10000 meters
+pressure: 1007.0 mb
+sky: a few clouds at 3000 feet
+METAR: LERI 040800Z 32015KT 280V360 9999 FEW030 14/M01 Q1007 NOSIG
+
+Google
+{'current_conditions': ''}

@@ -1,0 +1,17 @@
+Metar
+station: LEPP
+type: routine report, cycle 12 (automatic report)
+time: Tue May  4 12:30:00 2010
+temperature: 4.0 C
+dew point: 1.0 C
+wind: N at 24 knots, gusting to 35 knots
+visibility: 9000 meters
+pressure: 1012.0 mb
+weather: light drizzle
+sky: a few clouds at 1500 feet
+     scattered clouds at 2200 feet
+     broken clouds at 3000 feet
+METAR: LEPP 041230Z 35024G35KT 9000 -DZ FEW015 SCT022 BKN030 04/01 Q1012
+
+Google
+{'current_conditions': ''}

@@ -1,0 +1,15 @@
+Metar
+station: LEST
+type: routine report, cycle 22 (automatic report)
+time: Mon May  3 22:30:00 2010
+temperature: 5.0 C
+dew point: 4.0 C
+wind: NNW to NNE at 7 knots
+visibility: greater than 10000 meters
+pressure: 1024.0 mb
+sky: a few clouds at 2000 feet
+     scattered clouds at 3500 feet
+METAR: LEST 032230Z 36007KT 330V030 9999 FEW020 SCT035 05/04 Q1024 NOSIG
+
+Google
+{'current_conditions': ''}

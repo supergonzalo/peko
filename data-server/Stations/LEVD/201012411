@@ -1,0 +1,14 @@
+Metar
+station: LEVD
+type: routine report, cycle 10 (automatic report)
+time: Tue May  4 10:00:00 2010
+temperature: 7.0 C
+dew point: -1.0 C
+wind: N to ENE at 21 knots
+visibility: greater than 10000 meters
+pressure: 1016.0 mb
+sky: broken clouds at 2500 feet
+METAR: LEVD 041000Z 03021KT 360V060 9999 BKN025 07/M01 Q1016
+
+Google
+{'current_conditions': ''}
