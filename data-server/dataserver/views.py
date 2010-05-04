@@ -17,7 +17,7 @@ info_file=config["WORKDIR"]+"/data-server/Doc/METAR_Station_Places.txt"
 # Prints current day of the year
 def current_datetime(request):
 	now = datetime.datetime.now()
-	html = "<html><body>Today is day %s.</body></html>" % now.strftime('%j')
+	html = "<html><body>Today is day %s. info file:%s</body></html>" % (now.strftime('%j'),info_file)
 	return HttpResponse(html)
 
 ###########################################################################################Ultimo cambio, testear
@@ -42,10 +42,10 @@ def station_data_available(request, offset):
 	home=os.getcwd()
 	station_dir="%s/%s"%(workdir,offset)
 	data=''
-	
+	dex_files = '-1'
 	if os.path.exists(station_dir):			
 		os.chdir(station_dir)
-		dex_files=put_some_order('.')
+		#dex_files=put_some_order('.')
 		if dex_files == '-1':
 			data='No .dex info for station'
 		else:
