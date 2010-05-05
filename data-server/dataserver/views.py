@@ -95,11 +95,11 @@ def list_stations(request):
 	return HttpResponse(html)
 
 
-def publish_data(request,station,filename):
+def publish_data(request,station,xxx,filename):
 
 
 	home=os.getcwd()
-	station_dir="%s/%s"%(workdir,station)
+	station_dir="%s/%s"%(workdir,station[0:4])
 	data=''
 	
 	if os.path.exists(station_dir):			
