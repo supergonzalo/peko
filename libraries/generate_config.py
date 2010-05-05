@@ -11,11 +11,12 @@ config = {
 	"DATA_SERVER_IP"   : '',
 	"DATA_SERVR_PORT"  : '',
 	"UI_SERVER_IP" : '',
-	"UI_SERVER_PORT"  : '',
+	"UI_SERVER_NAME": '',
 	"DATA_SERVER_THREADS": '',
 	"DATA_SERVER_NAME": '',
 	"UI_SERVER_THREADS":'',
 	"UI_SERVER_PORT":'',
+	"DEX_FILES_EXPIRE": '400'
 }
 
 f=open('config.txt','w')

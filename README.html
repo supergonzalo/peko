@@ -15,11 +15,19 @@
  	      	   white-space: pre-wrap;      /* CSS3 */
  	      	   word-wrap: break-word;      /* IE 5.5+ */ }
 	</style></head><body><div class="note" id="Esquema  de servidores y servicios: peko.tk"><a name="esquema  de servidores y servicios: peko.tk"></a><h1>Esquema  de servidores y servicios: peko.tk</h1>
-V1.0
+V1.1
 
+################	<span style="font-size:xx-large">Preliminares</span>	################
 Programas necesarios:
 	-Django 1.1.1
 	
+<span style="background:yellow">lib/generate_config.py  : EJECUTAR AL INSTALAR Y VERIFICAR VALORES
+	-Ejecutable que escribe peko/<a style="color:#204A87" href="#config.txt">config.txt</a></span><span style="background:yellow">
+
+
+</span>
+
+################	<span style="font-size:xx-large">Estructura</span>	################
 
 start_site.py 
 
@@ -34,13 +42,13 @@ start_site.py
 		+ <a style="color:#204A87" href="#aaaadddhh">aaaadddhh</a>: a=ano, d=dia del ano (1 a 365/6), h=hora de registro
 		+ <a style="color:#204A87" href="#aaaaddd.dex">aaaaddd.dex</a>: a=ano, d=dia del ano (1 a 365/6)
 
-	- <strike>Implementa servicio de consultas para el uiserver</strike>
+	- Implementa servicio de consultas para el uiserver
 
 		+ dataserver/station: lista las estaciones de las que esta tomando datos junto con las coordenadas de las mismas
 		+ dataserver/station/code: lista los ".dex" disponibles ( <a style="color:#204A87" href="#stations/xxxx">Stations/XXXX</a> ) para la estacion de codigo "code" 
 		+ dataserver/station/code/<a style="color:#204A87" href="#aaaaddd.dex">aaaaddd.dex</a>: Lista los datos en el archivo .dex en cuestion
 		+ dataserver/station/code/day: Devuelve el valor ddd para el dia de hoy
-		+ dataserver/station/code/pXXX: Devuelve el valor de Eto para los ultimos XXX dias a partir de hoy (backwards)
+		+ <strike>dataserver/station/code/pXXX: Devuelve el valor de Eto para los ultimos XXX dias a partir de hoy (backwards)</strike>
 
 	-<strike> Implementa script de limpieza de archivos temporales a ejecutarse una vez por semana</strike> (<a style="color:#204A87" href="#delete_old_files">delete_old_files</a>)
 
@@ -51,58 +59,27 @@ start_site.py
 	-<strike>Servidor de frontend.</strike> 
  
 </div>
-<div class="note" id="data-server.py"><a name="data-server.py"></a><h1>data-server.py</h1>
-<span style="background:yellow">[Operativo]</span>
-
-Recibe dos parametros: -run o -stop
- 
-*************	Escribe en crontab	*************
-
--run:
-	- inicia el servidor de consultas (ver <a style="color:#204A87" href="#esquema  de servidores y servicios: peko.tk">Esquema  de servidores y servicios: peko.tk</a>)
-	- comienza a tomar datos de centrales de forma horaria y ejecuta de forma diaria el calculo de la eto
-	- ejecuta script de limpieza de archivos temporales <a style="color:#204A87" href="#delete_old_files">delete_old_files</a> de acuerdo a lo especificado en  <a style="color:#204A87" href="#config.txt">config.txt</a>
-
--stop:
-	-detiene los servicios, no borra datos.
-
-
-Volver a <a style="color:#204A87" href="#esquema  de servidores y servicios: peko.tk">Esquema  de servidores y servicios: peko.tk</a></div>
-<div class="note" id="delete_old_files"><a name="delete_old_files"></a><h1>delete_old_files</h1>
-Servicio que elimina los archivos temporales de los directorios de estaciones climaticas (<a style="color:#204A87" href="#stations/xxxx">Stations/XXXX</a>) luego del periodo en el que se consideran utiles (especificado en <a style="color:#204A87" href="#config.txt">config.txt</a>)
-
-Volver a <a style="color:#204A87" href="#esquema  de servidores y servicios: peko.tk">Esquema  de servidores y servicios: peko.tk</a></div>
-<div class="note" id="Stations/XXXX"><a name="stations/xxxx"></a><h1>Stations/XXXX</h1>
-Directorio de subdirectorios XXXX donde XXXX representa el codigo de la estacion de acuerdo a la libreria dataserver/Doc/METAR_Station_Places.txt
-
-
-Volver a <a style="color:#204A87" href="#esquema  de servidores y servicios: peko.tk">Esquema  de servidores y servicios: peko.tk</a></div>
 <div class="note" id="config.txt"><a name="config.txt"></a><h1>config.txt</h1>
 archivo de configuracion general.
 
 
 setea:
 	
-	'UI_SERVER_PORT': 'None'					#IP del server de frontend (<a style="color:#204A87" href="#ui-server.py">ui-server.py</a>)
-	'WORKDIR': '/home/aspire/Documents/peko'	#Directorio de instalacion del sistema
-	'DATA_SERVER_IP': '127.0.0.1'				#IP del server de datos (<a style="color:#204A87" href="#data-server.py">data-server.py</a>)
-	'TEMP_FILES_XPIRE': '7'						#Tiempo (dias) a  mantener los archivos de reporte horario (<a style="color:#204A87" href="#aaaadddhh">aaaadddhh</a>)
-	'DATA_SERVER_PORT': '8000'					#Puerto del Server de datos (<a style="color:#204A87" href="#data-server.py">data-server.py</a>)
-	'DEX_FILES_EXPIRE': '400'					#Tiempo (dias) a  mantener los archivos de reporte diario (<a style="color:#204A87" href="#aaaaddd.dex">aaaaddd.dex</a>)
-	'UI_SERVER_IP': 'None'						#Puerto del Server de frontend (<a style="color:#204A87" href="#ui-server.py">ui-server.py</a>)
 
+config = {
+        "WORKDIR"  : here,				#Directorio de instalacion del sistema
+        "TEMP_FILES_XPIRE"  : '7',			#Tiempo (dias) a  mantener los archivos de reporte horario (<a style="color:#204A87" href="#aaaadddhh">aaaadddhh</a>)
+        "DATA_SERVER_IP"   : '',				#IP del server de datos (<a style="color:#204A87" href="#data-server.py">data-server.py</a>)
+        "DATA_SERVR_PORT"  : '',			#Puerto del Server de datos (<a style="color:#204A87" href="#data-server.py">data-server.py</a>)
+        "UI_SERVER_IP" : '',				#Puerto del Server de frontend (<a style="color:#204A87" href="#ui-server.py">ui-server.py</a>)
+        "DATA_SERVER_THREADS": '',		#Max threads en Data Server
+        "DATA_SERVER_NAME": '',			#Nombre sitio Data Server
+        "UI_SERVER_THREADS":'',			#Max Threads en UI  Server
+        "UI_SERVER_PORT":'',				#IP del server de frontend (<a style="color:#204A87" href="#ui-server.py">ui-server.py</a>)
+        "DEX_FILES_EXPIRE": '400'			#Tiempo (dias) a  mantener los archivos de reporte diario (<a style="color:#204A87" href="#aaaaddd.dex">aaaaddd.dex</a>)
+	"UI_SERVER_NAME": '',				#Nombre sitio UI Server
+}
 
-Volver a <a style="color:#204A87" href="#esquema  de servidores y servicios: peko.tk">Esquema  de servidores y servicios: peko.tk</a></div>
-<div class="note" id="ui-server.py"><a name="ui-server.py"></a><h1>ui-server.py</h1>
-Recibe dos parametros: -run o -stop
- 
-*************	Escribe en crontab	*************
-
--run:
-	- inicia el servidor de frontend de usuario (ver <a style="color:#204A87" href="#esquema  de servidores y servicios: peko.tk">Esquema  de servidores y servicios: peko.tk</a>)
-
--stop:
-	-revierte lo ejecutado en -run, no borra datos.
 
 
 Volver a <a style="color:#204A87" href="#esquema  de servidores y servicios: peko.tk">Esquema  de servidores y servicios: peko.tk</a></div>
@@ -125,6 +102,45 @@ METAR: EGCC 130750Z 02008KT 9000 FEW030 06/03 Q1029
 
 Google
 {'current_conditions': {'temp_f': u'49', 'temp_c': u'10', 'humidity': u'Humidity: 87%', 'wind_condition': u'Wind: N at 2 mph', 'condition': u'', 'icon': u''}, 'forecast_information': {'city': u'Calamocha, Aragon', 'forecast_date': u'2010-05-02', 'latitude_e6': u'', 'longitude_e6': u'', 'postal_code': u'Calamocha,Spain', 'unit_system': u'US', 'current_date_time': u'2010-05-01 22:30:14 +0000'}, 'forecasts': [{'high': u'59', 'condition': u'Chance of Rain', 'low': u'37', 'day_of_week': u'Sun', 'icon': u'/ig/images/weather/chance_of_rain.gif'}, {'high': u'41', 'condition': u'Chance of Rain', 'low': u'32', 'day_of_week': u'Mon', 'icon': u'/ig/images/weather/chance_of_rain.gif'}, {'high': u'37', 'condition': u'Chance of Snow', 'low': u'33', 'day_of_week': u'Tue', 'icon': u'/ig/images/weather/chance_of_snow.gif'}, {'high': u'38', 'condition': u'Chance of Snow', 'low': u'36', 'day_of_week': u'Wed', 'icon': u'/ig/images/weather/chance_of_snow.gif'}]}
+
+
+Volver a <a style="color:#204A87" href="#esquema  de servidores y servicios: peko.tk">Esquema  de servidores y servicios: peko.tk</a></div>
+<div class="note" id="delete_old_files"><a name="delete_old_files"></a><h1>delete_old_files</h1>
+Servicio que elimina los archivos temporales de los directorios de estaciones climaticas (<a style="color:#204A87" href="#stations/xxxx">Stations/XXXX</a>) luego del periodo en el que se consideran utiles (especificado en <a style="color:#204A87" href="#config.txt">config.txt</a>)
+
+Volver a <a style="color:#204A87" href="#esquema  de servidores y servicios: peko.tk">Esquema  de servidores y servicios: peko.tk</a></div>
+<div class="note" id="Stations/XXXX"><a name="stations/xxxx"></a><h1>Stations/XXXX</h1>
+Directorio de subdirectorios XXXX donde XXXX representa el codigo de la estacion de acuerdo a la libreria dataserver/Doc/METAR_Station_Places.txt
+
+
+Volver a <a style="color:#204A87" href="#esquema  de servidores y servicios: peko.tk">Esquema  de servidores y servicios: peko.tk</a></div>
+<div class="note" id="data-server.py"><a name="data-server.py"></a><h1>data-server.py</h1>
+<span style="background:yellow">[Operativo]</span>
+
+Recibe dos parametros: -run o -stop
+ 
+*************	Escribe en crontab	*************
+
+-run:
+	- inicia el servidor de consultas (ver <a style="color:#204A87" href="#esquema  de servidores y servicios: peko.tk">Esquema  de servidores y servicios: peko.tk</a>)
+	- comienza a tomar datos de centrales de forma horaria y ejecuta de forma diaria el calculo de la eto
+	- ejecuta script de limpieza de archivos temporales <a style="color:#204A87" href="#delete_old_files">delete_old_files</a> de acuerdo a lo especificado en  <a style="color:#204A87" href="#config.txt">config.txt</a>
+
+-stop:
+	-detiene los servicios, no borra datos.
+
+
+Volver a <a style="color:#204A87" href="#esquema  de servidores y servicios: peko.tk">Esquema  de servidores y servicios: peko.tk</a></div>
+<div class="note" id="ui-server.py"><a name="ui-server.py"></a><h1>ui-server.py</h1>
+Recibe dos parametros: -run o -stop
+ 
+*************	Escribe en crontab	*************
+
+-run:
+	- inicia el servidor de frontend de usuario (ver <a style="color:#204A87" href="#esquema  de servidores y servicios: peko.tk">Esquema  de servidores y servicios: peko.tk</a>)
+
+-stop:
+	-revierte lo ejecutado en -run, no borra datos.
 
 
 Volver a <a style="color:#204A87" href="#esquema  de servidores y servicios: peko.tk">Esquema  de servidores y servicios: peko.tk</a></div>

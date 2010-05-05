@@ -11,13 +11,15 @@ os.chdir(here)
 
 workdir=config["WORKDIR"]+"/data-server/Stations"
 info_file=config["WORKDIR"]+"/data-server/Doc/METAR_Station_Places.txt"
+dex_xpire=int(config["DEX_FILES_EXPIRE"])
 
-
+def cday():
+	now = datetime.datetime.now()
+	return now.strftime('%j')
 
 # Prints current day of the year
 def current_datetime(request):
-	now = datetime.datetime.now()
-	html = "<html><body>Today is day %s.</body></html>" % (now.strftime('%j'))
+	html = "<html><body>Today is day %s.</body></html>" % cday()
 	return HttpResponse(html)
 
 ###########################################################################################Ultimo cambio, testear
@@ -37,10 +39,10 @@ def put_some_order(folder):
 	return '-1'
 
 # Lists .dex files available in a STATION directory 
-def station_data_available(request, offset):
-
+def station_data_available(request, offset,prev):
+	
 	home=os.getcwd()
-	station_dir="%s/%s/"%(workdir,offset)
+	station_dir="%s/%s/"%(workdir,offset[0:4])
 	data=''
 	
 	if os.path.exists(station_dir):			
@@ -50,7 +52,17 @@ def station_data_available(request, offset):
 			
 			data='No .dex info for station'
 		else:
-			for element in range(len(dex_files)):
+			if prev:
+				prev=int(prev)
+			else:
+				prev=len(dex_files)
+			if prev <=0:		#Some parsing of the input data, just in case
+				prev =1
+			if prev >= dex_xpire:
+				prev=dex_xpire
+			if prev >= len(dex_files):
+				prev=len(dex_files)
+			for element in range(prev):
 				data=data+"<p><a href=%s>%s</a></p>"%(dex_files[element][0],dex_files[element][0])
 		
 	else:

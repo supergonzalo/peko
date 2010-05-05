@@ -7,7 +7,7 @@ from dataserver.views import current_datetime, station_data_available, list_stat
 urlpatterns = patterns('',
     (r'^day/$', current_datetime),						# Prints current day of the year
 	(r'^station/$', list_stations),						# Lists .dex files available in a STATION directory 
-    (r'^station/([A-Z]{4})/$', station_data_available),	# Lists Stations directories
+    (r'^station/([A-Z]{4})(\d{0,3})/$', station_data_available),	# Lists Stations directories
 	(r'^station/([A-Z]{4})/(\d{5,7})', publish_data),
 )
 
