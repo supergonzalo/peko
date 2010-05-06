@@ -14,7 +14,7 @@ import pywapi
 import pprint
 from metar import Metar
 import etowind20
-from rsm import addto_rsm
+import rsm
 
 
 #Gets Weather Reports from stations given as a parameter (argv) and stores them in files
