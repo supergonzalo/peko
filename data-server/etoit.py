@@ -14,7 +14,7 @@ import pywapi
 import pprint
 from metar import Metar
 import etowind20
-
+from rsm import generate_rsm
 
 
 #Gets Weather Reports from stations given as a parameter (argv) and stores them in files
@@ -116,7 +116,7 @@ def etoit(stationcode,dayofyear):
 				observation=arch(dayofyear+str(i), 'r',0)
 				if len(observation[1])>5 or len(observation[3])>5: #there's data in the file
 					info[i]="\nTimestamp: "+str(i)+ etowind20.etowind(observation,station)
-		rsm=dayofyear[0:4]
+		
 		dex=dayofyear+'.dex'
 		if os.path.isfile(dex):
 			os.remove(dex)			
@@ -126,11 +126,8 @@ def etoit(stationcode,dayofyear):
 		
 		if not len(dexinfo)==0:
 			arch(dex,'a',etrad10.etorad(dexinfo,station,dex))	#writes timestamp
-			if os.path.isfile(rsm):
-				mode='a'
-			else:
-				mode='w'
-			#generate_rsm(dayofyear,dexinfo,station)
+
+		#rsm.addto_rsm(station,dexinfo)
 				
 	else:
 		print "No data for station"
