@@ -7,7 +7,7 @@ import os, re, glob
 def addto_rsm(station,dexinfo):						#Adds dexinfo to the top of station.rsm, if file does not exist it creates it
 	#print 'dexinfo#####################\n'
 	#print dexinfo
-	rsm=station[0:4]+'.rsm'
+	rsm=station+'.rsm'
 	temp=''
 	if os.path.isfile(rsm):
 		f=open(rsm,'r')
@@ -62,6 +62,6 @@ def reindex(directory):
 		os.chdir('..')
 	os.chdir(home)
 				
-#reindex('Stations')
+reindex('Stations')
 
 

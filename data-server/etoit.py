@@ -126,8 +126,8 @@ def etoit(stationcode,dayofyear):
 		
 		if not len(dexinfo)==0:
 			arch(dex,'a',etrad10.etorad(dexinfo,station,dex))	#writes timestamp
-
-		rsm.addto_rsm(station,dexinfo)
+		#para poder llamar a addto limpiar la parte del dex que corresponde al ultimo reporte
+		#rsm.addto_rsm(stationcode,dexinfo)
 				
 	else:
 		print "No data for station"
