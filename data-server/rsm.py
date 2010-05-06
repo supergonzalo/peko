@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 from __future__ import with_statement
-import os, re
+import os, re, glob
 
 
 def addto_rsm(station,dexinfo):						#Adds dexinfo to the top of station.rsm, if file does not exist it creates it
@@ -47,7 +47,21 @@ def create_rsm(station):			#Creates .rsm file for a directory '.', if exists del
 			#print element
 			#print eto
 		addto_rsm(station,eto+'\n')	#Write footer to .rsm
-				
 
+
+def reindex(directory):
+
+	home=os.getcwd()
+	os.chdir(directory)
+	centrals=os.listdir('.')
+
+	for station in centrals:
+		os.chdir(station)
+		print os.getcwd()
+		create_rsm(station)
+		os.chdir('..')
+	os.chdir(home)
+				
+#reindex('Stations')
 
 
