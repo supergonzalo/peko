@@ -194,7 +194,8 @@ def etorad(fs,station_name,filename):
 	#print radiation
 
 	etorad=DT*(0.408*radiation*0.98)	#0.98 Estimador Gonzalo, estima perdidas por G
-
+	if etorad<0:
+		etorad=0
 	
 	#print "\nETO WindTODAY: " +str(etowind)+"\nETOradTODAY: " +str(etorad)+"\nETOTODAY: " +str(float(etorad)+float(etowind))+"\nEstimada: " +str(0.0023*(tmed+17.8)*ext_radiation*(tmax-tmin)**(0.5))
 
