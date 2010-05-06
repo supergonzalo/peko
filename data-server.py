@@ -84,7 +84,7 @@ try:
 		tab.write()
 	#	- ejecuta script de limpieza de archivos temporales delete_old_files de acuerdo a lo especificado en  	dataserver.config
 
-		cronear delete_old_files
+	#	cronear delete_old_files
 
 	else:
 		usage()
