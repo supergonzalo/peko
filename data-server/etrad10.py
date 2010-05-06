@@ -198,7 +198,7 @@ def etorad(fs,station_name,filename):
 	
 	#print "\nETO WindTODAY: " +str(etowind)+"\nETOradTODAY: " +str(etorad)+"\nETOTODAY: " +str(float(etorad)+float(etowind))+"\nEstimada: " +str(0.0023*(tmed+17.8)*ext_radiation*(tmax-tmin)**(0.5))
 
-	return "\nETO WindTODAY: " +str(etowind)+"\nETOradTODAY: " +str(etorad)+"\nETOTODAY: " +str(float(etorad)+float(etowind))+"\nEstimada: " +str(0.0023*(tmed+17.8)*ext_radiation*(tmax-tmin)**(0.5))
+	return "\nETO WindTODAY: " +str(etowind)+"\nETOradTODAY: " +str(etorad)+"\nETOTODAY: " +str(float(etorad)+float(etowind))+"\nEstimada: " +str(0.0023*(tmed+17.8)*ext_radiation*(tmax-tmin)**(0.5))+ "\nTempMax: "+str(tmax)+"\nTempMin: "+str(tmin) + "\nTempMed: "+str(tmed) + "\nWindMed: "+str(wmed)
 	
 
 

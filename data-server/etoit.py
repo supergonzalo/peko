@@ -125,7 +125,7 @@ def etoit(stationcode,dayofyear):
 		dexinfo=arch(dex,'r',0)
 		
 		if not len(dexinfo)==0:
-			arch(dex,'a',etrad10.etorad(dexinfo,station,dex))	
+			arch(dex,'a',etrad10.etorad(dexinfo,station,dex))	#writes timestamp
 				
 	else:
 		print "No data for station"
