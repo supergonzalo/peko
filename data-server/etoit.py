@@ -16,8 +16,6 @@ from metar import Metar
 
 import etowind20
 
-import rsm
-
 import pickle
 
 
