@@ -118,8 +118,9 @@ def etoit(stationcode,dayofyear):
 					info[i]="\nTimestamp: "+str(i)+ etowind20.etowind(observation,station)
 		
 		dex=dayofyear+'.dex'
-		if os.path.isfile(dex):
-			os.remove(dex)			
+		#if os.path.isfile(dex):
+		#	os.remove(dex)			
+		arch(dex,'w','')
 		for i in range (len(info)):
 			arch(dex,'a',info[i])
 		dexinfo=arch(dex,'r',0)
