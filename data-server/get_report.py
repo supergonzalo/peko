@@ -48,29 +48,6 @@ def arch(filename, mode, data=0):
 	f.close()	
 	return temp
 
-
-def get_station(name,info_file):	#creates a dictionary with climate station info
-	
-	home=os.getcwd()		
-	os.chdir(home+'/Doc')
-	lib=arch(info_file,'r',0)
-	for i in range(len(lib)):
-		if re.findall(name,lib[i]): 
-			data = lib[i].split(';')
-	if data[11]=='':
-		altitude=10.0		#If there's no data at all we asume the station is @10m
-	else:
-		altitude=float(data[11])
-	city=data[3]+','+data[5]
-	temp=data[7].split('-')
-	grad=float(temp[0])
-	hemisf=temp[1][-1]
-	minutes=float(re.findall('\d*',temp[1])[0])
-	os.chdir(home)
-	return {'latitude':grad+minutes/60,'hemisf':hemisf,'altitude':altitude,'city':city,'code':name}
-
-
-
 def usage():			#Usage help
   program = os.path.basename(sys.argv[0])
   print "Usage: ",program,"<city> [ <city> ... ]"
@@ -94,16 +71,18 @@ if not stations:
 	home=os.getcwd()		
 	os.chdir(home+'/Doc')
 	f=open('stations.lib','r')
-	stations = pickle.load(f)
+	library = pickle.load(f)		#Dictionary of dictionaries with monitored stations
 	f.close()
 	os.chdir(home)
 
-for name in stations:
+
+for name in library:
 	print name
 	obs=''
 	report=''
 	goo={'current_conditions':''}
-	station=get_station(name,'METAR_Station_Places.txt')		#Climatic station dictionary, downloaded from noaa
+	#station=get_station(name,'METAR_Station_Places.txt')		#Climatic station dictionary, downloaded from noaa
+	station=library[name]
  	home=os.getcwd()
 	url = "%s/%s.TXT" % (BASE_URL, station['code'])
 	try:
@@ -117,7 +96,7 @@ for name in stations:
 		
 		if report=='':												#No data, lets ask google
 			print "No metar data for ",name,"\n\n"					#First parse station location to look for climate data
-			goo=gparser(station['city'])
+			goo=gparser(station['city'] + ',' +station ['country'] )
 
 					
 		if len(goo['current_conditions'])!=0 or len (report)!=0:		#If theres something to log
@@ -133,17 +112,14 @@ for name in stations:
 			os.chdir(direct)
 
 			entry_name=str(now.year)+str(cday(now))+str(now.hour)		#Creates filename
-			if not os.path.isfile(entry_name):							#Creates file YYYYDDDHH		
+			if not os.path.isfile(entry_name):											#Creates file YYYYDDDHH		
 				arch(entry_name, 'w', 'Metar\n'+str(obs)+'\nGoogle\n' + str(goo))
 						
 			os.chdir(home)
 		else:
 			print '############# No Data #################'
 			#Absolutely no data for station wtf is wrong?
-	
-	
 		
-	
 	except Metar.ParserError, err:
 		print "METAR code: ",line
     		print string.join(err.args,", "),"\n"

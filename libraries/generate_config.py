@@ -5,6 +5,7 @@ here=os.getcwd()
 here=os.chdir('..')
 here=os.getcwd()
 
+
 config = {
 	"WORKDIR"  : here,
 	"TEMP_FILES_XPIRE"  : '7',
@@ -22,3 +23,5 @@ config = {
 f=open('config.txt','w')
 pickle.dump(config,f)
 f.close()
+
+

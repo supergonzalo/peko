@@ -13,8 +13,12 @@ import glob,time
 import pywapi
 import pprint
 from metar import Metar
+
 import etowind20
+
 import rsm
+
+import pickle
 
 
 #Gets Weather Reports from stations given as a parameter (argv) and stores them in files
@@ -97,65 +101,65 @@ def get_station(name,info_file):	#creates a dictionary with climate station info
 	return {'latitude':grad+minutes/60,'hemisf':hemisf,'altitude':altitude,'city':city,'code':name}
 
 
+def etoit(station,dayofyear):
 
-
-
-def etoit(stationcode,dayofyear):
-
-
-	station=get_station(stationcode,'METAR_Station_Places.txt')	#Climatie station dictionary, downloaded from noaa
 	info=['','','','','','','','','','','','','','','','','','','','','','','','']
-
-	direct="%s/%s"%("Stations",station['code'])
-	home=os.getcwd()
-
-	if os.path.exists(direct):			#Creates Directory /Stations/XXXX (Satation ID)
-    		os.chdir(direct)
-		for i in range (24):
-			if os.path.isfile(dayofyear+str(i)):
-				observation=arch(dayofyear+str(i), 'r',0)
-				if len(observation[1])>5 or len(observation[3])>5: #there's data in the file
-					info[i]="\nTimestamp: "+str(i)+ etowind20.etowind(observation,station)
 		
-		dex=dayofyear+'.dex'
-		#if os.path.isfile(dex):
-		#	os.remove(dex)			
-		arch(dex,'w','')
-		for i in range (len(info)):
-			arch(dex,'a',info[i])
-		dexinfo=arch(dex,'r',0)
+	for i in range (24):
+		if os.path.isfile(dayofyear+str(i)):
+			observation=arch(dayofyear+str(i), 'r',0)
+			if len(observation[1])>5 or len(observation[3])>5: #there's data in the file
+				info[i]="\nTimestamp: "+str(i)+ etowind20.etowind(observation,station)
+	
 		
-		if not len(dexinfo)==0:
-			arch(dex,'a',etrad10.etorad(dexinfo,station,dex))	#writes timestamp
-		#para poder llamar a addto limpiar la parte del dex que corresponde al ultimo reporte
-		#rsm.addto_rsm(stationcode,dexinfo)
+	dex=dayofyear+'.dex'
+	if os.path.isfile(dex):
+		os.remove(dex)
+	for i in range (len(info)):
+		arch(dex,'a',info[i])				#Cambiar para que no acceda al archivo pro cadda linea!
+	dexinfo=arch(dex,'r',0)
+
+	if not len(dexinfo)==0:
+		arch(dex,'a',etrad10.etorad(dexinfo,station,dex))	#writes timestamp
+				#para poder llamar a addto limpiar la parte del dex que corresponde al ultimo reporte
+				#rsm.addto_rsm(stationcode,dexinfo)
 				
-	else:
-		print "No data for station"
+
+
+
+############################# RUN ############################################################
+
+
+os.chdir('./Doc')
+f=open('stations.lib','r')
+library = pickle.load(f)					#Dictionary of dictionaries with monitored stations
+f.close()
+os.chdir('..')
+
+
+for element in library:
+	print '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@'
+	print element
+	print '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@'
+	
+	direct="%s/%s"%("Stations",element)
+	home=os.getcwd()
+	if os.path.exists(direct):			#Changes to Directory /Stations/XXXX (Station ID)
+		os.chdir(direct)
+
+	for item in os.listdir('.'):
+		if item[-4:] != '.dex' or item[-4:] != '.rsm':	#is not an index file
+			buff={}
+			if item[0:7] not in buff:	#that day havent been indexed
+				if 1:					#range to index, 1 alldir
+					buff[item[0:7]]=1
+					etoit(library[element],item[0:7])
+		else:
+			print "No data for station"
+	
 	os.chdir(home)
+	
+			
 
-
-############################# DEBUG ############################################################
-
-
-database=os.listdir('./Stations')
-alldir=1
-today=datetime.datetime.now()
-
-yesterday = int(today.strftime('%j'))-1
-
-dayofyear=str(today.year)+str(yesterday)
-
-#dayofyear='2010106'
-
-if alldir==1:
-	for i in range(len(os.listdir('./Stations'))):
-		print '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@'
-		print database[i]
-		print '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@'
-		etoit(database[i],dayofyear)
-
-else:
-	etoit('LELC',dayofyear)
 
 

@@ -24,7 +24,7 @@ import datetime
 #Datos horarios de centrales
 hourly_central='python get_report.py'
 #Datos diarios de centrales
-daily_central='python Etoit.py'
+daily_central='python etoit.py'
 
 def cday(date):			#Day of the year
 	return date.strftime('%j')

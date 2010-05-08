@@ -155,22 +155,20 @@ def etorad(fs,station_name,filename):
 	#station name
 	#name of fs file
 	
-	info_file='METAR_Station_Places.txt'	#libreria de centrales 
-	
 	krs=0.18		#0.16 interior, 0.19 coast, Rs=0.7Ra-4 island
 	
 	j=int(filename[4:7])
 	temp=data_matrix(fs)
-	print temp
+	#print temp
 	wmed=temp['med_wind']
 	tmax=temp['tmax']
 	tmin=temp['tmin']
 	tmed=temp['tmed']
 	etowind=temp['etowind']
 	
-	lat=station_name['latitude']*3.14159265/180
+	lat=float(station_name['latitude'])*3.14159265/180
 	hemisf=station_name['hemisf']
-	z=station_name['altitude']	
+	z=float(station_name['altitude'])	
 	p=etowind20.atmp(z,tmed)
 	
 
@@ -189,7 +187,7 @@ def etorad(fs,station_name,filename):
 	pot_rad=rso(z,j,lat)
 
 	esuba=temp['eamed']
-	rnl(tmed,esuba,surface_rad,pot_rad)
+	#rnl(tmed,esuba,surface_rad,pot_rad)
 	radiation=rn(pot_rad,surface_rad)
 	#print radiation
 
@@ -201,26 +199,6 @@ def etorad(fs,station_name,filename):
 
 	return "\nETO WindTODAY: " +str(etowind)+"\nETOradTODAY: " +str(etorad)+"\nETOTODAY: " +str(float(etorad)+float(etowind))+"\nEstimada: " +str(0.0023*(tmed+17.8)*ext_radiation*(tmax-tmin)**(0.5))+ "\nTempMax: "+str(tmax)+"\nTempMin: "+str(tmin) + "\nTempMed: "+str(tmed) + "\nWindMed: "+str(wmed)
 	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
