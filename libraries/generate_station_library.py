@@ -3,14 +3,17 @@ import os,pickle,re
 info_file= 'METAR_Station_Places.txt'
 
 def convert(data):
+	mult=1
 	temp=data.split('-')
 	grad=float(temp[0])
 	hemisf=temp[1][-1]
+	if hemisf == 'W' or hemisf=='S':
+		mult=float(-1.0)
 	minutes=float(re.findall('\d*',temp[1])[0])
-	return [grad+minutes/60.0, hemisf]
+	return [mult*(grad+minutes/60.0), hemisf]
 
 def get_station(name,info_file):	#creates a dictionary with climate station info
-# This function is duplicated in get_repot.py!!!	
+
 	g=open(info_file,'r')
 	lib=g.readlines()
 	g.close()

@@ -10,7 +10,7 @@ f.close
 os.chdir(here)
 
 workdir=config["WORKDIR"]+"/data-server/Stations"
-info_file=config["WORKDIR"]+"/data-server/Doc/METAR_Station_Places.txt"
+info_file=config["WORKDIR"]+"/data-server/Doc/stations.lib"
 dex_xpire=int(config["DEX_FILES_EXPIRE"])
 
 def cday():
@@ -39,7 +39,7 @@ def put_some_order(folder):
 	return '-1'
 
 # Lists .dex files available in a STATION directory 
-def station_data_available(request, offset,prev):
+def station_data_available(request, format,offset,prev):
 	
 	home=os.getcwd()
 	station_dir="%s/%s/"%(workdir,offset[0:4])
@@ -73,30 +73,32 @@ def station_data_available(request, offset,prev):
 	return HttpResponse(html)
 
 # Lists Stations directories
-def list_stations(request):
+def list_stations(request,output='h'):
+	
 	html=''
+	xml=''
 	f = open(info_file, 'r')		
-	temp=f.readlines()	
+	#temp=f.readlines()	
+	temp=pickle.load(f)
 	f.close()
 
-	data=os.listdir(workdir)
-	
-	for element in data:
+	if output == 'x':				#Generates xml output
 
-		for i in range(len(temp)):
-			if re.findall(element,temp[i]): 
-				foo = temp[i].split(';')
-		ref=" %s, %s:%s ,%s "%(foo[7],foo[8],foo[3],foo[5])
+		for element in temp:
+			ref="%s. %s" % (temp[element]['city'],temp[element]['country'])
+			xml=xml+"<marker lat=\"%s\" lng=\"%s\" html=\"%s\" label=\"%s\" />"%(temp[element]['latitude'], temp[element]['longitude'], ref, temp[element]['code'])
+		html=xml
 
+	else:
+		for element in temp:
+			ref="%s. %s" % (temp[element]['city'],temp[element]['country'])
+			html=html+"<p><a href=%s>%s</a> %s lat=%s lng=%s</p>"%(temp[element]['code'], temp[element]['code'],ref,temp[element]['latitude'],temp[element]['longitude'])
+		html = "<html><body> %s </body></html>" %(html)
 
-		html=html+"<p><a href=%s>%s</a>%s</p>"%(element, element,ref)
-		
-	html = "<html><body> %s </body></html>" %(html)
 	return HttpResponse(html)
 
 
-def publish_data(request,station,xxx,filename):
-
+def publish_data(request,format,station,xxx,filename):
 
 	home=os.getcwd()
 	station_dir="%s/%s"%(workdir,station[0:4])
@@ -121,7 +123,7 @@ def publish_data(request,station,xxx,filename):
 	html = "<html><body> %s </body></html>" % (data)
 	return HttpResponse(html)
 
-def rsm_data(request,station,xxx):
+def rsm_data(request,format, station,xxx):
 	home=os.getcwd()
 	station=station[0:4]
 	station_dir="%s/%s"%(workdir,station)
