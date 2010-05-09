@@ -86,7 +86,7 @@ def list_stations(request,output='h'):
 
 		for element in temp:
 			ref="%s. %s" % (temp[element]['city'],temp[element]['country'])
-			xml=xml+"<marker lat=\"%s\" lng=\"%s\" label=\"%s\" > <infowindow> html=\"%s\" </infowindow> </marker>"%(temp[element]['latitude'], temp[element]['longitude'], ref, temp[element]['code'])
+			xml=xml+"<marker lat=\"%s\" lng=\"%s\" label=\"%s\" html=\"%s\" />"%(temp[element]['latitude'], temp[element]['longitude'], ref, temp[element]['code'])
 		html="<markers> %s </markers>" % xml
 
 	else:
