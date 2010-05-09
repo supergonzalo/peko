@@ -84,10 +84,6 @@ def list_stations(request,output='h'):
 
 	if output == 'x':				#Generates xml output
 
-<marker lat="43.65654" lng="-79.90138" label="Marker One">
-      <infowindow>Some stuff to display in the&lt;br&gt;First Info Window</infowindow>
-     </marker>
-
 		for element in temp:
 			ref="%s. %s" % (temp[element]['city'],temp[element]['country'])
 			xml=xml+"<marker lat=\"%s\" lng=\"%s\" label=\"%s\" > <infowindow> html=\"%s\" </infowindow> </marker>"%(temp[element]['latitude'], temp[element]['longitude'], ref, temp[element]['code'])
