@@ -33,8 +33,21 @@ def get_station(name,info_file):	#creates a dictionary with climate station info
 
 
 home=os.getcwd()	
-stations_to_check=['LERI', 'LELC', 'LEAS', 'LELL', 'LERT', 'LEVX', 'LEBZ', 'LEZA', 'GCLP', 'LEAM', 'LEZG', 'LETO', 'LEGA', 'EGCC', 'LEBA', 'LEAL', 'LEVS', 'GCLA', 'LEMG', 'LEHI', 'GCFV', 'LEJR', 'LEGE', 'LEMD', 'LELN', 'LEGT', 'EQYR', 'LFAT', 'LELO', 'LEBB', 'AGGH', 'LEXJ', 'LERS', 'LEIB', 'LEVC', 'LEBG', 'LEMH', 'LECH', 'GCXO', 'LEMO', 'LEST', 'LESA', 'LEVD', 'LEPA', 'GCRR', 'GCHI', 'LECV', 'LEVT', 'GCTS', 'SABA', 'LESO', 'LEZL', 'GEML', 'LEGR', 'LEPP', 'LEAB', 'LEBL', 'LECO']
 os.chdir(home+'/../data-server/Doc/')
+stations_to_check=list()
+f=open ('countries.lib','r')
+countries =f.read().split(',')
+f.close()
+g=open(info_file,'r')
+lib=g.readlines()
+g.close()
+for each in range(len(countries)-1):
+	print countries[each]
+	for i in range(len(lib)):
+		if re.findall(countries[each],lib[i]): 
+			#print 'found'
+			stations_to_check.append(lib[i][0:4])
+
 
 
 tempo={}
