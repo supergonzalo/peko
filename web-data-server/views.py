@@ -76,24 +76,34 @@ def station_data_available(request, format,offset,prev):
 def list_stations(request,output='h'):
 	
 	html=''
-	xml=''
+	xml='<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>'
 	f = open(info_file, 'r')		
 	#temp=f.readlines()	
 	temp=pickle.load(f)
 	f.close()
 
-	if output == 'x':				#Generates xml output
+
+	if output == 'x':                               #Generates xml output
 
 		for element in temp:
 			ref="%s. %s" % (temp[element]['city'],temp[element]['country'])
-			xml=xml+"<marker lat=\"%s\" lng=\"%s\" label=\"%s\" html=\"%s\" />"%(temp[element]['latitude'], temp[element]['longitude'], ref, temp[element]['code'])
+			xml=xml+"<marker lat=\"%s\" lng=\"%s\" label=\"%s\" html=\"%s\" />"%(temp[element]['latitude'], temp[element]['latitude'],ref,temp[element]['latitude'])
 		html="<markers> %s </markers>" % xml
+		html=xml
 
-	else:
+	elif output == 'h':
 		for element in temp:
 			ref="%s. %s" % (temp[element]['city'],temp[element]['country'])
 			html=html+"<p><a href=%s>%s</a> %s lat=%s lng=%s</p>"%(temp[element]['code'], temp[element]['code'],ref,temp[element]['latitude'],temp[element]['longitude'])
 		html = "<html><body> %s </body></html>" %(html)
+
+	elif output == 't':
+		for element in temp:
+			ref="%s. %s" % (temp[element]['city'],temp[element]['country'])
+			xml=xml+"%s,%s,%s;<br>\n" % (temp[element]['latitude'],temp[element]['longitude'],ref)
+                #html="<markers> %s </markers>" % xml
+		html=xml
+
 
 	return HttpResponse(html)
 

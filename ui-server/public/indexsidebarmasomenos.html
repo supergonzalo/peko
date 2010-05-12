@@ -1,0 +1,510 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/10/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>peko.tk</title>
+<style type="text/css">
+html body {width:100%; height:100%; margin:15px;
+font-family: Verdana,Arial,sans serif; font-size: 11px;}
+li {margin-left: -20px;}
+a:hover {text-decoration: underline overline}
+#map {width:95%; height:350px; border: 5px solid green;}
+#header {height:50px; padding-top:0px; text-align:center;padding-left:20px;}
+#adsense {margin:10px; text-align:center;}
+.sideblock {background-color:#eee;margin:0px;}
+.sideblock-header {padding:4px;}
+.sideblock-close:hover {font-weight:bold}
+.sideblock-container {margin:6px; padding:6px;}
+.esas {color:black; font-size:18px}
+.blue {color:blue; font-size:18px}
+</style>
+
+<script 
+
+src="http://maps.google.com/maps?file=api&v=2&key=ABQIAAAAYxpy0HiKBWXiyhVrpVqkshTWg_xmhpETXrjHUj59zHLsinrq_xS
+
+AmAGIHF6kJpo3mJn5WnKDztG7kw"type="text/javascript">
+</script>
+<script>
+
+var _mHybridMode = "Both";
+var _mHybridModeShort = "Both";
+GLoadMapsScript();
+</script>
+
+</head>
+<body onunload="GUnload();">
+<div id="header">
+
+<div id="hakuLaatikko" style="text-align:left">
+
+<form action="#" onsubmit="showAddress(this.haku.value); return false">
+<h4>Ingresa tu ubicacion: <input type="text" size="30" id="haku" name="haku" title="Address" value=""/>
+
+<input type="submit" value=" Pulsa aqui! " title="Enter" />&nbsp;
+Mostrar las <input type="text" size="2" id="maara" name="maara" title="Number shown" value="10"/>centrales mas cercanas  
+<span id="maximum">a un maximo de
+
+<input type="text" size="3" id="radius" name="radius" title="Search radius" value="100"/> km
+</span>
+</form>
+
+</div>
+
+</div>
+<div id="map"></div>
+
+<div id="novel">
+
+
+<div id="message" style=" background:white; overflow:auto; white-space:nowrap;"
+title="Resultados"></div>
+
+
+
+</div>
+
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+///Scripting by Esa 2006
+
+//globals
+
+_mPreferMetric=true;
+
+var page=[];
+
+page["Abc"] = "abc.txt";
+
+
+var kohde = "Abc";
+
+var teksti ="";
+var bounds = new GLatLngBounds();
+var marker=[];
+var pointer = new GMarker(new GLatLng(62,23));
+var kaikki = "<a href='javascript:fit();'>Mostrar todas</a>"
+var geocoder = new GClientGeocoder();
+var n=0;//osumat
+
+// tiny marker icons
+
+var hot = "http://labs.google.com/ridefinder/images/mm_20_red.png";
+var cold = "http://labs.google.com/ridefinder/images/mm_20_blue.png";
+var tiny = new GIcon();
+tiny.image = cold
+tiny.shadow = "http://labs.google.com/ridefinder/images/mm_20_shadow.png";
+tiny.iconSize = new GSize(12, 20);
+tiny.shadowSize = new GSize(22, 20);
+tiny.iconAnchor = new GPoint(6, 20);
+tiny.infoWindowAnchor = new GPoint(5, 1);
+var hotIcon = new GIcon(G_DEFAULT_ICON);
+
+// create the map
+var map = new GMap2(document.getElementById("map"));
+map.setCenter(new GLatLng( 0,0), 2);
+map.addControl(new GLargeMapControl());
+map.addControl(new GMapTypeControl(1));
+map.addControl(new GScaleControl(300));
+//GEvent.addListener(map, "click", function(){map.closeInfoWindow()});
+map.enableContinuousZoom();
+map.enableDoubleClickZoom();
+
+//overview
+
+
+///kontrollien piilotus
+map.hideControls();
+GEvent.addListener(map, "mouseover", function(){
+map.showControls();
+});
+GEvent.addListener(map, "mouseout", function(){
+map.hideControls(); 
+map.closeInfoWindow();
+});
+
+
+/// info window
+
+function doIW(pin,html){
+GEvent.addListener(pin, "click", function(){
+pin.openInfoWindowHtml(html,{maxWidth:300});
+})}
+
+
+function luokse(){
+map.zoomIn();map.zoomIn();map.zoomIn();
+}
+
+
+/////// function to process the text file
+
+var infoW=[];
+var distance=[];
+var sortti=[];
+
+
+parseFile = function(doku) {
+var howMany = document.getElementById("maara").value*1;
+var radius = document.getElementById("radius").value*1000;
+n=0;
+document.getElementById("message").innerHTML ="No hay centrales disponibles";
+teksti = "";
+infoW = doku.split("\n");
+sortti.length=0;
+
+for (var i=0; i<infoW.length; i++) {
+if (infoW[i].indexOf(",") != -1) {
+var lat = infoW[i].split(",")[0]*1;
+var lng = infoW[i].split(",")[1]*1;
+var point = new GLatLng(lat,lng);
+distance = point.distanceFrom(pointer.getPoint());
+
+var content = infoW[i];
+sortti.push({distance:distance, content:content, point:point});
+}}
+
+sortti=sortti.sort(function (a,b) {return (a.distance - b.distance)}); 
+
+
+for (var j=0; j<sortti.length && j<document.getElementById("maara").value*1; j++){
+if (sortti[j].distance<radius){
+//GLog.write(sortti[j].distance);
+bounds.extend(pointer.getPoint());
+n++;
+sortti[j].content = sortti[j].content.replace(/"/g, "");
+var tooltip = sortti[j].content.split(",")[2];
+html = sortti[j].content.split(",")[2]||" ";
+html += "<br/>";
+html += sortti[j].content.split(",")[3]||" ";
+html += "<br/>";
+html += "<small>";
+html += lat+", "+lng;
+html += "</small>";
+html += "<br/>";
+html += "<br/>";
+html += kaikki;
+
+
+marker[j] = new GMarker(sortti[j].point,{icon:tiny, title:tooltip});
+map.addOverlay(marker[j]);
+doIW(marker[j],html);
+bounds.extend(marker[j].getPoint());
+
+///sivupalkki
+
+teksti += "<small>"+ (sortti[j].distance/1000).toFixed(1)+"</small>"
+teksti += "<a href='javascript:go("+j+")'"
+teksti += "onmouseover='heat("+j+")' "
+teksti += "onmouseout='cool("+j+")'>"
+teksti += sortti[j].content.split(",")[2]||" ";
+teksti += "&nbsp;"
+teksti += sortti[j].content.split(",")[3]||" ";
+teksti += "&nbsp;"
+teksti += sortti[j].content.split(",")[4]||" ";
+teksti += "</a><br/>";
+document.getElementById("message").innerHTML = teksti;
+}}
+document.getElementById("message").innerHTML += "<br/> "+ n + " centrales en "+ 
+
+(sortti[n-1].distance/1000).toFixed(1) +" km";
+fit();
+}
+
+
+//// go
+
+function go(num){
+map.setZoom(12);
+GEvent.trigger(marker[num],"click");
+}
+
+var attract;
+
+function heat(num){
+attract = new GMarker(marker[num].getPoint(),hotIcon);
+map.addOverlay(attract);
+//map.closeInfoWindow();
+}
+
+function cool(num){
+map.removeOverlay(attract);
+}
+
+///show all
+
+function fit(){
+bounds.extend(pointer.getPoint());
+var center = bounds.getCenter();
+map.closeInfoWindow();
+if(n>0){map.setZoom(map.getBoundsZoomLevel(bounds));}
+map.setCenter(center);
+//map.panDirection(0,0.2);
+}
+
+
+///clear the small markers
+
+function clearMarkers(){
+for (var k=0; k<marker.length; k++) {
+map.removeOverlay(marker[k]);
+//marker.length=0;
+}
+bounds = new GLatLngBounds();
+//document.getElementById("haku").value=" ";
+}
+
+function doIt(iso){
+clearMarkers();
+GDownloadUrl(page[iso],parseFile);
+}
+
+
+///Geo
+
+function showAddress(address){
+if (address=="")
+{document.getElementById("message").innerHTML = address +" ??<br/><br/> Ingresa tu ubicacion";
+}else{
+
+geocoder.getLatLng(
+address,function(point){
+if (!point)
+{document.getElementById("message").innerHTML = address +" ??<br/><br/> Lo siento, no encuentro la direccion.";
+}else{
+output ="haetaan";
+map.clearOverlays();
+bounds=new GLatLngBounds();
+pointer = new GMarker(point, {title:address, draggable:true});//pointer
+map.addOverlay(pointer);
+pointer.enableDragging();
+GEvent.addListener(pointer, "dragend", function()
+{clearMarkers();
+//document.getElementById("haku").value=" ";
+doIt(kohde);
+bounds.extend(pointer.getPoint());
+});
+
+bounds.extend(point);
+
+var text = address;
+text += "<br/><br/>"
+text += "<small>"
+text += point.toUrlValue();
+text += "</small>"
+text += "<br/><br/>"
+text += kaikki;
+doIW(pointer,text);
+
+doIt(kohde);
+}});
+}}
+
+doIt(kohde);
+showAddress(document.getElementById("haku").value)
+
+
+</script>
+
+<script type="text/javascript">
+/*************************************************************************/
+/**
+ * A general helper function for creating html elements. <div> as default element type
+ * @author Esa 2008 
+ * used for infowindows and sidebar
+ */
+function createElem(opt_className, opt_html, opt_tagName) {
+  var tag = opt_tagName||"div";
+  var elem = document.createElement(tag);
+  if (opt_html) elem.innerHTML = opt_html;
+  if (opt_className) elem.className = opt_className;
+  return elem;
+}
+
+
+/**
+ * Sidebar <div> made a GControl()
+ * @author Esa 2008
+ */
+function sideBlockControl(opt_options){
+  this.opts = opt_options||{};
+}
+sideBlockControl.prototype = new GControl();
+sideBlockControl.prototype.initialize = function(_map) {
+  var openText = this.opts.openText||"Resultados";
+  var opener = createElem("sideblock-open",openText); // open button
+  opener.style.border = "1px solid black";
+  opener.style.textAlign = "center";
+  opener.style.fontSize = "12px";
+  opener.style.fontFamily = "Arial";
+  opener.style.backgroundColor = "#fff";
+  opener.style.width = "65px";
+  opener.style.position = "relative";
+  opener.style.top = "7px";
+  opener.style.left = "63px";
+  opener.style.cursor = "pointer";
+  _map.getContainer().appendChild(opener);
+  var header = createElem("sideblock-header"); // header containing close button
+  header.style.textAlign = "right";
+  var closeText = this.opts.closeText||"Cerrar[x]&nbsp;";
+  var close = createElem("sideblock-close",closeText,"span"); // close button
+  close.style.cursor = "pointer";
+  header.appendChild(close);
+  var leftBar = createElem("sideblock"); // the parent element of the sidebar
+  leftBar.appendChild(header);
+  _map.getContainer().appendChild(leftBar);
+  leftBar.style.width = this.opts.sideBlockWidth||"200px";
+  leftBar.style.height = "100%";
+  var contents = createElem("sideblock-container"); //contents div
+  leftBar.appendChild(contents);
+  contents.style.height = "90%";
+  contents.style.overflow = "auto";
+  var me = this;
+  me.container = contents;
+  me.isVisible = true;
+  function openEvent(){me.isVisible=true; GEvent.trigger(me,'open',true)};
+  function closeEvent(){me.isVisible=false; GEvent.trigger(me,'close',false)};
+  me.show = function(){leftBar.style.display = "block"; openEvent()};
+  me.hide = function(){leftBar.style.display = "none"; closeEvent()};
+  close.onclick = function(){me.hide()};
+  opener.onclick = function(){me.show()};
+  return leftBar;
+}
+sideBlockControl.prototype.getDefaultPosition = function() {
+  return new GControlPosition(G_ANCHOR_TOP_LEFT, new GSize(0, 0));
+}
+
+
+/**
+ * Google logo made a GControl()
+ */
+function PowerLogo(){};
+PowerLogo.prototype = new GControl();
+PowerLogo.prototype.initialize = function(map) {
+  var logo = document.createElement("img");
+  map.getContainer().appendChild(logo);
+  logo.src = "http://maps.google.com/intl/fi_ALL/mapfiles/poweredby.png";
+  return logo;
+}
+PowerLogo.prototype.getDefaultPosition = function() {
+  return new GControlPosition(G_ANCHOR_BOTTOM_LEFT, new GSize(407,7));
+}
+
+/**
+ * A GLargeMapControl with adjusted default position
+ */
+function OffsetControl(){};
+OffsetControl.prototype = new GLargeMapControl();
+OffsetControl.prototype.getDefaultPosition = function() {
+  return new GControlPosition(G_ANCHOR_TOP_LEFT, new GSize(407,7));
+}
+/**
+ * GMap2.showBounds() method. Fit bounds to viewport with paddings.
+ * @ author Esa 2008
+ * @ param bounds_ GLatLngBounds()
+ * @ param opt_options Optional options object {top, right, bottom, left, save}
+ */
+GMap2.prototype.showBounds = function(bounds_, opt_options){
+  var opts = opt_options||{};
+  opts.top = opts.top*1||0;
+  opts.left = opts.left*1||0;
+  opts.bottom = opts.bottom*1||0;
+  opts.right = opts.right*1||0;
+  opts.save = opts.save||true;
+  opts.disableSetCenter = opts.disableSetCenter||false;
+  var ty = this.getCurrentMapType();
+  var port = this.getSize();
+  if(!opts.disableSetCenter){
+    var virtualPort = new GSize(port.width - opts.left - opts.right, 
+                            port.height - opts.top - opts.bottom);
+    this.setZoom(ty.getBoundsZoomLevel(bounds_, virtualPort));
+    var xOffs = 0//(opts.left - opts.right)/2;
+    var yOffs = 0//(opts.top - opts.bottom)/2;
+    var bPxCenter = this.fromLatLngToDivPixel(bounds_.getCenter());
+    var newCenter = this.fromDivPixelToLatLng(new GPoint(bPxCenter.x-xOffs, bPxCenter.y-yOffs));
+    this.setCenter(newCenter);
+    if(opts.save)this.savePosition();
+  }
+  var portBounds = new GLatLngBounds();
+  portBounds.extend(this.fromContainerPixelToLatLng(new GPoint(opts.left, port.height-opts.bottom)));
+  portBounds.extend(this.fromContainerPixelToLatLng(new GPoint(port.width-opts.right, opts.top)));
+  return portBounds;
+}
+
+/**
+ * Pan and zoom to fit calling GMap.showBounds*/
+
+function fit(bounds){
+  var opts = {top:40,right:10,bottom:5,left:50};
+  if(myBlock.isVisible)opts.left = 450; //sideBlock width+padding
+  map.showBounds(bounds, opts);
+} 
+
+/**
+ * SideBlock
+ */
+var sideOptions = {sideBlockWidth:"400px"};
+var myBlock = new sideBlockControl(sideOptions);
+map.addControl(myBlock);
+
+var midLogo = new PowerLogo();
+var midControl = new OffsetControl();
+
+GEvent.addListener(myBlock, 'open', function(){
+  map.addControl(midLogo);
+  map.addControl(midControl);
+  refocus();
+});
+GEvent.addListener(myBlock, 'close', function(){
+  map.removeControl(midLogo);
+  map.removeControl(midControl);
+  refocus();
+});
+
+/**
+ * Calculating zoom focus point
+ */
+function virtualCenter(point, xOffs){
+  var pixCenter = map.fromLatLngToDivPixel(point);
+  var virtualPxCenter = new GPoint(pixCenter.x + xOffs/2, pixCenter.y);
+  return map.fromDivPixelToLatLng(virtualPxCenter);
+}
+function refocus(){
+  if(myBlock.isVisible)
+  {
+    var pnt = virtualCenter(map.getCenter(),0);//sideBlock width
+    map.setFocus(pnt);
+  }else{
+    map.setFocus(); //reset
+  }
+}
+GEvent.addListener(map,"moveend",function(){
+  refocus();
+});
+
+/**
+ * doubleClickZoom recentering
+ */
+GEvent.addDomListener(map,"dblclick",function(a,b){
+  var pnt = virtualCenter(b, 0); //sideBlock width
+  if(myBlock.isVisible)map.setCenter(pnt);
+});
+
+/**
+ * On load
+ */
+myBlock.container.appendChild(document.getElementById("novel"));
+myBlock.show();
+if(window.innerWidth<500)myBlock.hide();
+
+
+
+
+</script>
+</body>
+
+</html>

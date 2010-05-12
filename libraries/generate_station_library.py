@@ -47,3 +47,11 @@ pickle.dump(tempo,f)
 f.close()
 os.chdir(home)
 
+os.chdir(home+'/../ui-server/public/')
+f=open('abc.txt','w')
+for element in tempo:
+	f.write('%s,%s,%s,%s;' % (tempo[element]['latitude'],tempo[element]['longitude'],tempo[element]['city'],tempo[element]['country']))
+f.close()
+os.chdir(home)
+
+

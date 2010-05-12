@@ -1,0 +1,326 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<title>Collapsible Sidebar</title>
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAA5p-2xVuL2sCEA_3EI5cfbxT9NtVWVEDYCex5Ln-S79Q9YPk_qRRjBWysT-Cp9j7ICdRIKu6P6XDNNQ"
+  type="text/javascript"></script>
+<style type="text/css">
+html body {width:100%; height:100%; margin:0px;
+font-family: Verdana,Arial,sans serif; font-size: 11px;}
+li {margin-left: -20px;}
+a:hover {text-decoration: underline overline}
+#map {width:99%; height:440px; border: 0px solid silver;}
+#header {height:40px; padding-top:4px; text-align:center;}
+#adsense {margin:10px; text-align:center;}
+.sideblock {background-color:#eee;margin:0px;}
+.sideblock-header {padding:4px;}
+.sideblock-close:hover {font-weight:bold}
+.sideblock-container {margin:6px; padding:6px;}
+.esas {color:black; font-size:18px}
+.blue {color:blue; font-size:18px}
+</style>
+</head>
+<body onunload="GUnload()">
+<div id="header">
+<span class="esas"> Esa's Google Maps API experiments.</span> <span class="blue">Collapsible sidebar.</span> 
+<input type="button" value="New Markers" onclick="randomMarkers()"/> 
+ <small id="api-v"></small>
+</div>
+<div id="map"></div>
+<div id="adsense">
+<script type="text/javascript"><!--
+google_ad_client = "pub-3649938975494252";
+/* 728x90, luotu 22.11.2008 */
+google_ad_slot = "7864723809";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+<div id="novel">
+<h4>Map Kitchen [part 4]</h4>
+<h4>SideBlock() GControl object</h4>
+Collapsible sidebar makes a map page more usable especially with small displays. The implementation in maps.google.com is sophisticated. The map doesn't pan when it is largened though its centerpoint shifts. Markers and infowindow don't show any flicker. No waiting for new tiles to load.
+<h4>How is it made</h4>
+The map is actually full sized all the time. The sidebar covers a part of it when not collapsed. Clever, but not very simple. There are some...
+<h4>Technical challenges</h4>
+<ul><li>Controls must be moved back and forth.</li>
+<li>Zooming in/out must be focused to a virtual centerpoint.</li>
+<li>Infowindow should avoid going under the sidebar.</li>
+<li>Map bounds must be calculated for the smaller viewport.</li>
+<li>Overview map should follow the changing viewport.</li>
+</ul>
+I don't know the Google's solutions but I did it following way.
+<h4>Controls</h4>
+Placing control elements is straightforward by <code>GControlPosition()</code>.
+Google logo was also made a <code>GControl()</code>.
+These repositioned controls are added/removed on map.
+The original controls are not switched. They rest and hide behind the expanded sidebar.
+The GScaleControl was positioned ouside sidebar area.
+<h4>Zooming</h4>
+The virtual centerpoint of the reduced map is calculated from the pixel shift. The point is entered to <code>GMap2.setFocus()</code> method. The method makes in/out zooming to happen to/from the given point. Unfortunately the method is undocumented.
+<h4>Infowindow</h4>
+Infowindow avoids GControl elements. The sidebar block was subclassed as a <code>GControl</code>. Its constructor <code>new SideBlock(opts?)</code> constructs also the [Sidebar] button.
+<h4>Bounds</h4>
+The <a href="http://esa.ilmari.googlepages.com/showbounds.htm">already introduced</a> <code>GMap2.showBounds()</code> made the task very simple.
+<h4>Overview map</h4>
+This is bad one. The map of <code>GOverviewMapControl()</code> has no access anymore. The undocumented <code>getOverview()</code> method is gone. The only thing that would need adjustment are the two rectangles that show the viewport. Constructing an overview map from scrath is quite a big task compared to the issue.
+<h4>Events</h4>
+There are 'open' and 'close' GEvents on SideBlock object available. Also <code>SideBlock.isVisible</code> property is provided.
+<h4>Methods</h4>
+<code>show()</code> and <code>hide()</code> methods perform the same as [close] and [sidebar] buttons do.
+<h4>Contents</h4>
+Contents are appendChilded to the SideBlock after it is added on map. Syntax: <code>SideBlock.container.appendChild(dom_obj)</code>. In this example the div containing this story is appendChilded. Hopefully something more useful will usually be appended. Like a <code>SideBar</code> object with categories from <a href="http://mapsapi.googlepages.com/categories.htm">Part_[3]</a>.
+<p><a href="http://apitricks.blogspot.com/">Blog</a></p>
+<p>.</p>
+
+
+</div>
+
+
+<script type="text/javascript">
+
+/**
+ * A general helper function for creating html elements. <div> as default element type
+ * @author Esa 2008 
+ * used for infowindows and sidebar
+ */
+function createElem(opt_className, opt_html, opt_tagName) {
+  var tag = opt_tagName||"div";
+  var elem = document.createElement(tag);
+  if (opt_html) elem.innerHTML = opt_html;
+  if (opt_className) elem.className = opt_className;
+  return elem;
+}
+
+/**
+ * Sidebar <div> made a GControl()
+ * @author Esa 2008
+ */
+function sideBlockControl(opt_options){
+  this.opts = opt_options||{};
+}
+sideBlockControl.prototype = new GControl();
+sideBlockControl.prototype.initialize = function(_map) {
+  var openText = this.opts.openText||"Sidebar";
+  var opener = createElem("sideblock-open",openText); // open button
+  opener.style.border = "1px solid black";
+  opener.style.textAlign = "center";
+  opener.style.fontSize = "12px";
+  opener.style.fontFamily = "Arial";
+  opener.style.backgroundColor = "#fff";
+  opener.style.width = "65px";
+  opener.style.position = "relative";
+  opener.style.top = "7px";
+  opener.style.left = "63px";
+  opener.style.cursor = "pointer";
+  _map.getContainer().appendChild(opener);
+  var header = createElem("sideblock-header"); // header containing close button
+  header.style.textAlign = "right";
+  var closeText = this.opts.closeText||"Close[x]&nbsp;";
+  var close = createElem("sideblock-close",closeText,"span"); // close button
+  close.style.cursor = "pointer";
+  header.appendChild(close);
+  var leftBar = createElem("sideblock"); // the parent element of the sidebar
+  leftBar.appendChild(header);
+  _map.getContainer().appendChild(leftBar);
+  leftBar.style.width = this.opts.sideBlockWidth||"200px";
+  leftBar.style.height = "100%";
+  var contents = createElem("sideblock-container"); //contents div
+  leftBar.appendChild(contents);
+  contents.style.height = "90%";
+  contents.style.overflow = "auto";
+  var me = this;
+  me.container = contents;
+  me.isVisible = true;
+  function openEvent(){me.isVisible=true; GEvent.trigger(me,'open',true)};
+  function closeEvent(){me.isVisible=false; GEvent.trigger(me,'close',false)};
+  me.show = function(){leftBar.style.display = "block"; openEvent()};
+  me.hide = function(){leftBar.style.display = "none"; closeEvent()};
+  close.onclick = function(){me.hide()};
+  opener.onclick = function(){me.show()};
+  return leftBar;
+}
+sideBlockControl.prototype.getDefaultPosition = function() {
+  return new GControlPosition(G_ANCHOR_TOP_LEFT, new GSize(0, 0));
+}
+
+/**
+ * Google logo made a GControl()
+ */
+function PowerLogo(){};
+PowerLogo.prototype = new GControl();
+PowerLogo.prototype.initialize = function(map) {
+  var logo = document.createElement("img");
+  map.getContainer().appendChild(logo);
+  logo.src = "http://maps.google.com/intl/fi_ALL/mapfiles/poweredby.png";
+  return logo;
+}
+PowerLogo.prototype.getDefaultPosition = function() {
+  return new GControlPosition(G_ANCHOR_BOTTOM_LEFT, new GSize(407,7));
+}
+
+/**
+ * A GLargeMapControl with adjusted default position
+ */
+function OffsetControl(){};
+OffsetControl.prototype = new GLargeMapControl();
+OffsetControl.prototype.getDefaultPosition = function() {
+  return new GControlPosition(G_ANCHOR_TOP_LEFT, new GSize(407,7));
+}
+
+/**
+ * GMap2.showBounds() method. Fit bounds to viewport with paddings.
+ * @ author Esa 2008
+ * @ param bounds_ GLatLngBounds()
+ * @ param opt_options Optional options object {top, right, bottom, left, save}
+ */
+GMap2.prototype.showBounds = function(bounds_, opt_options){
+  var opts = opt_options||{};
+  opts.top = opts.top*1||0;
+  opts.left = opts.left*1||0;
+  opts.bottom = opts.bottom*1||0;
+  opts.right = opts.right*1||0;
+  opts.save = opts.save||true;
+  opts.disableSetCenter = opts.disableSetCenter||false;
+  var ty = this.getCurrentMapType();
+  var port = this.getSize();
+  if(!opts.disableSetCenter){
+    var virtualPort = new GSize(port.width - opts.left - opts.right, 
+                            port.height - opts.top - opts.bottom);
+    this.setZoom(ty.getBoundsZoomLevel(bounds_, virtualPort));
+    var xOffs = (opts.left - opts.right)/2;
+    var yOffs = (opts.top - opts.bottom)/2;
+    var bPxCenter = this.fromLatLngToDivPixel(bounds_.getCenter());
+    var newCenter = this.fromDivPixelToLatLng(new GPoint(bPxCenter.x-xOffs, bPxCenter.y-yOffs));
+    this.setCenter(newCenter);
+    if(opts.save)this.savePosition();
+  }
+  var portBounds = new GLatLngBounds();
+  portBounds.extend(this.fromContainerPixelToLatLng(new GPoint(opts.left, port.height-opts.bottom)));
+  portBounds.extend(this.fromContainerPixelToLatLng(new GPoint(port.width-opts.right, opts.top)));
+  return portBounds;
+}
+
+/**
+ * Map
+ */
+_mPreferMetric=true;
+var map = new GMap2(document.getElementById("map"));
+var Helsinki = new GLatLng(60.17 ,24.94);
+map.setCenter(Helsinki, 10); // map must be first setCentered. Then virtualCenter function works.
+var shiftedHelsinki = virtualCenter(Helsinki, 400);
+map.setCenter(shiftedHelsinki, 10); // Recentering to small viewport
+map.addControl(new GLargeMapControl());
+map.addControl(new GMapTypeControl());
+var scalePos = new GControlPosition(G_ANCHOR_BOTTOM_LEFT, new GSize(475,7));
+map.addControl(new GScaleControl(256), scalePos);
+var overv = new GOverviewMapControl();
+map.addControl(overv);
+overv.hide(1);
+map.openInfoWindowHtml(map.getCenter(),"Nice to see you.");
+map.closeInfoWindow(); //preloading infowindow
+document.getElementById("api-v").innerHTML = 'api v2.'+G_API_VERSION;
+
+/**
+* 7 random markers 
+ */
+function randomMarkers(_bounds){
+  var bounds = _bounds||map.getBounds();
+  var markerBounds = new GLatLngBounds();
+  var span = bounds.toSpan();
+  var southWest = bounds.getSouthWest();
+  var northEast = bounds.getNorthEast();
+  map.clearOverlays();
+  for (var i=0; i<7; i++){
+    var point = new GLatLng(southWest.lat() + span.lat() * Math.random()*0.9,
+                            southWest.lng() + span.lng() * Math.random()*0.9);
+    var marker = (new GMarker(point));
+    map.addOverlay(marker);
+    marker.bindInfoWindowHtml('<b>'+i+'</b>');
+    markerBounds.extend(point);
+  }
+  fit(markerBounds);
+}
+
+/**
+ * Pan and zoom to fit calling GMap.showBounds
+ */
+function fit(bounds){
+  var opts = {top:40,right:10,bottom:5,left:50};
+  if(myBlock.isVisible)opts.left = 450; //sideBlock width+padding
+  map.showBounds(bounds, opts);
+}
+
+/**
+ * SideBlock
+ */
+var sideOptions = {sideBlockWidth:"400px"};
+var myBlock = new sideBlockControl(sideOptions);
+map.addControl(myBlock);
+
+var midLogo = new PowerLogo();
+var midControl = new OffsetControl();
+
+GEvent.addListener(myBlock, 'open', function(){
+  map.addControl(midLogo);
+  map.addControl(midControl);
+  refocus();
+});
+GEvent.addListener(myBlock, 'close', function(){
+  map.removeControl(midLogo);
+  map.removeControl(midControl);
+  refocus();
+});
+
+/**
+ * Calculating zoom focus point
+ */
+function virtualCenter(point, xOffs){
+  var pixCenter = map.fromLatLngToDivPixel(point);
+  var virtualPxCenter = new GPoint(pixCenter.x + xOffs/2, pixCenter.y);
+  return map.fromDivPixelToLatLng(virtualPxCenter);
+}
+function refocus(){
+  if(myBlock.isVisible)
+  {
+    var pnt = virtualCenter(map.getCenter(),400);//sideBlock width
+    map.setFocus(pnt);
+  }else{
+    map.setFocus(); //reset
+  }
+}
+GEvent.addListener(map,"moveend",function(){
+  refocus();
+});
+
+/**
+ * doubleClickZoom recentering
+ */
+GEvent.addDomListener(map,"dblclick",function(a,b){
+  var pnt = virtualCenter(b, -400); //sideBlock width
+  if(myBlock.isVisible)map.setCenter(pnt);
+});
+
+/**
+ * On load
+ */
+myBlock.container.appendChild(document.getElementById("novel"));
+myBlock.show();
+if(window.innerWidth<500)myBlock.hide();
+
+window.onload = function(){
+  randomMarkers();
+}
+
+
+</script>
+
+</body>
+</html>
