@@ -127,12 +127,12 @@ def etoit(station,dayofyear):
 
 ############################# RUN ############################################################
 
-
+home=os.getcwd()
 os.chdir('./Doc')
 f=open('stations.lib','r')
 library = pickle.load(f)					#Dictionary of dictionaries with monitored stations
 f.close()
-os.chdir('..')
+os.chdir(home)
 
 
 for element in library:
@@ -141,19 +141,19 @@ for element in library:
 	print '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@'
 	
 	direct="%s/%s"%("Stations",element)
-	home=os.getcwd()
+	
 	if os.path.exists(direct):			#Changes to Directory /Stations/XXXX (Station ID)
 		os.chdir(direct)
 
-	for item in os.listdir('.'):
-		if item[-4:] != '.dex' or item[-4:] != '.rsm':	#is not an index file
-			buff={}
-			if item[0:7] not in buff:	#that day havent been indexed
-				if 1:					#range to index, 1 alldir
-					buff[item[0:7]]=1
-					etoit(library[element],item[0:7])
-		else:
-			print "No data for station"
+		for item in os.listdir('.'):
+			if item[-4:] != '.dex' and item[-4:] != '.rsm':	#is not an index file
+				buff={}
+				if item[0:7] not in buff:	#that day havent been indexed
+					if 1:					#range to index, 1 alldir
+						buff[item[0:7]]=1
+						etoit(library[element],item[0:7])
+	else:
+		print "No data for station"
 	
 	os.chdir(home)
 	

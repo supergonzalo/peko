@@ -156,4 +156,25 @@ def rsm_data(request,format, station,xxx):
 	html = "<html><body><p>%s</body></html>" % (data)
 	return HttpResponse(html)
 
+def infowindow(request,format, station,xxx):
+	home=os.getcwd()
+	station=station[0:4]
+	station_dir="%s/%s"%(workdir,station)
+	data=''
+	
+	if os.path.exists(station_dir):			
+		os.chdir(station_dir)
 
+	rsm=str(station+'.rsm')
+	if os.path.isfile(rsm):
+		f = open(rsm, 'r')		
+		resumen=f.readlines()	
+		f.close()
+
+		for element in resumen:
+			data=data+"<p>%s</p>"%(element)			#############################
+	else:
+		data= "No tenemos suficientes datos de la estacion"	
+	os.chdir(home)
+	html = "<html><body><p>%s</body></html>" % (data)
+	return HttpResponse(html)
