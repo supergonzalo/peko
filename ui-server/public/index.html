@@ -60,7 +60,7 @@ Mostrar las <input type="text" size="2" id="maara" name="maara" title="Number sh
 title="Resultados"></div>
 
 </div></td>
-<td><div id="gon" align="right" style="width:592px;">Prueba de la division para la muestra de resultados</div></td>
+<td><div id="gon" align="left" style="width:592px;"> <td><iframe id="descCentral" align="right" style="width:592px;">Prueba de la division para la muestra de resultados</iframe></td>
 </tr>
 <tr><td>Publicidad</td></tr>
 </table>
@@ -87,6 +87,8 @@ var marker=[];
 var pointer = new GMarker(new GLatLng(62,23));
 var closer = "<a href='javascript:luokse();'>Acercar</a>"
 var kaikki = "<a href='javascript:fit();'>Mostrar todas</a>"
+var stat1 = "<a href="
+var stat2 = ">Datos climaticos</a>"
 var geocoder = new GClientGeocoder();
 var n=0;//osumat
 
@@ -133,7 +135,7 @@ pin.openInfoWindowHtml(html,{maxWidth:300});
 
 
 function luokse(){
-map.zoomIn();map.zoomIn();map.zoomIn();
+map.zoomIn();map.zoomIn();
 }
 
 
@@ -157,11 +159,12 @@ for (var i=0; i<infoW.length; i++) {
 if (infoW[i].indexOf(",") != -1) {
 var lat = infoW[i].split(",")[0]*1;
 var lng = infoW[i].split(",")[1]*1;
+var stat_code=infoW[i].split(",")[3]*1;
 var point = new GLatLng(lat,lng);
 distance = point.distanceFrom(pointer.getPoint());
 
 var content = infoW[i];
-sortti.push({distance:distance, content:content, point:point});
+sortti.push({distance:distance, content:content, point:point,stat_code:stat_code});
 }}
 
 sortti=sortti.sort(function (a,b) {return (a.distance - b.distance)}); 
@@ -186,6 +189,9 @@ html += "<br/>";
 html += closer;
 html += " | ";
 html += kaikki;
+html += " | ";
+
+
 
 
 marker[j] = new GMarker(sortti[j].point,{icon:tiny, title:tooltip});
@@ -213,12 +219,19 @@ document.getElementById("message").innerHTML += "<br/> "+ n + " centrales en "+
 fit();
 }
 
-
 //// go
 
 function go(num){
 map.setZoom(12);
 GEvent.trigger(marker[num],"click");
+//A: tengo datos central en datosCentral
+
+centralUrl="http://myhome.com.ar:58000/t/"+sortti[num].content.split(",")[4];
+alert("NUM="+num+" sortti="+sortti[num]+" url="+centralUrl);
+//A: construi centralUrl para obtener datos central de servidorDeDatos
+
+document.getElementById("descCentral").src= centralUrl;
+//A: mostre los datos obtenidos en el elemento con id="descCentral" ( era"gon")
 }
 
 var attract;

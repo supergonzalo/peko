@@ -12,7 +12,7 @@ config = {
 	"DATA_SERVER_IP"   : '127.0.0.1',
 	"DATA_SERVER_PORT"  : '8000',
 	"UI_SERVER_IP" : '',
-	"UI_SERVER_NAME": '',
+	"UI_SERVER_NAME": 'peko.tk',
 	"DATA_SERVER_THREADS": '20',
 	"DATA_SERVER_NAME": 'peko.tk',
 	"UI_SERVER_THREADS":'',
