@@ -1,8 +1,5 @@
 data-server/Stations/*
 *.pyc
-data-server/Doc/eto1.0.py
-data-server/Doc/stations.lib
-data-server/Doc/test.gpx
 libraries/Stationsold.zip
-/uiserver/*
+config.txt
 

@@ -10,7 +10,7 @@ config = {
 	"WORKDIR"  : here,
 	"TEMP_FILES_XPIRE"  : '7',
 	"DATA_SERVER_IP"   : '127.0.0.1',
-	"DATA_SERVER_PORT"  : '8000',
+	"DATA_SERVER_PORT"  : '9000',
 	"UI_SERVER_IP" : '',
 	"UI_SERVER_NAME": 'peko.tk',
 	"DATA_SERVER_THREADS": '20',

@@ -1,7 +1,0 @@
-<markers> 
-  <!-- Dont use copy and paste on this XML file, use "View Source" or "Save As"
-       What the browser displays is *interpreted* XML, not XML source. --> 
- <marker lat="43.65654" lng="-79.90138" html="Some stuff to display in the&lt;br&gt;Uno"  label="a" /> 
- <marker lat="43.91892" lng="-78.89231" html="Some stuff to display in the&lt;br&gt;Dos" label="b" /> 
- <marker lat="43.82589" lng="-79.10040" html="Some stuff to display in the&lt;br&gt;Tres"  label="c" /> 
-</markers> 
