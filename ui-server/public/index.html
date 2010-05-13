@@ -8,8 +8,9 @@ html body {width:100%; height:100%; margin:15px;
 font-family: Verdana,Arial,sans serif; font-size: 11px;}
 li {margin-left: -20px;}
 a:hover {text-decoration: underline overline}
-#map {width:95%; height:350px; border: 5px solid green;}
-#header {height:50px; padding-top:0px; text-align:center;padding-left:20px;}
+#map {width:98%; height:350px; border: 0px solid green;}
+#header {height:50px; width:98%; padding-top:5px; text-align:left;padding-left:5px;}
+
 #adsense {margin:10px; text-align:center;}
 .sideblock {background-color:#eee;margin:0px;}
 .sideblock-header {padding:4px;}
@@ -37,10 +38,10 @@ GLoadMapsScript();
 <div id="hakuLaatikko" style="text-align:left">
 
 <form action="#" onsubmit="showAddress(this.haku.value); return false">
-<h4>Ingresa tu ubicacion: <input type="text" size="25" id="haku" name="haku" title="Address" value="murcia spain"/>
+<h3>Ingresa ubicacion: <input type="text" size="25" id="haku" name="haku" title="Address" value="murcia spain"/>
 
 <input type="submit" value=" Pulsa aqui! " title="Enter" />&nbsp;
-Mostrar las <input type="text" size="2" id="maara" name="maara" title="Number shown" value="5"/>centrales mas cercanas  
+para mostrar las <input type="text" size="2" id="maara" name="maara" title="Number shown" value="5"/>centrales mas cercanas  
 <span id="maximum">en un radio de
 
 <input type="text" size="3" id="radius" name="radius" title="Search radius" value="100"/> km
@@ -52,17 +53,16 @@ Mostrar las <input type="text" size="2" id="maara" name="maara" title="Number sh
 </div>
 <div id="map"></div>
 
-<table border="1">
+<table border="1" width="98%">
 <tr>
-<td><div id="novel">
-<h4 align="center"> Resultados de la busqueda - Selecciona la central a utilizar</h4>
-<div id="message" style="width:360px; height:90px; background:white; overflow:auto; white-space:nowrap;"
+<td width="20%"><div id="novel">
+<h3 align="center">Selecciona la central a utilizar</h3>
+<div id="message" style="height:90px; background:white; overflow:auto; white-space:nowrap;"
 title="Resultados"></div>
 
 </div></td>
-<td><div id="gon" align="left" style="width:592px;"> <td><iframe id="descCentral" align="right" style="width:592px;">Prueba de la division para la muestra de resultados</iframe></td>
+<td width="80%"><iframe id="descCentral" align="left" width="80%"></iframe></td>
 </tr>
-<tr><td>Publicidad</td></tr>
 </table>
 
 <script type="text/javascript">
@@ -227,7 +227,7 @@ GEvent.trigger(marker[num],"click");
 //A: tengo datos central en datosCentral
 
 centralUrl="http://myhome.com.ar:58000/t/"+sortti[num].content.split(",")[4];
-alert("NUM="+num+" sortti="+sortti[num]+" url="+centralUrl);
+//alert("NUM="+num+" sortti="+sortti[num]+" url="+centralUrl);
 //A: construi centralUrl para obtener datos central de servidorDeDatos
 
 document.getElementById("descCentral").src= centralUrl;
