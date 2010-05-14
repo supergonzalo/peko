@@ -13,10 +13,9 @@ import glob,time
 import pywapi
 import pprint
 from metar import Metar
-
 import etowind20
-
 import pickle
+import rsm
 
 
 #Gets Weather Reports from stations given as a parameter (argv) and stores them in files
@@ -152,6 +151,8 @@ for element in library:
 					if 1:					#range to index, 1 alldir
 						buff[item[0:7]]=1
 						etoit(library[element],item[0:7])
+		
+		rsm.create_rsm(element)
 	else:
 		print "No data for station"
 	

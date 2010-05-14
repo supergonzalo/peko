@@ -1,37 +1,22 @@
 #!/usr/bin/python
 
 from __future__ import with_statement
-import os, re, glob
+import os, re, glob, pickle
 
-
-def addto_rsm(station,dexinfo):						#Adds dexinfo to the top of station.rsm, if file does not exist it creates it
-	#print 'dexinfo#####################\n'
-	#print dexinfo
-	rsm=station+'.rsm'
-	temp=''
-	if os.path.isfile(rsm):
-		f=open(rsm,'r')
-		temp=f.readlines()
-		f.close()
-	f=open(rsm,'w')
-	f.writelines(dexinfo)
-	f.writelines(temp)
-	f.close()
-
-def create_rsm(station):			#Creates .rsm file for a directory '.', if exists deletes the previous one
-	date_file_list=[]
+def create_rsm(station):
 	rsm=station[0:4]+'.rsm'
-#Reindex .dex files, delete old rsm file
-	if os.path.isfile(rsm):
-		f=open(rsm,'w')
-		f.write('')
-		f.close()
-	for file in glob.glob('*.dex'):				#reverse order
+	index=dict()
+	print '\n Indexing %s' % str(station)	#Buscar todos los .dex
+	date_file_list=list()
+	for file in glob.glob('*.dex'):				
 		date_file_list.append(file)
+																				#Index = [.dex] ordenada backwards
 	date_file_list.sort()
-	#date_file_list.reverse() 							# newest mod date now first
+	date_file_list.reverse()
+	index['index']=date_file_list
+																				#Para index[.dex] -> dict[yyyyddd]=[resumen del dia].split
 	for element in date_file_list:
-		eto=element+'\n'
+		eto=dict()
 		with open(element, "r") as f:
 			f.seek (0, 2)           					# Seek @ EOF
 			fsize = f.tell()       					 	# Get Size
@@ -42,26 +27,25 @@ def create_rsm(station):			#Creates .rsm file for a directory '.', if exists del
 		for line in lines:
 			for item in findstr:
 				if item in line:
-					eto=eto+line
-			
-			#print element
-			#print eto
-		addto_rsm(station,eto+'\n')	#Write footer to .rsm
+					eto[item]=line
+		index[element]=eto
+																	
+	f=open(rsm,'w')#wirte XXXX.rsm 
+	pickle.dump(index,f)
+	f.close()
 
 
-def reindex(directory):
 
-	home=os.getcwd()
-	os.chdir(directory)
-	centrals=os.listdir('.')
-
-	for station in centrals:
-		os.chdir(station)
-		print os.getcwd()
-		create_rsm(station)
-		os.chdir('..')
-	os.chdir(home)
-				
-reindex('Stations')
+#if True:
+#	home=os.getcwd()
+#	os.chdir('Stations')
+#	centrals=os.listdir('.')
+	
+#	for station in centrals:						#Para estacion en stations.lib Entrar en dir
+#		os.chdir(station)
+#		print os.getcwd()
+#		create_rsm(station)
+#		os.chdir('..')
+#	os.chdir(home)
 
 
