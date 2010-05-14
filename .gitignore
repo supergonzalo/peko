@@ -2,4 +2,4 @@ data-server/Stations/*
 *.pyc
 libraries/Stationsold.zip
 config.txt
-
+ui-server/public/index.html
