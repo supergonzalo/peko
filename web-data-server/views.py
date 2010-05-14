@@ -22,7 +22,7 @@ def current_datetime(request):
 	html = "<html><body>Today is day %s.</body></html>" % cday()
 	return HttpResponse(html)
 
-###########################################################################################Ultimo cambio, testear
+
 #Sorts .dex files
 def put_some_order(folder):
 	date_file_list=[]
@@ -137,7 +137,7 @@ def rsm_data(request,format, station,xxx):
 	home=os.getcwd()
 	station=station[0:4]
 	station_dir="%s/%s"%(workdir,station)
-	data='<table border="1" width="100%"><tr><td align="center">Actualizado<td align="center">Consumo de agua<td align="center">Temperatura media<td align="center">Viento medio</tr>'
+	data='<table border="1" width="100%"><tr><td align="center">Actualizado<td align="center">Consumo de agua/dia<td align="center">Temperatura media/dia<td align="center">Viento medio/dia</tr>'
 	
 	if os.path.exists(station_dir):			
 		os.chdir(station_dir)
@@ -151,13 +151,30 @@ def rsm_data(request,format, station,xxx):
 		#for element in temp['index']:
 		element = temp['index'][0]	
 		data=data+'<tr><td align="center">Hace %s dias<td align="center"> %s litros por m2 <td align="center"> %s C <td align="center"> %s m/s</tr>'%(str(int(cday())-int(temp[element]['DayNumber']))[0:digits],temp[element]['ETOTODAY'][0:digits],temp[element]['TempMed'][0:digits],temp[element]['WindMed'][0:digits])
-
+		cant=0
+		teto=0
+		ttemp=0
+		twind=0
+		for element in temp['index']:
+			average=int(cday())-int(temp[element]['DayNumber'])
+			if average<5:
+				cant=cant+1
+				teto=teto+float(temp[element]['ETOTODAY'])
+				ttemp=ttemp+float(temp[element]['TempMed'])
+				twind=twind+float(temp[element]['WindMed'])
 		
+		teto=str(teto/cant)
+		ttemp=str(ttemp/cant)
+		twind=str(twind/cant)
+		data=data+'<tr><td align="center">Media de 5 dias<td align="center"> %s litros por m2 <td align="center"> %s C <td align="center"> %s m/s</tr></table><br>'%(teto[0:digits],ttemp[0:digits],twind[0:digits])
 		
+					
 	else:
 		data= "No data"	
 	os.chdir(home)
-	html = "<html><body>%s</table></body></html>" % (data)
+	data=data+'<table width=100%><tr><td><a href="index.html">Esta central NO da valores logicos</a><td><a href="index.html">Programa de Riego Avanzado</a><td><a href="index.html">Ayuda!</a> </div>'		
+
+	html = "<html><body>%s</body></html>" % (data)
 	return HttpResponse(html)
 
 def infowindow(request,format, station,xxx):

@@ -53,7 +53,7 @@ para mostrar las <input type="text" size="2" id="maara" name="maara" title="Numb
 <tr>
 <td width="20%"><div id="novel">
 <h3 align="center">Selecciona la central a utilizar</h3>
-<div id="message" style="height:90px; background:white; overflow:auto; white-space:nowrap;"
+<div id="message" style="height:150px; background:white; overflow:auto; white-space:nowrap;"
 title="Resultados"></div>
 
 </div></td>
@@ -125,7 +125,7 @@ map.closeInfoWindow();
 
 function doIW(pin,html){
 GEvent.addListener(pin, "click", function(){
-pin.openInfoWindowHtml(html,{maxWidth:300});
+pin.openInfoWindowHtml(html,{maxWidth:250});
 })}
 
 
@@ -196,15 +196,16 @@ bounds.extend(marker[j].getPoint());
 
 ///sivupalkki
 
-teksti += "<small>"+ (sortti[j].distance/1000).toFixed(1)+"</small>"
+teksti += "<small>"+ (sortti[j].distance/1000).toFixed(1)+"km </small>"
 teksti += "<a href='javascript:go("+j+")'"
 teksti += "onmouseover='heat("+j+")' "
 teksti += "onmouseout='cool("+j+")'>"
-teksti += sortti[j].content.split(",")[2]||" ";
+///teksti += sortti[j].content.split(",")[2]||" ";
 teksti += "&nbsp;"
-teksti += sortti[j].content.split(",")[3]||" ";
+teksti += sortti[j].content.split(":")[2]||" ";
 teksti += "&nbsp;"
-teksti += sortti[j].content.split(",")[4]||" ";
+teksti += sortti[j].content.split(":")[1]||" ";
+
 teksti += "</a><br/>";
 document.getElementById("message").innerHTML = teksti;
 }}
