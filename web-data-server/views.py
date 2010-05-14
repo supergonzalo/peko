@@ -137,7 +137,7 @@ def rsm_data(request,format, station,xxx):
 	home=os.getcwd()
 	station=station[0:4]
 	station_dir="%s/%s"%(workdir,station)
-	data=''
+	data='<table border="1" width="100%"><tr><td align="center">Actualizado<td align="center">Consumo de agua<td align="center">Temperatura media<td align="center">Viento medio</tr>'
 	
 	if os.path.exists(station_dir):			
 		os.chdir(station_dir)
@@ -145,15 +145,19 @@ def rsm_data(request,format, station,xxx):
 	rsm=str(station+'.rsm')
 	if os.path.isfile(rsm):
 		f = open(rsm, 'r')		
-		temp=f.readlines()	
+		temp=pickle.load(f)	
 		f.close()
+		digits=5
+		#for element in temp['index']:
+		element = temp['index'][0]	
+		data=data+'<tr><td align="center">Hace %s dias<td align="center"> %s litros por m2 <td align="center"> %s C <td align="center"> %s m/s</tr>'%(str(int(cday())-int(temp[element]['DayNumber']))[0:digits],temp[element]['ETOTODAY'][0:digits],temp[element]['TempMed'][0:digits],temp[element]['WindMed'][0:digits])
 
-		for element in temp:
-			data=data+"<p>%s</p>"%(element)
+		
+		
 	else:
 		data= "No data"	
 	os.chdir(home)
-	html = "<html><body><p>%s</body></html>" % (data)
+	html = "<html><body>%s</table></body></html>" % (data)
 	return HttpResponse(html)
 
 def infowindow(request,format, station,xxx):
@@ -173,8 +177,14 @@ def infowindow(request,format, station,xxx):
 
 		for element in resumen:
 			data=data+"<p>%s</p>"%(element)			#############################
+
+	#levanta los valores del cache para los ultimos 7 dias
+	#Calcula para la ultima semana los valores de tmax tmin windmedio y eto media 	
+	#Copia al array resultado los valores solicitados
 	else:
 		data= "No tenemos suficientes datos de la estacion"	
+
 	os.chdir(home)
 	html = "<html><body><p>%s</body></html>" % (data)
+# Devuelve el valor formateado
 	return HttpResponse(html)

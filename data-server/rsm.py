@@ -5,8 +5,8 @@ import os, re, glob, pickle
 
 def create_rsm(station):
 	rsm=station[0:4]+'.rsm'
-	index=dict()
 	print '\n Indexing %s' % str(station)	#Buscar todos los .dex
+	index=dict()
 	date_file_list=list()
 	for file in glob.glob('*.dex'):				
 		date_file_list.append(file)
@@ -17,6 +17,7 @@ def create_rsm(station):
 																				#Para index[.dex] -> dict[yyyyddd]=[resumen del dia].split
 	for element in date_file_list:
 		eto=dict()
+		eto['DayNumber']=element[4:7]
 		with open(element, "r") as f:
 			f.seek (0, 2)           					# Seek @ EOF
 			fsize = f.tell()       					 	# Get Size
@@ -27,8 +28,10 @@ def create_rsm(station):
 		for line in lines:
 			for item in findstr:
 				if item in line:
-					eto[item]=line
+					eto[item]=line.split(':')[1]
+			
 		index[element]=eto
+		
 																	
 	f=open(rsm,'w')#wirte XXXX.rsm 
 	pickle.dump(index,f)

@@ -63,7 +63,7 @@ os.chdir(home)
 os.chdir(home+'/../ui-server/public/')
 f=open('abc.txt','w')
 for element in tempo:
-	f.write('%s,%s,%s:%s,%s;' % (tempo[element]['latitude'],tempo[element]['longitude'],tempo[element]['city'],tempo[element]['country'],tempo[element]['code']))
+	f.write('%s,%s,%s:%s:%s;' % (tempo[element]['latitude'],tempo[element]['longitude'],tempo[element]['city'],tempo[element]['country'],tempo[element]['code']))
 f.close()
 os.chdir(home)
 

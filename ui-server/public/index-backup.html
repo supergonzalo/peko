@@ -9,8 +9,15 @@ font-family: Verdana,Arial,sans serif; font-size: 11px;}
 li {margin-left: -20px;}
 a:hover {text-decoration: underline overline}
 #map {width:98%; height:350px; border: 0px solid green;}
-#header {height:50px; width:98%; padding-top:0px; text-align:left;padding-left:5px;}
-#top {height:30px; width:98%; padding-top:5px; text-align:left;padding-left:5px;}
+#header {height:50px; width:98%; padding-top:5px; text-align:left;padding-left:5px;}
+
+#adsense {margin:10px; text-align:center;}
+.sideblock {background-color:#eee;margin:0px;}
+.sideblock-header {padding:4px;}
+.sideblock-close:hover {font-weight:bold}
+.sideblock-container {margin:6px; padding:6px;}
+.esas {color:black; font-size:18px}
+.blue {color:blue; font-size:18px}
 </style>
 
 <script 
@@ -26,9 +33,6 @@ GLoadMapsScript();
 
 </head>
 <body onunload="GUnload();">
-
-<div id="top"><a href='index.html'>Como usar el sitio?</a>	<a href='index.html'>Quienes Somos?</a></div id="top">
-
 <div id="header">
 
 <div id="hakuLaatikko" style="text-align:left">
@@ -83,7 +87,8 @@ var marker=[];
 var pointer = new GMarker(new GLatLng(62,23));
 var closer = "<a href='javascript:luokse();'>Acercar</a>"
 var kaikki = "<a href='javascript:fit();'>Mostrar todas</a>"
-//var stat = "<a href='javascript:go("j");'>Datos Climaticos</a>"
+var stat1 = "<a href="
+var stat2 = ">Datos climaticos</a>"
 var geocoder = new GClientGeocoder();
 var n=0;//osumat
 
@@ -185,7 +190,7 @@ html += closer;
 html += " | ";
 html += kaikki;
 html += " | ";
-///html += stat;
+
 
 
 
@@ -217,11 +222,11 @@ fit();
 //// go
 
 function go(num){
-map.setZoom(11);
+map.setZoom(12);
 GEvent.trigger(marker[num],"click");
 //A: tengo datos central en datosCentral
 
-centralUrl="http://localhost:9000/h/"+sortti[num].content.split(":")[2]+"/rsm";
+centralUrl="http://myhome.com.ar:58000/t/"+sortti[num].content.split(",")[4];
 //alert("NUM="+num+" sortti="+sortti[num]+" url="+centralUrl);
 //A: construi centralUrl para obtener datos central de servidorDeDatos
 
@@ -294,7 +299,6 @@ GEvent.addListener(pointer, "dragend", function()
 doIt(kohde);
 bounds.extend(pointer.getPoint());
 });
-
 
 bounds.extend(point);
 
