@@ -25,8 +25,7 @@ import datetime
 hourly_central='python get_report.py'
 #Datos diarios de centrales
 daily_central='python etoit.py'
-#Reindex de la base de datos
-index='python rsm.py'
+
 
 def cday(date):			#Day of the year
 	return date.strftime('%j')
@@ -56,7 +55,7 @@ try:
 		
 		tab.remove_all(hourly_central)
 		tab.remove_all(daily_central)
-		tab.remove_all(index)
+		#tab.remove_all(index)
 		tab.write()
 	
 		#	- descronea script de limpieza
@@ -81,11 +80,10 @@ try:
 		
 		cron = tab.new(command='cd '+here+'/data-server/ && '+hourly_central, comment=entry_name+'By dataserver.py')
 		cron2 = tab.new(command='cd '+here+'/data-server/ && '+daily_central, comment=entry_name+'By dataserver.py')
-		cron3 = tab.new(command='cd '+here+'/data-server/ && '+index, comment=entry_name+'By dataserver.py')
+		#cron3 = tab.new(command='cd '+here+'/data-server/ && '+index, comment=entry_name+'By dataserver.py')
 		
 		cron.every_hour()
-		cron2.every_day()
-		cron3.special = '* 12 * * *'
+		cron2.special = '* 3 * * *'
 	
 		tab.write()
 	#	- ejecuta script de limpieza de archivos temporales delete_old_files de acuerdo a lo especificado en  	dataserver.config
