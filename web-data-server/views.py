@@ -150,7 +150,7 @@ def rsm_data(request,format, station,xxx):
 		digits=5
 		#for element in temp['index']:
 		element = temp['index'][0]	
-		data=data+'<tr><td align="center">Hace %s dias<td align="center"> %s litros por m2 <td align="center"> %s C <td align="center"> %s m/s</tr>'%(str(int(cday())-int(temp[element]['DayNumber']))[0:digits],temp[element]['ETOTODAY'][0:digits],temp[element]['TempMed'][0:digits],temp[element]['WindMed'][0:digits])
+		data=data+'<tr><td align="center">Hace %s dias<td align="center"> %s mm <td align="center"> %s C <td align="center"> %s m/s</tr>'%(str(int(cday())-int(temp[element]['DayNumber']))[0:digits],temp[element]['ETOTODAY'][0:digits],temp[element]['TempMed'][0:digits],temp[element]['WindMed'][0:digits])
 		cant=0
 		teto=0
 		ttemp=0
@@ -166,13 +166,15 @@ def rsm_data(request,format, station,xxx):
 		teto=str(teto/cant)
 		ttemp=str(ttemp/cant)
 		twind=str(twind/cant)
-		data=data+'<tr><td align="center">Media de 5 dias<td align="center"> %s litros por m2 <td align="center"> %s C <td align="center"> %s m/s</tr></table><br>'%(teto[0:digits],ttemp[0:digits],twind[0:digits])
+		data=data+'<tr><td align="center">Media de 5 dias<td align="center"> %s mm <td align="center"> %s C <td align="center"> %s m/s</tr></table><br>'%(teto[0:digits],ttemp[0:digits],twind[0:digits])
 		
 					
 	else:
 		data= "No data"	
 	os.chdir(home)
-	data=data+'<table width=100%><tr><td><a href="index.html">Esta central NO da valores logicos</a><td><a href="index.html">Programa de Riego Avanzado</a><td><a href="index.html">Ayuda!</a> </div>'		
+	data=data+'<table width=100%><tr><td align="center" width="20%">Datos de la central:</td><td align="left">'
+	data=data+station
+	data=data+' </td><td align="center" title="Denunciar una central que no funciona bien"><a href="index.html">Votar negativo</a><td align="center" title="Crear un programa de riego para mi parcela"><a href="index.html">Programa de Riego Avanzado</a><td></div>'	
 
 	html = "<html><body>%s</body></html>" % (data)
 	return HttpResponse(html)
