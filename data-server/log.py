@@ -6,7 +6,7 @@ import pickle,datetime,os
 def cday(date):			#Day of the year
 	return date.strftime('%j')
 
-def init_log(logname):
+def init_log():
 	log=list()
 	return log
 
@@ -31,4 +31,22 @@ def logcommit(log, logname):
 	f=open(logname,'w')
 	pickle.dump(old,f)
 	f.close()
+
+
+#datalog=init_log()
+
+#printlog('1', datalog)
+#print datalog
+#printlog('2', datalog)
+#print datalog
+#printlog('3', datalog)
+#print datalog
+
+#logcommit(datalog, 'test.log')
+#f=open('test.log','r')
+#old=pickle.load(f)
+#f.close()
+#print 'log= %s' % old
+
+
 

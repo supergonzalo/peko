@@ -113,7 +113,7 @@ for name in library:
 		else:
 			print '############# No Data #################'
 			log.printlog("Nothing for %s" % name,datalog)
-		log.logcommit(datalog,'get.log')
+		
 		
 	except Metar.ParserError, err:
 		print "METAR code: ",line
@@ -122,7 +122,8 @@ for name in library:
   	except:
     		print "Error retrieving",name,"data","\n"
     		os.chdir(home)
-	
+
+log.logcommit(datalog,'get.log')	
 	
    	
 
