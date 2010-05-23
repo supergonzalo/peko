@@ -11,10 +11,9 @@ def init_log(logname):
 	if os.path.isfile(logname):
 		f=open(logname,'r')
 		log=pickle.load(f)
-		log[int(cday(now))]={now.hour:list()}
+		log[int(cday(now))][now.hour]=['NEWROW']
 		f.close 
 	else:
-		
 		log=dict()
 		log[int(cday(now))]={now.hour:['Created %s hs' % now.hour]}
 	return log
