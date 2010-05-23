@@ -16,6 +16,7 @@ from metar import Metar
 import etowind20
 import pickle
 import rsm
+import log
 
 
 #Gets Weather Reports from stations given as a parameter (argv) and stores them in files
@@ -132,13 +133,14 @@ f=open('stations.lib','r')
 library = pickle.load(f)					#Dictionary of dictionaries with monitored stations
 f.close()
 os.chdir(home)
-
+datalog=log.init_log('eto.log')
 
 for element in library:
 	print '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@'
 	print element
 	print '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@'
-	
+	log.printlog("%s" % element,datalog)
+	log.logcommit(datalog,'eto.log')
 	direct="%s/%s"%("Stations",element)
 	
 	if os.path.exists(direct):			#Changes to Directory /Stations/XXXX (Station ID)
@@ -155,6 +157,8 @@ for element in library:
 		rsm.create_rsm(element)
 	else:
 		print "No data for station"
+		log.printlog("No data for station %s" % element,datalog)
+		log.logcommit(datalog,'eto.log')
 	
 	os.chdir(home)
 	

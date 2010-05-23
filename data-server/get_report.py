@@ -14,7 +14,7 @@ import pywapi
 import pprint
 from metar import Metar
 import etowind20
-import pickle
+import pickle,log
 
 
 
@@ -48,6 +48,7 @@ def arch(filename, mode, data=0):
 	f.close()	
 	return temp
 
+
 def usage():			#Usage help
   program = os.path.basename(sys.argv[0])
   print "Usage: ",program,"<city> [ <city> ... ]"
@@ -73,8 +74,8 @@ if not stations:
 	f=open('stations.lib','r')
 	library = pickle.load(f)		#Dictionary of dictionaries with monitored stations
 	f.close()
+	datalog=log.init_log('get.log')
 	os.chdir(home)
-
 
 for name in library:
 	print name
@@ -92,21 +93,15 @@ for name in library:
        				report = line.strip()
         			obs = Metar.Metar(line)
 		
-		
-		
 		if report=='':												#No data, lets ask google
 			print "No metar data for ",name,"\n\n"					#First parse station location to look for climate data
+			log.printlog("No metar data for %s" % name,datalog)
+			log.logcommit(datalog,'get.log')
 			goo=gparser(station['city'] + ',' +station ['country'] )
-
 					
 		if len(goo['current_conditions'])!=0 or len (report)!=0:		#If theres something to log
-			
-			
 			now=datetime.datetime.now()
 			direct="%s/%s"%("Stations",station['code'])
-			
-			
-
 			if not os.path.exists(direct):								#Creates Directory /Stations/XXXX (Satation ID)
     				os.makedirs(direct)
 			os.chdir(direct)
@@ -118,7 +113,8 @@ for name in library:
 			os.chdir(home)
 		else:
 			print '############# No Data #################'
-			#Absolutely no data for station wtf is wrong?
+			log.printlog("Nothing for %s" % name,datalog)
+			log.logcommit(datalog,'get.log')
 		
 	except Metar.ParserError, err:
 		print "METAR code: ",line
