@@ -140,7 +140,7 @@ for element in library:
 	print element
 	print '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@'
 	log.printlog("%s" % element,datalog)
-	log.logcommit(datalog,'eto.log')
+
 	direct="%s/%s"%("Stations",element)
 	
 	if os.path.exists(direct):			#Changes to Directory /Stations/XXXX (Station ID)
@@ -158,9 +158,11 @@ for element in library:
 	else:
 		print "No data for station"
 		log.printlog("No data for station %s" % element,datalog)
-		log.logcommit(datalog,'eto.log')
+	
 	
 	os.chdir(home)
+
+log.logcommit(datalog,'eto.log')
 	
 			
 

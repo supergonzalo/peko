@@ -7,25 +7,28 @@ def cday(date):			#Day of the year
 	return date.strftime('%j')
 
 def init_log(logname):
-	now=datetime.datetime.now()
-	if os.path.isfile(logname):
-		f=open(logname,'r')
-		log=pickle.load(f)
-		log[int(cday(now))][now.hour]=['NEWROW']
-		f.close 
-	else:
-		log=dict()
-		log[int(cday(now))]={now.hour:['Created %s hs' % now.hour]}
+	log=list()
 	return log
 
 def printlog(message, datalog):
-		now=datetime.datetime.now()
-		datalog[int(cday(now))][now.hour].append(message)
+		datalog.append(message)
 
 def logcommit(log, logname):
+	now=datetime.datetime.now()
+	if os.path.isfile(logname):
+		f=open(logname,'r')
+		old=pickle.load(f)
+		f.close()
+	else:
+		old=dict()
+	if not old.has_key(cday(now)):
+		old[cday(now)]=dict()
+
+	if not old[cday(now)].has_key(now.hour):
+		old[cday(now)][now.hour]=list()
+	old[cday(now)][now.hour].extend(log)
+
 	f=open(logname,'w')
-	pickle.dump(log, f)
+	pickle.dump(old,f)
 	f.close()
-
-
 

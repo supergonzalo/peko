@@ -96,7 +96,6 @@ for name in library:
 		if report=='':												#No data, lets ask google
 			print "No metar data for ",name,"\n\n"					#First parse station location to look for climate data
 			log.printlog("No metar data for %s" % name,datalog)
-			log.logcommit(datalog,'get.log')
 			goo=gparser(station['city'] + ',' +station ['country'] )
 					
 		if len(goo['current_conditions'])!=0 or len (report)!=0:		#If theres something to log
@@ -114,7 +113,7 @@ for name in library:
 		else:
 			print '############# No Data #################'
 			log.printlog("Nothing for %s" % name,datalog)
-			log.logcommit(datalog,'get.log')
+		log.logcommit(datalog,'get.log')
 		
 	except Metar.ParserError, err:
 		print "METAR code: ",line
