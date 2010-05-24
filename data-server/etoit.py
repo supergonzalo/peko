@@ -133,7 +133,7 @@ f=open('stations.lib','r')
 library = pickle.load(f)					#Dictionary of dictionaries with monitored stations
 f.close()
 os.chdir(home)
-datalog=log.init_log('eto.log')
+datalog=log.init_log()
 
 for element in library:
 	print '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@'

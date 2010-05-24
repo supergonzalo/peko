@@ -74,7 +74,7 @@ if not stations:
 	f=open('stations.lib','r')
 	library = pickle.load(f)		#Dictionary of dictionaries with monitored stations
 	f.close()
-	datalog=log.init_log('get.log')
+	datalog=log.init_log()
 	os.chdir(home)
 
 for name in library:
