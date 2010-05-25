@@ -12,6 +12,6 @@ urlpatterns = patterns('',
 	(r'^([a-z])/([A-Z]{4}(\d{0,3}))/rsm/', rsm_data),							# Prints rsm file for station
 	(r'^([a-z])/([A-Z]{4}(\d{0,3}))/data/', raw),									# Prints info wiindow for ui-server
 	(r'^([a-z])/$', list_stations),																# Lists Stations available (x= xml, t=text) 
-	(r'^([a-z])/([A-Z]{4}(\d{0,3}))/test/', test),									# testing
+	(r'^([a-z])/([A-Z]{4}(\d{0,3}))/test/', test),								# testing
 )
 

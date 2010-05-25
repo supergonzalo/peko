@@ -141,7 +141,7 @@ def rsm_data(request,format, station,xxx):
 	if os.path.exists(station_dir):			
 		os.chdir(station_dir)
 	rsm=str(station+'.rsm')
-
+	data=''
 	if format=='h':
 		data='<table border="1" width="100%"><tr><td align="center">Actualizado<td align="center">Consumo de agua/dia<td align="center">Temperatura media/dia<td align="center">Viento medio/dia</tr>'
 			
