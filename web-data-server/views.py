@@ -238,7 +238,7 @@ def rsm_data(request,format, station,xxx):
 		f.close()
 	
 	element = temp['index'][0]
-	fig=Figure(figsize=(10,4),facecolor='w', edgecolor='w')
+	fig=Figure(figsize=(9,3),facecolor='w', edgecolor='w')
 
 	ax=fig.add_subplot(111)
 	#ax=fig.add_subplot(311)
