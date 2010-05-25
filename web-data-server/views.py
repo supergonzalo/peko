@@ -175,7 +175,7 @@ def rsm_data(request,format, station,xxx):
 	os.chdir(home)
 	data=data+'<table width=100%><tr><td align="center" width="20%">Datos de la central:</td><td align="left">'
 	data=data+station
-	data=data+' </td><td align="center" title="Denunciar una central que no funciona bien"><a href="http://peko.tk/index.html">Votar negativo</a><td align="center" title="Crear un programa de riego para mi parcela"><a href="href="http://peko.tk/index.html">Programa de Riego Avanzado</a><td></div>'	
+	#data='</td></table></div>'	
 
 	html = "<html><body>%s</body></html>" % (data)
 	return HttpResponse(html)
