@@ -237,57 +237,57 @@ def rsm_data(request,format, station,xxx):
 		temp=pickle.load(f)	
 		f.close()
 	
-	element = temp['index'][0]
-	fig=Figure(figsize=(9,3),facecolor='w', edgecolor='w')
+		element = temp['index'][0]
+		fig=Figure(figsize=(9,3),facecolor='w', edgecolor='w')
 
-	ax=fig.add_subplot(111)
+		ax=fig.add_subplot(111)
 	#ax=fig.add_subplot(311)
 	#ay=fig.add_subplot(312)
 	#az=fig.add_subplot(313)
-	x=[]
-	y=[]
-	z=[]
-	t=[]
-	now=datetime.datetime.now()
-	delta=datetime.timedelta(days=1)
-	teto=0
-	ttemp=0
-	twind=0
-	cant=0
+		x=[]
+		y=[]
+		z=[]
+		t=[]
+		now=datetime.datetime.now()
+		delta=datetime.timedelta(days=1)
+		teto=0
+		ttemp=0
+		twind=0
+		cant=0
 
-	for element in temp['index']:
-		average=int(cday())-int(temp[element]['DayNumber'])
-		if average<10:
-			cant+=1
-			x.append(now-datetime.timedelta(days=average))
-			y.append(float(temp[element]['ETOTODAY']))
-			z.append(float(temp[element]['TempMed']))
-			t.append(float(temp[element]['WindMed']))
-			teto=teto+float(temp[element]['ETOTODAY'])
-			ttemp=ttemp+float(temp[element]['TempMed'])
-			twind=twind+float(temp[element]['WindMed'])
-				
-		else:
-			break
-	teto=teto/cant
-	ttemp=ttemp/cant
-	twind=twind/cant
-	ax.set_ylabel('Evapo. mm')
-	ax.plot_date(x, [teto]*len(x), '-')
-	ax.bar(x,y,alpha=0.5,color='green')
-	ax.xaxis.set_major_formatter(DateFormatter('%Y-%m-%d'))
-	#ay.plot_date(z, y, '-')
-	#ay.xaxis.set_major_formatter(DateFormatter('%Y-%m-%d'))
-	#az.plot_date(t, y, '-')
-	#az.xaxis.set_major_formatter(DateFormatter('%Y-%m-%d'))
+		for element in temp['index']:
+			average=int(cday())-int(temp[element]['DayNumber'])
+			if average<10:
+				cant+=1
+				x.append(now-datetime.timedelta(days=average))
+				y.append(float(temp[element]['ETOTODAY']))
+				z.append(float(temp[element]['TempMed']))
+				t.append(float(temp[element]['WindMed']))
+				teto=teto+float(temp[element]['ETOTODAY'])
+				ttemp=ttemp+float(temp[element]['TempMed'])
+				twind=twind+float(temp[element]['WindMed'])
+					
+			else:
+				break
+		teto=teto/cant
+		ttemp=ttemp/cant
+		twind=twind/cant
+		ax.set_ylabel('Evapo. mm')
+		ax.plot_date(x, [teto]*len(x), '-')
+		ax.bar(x,y,alpha=0.5,color='green')
+		ax.xaxis.set_major_formatter(DateFormatter('%Y-%m-%d'))
+		#ay.plot_date(z, y, '-')
+		#ay.xaxis.set_major_formatter(DateFormatter('%Y-%m-%d'))
+		#az.plot_date(t, y, '-')
+		#az.xaxis.set_major_formatter(DateFormatter('%Y-%m-%d'))
+	
 
+		fig.autofmt_xdate()
+		canvas=FigureCanvas(fig)
+		response=HttpResponse(content_type='image/png')
+		canvas.print_png(response)
 
-	fig.autofmt_xdate()
-	canvas=FigureCanvas(fig)
-	response=HttpResponse(content_type='image/png')
-	canvas.print_png(response)
-
-	return response
+		return response
 
 
 
