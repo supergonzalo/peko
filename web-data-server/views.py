@@ -286,8 +286,12 @@ def rsm_data(request,format, station,xxx):
 		canvas=FigureCanvas(fig)
 		response=HttpResponse(content_type='image/png')
 		canvas.print_png(response)
+	else:
+		response= "<html><body><p>No data</body></html>"
 
-		return response
+	os.chdir(home)
+	
+	return response
 
 
 
