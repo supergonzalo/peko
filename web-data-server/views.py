@@ -134,7 +134,7 @@ def publish_data(request,format,station,xxx,filename):
 	html = "<html><body> %s </body></html>" % (data)
 	return HttpResponse(html)
 
-def rsm_data(request,format, station,xxx):
+def test(request,format, station,xxx):
 	home=os.getcwd()
 	station=station[0:4]
 	station_dir="%s/%s"%(workdir,station)
@@ -219,11 +219,9 @@ def raw(request,format, station,xxx):
 # Devuelve el valor formateado
 	return HttpResponse(html)
 
+def rsm_data(request,format, station,xxx):
 
-
-def test(request,format, station,xxx):
-
-	import random
+	from matplotlib.pyplot import axhline
 	from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 	from matplotlib.figure import Figure
 	from matplotlib.dates import DateFormatter
@@ -240,7 +238,7 @@ def test(request,format, station,xxx):
 		f.close()
 	
 	element = temp['index'][0]
-	fig=Figure(figsize=(8,4),facecolor='w', edgecolor='w')
+	fig=Figure(figsize=(10,4),facecolor='w', edgecolor='w')
 
 	ax=fig.add_subplot(111)
 	#ax=fig.add_subplot(311)
@@ -259,7 +257,7 @@ def test(request,format, station,xxx):
 
 	for element in temp['index']:
 		average=int(cday())-int(temp[element]['DayNumber'])
-		if average<7:
+		if average<10:
 			cant+=1
 			x.append(now-datetime.timedelta(days=average))
 			y.append(float(temp[element]['ETOTODAY']))
@@ -274,9 +272,9 @@ def test(request,format, station,xxx):
 	teto=teto/cant
 	ttemp=ttemp/cant
 	twind=twind/cant
+	ax.set_ylabel('Evapo. mm')
 	ax.plot_date(x, [teto]*len(x), '-')
-	ax.bar(x,y,alpha=0.8,color='green')
-	
+	ax.bar(x,y,alpha=0.5,color='green')
 	ax.xaxis.set_major_formatter(DateFormatter('%Y-%m-%d'))
 	#ay.plot_date(z, y, '-')
 	#ay.xaxis.set_major_formatter(DateFormatter('%Y-%m-%d'))
