@@ -2,6 +2,7 @@ from django.http import HttpResponse
 import datetime
 import time, os, glob,re,pickle
 
+
 here=os.getcwd()
 os.chdir('../')
 f=open('config.txt','r')
@@ -157,7 +158,7 @@ def rsm_data(request,format, station,xxx):
 		twind=0
 		for element in temp['index']:
 			average=int(cday())-int(temp[element]['DayNumber'])
-			if average<5:
+			if average<7:
 				cant=cant+1
 				teto=teto+float(temp[element]['ETOTODAY'])
 				ttemp=ttemp+float(temp[element]['TempMed'])
@@ -166,7 +167,7 @@ def rsm_data(request,format, station,xxx):
 		teto=str(teto/cant)
 		ttemp=str(ttemp/cant)
 		twind=str(twind/cant)
-		data=data+'<tr><td align="center">Media de 5 dias<td align="center"> %s mm <td align="center"> %s C <td align="center"> %s m/s</tr></table><br>'%(teto[0:digits],ttemp[0:digits],twind[0:digits])
+		data=data+'<tr><td align="center">Media de 7 dias<td align="center"> %s mm <td align="center"> %s C <td align="center"> %s m/s</tr></table><br>'%(teto[0:digits],ttemp[0:digits],twind[0:digits])
 		
 					
 	else:
@@ -179,7 +180,7 @@ def rsm_data(request,format, station,xxx):
 	html = "<html><body>%s</body></html>" % (data)
 	return HttpResponse(html)
 
-def infowindow(request,format, station,xxx):
+def raw(request,format, station,xxx):
 	home=os.getcwd()
 	station=station[0:4]
 	station_dir="%s/%s"%(workdir,station)
@@ -207,3 +208,52 @@ def infowindow(request,format, station,xxx):
 	html = "<html><body><p>%s</body></html>" % (data)
 # Devuelve el valor formateado
 	return HttpResponse(html)
+
+
+
+def test(request,format, station,xxx):
+
+	import random
+	from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
+	from matplotlib.figure import Figure
+	from matplotlib.dates import DateFormatter
+	home=os.getcwd()
+	station=station[0:4]
+	station_dir="%s/%s"%(workdir,station)
+	if os.path.exists(station_dir):			
+		os.chdir(station_dir)
+
+	rsm=str(station+'.rsm')
+	if os.path.isfile(rsm):
+		f = open(rsm, 'r')		
+		temp=pickle.load(f)	
+		f.close()
+	
+	element = temp['index'][0]
+	fig=Figure(figsize=(6,3))
+	ax=fig.add_subplot(111)
+	x=[]
+	y=[]
+	now=datetime.datetime.now()
+	delta=datetime.timedelta(days=1)
+	for element in temp['index']:
+		average=int(cday())-int(temp[element]['DayNumber'])
+		if average<7:
+			x.append(now-datetime.timedelta(days=average))
+			y.append(float(temp[element]['ETOTODAY']))
+				
+		else:
+			break
+
+	ax.plot_date(x, y, '-')
+	ax.xaxis.set_major_formatter(DateFormatter('%Y-%m-%d'))
+	fig.autofmt_xdate()
+	canvas=FigureCanvas(fig)
+	response=HttpResponse(content_type='image/png')
+	canvas.print_png(response)
+
+	return response
+
+
+
+
