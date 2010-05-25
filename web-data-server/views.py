@@ -138,45 +138,55 @@ def rsm_data(request,format, station,xxx):
 	home=os.getcwd()
 	station=station[0:4]
 	station_dir="%s/%s"%(workdir,station)
-	data='<table border="1" width="100%"><tr><td align="center">Actualizado<td align="center">Consumo de agua/dia<td align="center">Temperatura media/dia<td align="center">Viento medio/dia</tr>'
-	
 	if os.path.exists(station_dir):			
 		os.chdir(station_dir)
-
 	rsm=str(station+'.rsm')
-	if os.path.isfile(rsm):
-		f = open(rsm, 'r')		
-		temp=pickle.load(f)	
-		f.close()
-		digits=5
-		#for element in temp['index']:
-		element = temp['index'][0]	
-		data=data+'<tr><td align="center">Hace %s dias<td align="center"> %s mm <td align="center"> %s C <td align="center"> %s m/s</tr>'%(str(int(cday())-int(temp[element]['DayNumber']))[0:digits],temp[element]['ETOTODAY'][0:digits],temp[element]['TempMed'][0:digits],temp[element]['WindMed'][0:digits])
-		cant=0
-		teto=0
-		ttemp=0
-		twind=0
-		for element in temp['index']:
-			average=int(cday())-int(temp[element]['DayNumber'])
-			if average<7:
-				cant=cant+1
-				teto=teto+float(temp[element]['ETOTODAY'])
-				ttemp=ttemp+float(temp[element]['TempMed'])
-				twind=twind+float(temp[element]['WindMed'])
-		
-		teto=str(teto/cant)
-		ttemp=str(ttemp/cant)
-		twind=str(twind/cant)
-		data=data+'<tr><td align="center">Media de 7 dias<td align="center"> %s mm <td align="center"> %s C <td align="center"> %s m/s</tr></table><br>'%(teto[0:digits],ttemp[0:digits],twind[0:digits])
+
+	if format=='h':
+		data='<table border="1" width="100%"><tr><td align="center">Actualizado<td align="center">Consumo de agua/dia<td align="center">Temperatura media/dia<td align="center">Viento medio/dia</tr>'
+			
+		if os.path.isfile(rsm):
+			f = open(rsm, 'r')		
+			temp=pickle.load(f)	
+			f.close()
+			digits=5
+			#for element in temp['index']:
+			element = temp['index'][0]	
+			data=data+'<tr><td align="center">Hace %s dias<td align="center"> %s mm <td align="center"> %s C <td align="center"> %s m/s</tr>'%(str(int(cday())-int(temp[element]['DayNumber']))[0:digits],temp[element]['ETOTODAY'][0:digits],temp[element]['TempMed'][0:digits],temp[element]['WindMed'][0:digits])
+			cant=0
+			teto=0
+			ttemp=0
+			twind=0
+			for element in temp['index']:
+				average=int(cday())-int(temp[element]['DayNumber'])
+				if average<7:
+					cant=cant+1
+					teto=teto+float(temp[element]['ETOTODAY'])
+					ttemp=ttemp+float(temp[element]['TempMed'])
+					twind=twind+float(temp[element]['WindMed'])
+			
+			teto=str(teto/cant)
+			ttemp=str(ttemp/cant)
+			twind=str(twind/cant)
+			data=data+'<tr><td align="center">Media de 7 dias<td align="center"> %s mm <td align="center"> %s C <td align="center"> %s m/s</tr></table><br>'%(teto[0:digits],ttemp[0:digits],twind[0:digits])
 		
 					
-	else:
-		data= "No data"	
-	os.chdir(home)
-	data=data+'<table width=100%><tr><td align="center" width="20%">Datos de la central:</td><td align="left">'
-	data=data+station
-	#data='</td></table></div>'	
-
+		else:
+			data= "No data"	
+		os.chdir(home)
+		data=data+'<table width=100%><tr><td align="center" width="20%">Datos de la central:</td><td align="left">'
+		data=data+station
+		#data='</td></table></div>'	
+	
+	elif format=='c':
+		if os.path.isfile(rsm):
+			f = open(rsm, 'r')		
+			temp=pickle.load(f)	
+			f.close()
+			data='Dia del ano,eto del dia, temp media del dia, viento medio del dia;'
+			for element in temp['index']:
+				data+='%s,%s,%s,%s;' % (temp[element]['DayNumber'],temp[element]['ETOTODAY'],temp[element]['TempMed'],temp[element]['WindMed'])
+		
 	html = "<html><body>%s</body></html>" % (data)
 	return HttpResponse(html)
 
@@ -230,23 +240,50 @@ def test(request,format, station,xxx):
 		f.close()
 	
 	element = temp['index'][0]
-	fig=Figure(figsize=(6,3))
+	fig=Figure(figsize=(8,4),facecolor='w', edgecolor='w')
+
 	ax=fig.add_subplot(111)
+	#ax=fig.add_subplot(311)
+	#ay=fig.add_subplot(312)
+	#az=fig.add_subplot(313)
 	x=[]
 	y=[]
+	z=[]
+	t=[]
 	now=datetime.datetime.now()
 	delta=datetime.timedelta(days=1)
+	teto=0
+	ttemp=0
+	twind=0
+	cant=0
+
 	for element in temp['index']:
 		average=int(cday())-int(temp[element]['DayNumber'])
 		if average<7:
+			cant+=1
 			x.append(now-datetime.timedelta(days=average))
 			y.append(float(temp[element]['ETOTODAY']))
+			z.append(float(temp[element]['TempMed']))
+			t.append(float(temp[element]['WindMed']))
+			teto=teto+float(temp[element]['ETOTODAY'])
+			ttemp=ttemp+float(temp[element]['TempMed'])
+			twind=twind+float(temp[element]['WindMed'])
 				
 		else:
 			break
-
-	ax.plot_date(x, y, '-')
+	teto=teto/cant
+	ttemp=ttemp/cant
+	twind=twind/cant
+	ax.plot_date(x, [teto]*len(x), '-')
+	ax.bar(x,y,alpha=0.8,color='green')
+	
 	ax.xaxis.set_major_formatter(DateFormatter('%Y-%m-%d'))
+	#ay.plot_date(z, y, '-')
+	#ay.xaxis.set_major_formatter(DateFormatter('%Y-%m-%d'))
+	#az.plot_date(t, y, '-')
+	#az.xaxis.set_major_formatter(DateFormatter('%Y-%m-%d'))
+
+
 	fig.autofmt_xdate()
 	canvas=FigureCanvas(fig)
 	response=HttpResponse(content_type='image/png')
