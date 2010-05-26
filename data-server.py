@@ -86,7 +86,7 @@ try:
 		
 		cron.every_hour()
 		cron2.special = '15 3 * * *'
-		cron3.specia =  '45 6 * * *'
+		cron3.special = '45 6 * * *'
 	
 		tab.write()
 	#	- ejecuta script de limpieza de archivos temporales delete_old_files de acuerdo a lo especificado en config.txt
