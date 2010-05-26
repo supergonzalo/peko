@@ -38,9 +38,10 @@ def dmin(j):
 ###################################### Sunset hour angle
 
 def ws(j, lat):
-	print j
-	print lat
-	return math.acos(-math.tan(lat)*math.tan(dmin(j)))
+	p=-math.tan(lat)*math.tan(dmin(j))
+	if abs(p)>1:
+		p=1
+	return math.acos(p)
 
 ###################################### Extraterrestrial radiation
 
