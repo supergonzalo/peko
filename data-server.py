@@ -25,6 +25,7 @@ import datetime
 hourly_central='python get_report.py'
 #Datos diarios de centrales
 daily_central='python etoit.py'
+daily_cleanup='python delete_old_files.py'
 
 
 def cday(date):			#Day of the year
@@ -55,6 +56,7 @@ try:
 		
 		tab.remove_all(hourly_central)
 		tab.remove_all(daily_central)
+		tab.remove_all(daily_cleanup)
 		#tab.remove_all(index)
 		tab.write()
 	
@@ -80,13 +82,14 @@ try:
 		
 		cron = tab.new(command='cd '+here+'/data-server/ && '+hourly_central, comment=entry_name+'By dataserver.py')
 		cron2 = tab.new(command='cd '+here+'/data-server/ && '+daily_central, comment=entry_name+'By dataserver.py')
-		#cron3 = tab.new(command='cd '+here+'/data-server/ && '+index, comment=entry_name+'By dataserver.py')
+		cron3 = tab.new(command='cd '+here+'/data-server/ && '+daily_cleanup, comment=entry_name+'By dataserver.py')
 		
 		cron.every_hour()
-		cron2.special = '* 3 * * *'
+		cron2.special = '15 3 * * *'
+		cron3.specia =  '45 6 * * *'
 	
 		tab.write()
-	#	- ejecuta script de limpieza de archivos temporales delete_old_files de acuerdo a lo especificado en  	dataserver.config
+	#	- ejecuta script de limpieza de archivos temporales delete_old_files de acuerdo a lo especificado en config.txt
 
 	#	cronear delete_old_files
 
