@@ -116,6 +116,10 @@ def etowind(foo,wstation):
 	DeltaTMean=delta(TMean)
 	Gamma=gamma(P)
 	etowh= Gamma*(900.0/24.0)*Wspeed*(Es-Ea)/((DeltaTMean+Gamma*(1+0.34*Wspeed))*(TMean+273.0)) # mm/hour
+	if etowh < 0:
+		etowh=0
+	if Ea < 0:
+		Ea=0
 		
 	return "\nETO Wind: " +str(etowh) +"\nWindsp: " + str(Wspeed) + "\nTemp: " + str(TMean) + "\nea: " + str(Ea)
 
