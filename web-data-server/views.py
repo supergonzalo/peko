@@ -281,13 +281,12 @@ def rsm_data(request,format, station,xxx):
 		#az.plot_date(t, y, '-')
 		#az.xaxis.set_major_formatter(DateFormatter('%Y-%m-%d'))
 	
-
 		fig.autofmt_xdate()
 		canvas=FigureCanvas(fig)
 		response=HttpResponse(content_type='image/png')
 		canvas.print_png(response)
 	else:
-		response= "<html><body><p>No data</body></html>"
+		response= HttpResponse("<html><body><p>No data</body></html>")
 
 	os.chdir(home)
 	
