@@ -95,7 +95,7 @@ def etowind(foo,wstation):
 		#print 'Google?'
  		gdat=eval(foo[3])
 				
-		if len(gdat['current_conditions'])==0:
+		if len(gdat['current_conditions']['temp_c'])==0:
 			print 'no data'
 			return'-1'
 		else:
