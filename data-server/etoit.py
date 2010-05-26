@@ -104,17 +104,19 @@ def etoit(station,dayofyear):
 	info=['','','','','','','','','','','','','','','','','','','','','','','','']
 		
 	for i in range (24):
-		if os.path.isfile(dayofyear+str(i)):
-			observation=arch(dayofyear+str(i), 'r',0)
+		ind=str(i)
+		if os.path.isfile(dayofyear+ind):
+			observation=arch(dayofyear+ind, 'r',0)
 			if len(observation[1])>5 or len(observation[3])>5: #there's data in the file
-				info[i]="\nTimestamp: "+str(i)+ etowind20.etowind(observation,station)
+				info[i]="\nTimestamp: "+ind+ etowind20.etowind(observation,station)
 	
 		
 	dex=dayofyear+'.dex'
-	if os.path.isfile(dex):
-		os.remove(dex)
+	f=open(dex,'w')
 	for i in range (len(info)):
-		arch(dex,'a',info[i])				#Cambiar para que no acceda al archivo pro cadda linea!
+		f.write(info[i])	
+	f.close()	
+
 	dexinfo=arch(dex,'r',0)
 
 	if not len(dexinfo)==0:
@@ -145,14 +147,12 @@ for element in library:
 	
 	if os.path.exists(direct):			#Changes to Directory /Stations/XXXX (Station ID)
 		os.chdir(direct)
-
+		buff=list()
 		for item in os.listdir('.'):
 			if item[-4:] != '.dex' and item[-4:] != '.rsm':	#is not an index file
-				buff={}
-				if item[0:7] not in buff:	#that day havent been indexed
-					if 1:					#range to index, 1 alldir
-						buff[item[0:7]]=1
-						etoit(library[element],item[0:7])
+				if item[0:7] not in buff:			#that day havent been indexed
+					buff.append(item[0:7])
+					etoit(library[element],item[0:7])
 		
 		rsm.create_rsm(element)
 	else:
