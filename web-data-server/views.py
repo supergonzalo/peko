@@ -258,7 +258,7 @@ def rsm_data(request,format, station,xxx):
 		for element in temp['index']:
 			average=int(cday())-int(temp[element]['DayNumber'])
 			if average<10:
-				cant+=1
+				cant+=1.0
 				x.append(now-datetime.timedelta(days=average))
 				y.append(float(temp[element]['ETOTODAY']))
 				z.append(float(temp[element]['TempMed']))
@@ -275,9 +275,9 @@ def rsm_data(request,format, station,xxx):
 		teto=teto/cant
 		ttemp=ttemp/cant
 		twind=twind/cant
-		ax.set_ylabel('Evapo. mm')
-		ax.plot_date(x, [teto]*len(x), '-')
-		ax.bar(x,y,width,alpha=0.5,color='green')
+		ax.set_ylabel('Evapo. mm',color='blue')
+		ax.plot_date(x, [teto]*len(x), '-',color='green')
+		ax.bar(x,y,width,alpha=0.5,color='blue')
 		ax.xaxis.set_major_formatter(DateFormatter('%Y-%m-%d'))
 
 		fig.autofmt_xdate()
