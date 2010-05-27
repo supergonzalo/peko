@@ -1,5 +1,5 @@
 from django.conf.urls.defaults import *
-from views import current_datetime, station_data_available, list_stations, publish_data, rsm_data, raw, test
+from views import current_datetime, station_data_available, list_stations, publish_data, rsm_data, raw, test,near
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
@@ -13,5 +13,6 @@ urlpatterns = patterns('',
 	(r'^([a-z])/([A-Z]{4}(\d{0,3}))/data/', raw),									# Prints info wiindow for ui-server
 	(r'^([a-z])/$', list_stations),																# Lists Stations available (x= xml, t=text) 
 	(r'^([a-z])/([A-Z]{4}(\d{0,3}))/test/', test),								# testing
+	(r'^([a-z])/([A-Z]{4}(\d{0,3}))/near/', near),								# Nearest stations
 )
 
