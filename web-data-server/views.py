@@ -1,6 +1,11 @@
 from django.http import HttpResponse
 import datetime
 import time, os, glob,re,pickle
+from operator import itemgetter, attrgetter
+from matplotlib.pyplot import axhline
+from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
+from matplotlib.figure import Figure
+from matplotlib.dates import DateFormatter
 
 
 here=os.getcwd()
@@ -13,6 +18,11 @@ os.chdir(here)
 workdir=config["WORKDIR"]+"/data-server/Stations"
 info_file=config["WORKDIR"]+"/data-server/Doc/stations.lib"
 dex_xpire=int(config["DEX_FILES_EXPIRE"])
+
+f = open(info_file, 'r')		
+temp=pickle.load(f)
+f.close()
+
 
 def cday():
 	now = datetime.datetime.now()
@@ -78,11 +88,6 @@ def list_stations(request,output='h'):
 	
 	html=''
 	xml='<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>'
-	f = open(info_file, 'r')		
-	#temp=f.readlines()	
-	temp=pickle.load(f)
-	f.close()
-
 
 	if output == 'x':                               #Generates xml output
 
@@ -160,7 +165,7 @@ def test(request,format, station,xxx):
 			for element in temp['index']:
 				average=int(cday())-int(temp[element]['DayNumber'])
 				if average<7:
-					cant=cant+1
+					cant=cant+1.0
 					teto=teto+float(temp[element]['ETOTODAY'])
 					ttemp=ttemp+float(temp[element]['TempMed'])
 					twind=twind+float(temp[element]['WindMed'])
@@ -221,10 +226,6 @@ def raw(request,format, station,xxx):
 
 def rsm_data(request,format, station,xxx):
 
-	from matplotlib.pyplot import axhline
-	from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
-	from matplotlib.figure import Figure
-	from matplotlib.dates import DateFormatter
 	home=os.getcwd()
 	station=station[0:4]
 	station_dir="%s/%s"%(workdir,station)
@@ -241,9 +242,7 @@ def rsm_data(request,format, station,xxx):
 		fig=Figure(figsize=(9,3),facecolor='w', edgecolor='w')
 
 		ax=fig.add_subplot(111)
-	#ax=fig.add_subplot(311)
-	#ay=fig.add_subplot(312)
-	#az=fig.add_subplot(313)
+
 		x=[]
 		y=[]
 		z=[]
@@ -291,6 +290,22 @@ def rsm_data(request,format, station,xxx):
 	
 	return response
 
+def manh_distance(lat1,long1,lat2,long2):
+	return (lat1-lat2)**2+(long1-long2)**2
 
+
+def near(request,format, station,xxx):
+	
+	station=station[0:4]
+	base=[float(temp[station]['latitude']),float(temp[station]['longitude'])]
+	sorted_list=list()
+	for element in temp:
+			sorted_list.append([element,manh_distance(base[0],base[1],float(temp[element]['latitude']),float(temp[element]['longitude']))])
+	result=sorted(sorted_list, key=itemgetter(1))
+	ordenada=''
+	for i in range(100):
+		ordenada=ordenada+"<p>%s,%s,%s:%s:%s</p>"%(temp[result[i][0]]['latitude'],temp[result[i][0]]['longitude'],temp[result[i][0]]['city'],temp[result[i][0]]['country'],temp[result[i][0]]['code'])
+				
+	return HttpResponse("<html><body><p>%s<br></body></html>"% ordenada)
 
 

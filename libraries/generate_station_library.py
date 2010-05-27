@@ -1,4 +1,4 @@
-import os,pickle,re
+import os,pickle,re,math
 
 info_file= 'METAR_Station_Places.txt'
 
@@ -10,13 +10,11 @@ def convert(data):
 	if hemisf == 'W' or hemisf=='S':
 		mult=float(-1.0)
 	minutes=float(re.findall('\d*',temp[1])[0])
-	return [mult*(grad+minutes/60.0), hemisf]
+	return [mult*(grad+minutes/60.0), hemisf,mult*(grad+minutes/60.0)*math.pi/180.0]
+
 
 def get_station(name,info_file):	#creates a dictionary with climate station info
 
-	g=open(info_file,'r')
-	lib=g.readlines()
-	g.close()
 	for i in range(len(lib)):
 		if re.findall(name,lib[i]): 
 			data = lib[i].split(';')
@@ -26,10 +24,10 @@ def get_station(name,info_file):	#creates a dictionary with climate station info
 		altitude=float(data[11])
 	city1=data[3]
 	city2=data[5]
-	[latitude, hemisf]=convert(data[7])
-	[longitude, medisf]=convert(data[8])
-	
-	return {'latitude':latitude ,'hemisf':hemisf, 'longitude':longitude, 'medisf': medisf, 'altitude':altitude,'city':city1,'country':city2,'code':name}
+	[latitude, hemisf,latrad]=convert(data[7])
+	[longitude, medisf,longrad]=convert(data[8])
+		
+	return {'latitude':latitude ,'hemisf':hemisf, 'longitude':longitude, 'medisf': medisf,'latrad':latrad,'longrad':longrad, 'altitude':altitude,'city':city1,'country':city2,'code':name}
 
 
 home=os.getcwd()	
@@ -45,15 +43,13 @@ for each in range(len(countries)-1):
 	print countries[each]
 	for i in range(len(lib)):
 		if re.findall(countries[each],lib[i]): 
-			#print 'found'
 			stations_to_check.append(lib[i][0:4])
-
-
 
 tempo={}
 
 for element in stations_to_check:
-	tempo[element]=get_station(element,info_file)
+	tempo[element]=get_station(element,lib)
+
 
 f=open('stations.lib','w')
 pickle.dump(tempo,f)

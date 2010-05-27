@@ -9,15 +9,6 @@ import datetime
 import etowind20
 
 
-###################################### (Aux) To Radians
-
-def torad(deg,minutes,hemisf):
-
-	rad=(deg+minutes/60.0)*math.pi/180.0
-	if( hemisf=='S'):
-		rad = - rad
-	return rad
-	
 ###################################### (Aux) Day of the year-> J
 
 def doy(date):
@@ -169,7 +160,7 @@ def etorad(fs,station_name,filename):
 	tmed=temp['tmed']
 	etowind=temp['etowind']
 	
-	lat=float(station_name['latitude'])*3.14159265/180
+	lat=float(station_name['latrad'])
 	hemisf=station_name['hemisf']
 	z=float(station_name['altitude'])	
 	p=etowind20.atmp(z,tmed)
