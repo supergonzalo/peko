@@ -269,6 +269,8 @@ def rsm_data(request,format, station,xxx):
 					
 			else:
 				break
+		x.pop(0)
+		y.pop(0)
 		teto=teto/cant
 		ttemp=ttemp/cant
 		twind=twind/cant
@@ -276,11 +278,7 @@ def rsm_data(request,format, station,xxx):
 		ax.plot_date(x, [teto]*len(x), '-')
 		ax.bar(x,y,alpha=0.5,color='green')
 		ax.xaxis.set_major_formatter(DateFormatter('%Y-%m-%d'))
-		#ay.plot_date(z, y, '-')
-		#ay.xaxis.set_major_formatter(DateFormatter('%Y-%m-%d'))
-		#az.plot_date(t, y, '-')
-		#az.xaxis.set_major_formatter(DateFormatter('%Y-%m-%d'))
-	
+		
 		fig.autofmt_xdate()
 		canvas=FigureCanvas(fig)
 		response=HttpResponse(content_type='image/png')
