@@ -271,14 +271,15 @@ def rsm_data(request,format, station,xxx):
 				break
 		x.pop(0)
 		y.pop(0)
+		width=1
 		teto=teto/cant
 		ttemp=ttemp/cant
 		twind=twind/cant
 		ax.set_ylabel('Evapo. mm')
 		ax.plot_date(x, [teto]*len(x), '-')
-		ax.bar(x,y,alpha=0.5,color='green')
+		ax.bar(x,y,width,alpha=0.5,color='green')
 		ax.xaxis.set_major_formatter(DateFormatter('%Y-%m-%d'))
-		
+
 		fig.autofmt_xdate()
 		canvas=FigureCanvas(fig)
 		response=HttpResponse(content_type='image/png')
