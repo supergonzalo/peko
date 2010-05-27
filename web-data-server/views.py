@@ -256,7 +256,7 @@ def rsm_data(request,format, station,xxx):
 		cant=0
 
 		for element in temp['index']:
-			average=int(cday())-int(temp[element]['DayNumber']-1)
+			average=int(cday())-int(temp[element]['DayNumber'])
 			if average<10:
 				cant+=1
 				x.append(now-datetime.timedelta(days=average))
