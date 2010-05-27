@@ -256,7 +256,7 @@ def rsm_data(request,format, station,xxx):
 		cant=0
 
 		for element in temp['index']:
-			average=int(cday())-int(temp[element]['DayNumber'])
+			average=int(cday())-int(temp[element]['DayNumber']-1)
 			if average<10:
 				cant+=1
 				x.append(now-datetime.timedelta(days=average))
@@ -286,7 +286,7 @@ def rsm_data(request,format, station,xxx):
 		response=HttpResponse(content_type='image/png')
 		canvas.print_png(response)
 	else:
-		response= HttpResponse("<html><body><p>No data</body></html>")
+		response= HttpResponse("<html><body><p>No data<br></body></html>")
 
 	os.chdir(home)
 	
