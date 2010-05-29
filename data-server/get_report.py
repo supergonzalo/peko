@@ -14,7 +14,7 @@ import pywapi
 import pprint
 from metar import Metar
 import etowind20
-import pickle,log
+import pickle
 
 
 
@@ -74,7 +74,6 @@ if not stations:
 	f=open('stations.lib','r')
 	library = pickle.load(f)		#Dictionary of dictionaries with monitored stations
 	f.close()
-	datalog=log.init_log()
 	os.chdir(home)
 
 for name in library:
@@ -95,7 +94,6 @@ for name in library:
 		
 		if report=='':												#No data, lets ask google
 			print "No metar data for ",name,"\n\n"					#First parse station location to look for climate data
-			log.printlog("No metar data for %s" % name,datalog)
 			goo=gparser(station['city'] + ',' +station ['country'] )
 					
 		if len(goo['current_conditions'])!=0 or len (report)!=0:		#If theres something to log
@@ -112,7 +110,6 @@ for name in library:
 			os.chdir(home)
 		else:
 			print '############# No Data #################'
-			log.printlog("Nothing for %s" % name,datalog)
 		
 		
 	except Metar.ParserError, err:
@@ -123,7 +120,7 @@ for name in library:
     		print "Error retrieving",name,"data","\n"
     		os.chdir(home)
 
-log.logcommit(datalog,'get.log')	
+
 	
    	
 

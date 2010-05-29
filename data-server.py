@@ -80,13 +80,13 @@ try:
 		now=datetime.datetime.now()
 		entry_name=str(cday(now))+'-'+str(now.hour)+' '
 		
-		cron = tab.new(command='cd '+here+'/data-server/ && '+hourly_central, comment=entry_name+'By dataserver.py')
-		cron2 = tab.new(command='cd '+here+'/data-server/ && '+daily_central, comment=entry_name+'By dataserver.py')
-		cron3 = tab.new(command='cd '+here+'/data-server/ && '+daily_cleanup, comment=entry_name+'By dataserver.py')
+		cron = tab.new(command='cd '+here+'/data-server/ && '+hourly_central+'> last_hourly.txt', comment=entry_name+'By dataserver.py')
+		cron2 = tab.new(command='cd '+here+'/data-server/ && '+daily_central+'> last_daily.txt', comment=entry_name+'By dataserver.py')
+		cron3 = tab.new(command='cd '+here+'/data-server/ && '+daily_cleanup+'> last_cleanup.txt', comment=entry_name+'By dataserver.py')
 		
 		cron.every_hour()
-		cron2.special = '15 3 * * *'
-		cron3.special = '45 6 * * *'
+		cron2.special = '45 3 * * *'
+		cron3.special = '55 6 * * *'
 	
 		tab.write()
 	#	- ejecuta script de limpieza de archivos temporales delete_old_files de acuerdo a lo especificado en config.txt
