@@ -256,7 +256,7 @@ def rsm_data(request,format, station,xxx):
 
 		for element in temp['index']:
 			average=int(cday())-int(temp[element]['DayNumber'])
-			if average<10:
+			if average<10 and average >0 :
 				cant+=1.0
 				x.append(now-datetime.timedelta(days=average))
 				y.append(float(temp[element]['ETOTODAY']))
@@ -293,11 +293,9 @@ def rsm_data(request,format, station,xxx):
 def manh_distance(lat1,long1,lat2,long2):
 	return (lat1-lat2)**2+(long1-long2)**2
 
-
-def near(request,format, station,xxx):
+def near(request,format, lat,longitud):
 	
-	station=station[0:4]
-	base=[float(temp[station]['latitude']),float(temp[station]['longitude'])]
+	base=[float(lat),float(longitud)]
 	sorted_list=list()
 	for element in temp:
 			sorted_list.append([element,manh_distance(base[0],base[1],float(temp[element]['latitude']),float(temp[element]['longitude']))])
