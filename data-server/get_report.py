@@ -1,39 +1,27 @@
-#!/usr/bin/python
-#
+import urllib,datetime
 import os
 import sys
 import getopt
 import string
 import urllib
-import datetime
-import etrad10
 import re
 import fnmatch
 import glob,time
 import pywapi
 import pprint
 from metar import Metar
-import etowind20
 import pickle
 
-
-
-#Gets Weather Reports from stations given as a parameter (argv) and stores them in files
-#../Stations/XXXX/YYYYDDDHH X=Station Identifier Y=Year D=Day of the year(1-365/366) H=Hour 
-
-BASE_URL = "http://weather.noaa.gov/pub/data/observations/metar/stations"
 
 def cday(date):			#Day of the year
 	return date.strftime('%j')
 
 def gparser (city):	#Gets weather from google in case station is not working
-	
 	try:
 		result=pywapi.get_weather_from_google(city)
-		
 	except:
-		print '\nNo data for'+ city
-		result =0
+		print '\nNo Google data for '+ city
+		result =''
 
 	return result
 
@@ -57,70 +45,81 @@ def usage():			#Usage help
 """
   sys.exit(1)
 
-stations = []
-debug = False
-
-try:
-  opts, stations = getopt.getopt(sys.argv[1:], 'd')
-  for opt in opts:
-    if opt[0] == '-d':
-      debug = True
-except:
-  usage()
- 
-if not stations:
-	home=os.getcwd()		
-	os.chdir(home+'/Doc')
-	f=open('stations.lib','r')
-	library = pickle.load(f)		#Dictionary of dictionaries with monitored stations
-	f.close()
-	os.chdir(home)
-
-for name in library:
-	print name
-	obs=''
-	report=''
-	goo={'current_conditions':''}
-	#station=get_station(name,'METAR_Station_Places.txt')		#Climatic station dictionary, downloaded from noaa
-	station=library[name]
- 	home=os.getcwd()
-	url = "%s/%s.TXT" % (BASE_URL, station['code'])
-	try:
-		urlh = urllib.urlopen(url)
-		for line in urlh:
-      			if line.startswith(name):			#Gets data from noaa server
-       				report = line.strip()
-        			obs = Metar.Metar(line)
-		
-		if report=='':												#No data, lets ask google
-			print "No metar data for ",name,"\n\n"					#First parse station location to look for climate data
-			goo=gparser(station['city'] + ',' +station ['country'] )
-					
-		if len(goo['current_conditions'])!=0 or len (report)!=0:		#If theres something to log
-			now=datetime.datetime.now()
-			direct="%s/%s"%("Stations",station['code'])
-			if not os.path.exists(direct):								#Creates Directory /Stations/XXXX (Satation ID)
-    				os.makedirs(direct)
-			os.chdir(direct)
-
-			entry_name=str(now.year)+str(cday(now))+str(now.hour)		#Creates filename
-			if not os.path.isfile(entry_name):											#Creates file YYYYDDDHH		
-				arch(entry_name, 'w', 'Metar\n'+str(obs)+'\nGoogle\n' + str(goo))
-						
-			os.chdir(home)
-		else:
-			print '############# No Data #################'
-		
-		
-	except Metar.ParserError, err:
-		print "METAR code: ",line
-    		print string.join(err.args,", "),"\n"
-    		os.chdir(home)
-  	except:
-    		print "Error retrieving",name,"data","\n"
-    		os.chdir(home)
-
+def tomonth(month):
+	if month=='Jan': return 1
+	if month=='Feb': return 2
+	if month=='Mar': return 3
+	if month=='Apr': return 4
+	if month=='May': return 5
+	if month=='Jun': return 6
+	if month=='Jul': return 7
+	if month=='Aug': return 8
+	if month=='Sep': return 9
+	if month=='Oct': return 10
+	if month=='Nov': return 11
+	if month=='Dec': return 12
 
 	
-   	
+BASE_URL = "http://weather.noaa.gov/pub/data/observations/metar/stations"
+head=len('http://weather.noaa.gov/pub/data/observations/metar/stations/')-2
+date=len('<img src="/icons/text.gif" alt="[TXT]"> <a href="ZYTX.TXT">ZYTX.TXT</a>                      ')
+
+urlh = urllib.urlopen(BASE_URL)
+now=datetime.datetime.now()
+print str(now)
+aux=dict()
+for line in urlh:
+	if len(line)==119:
+		year=int(line[date+7:date+11])
+		month=tomonth(line[date+3:date+6])
+		day=int(line[date:date+2])
+		hour=int(line[date+12:date+14])
+		delta=now-datetime.datetime(year,month,day,hour,00)
+		if delta.days < 1:
+			aux[str(line[head:head+4])]= datetime.datetime(year,month,day,hour,00)
+#update contiene metar stations y la [fecha hora] de la ultima actualizacion
+
+home=os.getcwd()
+f=open(home+'/Doc/stations.lib','r')
+library = pickle.load(f)		#Dictionary of dictionaries with monitored stations
+f.close()
+for name in library:
+	obs=''
+	report=''
+	goo={}
+	station=library[name]
+	print name
+	if station['metar'] in aux:
+		print 'New data in aux'
+		url = "%s/%s.TXT" % (BASE_URL, name)
+		try:
+			urlh = urllib.urlopen(url)
+			for line in urlh:
+				if line.startswith(station['metar']):			#Gets data from noaa server
+					report = line.strip()
+					obs = Metar.Metar(line)
+		except Metar.ParserError, err:
+			print "METAR code: ",line
+			print string.join(err.args,", "),"\n"
+
+	if report=='':												#No data, lets ask google
+		print "No metar data for ",name,"\n\n"					#First parse station location to look for climate data
+		goo=gparser(station['city'] + ',' +station ['country'] )
+
+	if 'current_conditions' in goo or report!='':		#If theres something to log
+		now=datetime.datetime.now()
+		direct="%s/%s"%("/Stations",station['code'])
+		current=home+direct
+		if not os.path.exists(current):								#Creates Directory /Stations/XXXX (Satation ID)
+			os.makedirs(current)
+		entry_name=str(now.year)+str(cday(now))+str(now.hour)		#Creates filename
+		print 'Saving '+current
+		if not os.path.isfile(current+'/'+entry_name):											#Creates file YYYYDDDHH		
+			arch(current+'/'+entry_name, 'w', 'Metar\n'+str(obs)+'\nGoogle\n' + str(goo))
+	else:
+		print '############# No Data at all for %s #################' % name
+
+
+now=datetime.datetime.now()
+print str(now)
 
