@@ -63,19 +63,17 @@ def etowind(foo,wstation):	#cambiar, ya recibe los datos para procesar en foo, s
 
 	
 	if isinstance(foo, dict): #Google data. 
+		print 'Google %s\n'%foo
 		TMean=float(foo['current_conditions']['temp_c'])
 		P=atmp(float(wstation['altitude']),TMean)
 		RH=float(re.findall('\d+',foo['current_conditions']['humidity'])[0])
 		Es=edt(TMean)
 		Ea=Es*RH/100
-		w=foo['current_conditions']['wind_condition']
-		if w.isdigit():
-			Wspeed=float(re.findall('\d+',w)[0])*0.44704 #to m/s	
-		else:
-			Wspeed=0
+		Wspeed=float(re.findall('\d[0-9]{0,2}.\d[0-9]{0,2}',foo['current_conditions']['wind_condition'])[0])
+
 		
 	else:	
-			#print 'Metar: %s'%foo[i]
+		print 'Metar: %s\n'%foo
 		
 		if re.findall('temperature:',foo): 
 			TMean=float(getdata(foo))
@@ -92,7 +90,8 @@ def etowind(foo,wstation):	#cambiar, ya recibe los datos para procesar en foo, s
 		Es=edt(TMean)
 		Ea=edt(TDew)
 		
-			
+	print 'Tmean %s P %s TDEW %s Wspeed%s'%(TMean,P,TDew,Wspeed)	
+		
 	DeltaTMean=delta(TMean)
 	Gamma=gamma(P)
 	etowh= Gamma*(900.0/24.0)*Wspeed*(Es-Ea)/((DeltaTMean+Gamma*(1+0.34*Wspeed))*(TMean+273.0)) # mm/hour

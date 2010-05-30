@@ -114,7 +114,7 @@ def etoit(station,dayofyear):
 				#ver si hay datos de google
 				#si hay datos de google llamar a etwind con los datos
 				gdat=eval(observation[3])
-				if gdat['current_conditions'] and gdat['current_conditions']['temp_c']:
+				if gdat['current_conditions'] and gdat['current_conditions']['temp_c']!='':
 					info[i]="\nTimestamp: "+ind+ etowind20.etowind(gdat,station)
 	#crear nombre de archivo indice					
 	dex=dayofyear+'.dex'
@@ -128,8 +128,7 @@ def etoit(station,dayofyear):
 	#si hay datos en el indice llamar a etorad (esto deberia correr una vez con todos los datos del dia
 	if not len(dexinfo)==0:
 		arch(dex,'a',etrad10.etorad(dexinfo,station,dex))	#writes timestamp
-				#para poder llamar a addto limpiar la parte del dex que corresponde al ultimo reporte
-				#rsm.addto_rsm(stationcode,dexinfo)
+
 				
 
 

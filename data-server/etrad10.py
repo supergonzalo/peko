@@ -112,6 +112,7 @@ def data_matrix(foo):
 	tmax=-50.0
 	tmin=100.0
 	
+	#print 'foo %s \n'% foo
 
 	for i in range(len(foo)):
 		
@@ -120,7 +121,7 @@ def data_matrix(foo):
 		
 		if re.findall('ETO Wind:',foo[i]):
 			temp_etwind=temp_etwind+getdata(foo[i])
-
+		
 		if re.findall('Windsp:',foo[i]):
 			temp_windsp=temp_windsp+getdata(foo[i])
 		
@@ -153,7 +154,7 @@ def etorad(fs,station_name,filename):
 	
 	j=int(filename[4:7])
 	temp=data_matrix(fs)
-	#print temp
+	#print 'temp %s'%temp
 	wmed=temp['med_wind']
 	tmax=temp['tmax']
 	tmin=temp['tmin']
@@ -189,7 +190,7 @@ def etorad(fs,station_name,filename):
 	if etorad<0:
 		etorad=0
 	
-	#print "\nETO WindTODAY: " +str(etowind)+"\nETOradTODAY: " +str(etorad)+"\nETOTODAY: " +str(float(etorad)+float(etowind))+"\nEstimada: " +str(0.0023*(tmed+17.8)*ext_radiation*(tmax-tmin)**(0.5))
+	print "\nETO WindTODAY: " +str(etowind)+"\nETOradTODAY: " +str(etorad)+"\nETOTODAY: " +str(float(etorad)+float(etowind))+"\nEstimada: " +str(0.0023*(tmed+17.8)*ext_radiation*(tmax-tmin)**(0.5))
 
 	return "\nETO WindTODAY: " +str(etowind)+"\nETOradTODAY: " +str(etorad)+"\nETOTODAY: " +str(float(etorad)+float(etowind))+"\nEstimada: " +str(0.0023*(tmed+17.8)*ext_radiation*(tmax-tmin)**(0.5))+ "\nTempMax: "+str(tmax)+"\nTempMin: "+str(tmin) + "\nTempMed: "+str(tmed) + "\nWindMed: "+str(wmed)
 	
