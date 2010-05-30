@@ -108,6 +108,7 @@ def etoit(station,dayofyear):
 		ind=str(i)
 		if os.path.isfile(dayofyear+ind):
 			observation=arch(dayofyear+ind, 'r',0)
+			print observation
 			if len(observation[1])>5: #there's data in the file
 				info[i]="\nTimestamp: "+ind+ etowind20.etowind(observation,station)
 			elif isinstance(observation[3], dict):

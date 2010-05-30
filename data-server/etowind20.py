@@ -63,7 +63,7 @@ def etowind(foo,wstation):	#cambiar, ya recibe los datos para procesar en foo, s
 
 	
 	if isinstance(foo, dict): #Google data. 
-		print 'Google %s\n'%foo
+		#print 'Google %s\n'%foo
 		TMean=float(foo['current_conditions']['temp_c'])
 		P=atmp(float(wstation['altitude']),TMean)
 		RH=float(re.findall('\d+',foo['current_conditions']['humidity'])[0])
@@ -72,23 +72,27 @@ def etowind(foo,wstation):	#cambiar, ya recibe los datos para procesar en foo, s
 		Wspeed=float(re.findall('\d[0-9]{0,2}.\d[0-9]{0,2}',foo['current_conditions']['wind_condition'])[0])
 
 		
-	else:	
-		print 'Metar: %s\n'%foo
+	elif foo[0]=='Metar\n':	
+		#print 'Metar: %s\n'%foo
+		for element in range(len(foo)):
 		
-		if re.findall('temperature:',foo): 
-			TMean=float(getdata(foo))
+			if re.findall('temperature:',foo[element]): 
+				TMean=float(getdata(foo[element]))
 		
-		if re.findall('pressure:',foo):
-			P=float(getdata(foo)/10.0)
+			if re.findall('pressure:',foo[element]):
+				P=float(getdata(foo[element])/10.0)
 
-		if re.findall('dew point:',foo):
-			TDew=float(getdata(foo))
+			if re.findall('dew point:',foo[element]):
+				TDew=float(getdata(foo[element]))
 
-		if re.findall('wind:',foo):
-			Wspeed=wsp(float(getdata(foo)))
+			if re.findall('wind:',foo[element]):
+				Wspeed=wsp(float(getdata(foo[element])))
+
+	else:
+		return ''
 		
-		Es=edt(TMean)
-		Ea=edt(TDew)
+	Es=edt(TMean)
+	Ea=edt(TDew)
 		
 	print 'Tmean %s P %s TDEW %s Wspeed%s'%(TMean,P,TDew,Wspeed)	
 		
