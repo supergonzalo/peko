@@ -109,7 +109,7 @@ def etoit(station,dayofyear):
 		if os.path.isfile(dayofyear+ind):
 			observation=arch(dayofyear+ind, 'r',0)
 			if len(observation[1])>5: #there's data in the file
-				info[i]="\nTimestamp: "+ind+ etowind20.etowind(observation[1],station)
+				info[i]="\nTimestamp: "+ind+ etowind20.etowind(observation,station)
 			elif isinstance(observation[3], dict):
 				#ver si hay datos de google
 				#si hay datos de google llamar a etwind con los datos
