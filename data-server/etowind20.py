@@ -54,65 +54,45 @@ def getdata(f):
 		return 0
 
 	
-def etowind(foo,wstation):
+def etowind(foo,wstation):	#cambiar, ya recibe los datos para procesar en foo, si foo es lista, son datos metar y si es dict son datos google
 
-	gdat=False
 	TMean=21.0
 	P=101.3
 	TDew=16.0
 	Wspeed=1.0
-	
-	
-	if foo[1]!='\n': #Metar data. 
-		
-		
-		for i in range(len(foo)):
-	
 
+	
+	if isinstance(foo, dict): #Google data. 
+		TMean=float(foo['current_conditions']['temp_c'])
+		P=atmp(float(wstation['altitude']),TMean)
+		RH=float(re.findall('\d+',foo['current_conditions']['humidity'])[0])
+		Es=edt(TMean)
+		Ea=Es*RH/100
+		w=foo['current_conditions']['wind_condition']
+		if w.isdigit():
+			Wspeed=float(re.findall('\d+',w)[0])*0.44704 #to m/s	
+		else:
+			Wspeed=0
+		
+	else:	
 			#print 'Metar: %s'%foo[i]
 		
-			if re.findall('temperature:',foo[i]): 
-				TMean=float(getdata(foo[i]))
+		if re.findall('temperature:',foo): 
+			TMean=float(getdata(foo))
 		
-			if re.findall('pressure:',foo[i]):
-				P=float(getdata(foo[i])/10.0)
+		if re.findall('pressure:',foo):
+			P=float(getdata(foo)/10.0)
 
-			if re.findall('dew point:',foo[i]):
-				TDew=float(getdata(foo[i]))
+		if re.findall('dew point:',foo):
+			TDew=float(getdata(foo))
 
-			if re.findall('wind:',foo[i]):
-				Wspeed=wsp(float(getdata(foo[i])))
-
-
+		if re.findall('wind:',foo):
+			Wspeed=wsp(float(getdata(foo)))
 		
 		Es=edt(TMean)
 		Ea=edt(TDew)
 		
-		
-	
-	else:	
-
-		#print 'Google?'
- 		gdat=eval(foo[3])
-				
-		if len(gdat['current_conditions']['temp_c'])==0:
-			print 'no data'
-			return'-1'
-		else:
-			#print 'yes! google'
-			TMean=float(gdat['current_conditions']['temp_c'])
-			P=atmp(float(wstation['altitude']),TMean)
-			RH=float(re.findall('\d+',gdat['current_conditions']['humidity'])[0])
-			Es=edt(TMean)
-			Ea=Es*RH/100
-			w=gdat['current_conditions']['wind_condition']
-			if w.isdigit():
-				Wspeed=float(re.findall('\d+',w)[0])*0.44704 #to m/s	
-			else:
-				Wspeed=0
-
-	
-	
+			
 	DeltaTMean=delta(TMean)
 	Gamma=gamma(P)
 	etowh= Gamma*(900.0/24.0)*Wspeed*(Es-Ea)/((DeltaTMean+Gamma*(1+0.34*Wspeed))*(TMean+273.0)) # mm/hour

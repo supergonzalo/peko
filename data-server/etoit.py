@@ -16,7 +16,7 @@ from metar import Metar
 import etowind20
 import pickle
 import rsm
-import log
+
 
 
 #Gets Weather Reports from stations given as a parameter (argv) and stores them in files
@@ -102,24 +102,32 @@ def get_station(name,info_file):	#creates a dictionary with climate station info
 def etoit(station,dayofyear):
 
 	info=['','','','','','','','','','','','','','','','','','','','','','','','']
+	#empty="{'current_conditions': {'temp_f': u''"
 		
 	for i in range (24):
 		ind=str(i)
 		if os.path.isfile(dayofyear+ind):
 			observation=arch(dayofyear+ind, 'r',0)
-			if len(observation[1])>5 or len(observation[3])>5: #there's data in the file
-				info[i]="\nTimestamp: "+ind+ etowind20.etowind(observation,station)
-	
-		
+			if len(observation[1])>5: #there's data in the file
+				info[i]="\nTimestamp: "+ind+ etowind20.etowind(observation[1],station)
+			elif isinstance(observation[3], dict):
+				#ver si hay datos de google
+				#si hay datos de google llamar a etwind con los datos
+				gdat=eval(observation[3])
+				if gdat['current_conditions'] and gdat['current_conditions']['temp_c']:
+					info[i]="\nTimestamp: "+ind+ etowind20.etowind(gdat,station)
+	#crear nombre de archivo indice					
 	dex=dayofyear+'.dex'
+	#guardar datos
 	f=open(dex,'w')
 	for i in range (len(info)):
 		f.write(info[i])	
 	f.close()	
 
 	dexinfo=arch(dex,'r',0)
-
+	#si hay datos en el indice llamar a etorad (esto deberia correr una vez con todos los datos del dia
 	if not len(dexinfo)==0:
+		print dexinfo
 		arch(dex,'a',etrad10.etorad(dexinfo,station,dex))	#writes timestamp
 				#para poder llamar a addto limpiar la parte del dex que corresponde al ultimo reporte
 				#rsm.addto_rsm(stationcode,dexinfo)
@@ -135,13 +143,13 @@ f=open('stations.lib','r')
 library = pickle.load(f)					#Dictionary of dictionaries with monitored stations
 f.close()
 os.chdir(home)
-datalog=log.init_log()
+
 
 for element in library:
 	print '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@'
 	print element
 	print '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@'
-	log.printlog("%s" % element,datalog)
+
 
 	direct="%s/%s"%("Stations",element)
 	
@@ -157,12 +165,11 @@ for element in library:
 		rsm.create_rsm(element)
 	else:
 		print "No data for station"
-		log.printlog("No data for station %s" % element,datalog)
-	
+
 	
 	os.chdir(home)
 
-log.logcommit(datalog,'eto.log')
+
 	
 			
 

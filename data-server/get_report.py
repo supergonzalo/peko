@@ -98,9 +98,8 @@ for name in library:
 				if line.startswith(station['metar']):			#Gets data from noaa server
 					report = line.strip()
 					obs = Metar.Metar(line)
-		except Metar.ParserError, err:
-			print "METAR code: ",line
-			print string.join(err.args,", "),"\n"
+		except :
+			print "Error retrieving",url,"\n"
 
 	if report=='':												#No data, lets ask google
 		print "No metar data for ",name,"\n\n"					#First parse station location to look for climate data
