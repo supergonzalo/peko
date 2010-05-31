@@ -112,8 +112,8 @@ for name in library:
 		if not os.path.exists(current):								#Creates Directory /Stations/XXXX (Satation ID)
 			os.makedirs(current)
 		entry_name=str(now.year)+str(cday(now))+str(now.hour)		#Creates filename
-		print 'Saving '+current
 		if not os.path.isfile(current+'/'+entry_name):											#Creates file YYYYDDDHH		
+			print 'Saving '+current
 			arch(current+'/'+entry_name, 'w', 'Metar\n'+str(obs)+'\nGoogle\n' + str(goo))
 	else:
 		print '############# No Data at all for %s #################' % name

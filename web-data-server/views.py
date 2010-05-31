@@ -256,24 +256,32 @@ def rsm_data(request,format, station,xxx):
 
 		for element in temp['index']:
 			average=int(cday())-int(temp[element]['DayNumber'])
-			if average<10:
-				cant+=1.0
+			if average<15:
 				x.append(now-datetime.timedelta(days=average))
-				y.append(float(temp[element]['ETOTODAY']))
-				z.append(float(temp[element]['TempMed']))
-				t.append(float(temp[element]['WindMed']))
-				teto=teto+float(temp[element]['ETOTODAY'])
-				ttemp=ttemp+float(temp[element]['TempMed'])
-				twind=twind+float(temp[element]['WindMed'])
+				try:
+					eto=float(temp[element]['ETOTODAY'])
+					cant+=1.0
+				except:
+					eto=0
+				y.append(eto)
+				teto=teto+float(eto)
+
+				#z.append(float(temp[element]['TempMed']))
+				#t.append(float(temp[element]['WindMed']))
+				#ttemp=ttemp+float(temp[element]['TempMed'])
+				#twind=twind+float(temp[element]['WindMed'])
 					
 			else:
 				break
 		x.pop(0)
 		y.pop(0)
 		width=1
-		teto=teto/cant
-		ttemp=ttemp/cant
-		twind=twind/cant
+		try:
+			teto=teto/cant
+		except:
+			teto=0		
+		#ttemp=ttemp/cant
+		#twind=twind/cant
 		ax.set_ylabel('Evapo. mm',color='blue')
 		ax.plot_date(x, [teto]*len(x), '-',color='green')
 		ax.bar(x,y,width,alpha=0.5,color='blue')

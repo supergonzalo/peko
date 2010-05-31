@@ -102,13 +102,12 @@ def get_station(name,info_file):	#creates a dictionary with climate station info
 def etoit(station,dayofyear):
 
 	info=['','','','','','','','','','','','','','','','','','','','','','','','']
-	#empty="{'current_conditions': {'temp_f': u''"
 		
 	for i in range (24):
 		ind=str(i)
 		if os.path.isfile(dayofyear+ind):
 			observation=arch(dayofyear+ind, 'r',0)
-			print observation
+			#print observation
 			if len(observation[1])>5: #there's data in the file
 				info[i]="\nTimestamp: "+ind+ etowind20.etowind(observation,station)
 			elif isinstance(observation[3], dict):
@@ -137,8 +136,7 @@ def etoit(station,dayofyear):
 ############################# RUN ############################################################
 
 home=os.getcwd()
-os.chdir('./Doc')
-f=open('stations.lib','r')
+f=open('./Doc/stations.lib','r')
 library = pickle.load(f)					#Dictionary of dictionaries with monitored stations
 f.close()
 os.chdir(home)

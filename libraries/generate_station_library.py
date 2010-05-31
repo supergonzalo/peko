@@ -92,10 +92,10 @@ pickle.dump(dest,f)
 f.close()
 os.chdir(home)
 
-os.chdir(home+'/../ui-server/public/')
-f=open('abc.txt.test','w')
-for element in tempo:
-	f.write('%s,%s,%s:%s:%s;' % (tempo[element]['latitude'],tempo[element]['longitude'],tempo[element]['city'],tempo[element]['country'],tempo[element]['code'])) #last change
-f.close()
-os.chdir(home)
+#os.chdir(home+'/../ui-server/public/')
+#f=open('abc.txt.test','w')
+#for element in tempo:
+#	f.write('%s,%s,%s:%s:%s;' % (tempo[element]['latitude'],tempo[element]['longitude'],tempo[element]['city'],tempo[element]['country'],tempo[element]['code'])) #last change
+#f.close()
+#os.chdir(home)
 

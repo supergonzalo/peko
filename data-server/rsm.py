@@ -29,10 +29,9 @@ def create_rsm(station):
 			for item in findstr:
 				if item in line:
 					eto[item]=line.split(':')[1]
-			
+
 		index[element]=eto
-		
-																	
+	print len(index)															
 	f=open(rsm,'w')#wirte XXXX.rsm 
 	pickle.dump(index,f)
 	f.close()
@@ -46,7 +45,7 @@ def create_rsm(station):
 	
 #	for station in centrals:						#Para estacion en stations.lib Entrar en dir
 #		os.chdir(station)
-#		print os.getcwd()
+#	print os.getcwd()
 #		create_rsm(station)
 #		os.chdir('..')
 #	os.chdir(home)

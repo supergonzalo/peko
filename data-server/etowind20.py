@@ -94,7 +94,7 @@ def etowind(foo,wstation):	#cambiar, ya recibe los datos para procesar en foo, s
 	Es=edt(TMean)
 	Ea=edt(TDew)
 		
-	print 'Tmean %s P %s TDEW %s Wspeed%s'%(TMean,P,TDew,Wspeed)	
+	#print 'Tmean %s P %s TDEW %s Wspeed %s'%(TMean,P,TDew,Wspeed)	
 		
 	DeltaTMean=delta(TMean)
 	Gamma=gamma(P)
