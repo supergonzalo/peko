@@ -198,26 +198,31 @@ def test(request,format, station,xxx):
 def raw(request,format, station,xxx):
 	home=os.getcwd()
 	station=station[0:4]
-	station_dir="%s/%s"%(workdir,station)
+	station_dir="%s/%s/"%(workdir,station)
 	data=''
 	
-	if os.path.exists(station_dir):			
-		os.chdir(station_dir)
-
 	rsm=str(station+'.rsm')
-	if os.path.isfile(rsm):
-		f = open(rsm, 'r')		
-		resumen=f.readlines()	
+	try:
+		f = open(station_dir+rsm, 'r')		
+		temp=pickle.load(f)	
 		f.close()
+	
+		element = temp['index'][0]
+	
+		for element in temp['index']:
+			add="Dia,%s,"% temp[element]['DayNumber']
+			try:
+				add=add+"Eto,%s,Tmedia,%s,Wind,%s,"%(temp[element]['ETOTODAY'],temp[element]['TempMed'],temp[element]['WindMed'])	
+			except:
+				add=add+"No data"
+		
+			if format=='h':
+				add="<p>"+add+"</p>"
+			
+			data+=add
 
-		for element in resumen:
-			data=data+"<p>%s</p>"%(element)			#############################
-
-	#levanta los valores del cache para los ultimos 7 dias
-	#Calcula para la ultima semana los valores de tmax tmin windmedio y eto media 	
-	#Copia al array resultado los valores solicitados
-	else:
-		data= "No tenemos suficientes datos de la estacion"	
+	except:
+		data= "No hay datos"	
 
 	os.chdir(home)
 	html = "<html><body><p>%s</body></html>" % (data)

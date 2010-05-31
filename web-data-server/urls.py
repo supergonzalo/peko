@@ -8,10 +8,10 @@ urlpatterns = patterns('',
   (r'^day/$', current_datetime),																# Prints current day of the year
   (r'^([a-z])/([A-Z]{4})(\d{0,3})/$', station_data_available),	# Lists Stations directories
 	(r'^([a-z])/([A-Z]{4}(\d{0,3}))/(\d{5,7})', publish_data),		# Prints data for station & day
-	(r'^([a-z])/([A-Z]{4}(\d{0,3}))/rsm/', rsm_data),							# Prints rsm file for station
-	(r'^([a-z])/([A-Z]{4}(\d{0,3}))/data/', raw),									# Prints info wiindow for ui-server
-	(r'^([a-z])/$', list_stations),																# Lists Stations available (x= xml, t=text) 
-	(r'^([a-z])/([A-Z]{4}(\d{0,3}))/test/', test),								# testing
-	(r'^([a-z])/near/(\D*\d{0,3}\D*\d{0,3})/(\D*\d{0,3}\D*\d{0,3})/$', near),								# Nearest stations
+	(r'^([a-z])/([A-Z]{4}(\d{0,3}))/rsm/', rsm_data),							# Grafico para estacion
+	(r'^([a-z])/([A-Z]{4}(\d{0,3}))/data/', raw),									# Prints info window for ui-server (h=html, c=csv)
+	(r'^([a-z])/$', list_stations),																# Lists Stations available (h=html, x= xml, t=text) 
+	(r'^([a-z])/([A-Z]{4}(\d{0,3}))/table/', test),								# testing
+	(r'^([a-z])/near/(\D*\d{0,3}\D*\d{0,3})/(\D*\d{0,3}\D*\d{0,3})/$', near),	# Nearest stations
 )
 
