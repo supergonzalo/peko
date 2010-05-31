@@ -141,8 +141,11 @@ library = pickle.load(f)					#Dictionary of dictionaries with monitored stations
 f.close()
 os.chdir(home)
 
+now=datetime.datetime.now()
+print str(now)
 
 for element in library:
+	
 	print '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@'
 	print element
 	print '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@'
@@ -166,7 +169,8 @@ for element in library:
 	
 	os.chdir(home)
 
-
+now=datetime.datetime.now()
+print str(now)
 	
 			
 
