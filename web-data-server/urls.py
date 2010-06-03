@@ -12,6 +12,6 @@ urlpatterns = patterns('',
 	(r'^([a-z])/([A-Z]{4}(\d{0,3}))/data/', raw),									# Prints info window for ui-server (h=html, c=csv)
 	(r'^([a-z])/$', list_stations),																# Lists Stations available (h=html, x= xml, t=text) 
 	(r'^([a-z])/([A-Z]{4}(\d{0,3}))/table/', test),								# testing
-	(r'^([a-z])/near/(\D*\d{0,3}\D*\d{0,3})/(\D*\d{0,3}\D*\d{0,3})/$', near),	# Nearest stations
+	(r'^([a-z])/near/(\D*\d{0,3}\D*\d{0,7})/(\D*\d{0,3}\D*\d{0,7})/$', near),	# Nearest stations
 )
 
