@@ -315,8 +315,8 @@ def near(request,format, lat,longitud):
 	result=sorted(sorted_list, key=itemgetter(1))
 	ordenada=''
 	for i in range(100):
-		ordenada=ordenada+"<p>%s,%s,%s:%s:%s</p>"%(temp[result[i][0]]['latitude'],temp[result[i][0]]['longitude'],temp[result[i][0]]['city'],temp[result[i][0]]['country'],temp[result[i][0]]['code'])
+		ordenada=ordenada+"<p>%s,%s,%s:%s:%s;</p>"%(temp[result[i][0]]['latitude'],temp[result[i][0]]['longitude'],temp[result[i][0]]['city'],temp[result[i][0]]['country'],temp[result[i][0]]['code'])
 				
-	return HttpResponse("<html><body><p>%s<br></body></html>"% ordenada)
+	return HttpResponse("<html><body>%s</body></html>"% ordenada)
 
 
