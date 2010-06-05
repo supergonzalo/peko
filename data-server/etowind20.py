@@ -39,7 +39,7 @@ def edt(t):
 ###################################### Wind speed @ ground
 
 def wsp(knots):	#Estimates wind speed @ 2m based on a wsp measured @ 10m
-	return knots*0.514444444*4.87/math.log(67.87*10-5.42)
+	return (knots/0.514444444)*4.87/math.log(67.87*10-5.42)
 
 ###################################### Get values from file f
 
@@ -69,7 +69,7 @@ def etowind(foo,wstation):	#cambiar, ya recibe los datos para procesar en foo, s
 		RH=float(re.findall('\d+',foo['current_conditions']['humidity'])[0])
 		Es=edt(TMean)
 		Ea=Es*RH/100
-		Wspeed=float(re.findall('\d[0-9]{0,2}.\d[0-9]{0,2}',foo['current_conditions']['wind_condition'])[0])
+		Wspeed=float(re.findall('\d[0-9]{0,2}.\d[0-9]{0,2}',foo['current_conditions']['wind_condition'])[0])/0.447 #Es mph
 
 		
 	elif foo[0]=='Metar\n':	
@@ -86,7 +86,7 @@ def etowind(foo,wstation):	#cambiar, ya recibe los datos para procesar en foo, s
 				TDew=float(getdata(foo[element]))
 
 			if re.findall('wind:',foo[element]):
-				Wspeed=wsp(float(getdata(foo[element])))
+				Wspeed=wsp(float(getdata(foo[element])))		#Es knots
 
 	else:
 		return ''
