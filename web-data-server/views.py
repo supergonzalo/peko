@@ -317,6 +317,5 @@ def near(request,format, lat,longitud):
 	for i in range(100):
 		ordenada=ordenada+"<p>%s,%s,%s:%s:%s;</p>"%(temp[result[i][0]]['latitude'],temp[result[i][0]]['longitude'],temp[result[i][0]]['city'],temp[result[i][0]]['country'],temp[result[i][0]]['code'])
 				
-	return HttpResponse("%s"% ordenada)
-
+	return HttpResponse("<div id='ifrmTest'>%s</div>"% ordenada)
 
