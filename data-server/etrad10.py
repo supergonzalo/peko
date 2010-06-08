@@ -51,7 +51,7 @@ def N(j,lat):
 def rs(krs,tmax,tmin,ra):
 	
 
-	return (krs*ra*(tmax-tmin)**0.5)
+	return (krs*ra*(abs(tmax-tmin))**0.5)
 
 ###################################### RS0
 
@@ -75,8 +75,8 @@ def rn(rns,rnl):
 ###################################### ETo
 
 def eto(tmed,rn,p,es,ea,ws):
-	#0.95 Estimador Gonzalo, estima G
-	return (0.408*rn*0.97*etowind20.delta(tmed)+etowind20.gamma(p)*(900/(tmed+273))*ws*(es-ea))/(etowind20.delta(tmed)+etowind20.gamma(p)*(1+0.34*ws))
+	
+	return (0.408*rn*etowind20.delta(tmed)+etowind20.gamma(p)*(900/(tmed+273))*ws*(es-ea))/(etowind20.delta(tmed)+etowind20.gamma(p)*(1+0.34*ws))
 
 
 #########################################################################################################################
@@ -192,7 +192,7 @@ def etorad(fs,station_name,filename):
 	
 	#print "\nETO WindTODAY: " +str(etowind)+"\nETOradTODAY: " +str(etorad)+"\nETOTODAY: " +str(float(etorad)+float(etowind))+"\nEstimada: " +str(0.0023*(tmed+17.8)*ext_radiation*(tmax-tmin)**(0.5))
 
-	return "\nETO WindTODAY: " +str(etowind)+"\nETOradTODAY: " +str(etorad)+"\nETOTODAY: " +str(float(etorad)+float(etowind))+"\nEstimada: " +str(0.0023*(tmed+17.8)*ext_radiation*(tmax-tmin)**(0.5))+ "\nTempMax: "+str(tmax)+"\nTempMin: "+str(tmin) + "\nTempMed: "+str(tmed) + "\nWindMed: "+str(wmed)
+	return "\nETO WindTODAY: " +str(etowind)+"\nETOradTODAY: " +str(etorad)+"\nETOTODAY: " +str(float(etorad)+float(etowind))+"\nEstimada: " +str(0.0023*(tmed+17.8)*ext_radiation*(abs(tmax-tmin))**(0.5))+ "\nTempMax: "+str(tmax)+"\nTempMin: "+str(tmin) + "\nTempMed: "+str(tmed) + "\nWindMed: "+str(wmed)
 	
 
 

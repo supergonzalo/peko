@@ -124,7 +124,6 @@ def etoit(station,dayofyear):
 				except:
 					print 'Invalid Google data\n'
 					#print observation [3]
-					print '!!!!!!!!!!!!!!!!!!!!!!!!\n'
 	#crear nombre de archivo indice					
 	dex=dayofyear+'.dex'
 	#guardar datos

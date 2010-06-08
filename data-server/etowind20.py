@@ -39,7 +39,7 @@ def edt(t):
 ###################################### Wind speed @ ground
 
 def wsp(knots):	#Estimates wind speed @ 2m 
-	return (knots)*0.2
+	return (knots)*0.7
 
 ###################################### Get values from file f
 
@@ -58,21 +58,23 @@ def etowind(foo,wstation):	#cambiar, ya recibe los datos para procesar en foo, s
 
 	TMean=21.0
 	P=101.3
-	TDew=16.0
+	TDew=0.0
 	Wspeed=1.0
 
 	
 	if isinstance(foo, dict): #Google data. 
-		#print 'Google %s\n'%foo
+		print 'Google %s\n'%foo
 		TMean=float(foo['current_conditions']['temp_c'])
 		P=atmp(float(wstation['altitude']),TMean)
+		
 		RH=float(re.findall('\d+',foo['current_conditions']['humidity'])[0])
-		Es=edt(TMean)
-		Ea=Es*RH/100
+		print 'RH=%s TMean=%s \n'%(RH,TMean)
+		TDew=TMean-(100.0-RH)/5
+		
 		try:
-			Wspeed=float(re.findall('\d[0-9]{0,2}',foo['current_conditions']['wind_condition'])[0])/0.447 #Es mph to m/s
+			Wspeed=float(re.findall('\d[0-9]{0,2}',foo['current_conditions']['wind_condition'])[0])*0.447 #Es mph to m/s
 		except:	
-			Wspeed=0.1
+			Wspeed=1.0
 				
 	elif foo[0]=='Metar\n':	
 		#print 'Metar: %s\n'%foo
@@ -88,10 +90,12 @@ def etowind(foo,wstation):	#cambiar, ya recibe los datos para procesar en foo, s
 				TDew=float(getdata(foo[element]))
 
 			if re.findall('wind:',foo[element]):
-				Wspeed=float(getdata(foo[element]))/0.5144		#Es knots to m/s
+				Wspeed=float(getdata(foo[element]))*0.5144		#Es knots to m/s
 
 	else:
 		return ''
+	if TDew==0.0:
+		TDew=TMean-3.0
 		
 	Es=edt(TMean)
 	Ea=edt(TDew)
