@@ -107,15 +107,24 @@ def etoit(station,dayofyear):
 		ind=str(i)
 		if os.path.isfile(dayofyear+ind):
 			observation=arch(dayofyear+ind, 'r',0)
+			
 			#print observation
 			if len(observation[1])>5: #there's data in the file
 				info[i]="\nTimestamp: "+ind+ etowind20.etowind(observation,station)
-			elif isinstance(observation[3], dict):
+				
+			elif isinstance(eval(observation[3]), dict):
 				#ver si hay datos de google
 				#si hay datos de google llamar a etwind con los datos
+				#print 'Checking Google data \n'
 				gdat=eval(observation[3])
-				if gdat['current_conditions'] and gdat['current_conditions']['temp_c']!='':
-					info[i]="\nTimestamp: "+ind+ etowind20.etowind(gdat,station)
+				try:
+					if gdat['current_conditions']['temp_c']!='':
+						info[i]="\nTimestamp: "+ind+ etowind20.etowind(gdat,station)
+						#print 'Valid Google data\n'
+				except:
+					print 'Invalid Google data\n'
+					#print observation [3]
+					print '!!!!!!!!!!!!!!!!!!!!!!!!\n'
 	#crear nombre de archivo indice					
 	dex=dayofyear+'.dex'
 	#guardar datos

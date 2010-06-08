@@ -186,7 +186,7 @@ def etorad(fs,station_name,filename):
 	radiation=rn(pot_rad,surface_rad)
 	#print radiation
 
-	etorad=DT*(0.408*radiation*0.98)	#0.98 Estimador Gonzalo, estima perdidas por G
+	etorad=DT*(0.408*radiation)	
 	if etorad<0:
 		etorad=0
 	

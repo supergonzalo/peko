@@ -39,7 +39,7 @@ def edt(t):
 ###################################### Wind speed @ ground
 
 def wsp(knots):	#Estimates wind speed @ 2m based on a wsp measured @ 10m
-	return (knots/0.514444444)*4.87/math.log(67.87*10-5.42)
+	return (knots)*0.747
 
 ###################################### Get values from file f
 
@@ -69,9 +69,11 @@ def etowind(foo,wstation):	#cambiar, ya recibe los datos para procesar en foo, s
 		RH=float(re.findall('\d+',foo['current_conditions']['humidity'])[0])
 		Es=edt(TMean)
 		Ea=Es*RH/100
-		Wspeed=float(re.findall('\d[0-9]{0,2}.\d[0-9]{0,2}',foo['current_conditions']['wind_condition'])[0])/0.447 #Es mph
-
-		
+		try:
+			Wspeed=float(re.findall('\d[0-9]{0,2}',foo['current_conditions']['wind_condition'])[0])/0.447 #Es mph to m/s
+		except:	
+			Wspeed=0.1
+				
 	elif foo[0]=='Metar\n':	
 		#print 'Metar: %s\n'%foo
 		for element in range(len(foo)):
@@ -86,7 +88,7 @@ def etowind(foo,wstation):	#cambiar, ya recibe los datos para procesar en foo, s
 				TDew=float(getdata(foo[element]))
 
 			if re.findall('wind:',foo[element]):
-				Wspeed=wsp(float(getdata(foo[element])))		#Es knots
+				Wspeed=float(getdata(foo[element]))/0.5144		#Es knots to m/s
 
 	else:
 		return ''
@@ -95,7 +97,8 @@ def etowind(foo,wstation):	#cambiar, ya recibe los datos para procesar en foo, s
 	Ea=edt(TDew)
 		
 	#print 'Tmean %s P %s TDEW %s Wspeed %s'%(TMean,P,TDew,Wspeed)	
-		
+
+	Wspeed=wsp(Wspeed)
 	DeltaTMean=delta(TMean)
 	Gamma=gamma(P)
 	etowh= Gamma*(900.0/24.0)*Wspeed*(Es-Ea)/((DeltaTMean+Gamma*(1+0.34*Wspeed))*(TMean+273.0)) # mm/hour
