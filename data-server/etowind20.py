@@ -38,8 +38,8 @@ def edt(t):
 
 ###################################### Wind speed @ ground
 
-def wsp(knots):	#Estimates wind speed @ 2m based on a wsp measured @ 10m
-	return (knots)*0.1747
+def wsp(knots):	#Estimates wind speed @ 2m 
+	return (knots)*0.2
 
 ###################################### Get values from file f
 
