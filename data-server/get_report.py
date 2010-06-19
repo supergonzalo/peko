@@ -36,15 +36,6 @@ def arch(filename, mode, data=0):
 	f.close()	
 	return temp
 
-
-def usage():			#Usage help
-  program = os.path.basename(sys.argv[0])
-  print "Usage: ",program,"<city> [ <city> ... ]"
-  print """Options:
-  <city> . Station code, ex 'LELC'
-"""
-  sys.exit(1)
-
 def tomonth(month):
 	if month=='Jan': return 1
 	if month=='Feb': return 2
@@ -102,10 +93,14 @@ for name in library:
 			print "Error retrieving",url,"\n"
 
 	if report=='':												#No data, lets ask google
-		print "No metar data for ",name,"\n\n"					#First parse station location to look for climate data
+		print "No metar data for ",name,"\n"					#First parse station location to look for climate data
+		#print "Lets try %s \n"%(station['city'] + ',' +station ['country'] )
 		goo=gparser(station['city'] + ',' +station ['country'] )
-
-	if 'current_conditions' in goo or report!='':		#If theres something to log
+		if 'temp_c' in goo['current_conditions']:
+			report=goo
+	
+	if report!='':		
+		print "Data available"
 		now=datetime.datetime.now()
 		direct="%s/%s"%("/Stations",station['code'])
 		current=home+direct
@@ -113,11 +108,14 @@ for name in library:
 			os.makedirs(current)
 		entry_name=str(now.year)+str(cday(now))+str(now.hour)		#Creates filename
 		if not os.path.isfile(current+'/'+entry_name):											#Creates file YYYYDDDHH		
-			print 'Saving '+current
-			arch(current+'/'+entry_name, 'w', 'Metar\n'+str(obs)+'\nGoogle\n' + str(goo))
+			print 'Saving '+current+'/'+entry_name
+			try: 
+				arch(current+'/'+entry_name, 'w', 'Metar\n'+str(obs)+'\nGoogle\n' + str(goo))
+			except:
+				print 'Could not save file'
 	else:
-		print '############# No Data at all for %s #################' % name
-
+		print '############# No Data at all for %s #################' % (station['city'] + ',' +station ['country'] + ':' + name + '\n' )
+		#print goo
 
 now=datetime.datetime.now()
 print str(now)

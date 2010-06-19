@@ -17,10 +17,8 @@ def first_empty(dicc):
 		if dicc[k]==[]:
 			return k
 
-def get_station(name,info_file):	#creates a dictionary with climate station info
-	for i in range(len(lib)):
-		if re.findall(name,lib[i]): 
-			data = lib[i].split(';')
+def get_station(line):	#creates a dictionary with climate station info
+	data = line.split(';')
 	if data[11]=='':
 		altitude=10.0		#If there's no data at all we asume the station is @10m
 	else:
@@ -29,73 +27,50 @@ def get_station(name,info_file):	#creates a dictionary with climate station info
 	city2=data[5]
 	[latitude, hemisf,latrad]=convert(data[7])
 	[longitude, medisf,longrad]=convert(data[8])
-		
-	return {'latitude':latitude ,'hemisf':hemisf, 'longitude':longitude, 'medisf': medisf,'latrad':latrad,'longrad':longrad, 'altitude':altitude,'city':city1,'country':city2,'code':name,'metar':name}
+	name=line[0:4]
+	metar=data[14][0:4]	
+	return {'latitude':latitude ,'hemisf':hemisf, 'longitude':longitude, 'medisf': medisf,'latrad':latrad,'longrad':longrad, 'altitude':altitude,'city':city1,'country':city2,'code':name,'metar':metar}
 
 
 home=os.getcwd()	
 os.chdir(home+'/../data-server/Doc/')
-stations_to_check=list()
+stations_to_check=dict()
 f=open ('countries.lib','r')
 countries =f.read().split(',')
 f.close()
 g=open(info_file,'r')
-lib=g.readlines()
+a=g.readlines()
 g.close()
-for each in range(len(countries)-1):
-	print countries[each]
-	for i in range(len(lib)):
-		if re.findall(countries[each],lib[i]): 
-			stations_to_check.append(lib[i][0:4])
-
-tempo={}
-
-for element in stations_to_check:
-	tempo[element]=get_station(element,lib)
-
-origen=tempo
-
-#tempo tiene las estaciones con sus datosfrom operator import itemgetter
-	
-#crear array con todas las combinaciones
-prototipo=['A','B','C','D','E','F','G','H','I','J','K','L','M']
-dest=dict()
-for uno in prototipo:
-	for dos in prototipo:
-		for tres in prototipo:
-			for cuatro in prototipo:
-				dest[str(uno+dos+tres+cuatro)]=list()
-
-#copiar primero las lineas que si se corresponden al array
-for element in origen:
-	if element.isalpha():
-		dest[element]=origen[element]
-
-#mapear las que no se corresponden a los lugares libres
-for item in origen:
-	if not item.isalpha():
-		print item
-		newkey=first_empty(dest)
-		dest[newkey]=origen[item]
-		dest[newkey]['code']=newkey
-
-tempo=dest.copy()
-dest.clear()
-
-for element in tempo:
-	if tempo[element]:
-		dest[element]=tempo[element]
+count=dict()
+toabc=list()
+for i in range(len(a)):
+	try:
+		count[a[i].split(';')[5]].append(a[i])
+	except:
+		count[a[i].split(';')[5]]=list()
+		count[a[i].split(';')[5]].append(a[i])
 		
+#count es un diccionario de listas por paises
+
+for each in range(len(countries)-1):
+		
+	for i in range(len(count[countries[each]])):
+		try:
+			station_data=get_station(count[countries[each]][i])
+			stations_to_check[station_data['code']]=station_data
+			tempo='%s,%s,%s:%s:%s;' % (station_data['latitude'],station_data['longitude'],station_data['city'],station_data['country'],station_data['code']) 
+			toabc.append(tempo)
+		except:
+			print "No stations for %s" % countries[each]
 
 f=open('stations.lib','w')
-pickle.dump(dest,f)
+pickle.dump(stations_to_check,f)
 f.close()
 os.chdir(home)
 
-#os.chdir(home+'/../ui-server/public/')
-#f=open('abc.txt.test','w')
-#for element in tempo:
-#	f.write('%s,%s,%s:%s:%s;' % (tempo[element]['latitude'],tempo[element]['longitude'],tempo[element]['city'],tempo[element]['country'],tempo[element]['code'])) #last change
-#f.close()
-#os.chdir(home)
+os.chdir(home+'/../../ui-server/public/')
+f=open('abc.txt.test','w')
+f.writelines(toabc)
+f.close()
+os.chdir(home)
 
