@@ -81,7 +81,7 @@ for name in library:
 	station=library[name]
 	print name
 	if station['metar'] in aux:
-		print 'New data in aux'
+		print 'New data in for station'
 		url = "%s/%s.TXT" % (BASE_URL, name)
 		try:
 			urlh = urllib.urlopen(url)
@@ -96,8 +96,11 @@ for name in library:
 		print "No metar data for ",name,"\n"					#First parse station location to look for climate data
 		print "Lets try %s \n"%(station['city'] + ',' +station ['country'] )
 		goo=gparser(station['city'] + ',' +station ['country'] )
-		if 'temp_c' in goo['current_conditions']:
-			report=goo
+		try:
+			if 'temp_c' in goo['current_conditions']:
+				report=goo
+		except:
+			print "-------> Error con goo"
 	
 	if report!='':		
 		print "Data available"
@@ -109,10 +112,10 @@ for name in library:
 		entry_name=str(now.year)+str(cday(now))+str(now.hour)		#Creates filename
 		if not os.path.isfile(current+'/'+entry_name):											#Creates file YYYYDDDHH		
 			print 'Saving '+current+'/'+entry_name
-			try: 
-				arch(current+'/'+entry_name, 'w', 'Metar\n'+str(obs)+'\nGoogle\n' + str(goo))
-			except:
-				print 'Could not save file'
+			#aca se usaba arch
+			fil=open(current+'/'+entry_name, 'w')
+			fil.writelines('Metar\n'+str(obs)+'\nGoogle\n' + str(goo))
+			fil.close
 	else:
 		print '############# No Data at all for %s #################' % (station['city'] + ',' +station ['country'] + ':' + name + '\n' )
 		#print goo
