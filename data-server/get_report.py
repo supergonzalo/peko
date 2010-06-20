@@ -94,7 +94,7 @@ for name in library:
 
 	if report=='':												#No data, lets ask google
 		print "No metar data for ",name,"\n"					#First parse station location to look for climate data
-		#print "Lets try %s \n"%(station['city'] + ',' +station ['country'] )
+		print "Lets try %s \n"%(station['city'] + ',' +station ['country'] )
 		goo=gparser(station['city'] + ',' +station ['country'] )
 		if 'temp_c' in goo['current_conditions']:
 			report=goo

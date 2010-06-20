@@ -68,7 +68,7 @@ pickle.dump(stations_to_check,f)
 f.close()
 os.chdir(home)
 
-os.chdir(home+'/../../ui-server/public/')
+#os.chdir(home+'/../../ui-server/public/')
 f=open('abc.txt.test','w')
 f.writelines(toabc)
 f.close()
