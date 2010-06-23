@@ -22,19 +22,7 @@ def gparser (city):	#Gets weather from google in case station is not working
 	except:
 		print '\nNo Google data for '+ city
 		result =''
-
 	return result
-
-
-def arch(filename, mode, data=0):
-	f = open(filename, mode)		#Writes / reads filename. In a 'r', data is a dummy
-	if mode=='r' or mode=='r+':
-		temp=f.readlines()	
-	else:
-		f.write(data)
-		temp=True
-	f.close()	
-	return temp
 
 def tomonth(month):
 	if month=='Jan': return 1
@@ -95,14 +83,14 @@ for name in library:
 	if report=='':												#No data, lets ask google
 		print "No metar data for ",name,"\n"					#First parse station location to look for climate data
 		print "Lets try %s \n"%(station['city'] + ',' +station ['country'] )
-		goo=gparser(station['city'] + ',' +station ['country'] )
 		try:
+			goo=gparser(station['city'] + ','+station ['country'] )
 			if 'temp_c' in goo['current_conditions']:
 				report=goo
 		except:
-			print "-------> Error con goo"
+			print "-------> Error in gparser: %s" % goo
 	
-	if report!='':		
+	if len(report)>10:		
 		print "Data available"
 		now=datetime.datetime.now()
 		direct="%s/%s"%("/Stations",station['code'])
@@ -112,12 +100,12 @@ for name in library:
 		entry_name=str(now.year)+str(cday(now))+str(now.hour)		#Creates filename
 		if not os.path.isfile(current+'/'+entry_name):											#Creates file YYYYDDDHH		
 			print 'Saving '+current+'/'+entry_name
-			#aca se usaba arch
+
 			fil=open(current+'/'+entry_name, 'w')
 			fil.writelines('Metar\n'+str(obs)+'\nGoogle\n' + str(goo))
 			fil.close
 	else:
-		print '############# No Data at all for %s #################' % (station['city'] + ',' +station ['country'] + ':' + name + '\n' )
+		print '############# No Data at all for %s #################' % (station['city'] + ' ' +station ['country'] + ':' + name + '\n' )
 		#print goo
 
 now=datetime.datetime.now()
