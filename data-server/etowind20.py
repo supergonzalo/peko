@@ -63,7 +63,7 @@ def etowind(foo,wstation):	#cambiar, ya recibe los datos para procesar en foo, s
 
 	
 	if isinstance(foo, dict): #Google data. 
-		print 'Google %s\n'%foo
+		# 'Google %s\n'%foo
 		TMean=float(foo['current_conditions']['temp_c'])
 		P=atmp(float(wstation['altitude']),TMean)
 		
