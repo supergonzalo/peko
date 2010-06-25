@@ -12,16 +12,30 @@ import pprint
 from metar import Metar
 import pickle
 
+log=list()
 
 def cday(date):			#Day of the year
 	return date.strftime('%j')
 
-def gparser (city):	#Gets weather from google in case station is not working
-	try:
-		result=pywapi.get_weather_from_google(city)
-	except:
-		print '\nNo Google data for '+ city
-		result =''
+def gparser(city, country, lib):	#Gets weather from google in case station is not working
+
+#Cargar libreria goo
+#La estacion esta en la libreria?
+#Si ->consultar datos
+#No ->generar log
+	result=''
+	if country in lib:
+		if city in lib[country]:
+			try:
+				result=pywapi.get_weather_from_google(city+','+country)
+			except:
+				print '\nNo Google data for '+ city
+		else:
+			print '------------> %s not found in %s\n' %(city, country)
+			log.append(city+','+country+'\n')
+	else:
+		print '------------> %s not found in countries' % country
+			
 	return result
 
 def tomonth(month):
@@ -47,6 +61,8 @@ urlh = urllib.urlopen(BASE_URL)
 now=datetime.datetime.now()
 print str(now)
 aux=dict()
+
+
 for line in urlh:
 	if len(line)==119:
 		year=int(line[date+7:date+11])
@@ -62,6 +78,10 @@ home=os.getcwd()
 f=open(home+'/Doc/stations.lib','r')
 library = pickle.load(f)		#Dictionary of dictionaries with monitored stations
 f.close()
+f=open(home+'/Doc/google.lib','r')
+goolib=pickle.load(f)
+f.close()
+
 for name in library:
 	obs=''
 	report=''
@@ -69,8 +89,8 @@ for name in library:
 	station=library[name]
 	print name
 	if station['metar'] in aux:
-		print 'New data in for station'
-		url = "%s/%s.TXT" % (BASE_URL, name)
+		print 'New data for station'
+		url = "%s/%s.TXT" % (BASE_URL, station['metar'])
 		try:
 			urlh = urllib.urlopen(url)
 			for line in urlh:
@@ -81,10 +101,10 @@ for name in library:
 			print "Error retrieving",url,"\n"
 
 	if report=='':												#No data, lets ask google
-		print "No metar data for ",name,"\n"					#First parse station location to look for climate data
+		print "No metar data for ",station['metar'],"\n"					#First parse station location to look for climate data
 		print "Lets try %s \n"%(station['city'] + ',' +station ['country'] )
 		try:
-			goo=gparser(station['city'] + ','+station ['country'] )
+			goo=gparser(station['city'] ,  station ['country'], goolib )
 			if 'temp_c' in goo['current_conditions']:
 				report=goo
 		except:
@@ -111,3 +131,6 @@ for name in library:
 now=datetime.datetime.now()
 print str(now)
 
+f=open('getlog.txt','w')
+f.writelines(log)
+f.close()

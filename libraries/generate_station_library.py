@@ -1,4 +1,4 @@
-import os,pickle,re,math
+import os,pickle,re,math,sys
 
 info_file= 'METAR.txt'
 
@@ -32,8 +32,10 @@ def get_station(line):	#creates a dictionary with climate station info
 	return {'latitude':latitude ,'hemisf':hemisf, 'longitude':longitude, 'medisf': medisf,'latrad':latrad,'longrad':longrad, 'altitude':altitude,'city':city1,'country':city2,'code':name,'metar':metar}
 
 
-home=os.getcwd()	
-os.chdir(home+'/../data-server/Doc/')
+home=os.getcwd()
+sys.path.append(home+'/../data-server/')
+import pywapi	
+os.chdir(home+'/../data-server/Doc')
 stations_to_check=dict()
 f=open ('countries.lib','r')
 countries =f.read().split(',')
@@ -63,10 +65,11 @@ for each in range(len(countries)-1):
 		except:
 			print "No stations for %s" % countries[each]
 
+
+#Guardar stations.lib
 f=open('stations.lib','w')
 pickle.dump(stations_to_check,f)
 f.close()
-os.chdir(home)
 
 #os.chdir(home+'/../../ui-server/public/')
 f=open('abc.txt.test','w')
