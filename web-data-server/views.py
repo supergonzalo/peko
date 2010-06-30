@@ -271,15 +271,11 @@ def rsm_data(request,format, station,xxx):
 				y.append(eto)
 				teto=teto+float(eto)
 
-				#z.append(float(temp[element]['TempMed']))
-				#t.append(float(temp[element]['WindMed']))
-				#ttemp=ttemp+float(temp[element]['TempMed'])
-				#twind=twind+float(temp[element]['WindMed'])
 					
 			else:
 				break
-		x.pop(0)
-		y.pop(0)
+		#x.pop(0)
+		#y.pop(0)
 		width=1
 		try:
 			teto=teto/cant
