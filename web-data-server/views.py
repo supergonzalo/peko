@@ -274,10 +274,11 @@ def rsm_data(request,format, station,xxx):
 					
 			else:
 				break
+			width=1
 		try:
 			x.pop(0)
 			y.pop(0)
-			width=1
+			
 		except:
 			a=1
 			#lista vacia
