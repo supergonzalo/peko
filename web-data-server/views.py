@@ -314,9 +314,13 @@ def near(request,format, lat,longitud):
 	for element in temp:
 			sorted_list.append([element,manh_distance(base[0],base[1],float(temp[element]['latitude']),float(temp[element]['longitude']))])
 	result=sorted(sorted_list, key=itemgetter(1))
-	ordenada=''
-	for i in range(100):
-		ordenada=ordenada+"<p>%s,%s,%s:%s:%s;</p>"%(temp[result[i][0]]['latitude'],temp[result[i][0]]['longitude'],temp[result[i][0]]['city'],temp[result[i][0]]['country'],temp[result[i][0]]['code'])
-				
-	return HttpResponse("<div id='ifrmTest'>%s</div>"% ordenada)
+	ordenada="%s,%s,%s:%s:%s;"%(temp[result[0][0]]['latitude'],temp[result[0][0]]['longitude'],temp[result[0][0]]['city'],temp[result[0][0]]['country'],temp[result[0][0]]['code'])
 
+	#for i in range(20):
+	#	ordenada=ordenada+"<p>%s,%s,%s:%s:%s;</p>"%(temp[result[i][0]]['latitude'],temp[result[i][0]]['longitude'],temp[result[i][0]]['city'],temp[result[i][0]]['country'],temp[result[i][0]]['code'])
+	for i in range(10):
+		i+=1
+		ordenada=ordenada+"%s,%s,%s:%s:%s;"%(temp[result[i][0]]['latitude'],temp[result[i][0]]['longitude'],temp[result[i][0]]['city'],temp[result[i][0]]['country'],temp[result[i][0]]['code'])
+
+				
+	return HttpResponse("Near(\"%s\");"% ordenada)
