@@ -61,11 +61,9 @@ for each in range(len(countries)-1):
 			station_data=get_station(count[countries[each]][i])
 			stations_to_check[station_data['code']]=station_data
 			tempo='%s,%s,%s:%s:%s;' % (station_data['latitude'],station_data['longitude'],station_data['city'],station_data['country'],station_data['code']) 
-			toabc.append(tempo)
+			toabc.append(str(tempo))
 		except:
-			print "No stations for %s" % countries[each]
-
-
+			print "Error in %s :%s" % (countries[each],station_data)
 #Guardar stations.lib
 f=open('stations.lib','w')
 pickle.dump(stations_to_check,f)

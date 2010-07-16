@@ -7,10 +7,12 @@ import urllib
 import re
 import fnmatch
 import glob,time
-import pywapi
-import pprint
 from metar import Metar
 import pickle
+
+import urllib2
+from BeautifulSoup import BeautifulStoneSoup
+
 
 log=list()
 
@@ -100,16 +102,26 @@ for name in library:
 		except :
 			print "Error retrieving",url,"\n"
 
-	if report=='':												#No data, lets ask google
+	if report=='':												#No data, lets ask WUNDERGROUND
 		print "No metar data for ",station['metar'],"\n"					#First parse station location to look for climate data
-		print "Lets try %s \n"%(station['city'] + ',' +station ['country'] )
+		city=str(station['city'] + ',' +station ['country'])
+		print "Lets try %s \n"% city
 		try:
-			goo=gparser(station['city'] ,  station ['country'], goolib )
-			if 'temp_c' in goo['current_conditions']:
-				report=goo
+			city = city.replace(' ', '%20')
+			url = "http://api.wunderground.com/auto/wui/geo/WXCurrentObXML/index.xml?query=%s"%city
+			page = urllib2.urlopen(url)
+			soup = BeautifulStoneSoup(page)
+			daytemp = soup.find("temp_c").string
+			wind= soup.find("wind_mph").string
+			wind=str(float(wind)*0.89)
+			rh= soup.find("relative_humidity").string
+			pressure= soup.find("pressure_mb").string
+			dewpoint= soup.find("dewpoint_c").string
+			#armar estructura de datos
+			obs= "station:%s\n type: WUNDERGROUND \n time:--- \n temperature: %s\n dew point: %s\n wind: %s\n visibility: ---\n pressure:%s\n"%(station['code'],daytemp,dewpoint,wind,pressure)
+			report=obs
 		except:
-			print "-------> Error in gparser: %s" % goo
-	
+			print "-------> Error in SOUP"
 	if len(report)>10:		
 		print "Data available"
 		now=datetime.datetime.now()
