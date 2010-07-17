@@ -10,8 +10,6 @@ import etrad10
 import re
 import fnmatch
 import glob,time
-import pywapi
-import pprint
 from metar import Metar
 import etowind20
 import pickle
@@ -28,18 +26,6 @@ BASE_URL = "http://weather.noaa.gov/pub/data/observations/metar/stations"
 
 def cday(date):			#Day of the year
 	return date.strftime('%j')
-
-def gparser (city):	#Gets weather from google in case station is not working
-	
-	try:
-		result=pywapi.get_weather_from_google(city)
-		
-	except:
-		print '\nNo data for'+ city
-		result =0
-
-	return result
-
 
 def arch(filename, mode, data=0):
 	f = open(filename, mode)		#Writes / reads filename. In a 'r', data is a dummy
@@ -77,26 +63,6 @@ def present(filename):				#looks for a filename in a directory
 		
 			return True
 	return False
-
-def get_station(name,info_file):	#creates a dictionary with climate station info
-	
-	home=os.getcwd()		
-	os.chdir(home+'/Doc')
-	lib=arch(info_file,'r',0)
-	for i in range(len(lib)):
-		if re.findall(name,lib[i]): 
-			data = lib[i].split(';')
-	if data[11]=='':
-		altitude=10.0	
-	else:
-		altitude=float(data[11])
-	city=data[3]+','+data[5]
-	temp=data[7].split('-')
-	grad=float(temp[0])
-	hemisf=temp[1][-1]
-	minutes=float(re.findall('\d*',temp[1])[0])
-	os.chdir(home)
-	return {'latitude':grad+minutes/60,'hemisf':hemisf,'altitude':altitude,'city':city,'code':name}
 
 
 def etoit(station,dayofyear):

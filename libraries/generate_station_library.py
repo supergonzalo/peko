@@ -28,8 +28,9 @@ def get_station(line):	#creates a dictionary with climate station info
 	[latitude, hemisf,latrad]=convert(data[7])
 	[longitude, medisf,longrad]=convert(data[8])
 	name=line[0:4]
-	metar=data[14][0:4]	
-	return {'latitude':latitude ,'hemisf':hemisf, 'longitude':longitude, 'medisf': medisf,'latrad':latrad,'longrad':longrad, 'altitude':altitude,'city':city1,'country':city2,'code':name,'metar':metar}
+	metar=data[14][0:4]
+	factor=float(data[15])	
+	return {'latitude':latitude ,'hemisf':hemisf, 'longitude':longitude, 'medisf': medisf,'latrad':latrad,'longrad':longrad, 'altitude':altitude,'city':city1,'country':city2,'code':name,'metar':metar,'factor':factor}
 
 
 home=os.getcwd()
@@ -60,8 +61,6 @@ for each in range(len(countries)-1):
 		try:
 			station_data=get_station(count[countries[each]][i])
 			stations_to_check[station_data['code']]=station_data
-			tempo='%s,%s,%s:%s:%s;' % (station_data['latitude'],station_data['longitude'],station_data['city'],station_data['country'],station_data['code']) 
-			toabc.append(str(tempo))
 		except:
 			print "Error in %s :%s" % (countries[each],station_data)
 #Guardar stations.lib
@@ -69,9 +68,4 @@ f=open('stations.lib','w')
 pickle.dump(stations_to_check,f)
 f.close()
 
-#os.chdir(home+'/../../ui-server/public/')
-f=open('abc.txt.test','w')
-f.writelines(toabc)
-f.close()
-os.chdir(home)
 

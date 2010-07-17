@@ -163,7 +163,8 @@ def etorad(fs,station_name,filename):
 	
 	lat=float(station_name['latrad'])
 	hemisf=station_name['hemisf']
-	z=float(station_name['altitude'])	
+	z=float(station_name['altitude'])
+	factor=float(station_name['factor'])	
 	p=etowind20.atmp(z,tmed)
 	
 
@@ -192,7 +193,7 @@ def etorad(fs,station_name,filename):
 	
 	#print "\nETO WindTODAY: " +str(etowind)+"\nETOradTODAY: " +str(etorad)+"\nETOTODAY: " +str(float(etorad)+float(etowind))+"\nEstimada: " +str(0.0023*(tmed+17.8)*ext_radiation*(tmax-tmin)**(0.5))
 
-	return "\nETO WindTODAY: " +str(etowind)+"\nETOradTODAY: " +str(etorad)+"\nETOTODAY: " +str(float(etorad)+float(etowind))+"\nEstimada: " +str(0.0023*(tmed+17.8)*ext_radiation*(abs(tmax-tmin))**(0.5))+ "\nTempMax: "+str(tmax)+"\nTempMin: "+str(tmin) + "\nTempMed: "+str(tmed) + "\nWindMed: "+str(wmed)
+	return "\nETO WindTODAY: " +str(etowind)+"\nETOradTODAY: " +str(etorad)+"\nETOTODAY: " +str(factor*(float(etorad)+float(etowind)))+"\nEstimada: " +str(0.0023*(tmed+17.8)*ext_radiation*(abs(tmax-tmin))**(0.5))+ "\nTempMax: "+str(tmax)+"\nTempMin: "+str(tmin) + "\nTempMed: "+str(tmed) + "\nWindMed: "+str(wmed)
 	
 
 
