@@ -5,14 +5,11 @@ AAAD;--;---;Olivia, Olivia Regional Airport;MN;United States;4;44-46-43N;095-01-
 AAAE;--;---;Mobridge;SD;United States;4;45-32N;100-26W;;;508;;;KY26;1
 AAAF;--;---;Cheboygan, Cheboygan County Airport;MI;United States;4;45-39-13N;084-31-09W;;;195;;;KY15;1
 AAAG;--;---;Airlake;MN;United States;4;44-38N;093-14W;;;292;;;KY12;1
-AAAH;--;---;Egmont Key Coast Guard Station;FL;United States;4;27-36N;082-46W;;;1;;;KX91;1
 AAAI;--;---;Venice Long Range Navigation;FL;United States;4;27-05N;082-27W;;;1;;;KX90;1
-AAAJ;--;---;Ft. Myers Beach Coast Guard Station;FL;United States;4;26-27N;081-57W;;;1;;;KX89;1
 AAAK;--;---;Marathon Coast Guard Station;FL;United States;4;24-43N;081-07W;;;1;;;KX88;1
 AAAL;--;---;Miami Beach Coast Guard Station;FL;United States;4;25-46N;080-08W;;;1;;;KX87;1
 AAAM;--;---;Fowey Rocks Coast Guard Station;FL;United States;4;25-35N;080-06W;;;1;;;KX86;1
 AAAN;--;---;Islamorada Coast Guard Station;FL;United States;4;24-57N;080-35W;;;1;;;KX84;1
-AAAO;--;---;Fort Pierce Coast Guard Station;FL;United States;4;27-28N;080-18W;;;1;;;KX82;1
 AAAP;--;---;Lake Worth Inlet;FL;United States;4;26-46N;080-03W;;;1;;;KX81;1
 AAAQ;--;---;Jupiter Inlet Coast Guard Station;FL;United States;4;27-02N;080-07W;;;1;;;KX80;1
 AAAR;--;---;Titusville, NASA Shuttle Landing Facility;FL;United States;4;28-37N;080-42W;;;3;;;KX68;1
@@ -24,7 +21,6 @@ AAAW;--;---;West Cameron B522;LA;United States;4;28-23N;093-30W;;;29;;;KW76;1
 AAAX;--;---;Smith Point , Sunnybank;VA;United States;4;37-53N;076-11W;;;1;;;KW71;1
 AAAY;--;---;Clarksville , Marks;VA;United States;4;36-36N;078-34W;;;128;;;KW63;1
 AAAZ;--;---;West Cameron 560;LA;United States;4;28-09N;093-21W;;;0;;;KW60;1
-AABA;--;---;Cape Charles Coast Guard Station;VA;United States;4;37-15N;076-00W;;;2;;;KW51;1
 AABB;--;---;Asheboro, Asheboro Municipal Airport;NC;United States;4;35-39-14N;079-53-42W;;;205;;;KW44;1
 AABC;--;---;Norfolk , Chesapeak;VA;United States;4;36-54N;075-43W;;;23;;;KW39;1
 AABD;74;595;Ocean City;MD;United States;4;38-20N;075-05W;;;4;4;;KW30;1
@@ -43,7 +39,6 @@ AABP;--;---;Delta;UT;United States;4;39-20N;112-35W;;;1414;;;KU24;1
 AABQ;--;---;Bullfrog Marina;UT;United States;4;37-30N;110-42W;;;1110;;;KU17;1
 AABR;--;---;Eagle Range;UT;United States;4;41-03N;113-04W;;;1292;;;KU16;1
 AABS;--;---;Challis, Challis Airport;ID;United States;4;44-31-22N;114-12-54W;44-31-12N;114-12-54W;1534;1536;;KU15;1
-AABT;--;---;Port Lavaca, Calhoun County Airport;TX;United States;4;28-39-14N;096-40-52W;;;9;;;KT97;1
 AABU;--;---;Fredericksburg, Gillespie County Airport;TX;United States;4;30-14-37N;098-54-34W;;;517;;;KT82;1
 AABV;--;---;Hearne, Hearne Municipal Airport;TX;United States;4;30-52-18N;096-37-20W;;;87;;;KT72;1
 AABW;--;---;Weslaco, Mid Valley Airport;TX;United States;4;26-10-39N;097-58-23W;;;21;;;KT65;1
@@ -56,16 +51,13 @@ AACC;--;---;Falfurrias, Brooks County Airport;TX;United States;4;27-12-24N;098-0
 AACD;--;---;Tomahawk, Tomahawk Regional Airport;WI;United States;4;45-28-08N;089-48-20W;;;453;;;KT08;1
 AACE;--;---;Skykomish, Skykomish State Airport;WA;United States;4;47-42N;121-20W;;;304;;;KS88;1
 AACF;--;---;Grangeville ;ID;United States;4;45-57N;116-08W;;;1009;;;KS80;1
-AACG;--;---;Ship Shoal 198g;LA;United States;4;28-30N;091-12W;;;2;;;KS65;1
 AACH;--;---;South Timbalier;LA;United States;4;28-32N;090-35W;;;1;;;KS58;1
-AACI;--;---;Destruction Island;WA;United States;4;47-40N;124-29W;;;24;;;KS53;1
 AACJ;--;---;Tillamook, Tillamook Airport;OR;United States;4;45-25-05N;123-48-52W;;;11;;;KS47;1
 AACK;--;---;Burrows Island;WA;United States;4;48-05N;122-06W;;;18;;;KS38;1
 AACL;--;---;Salida;CO;United States;4;38-31N;106-01W;;;2186;;;KS29;1
 AACM;--;---;Sunriver;OR;United States;4;43-53N;121-27W;;;1266;;;KS21;1
 AACN;--;---;Spencer;ID;United States;4;44-21N;112-11W;;;1793;;;KS14;1
 AACO;--;---;Mullan Aviation Weather Reporting Station;ID;United States;4;47-28N;115-48W;;;1011;;;KS06;1
-AACP;--;---;Ship Shoal B224a;LA;United States;4;28-30N;091-18W;;;32;;;KS02;1
 AACQ;--;---;SALT POINT;LA;United States;4;29-34N;091-32W;;;1;0;;KP92;1
 AACR;--;---;Rome Automatic Meteorological Observing System;OR;United States;4;42-54N;117-39W;;;1162;;;KP88;1
 AACS;--;---;Manistique;MI;United States;4;45-57-00N;086-13-47W;;;178;178;;KP75;1
@@ -73,34 +65,24 @@ AACT;--;---;Lowell;ID;United States;4;46-08-39N;115-35-47W;;;480;480;;KP69;1
 AACU;--;---;EUREKA;NV;United States;4;39-36N;116-00W;;;1812;1809;;KP68;1
 AACV;--;---;Lidgerwood Remote Automatic Meteorological Observing System;ND;United States;4;46-06N;097-09W;;;351;;;KP67;1
 AACW;--;---;Lukeville;AZ;United States;4;31-53N;112-49W;;;511;;;KP65;1
-AACX;--;---;Grand Marais;MN;United States;4;47-44-50N;090-20-40W;;;185;185;;KP61;1
 AACY;--;---;YELLOWSTONE LAKE;WY;United States;4;44-33N;110-25W;;;2388;2388;;KP60;1
 AACZ;--;---;COPPER HARBOR;MI;United States;4;47-28N;087-53W;;;191;190;;KP59;1
 AADA;--;---;PORT HOPE;MI;United States;4;44-01N;082-48W;;;180;179;;KP58;1
 AADB;--;---;MUNISING LAKESHORE;MI;United States;4;46-25N;086-39W;;;187;;;KP53;1
-AADC;--;---;Chetco River Coast Guard Station;OR;United States;4;42-09N;124-16W;;;6;;;KP47;1
 AADD;--;---;Santa Barbara Harbor;CA;United States;4;34-24N;119-42W;;;8;;;KP44;1
 AADE;--;---;Ventura Harbor;CA;United States;4;34-15N;119-15W;;;7;;;KP43;1
-AADF;72;750;Pequot Lake;MN;United States;4;46-36N;094-19W;;;390;390;;KP39;1
 AADG;72;487;Caliente;NV;United States;4;37-36-44N;114-31-35W;37-36-44N;114-31-35W;1333;1333;P;KP38;1
 AADH;72;540;Spickard;MO;United States;4;40-15N;093-43W;;;271;270;P;KP35;1
 AADI;--;---;West Cameron;LA;United States;4;28-20N;093-01W;;;24;;;KP30;1
 AADJ;72;452;MEDICINE LODGE;KS;United States;4;37-17N;098-33W;;;469;469;;KP28;1
-AADK;--;---;Grand Isle B95;LA;United States;4;28-30N;090-07W;;;1;;;KP26;1
 AADL;--;---;Vermilion B215;LA;United States;4;28-42N;092-19W;;;1;;;KP25;1
 AADM;72;765;Roseglen;ND;United States;4;47-45N;101-50W;;;624;624;P;KP24;1
 AADN;--;---;Vermilion B131;LA;United States;4;29-04N;092-11W;;;1;;;KP22;1
-AADO;--;---;Main Pass B68;LA;United States;4;29-40N;088-53W;;;1;;;KP21;1
-AADP;72;758;Devils Lake;ND;United States;4;48-06N;098-52W;;;439;443;P;KP11;1
 AADQ;74;730;Sanderson;TX;United States;4;30-10N;102-25W;;;865;865;P;KP07;1
 AADR;--;---;Bullhead City;AZ;United States;4;35-10N;114-34W;;;167;;;KP06;1
 AADS;--;---;Ajo Municipal;AZ;United States;4;32-27N;112-52W;;;444;;;KP01;1
-AADT;--;---;Tenneco Platform;LA;United States;4;28-00N;093-00W;;;15;;;KP00;1
-AADU;--;---;Shelter Cove;CA;United States;4;40-01N;124-04W;;;21;;;KO87;1
 AADV;--;---;Point Cabrillo;CA;United States;4;39-21N;123-49W;;;20;;;KO72;1
-AADW;72;590;Fort Bragg;CA;United States;4;39-24N;123-49W;;;19;;;KO64;1
 AADX;--;---;Hanford, Hanford Municipal Airport;CA;United States;4;36-19-03N;119-37-46W;36-18-52N;119-37-39W;75;74;;KO18;1
-AADY;--;---;Cape May Coast Guard Station;NJ;United States;4;38-57N;074-53W;;;2;;;KN91;1
 AADZ;--;---;Bronx , Execution Coast Guard Station;NY;United States;4;40-53N;073-44W;;;8;;;KN84;1
 AAEA;--;---;Ocean City, Ocean City Municipal Airport;MD;United States;4;38-18-30N;075-07-26W;38-18-38N;075-07-13W;3;3;;KN80;1
 AAEB;74;590;Barnegat Coast Guard Station;NJ;United States;4;39-46N;074-06W;;;6;;;KN78;1
@@ -115,34 +97,24 @@ AAEJ;--;---;Huntsville, Madison County Executive Airport;AL;United States;4;34-5
 AAEK;--;---;Mena, Mena Intermountain Municipal Airport;AR;United States;4;34-32-43N;094-12-09W;34-32-54N;094-12-33W;329;;;KM39;1
 AAEL;--;---;Metropolis, Metropolis Municipal Airport;IL;United States;4;37-11-09N;088-45-02W;;;117;;;KM30;1
 AAEM;--;---;Newport, Newport Municipal Airport;AR;United States;4;35-38-15N;091-10-34W;;;73;;;KM19;1
-AAEN;--;---;El Capitan Beach;CA;United States;4;33-27N;120-02W;;;27;;;KL98;1
 AAEO;--;---;Point Vincente;CA;United States;4;33-44N;118-24W;;;5;;;KL97;1
-AAEP;--;---;Terminal Island;CA;United States;4;33-44N;118-16W;;;10;;;KL82;1
 AAEQ;--;---;Oxnard , Channel Island;CA;United States;4;34-10N;119-13W;;;2;;;KL79;1
 AAER;--;---;Mission Beach;CA;United States;4;32-46N;117-14W;;;2;;;KL58;1
 AAES;--;---;Malibu Beach;CA;United States;4;34-02N;118-41W;;;139;;;KL55;1
 AAET;--;---;Galliano, South Lafourche Airport;LA;United States;4;29-26-41N;090-15-40W;;;0;;;KL49;1
-AAEU;--;---;Anacapa Island;CA;United States;4;34-01N;119-22W;;;42;;;KL46;1
 AAEV;--;---;Oakdale, Allen Parish Airport;LA;United States;4;30-45-02N;092-41-19W;;;33;;;KL42;1
-AAEW;--;---;High Island A489b;LA;United States;4;28-12N;094-12W;;;;;;KL40;1
 AAEX;--;---;Oceanside Harbor;CA;United States;4;33-13N;117-24W;;;9;;;KL34;1
 AAEY;--;---;Santa Catalina Island;CA;United States;4;33-20N;118-20W;;;3;;;KL27;1
-AAEZ;--;---;Scripps Pier , La Jol;CA;United States;4;32-52N;117-15W;;;4;;;KL21;1
-AAFA;--;---;Cabrillo Beach;CA;United States;4;33-43N;118-17W;;;8;;;KL14;1
 AAFB;--;---;Point Loma , Cabrillo;CA;United States;4;32-40N;117-29W;;;111;;;KL13;1
 AAFC;--;---;San Clemente;CA;United States;4;33-25N;117-37W;;;3;;;KL10;1
-AAFD;--;---;Mount Sterling, Mount Sterling Municipal Airport;IL;United States;4;39-59-15N;090-48-15W;;;223;;;KI63;1
 AAFE;--;---;Pineville, Kee Field Airport;WV;United States;4;37-36-01N;081-33-33W;;;544;;;KI16;1
 AAFF;--;---;Sidney, Sidney Municipal Airport;OH;United States;4;40-14-28N;084-09-03W;;;318;;;KI12;1
 AAFG;74;643;Hominy Municipal;OK;United States;4;36-26N;096-23W;36-26N;096-23W;251;252;;KH92;1
 AAFH;--;---;Seminole, Seminole Municipal Airport;OK;United States;4;35-16-28N;096-40-30W;;;312;;;KH45;1
-AAFI;--;---;High Island A572c;LA;United States;4;27-57N;093-59W;;;30;;;KH39;1
 AAFJ;--;---;Southwest Harbor;ME;United States;4;44-16N;068-19W;;;5;;;KH32;1
-AAFK;--;---;High Island 264C;LA;United States;4;28-28N;93-44W;;;0;;;KH08;1
 AAFL;--;---;Granbury, Granbury Municipal Airport;TX;United States;4;32-26-39N;097-49-01W;;;237;;;KF55;1
 AAFM;--;---;Sherman-Denison;TX;United States;4;33-43N;096-40W;;;228;;;KF39;1
 AAFN;74;646;Sulphur Municipal;OK;United States;4;34-31N;096-59W;34-31N;096-59W;320;320;;KF30;1
-AAFO;--;---;El Reno, El Reno Municipal Air Park;OK;United States;4;35-28-21N;098-00-20W;;;432;;;KF28;1
 AAFP;--;---;Cleburne, Cleburne Municipal Airport;TX;United States;4;32-21-13N;097-26-01W;;;260;;;KF18;1
 AAFQ;74;645;Henryetta Municipal;OK;United States;4;35-24N;096-01W;35-24N;096-01W;259;259;;KF10;1
 AAFR;--;---;Vernon, Wilbarger County Airport;TX;United States;4;34-13-32N;099-17-01W;;;386;;;KF05;1
@@ -150,10 +122,8 @@ AAFS;--;---;Safford Automatic Meteorological Observing System;AZ;United States;4
 AAFT;--;---;Alpine, Alpine-Casparis Municipal Airport;TX;United States;4;30-23-03N;103-41-00W;;;1376;;;KE38;1
 AAFU;--;---;Chama;NM;United States;4;36-54N;106-35W;;;2393;;;KE33;1
 AAFV;--;---;Sonora, Sonora Municipal Airport;TX;United States;4;30-35-08N;100-38-54W;;;652;;;KE29;1
-AAFW;74;733;Northrup Landing Strip;NM;United States;4;33-54N;106-24W;32-54N;106-24W;1193;1193;;KE28;1
 AAFX;--;---;Whiteriver, Whiteriver Airport;AZ;United States;4;33-49N;109-59W;;;1570;;;KE24;1
 AAFY;--;---;Graham, Graham Municipal Airport;TX;United States;4;33-06-36N;098-33-19W;;;342;;;KE15;1
-AAFZ;--;---;East Cameron 345;LA;United States;4;28-05N;092-42W;;;0;;;KE12;1
 AAGA;--;---;South St. Paul Municipal;MN;United States;4;44-51N;093-09W;;;250;;;KD97;1
 AAGB;--;---;Harbor Springs, Harbor Springs Airport;MI;United States;4;45-25-32N;084-54-48W;;;209;;;KD87;1
 AAGC;72;756;Warroad;MN;United States;4;48-56N;095-21W;;;328;328;;KD45;1
@@ -162,7 +132,6 @@ AAGE;--;---;FAITH, SOUTH DAKOTA;SD;United States;4;45-02N;102-01W;;;787;784;;KD0
 AAGF;--;---;Winter Park Resort ;CO;United States;4;39-53N;105-46W;;;2771;;;KC96;1
 AAGG;--;---;Lacon, Marshall County Airport;IL;United States;4;41-01-09N;089-23-11W;;;173;;;KC75;1
 AAGH;--;---;Dixon , Walgreen Field;IL;United States;4;41-50N;089-27W;;;240;;;KC73;1
-AAGI;--;---;Two Rivers Coast Guard Station;WI;United States;4;44-08N;087-33W;;;176;;;KC58;1
 AAGJ;--;---;Burlington, Burlington Municipal Airport;WI;United States;4;42-41-26N;088-18-17W;;;237;;;KC52;1
 AAGK;--;---;Holland , Tulip City;MI;United States;4;42-45N;086-06W;;;210;;;KC19;1
 AAGL;--;---;Morris, Morris Municipal-James R Washburn Field Airport;IL;United States;4;41-25-31N;088-25-07W;;;178;;;KC09;1
@@ -170,7 +139,6 @@ AAGM;--;---;Battle Mountain;NV;United States;4;40-36N;116-52W;;;1381;;;KB23;1
 AAGN;--;---;Portage Glacier, Portage Visitor Center;AK;United States;4;60-47-03N;148-50-46W;60-47-59N;148-50-20W;31;28;;KA21;1
 AAGO;--;---;Currituck, Currituck County Airport;NC;United States;4;36-23-56N;076-00-58W;;;5;;;K9W7;1
 AAGP;72;653;CHAMBERLAIN MUNICIPAL AIRPORT;SD;United States;4;43-46N;099-19W;43-46-00N;099-19-06W;517;519;;K9V9;1
-AAGQ;--;---;Port Aransas Coast Guard Station;TX;United States;4;27-50N;097-04W;;;1;;;K9R1;1
 AAGR;--;---;Galveston Coast Guard Station;TX;United States;4;29-20N;094-46W;;;1;;;K9R0;1
 AAGS;--;---;Edwards, Edwards Air Force Auxiliary North Base;CA;United States;4;34-59N;117-51W;;;701;;;K9L2;1
 AAGT;--;---;Dana Point;CA;United States;4;33-27N;117-41W;;;15;;;K9L0;1
@@ -179,24 +147,17 @@ AAGV;--;---;Wells;NV;United States;4;41-07N;114-58W;;;1722;;;K9BB;1
 AAGW;--;---;Bear Island Coast Guard Station;ME;United States;4;44-17N;068-16W;;;12;;;K9B5;1
 AAGX;72;612;Newport;VT;United States;4;44-56N;072-12W;;;233;233;;K9B2;1
 AAGY;--;---;Point Robinson Coast Guard Light Station;WA;United States;4;47-23N;122-22W;;;0;;;K99S;1
-AAGZ;--;---;Port Chicago;CA;United States;4;38-02N;122-02W;;;12;;;K99Q;1
 AAHA;--;---;Moorhead, Moorhead Municipal Airport;MN;United States;4;46-50-21N;096-39-47W;;;280;;;K99M;1
 AAHB;--;---;Rio Vista Coast Guard Light Station;CA;United States;4;38-09N;121-42W;;;1;;;K98Q;1
 AAHC;--;---;Point No Point Coast Guard Station;WA;United States;4;47-55N;122-32W;;;1;;;K97S;1
 AAHD;--;---;Point Reyes Coast Guard Station;CA;United States;4;38-00N;123-01W;;;87;;;K97Q;1
 AAHE;--;---;New Dungeness Coast Guard Station;WA;United States;4;48-10N;123-06W;;;12;;;K96S;1
 AAHF;--;---;Trinidad Head Coast Guard Light Station;CA;United States;4;41-03N;124-09W;;;58;;;K96Q;1
-AAHG;--;---;Owl's Head Light Station;ME;United States;4;44-05N;069-02W;;;15;;;K96B;1
-AAHH;--;---;Yaquina Bay Coast Guard Station;OR;United States;4;44-37N;124-03W;;;1;;;K95S;1
 AAHI;--;---;Point Pinos Coast Guard Light Station;CA;United States;4;36-38N;121-56W;;;6;;;K95Q;1
-AAHJ;--;---;Cape Vincent Marine Aviation Reporting Station;NY;United States;4;44-07N;076-20W;;;75;;;K95B;1
 AAHK;--;---;Point Bonita Coast Guard Light Station;CA;United States;4;37-48N;122-31W;;;1;;;K94Q;1
 AAHL;--;---;Wood Island Light Station;ME;United States;4;43-27N;070-19W;;;9;;;K94B;1
-AAHM;--;---;Cape Flattery Coast Guard Light Station;WA;United States;4;48-23N;124-44W;;;26;;;K93S;1
 AAHN;--;---;Pigeon Point Coast Guard Light Station;CA;United States;4;37-11N;122-24W;;;1;;;K93Q;1
-AAHO;--;---;Cape Blanco Coast Guard Station;OR;United States;4;42-50N;124-34W;;;57;;;K92S;1
 AAHP;--;---;Bodega Bay Coast Guard Light Station;CA;United States;4;38-19N;123-03W;;;3;;;K92Q;1
-AAHQ;--;---;Alki Point Coast Guard Light Station;WA;United States;4;47-31N;122-25W;;;1;;;K91S;1
 AAHR;--;---;Point Blunt Coast Guard Light Station;CA;United States;4;37-51N;122-25W;;;73;;;K91Q;1
 AAHS;--;---;Umpqua River Coast Guard Station;OR;United States;4;43-41N;124-10W;;;41;;;K90S;1
 AAHT;--;---;Crane Lake Automatic Weather Observing , Reporting System;MN;United States;4;46-16N;092-34W;;;350;;;K8Y8;1
@@ -204,8 +165,6 @@ AAHU;--;---;Buffalo, Buffalo Municipal Airport;MN;United States;4;45-09-32N;093-
 AAHV;--;---;Browning, Starr-Browning Airstrip;MT;United States;4;48-36-04N;113-06-53W;;;1419;;;K8S0;1
 AAHW;--;---;Freeport Coast Guard Station;TX;United States;4;28-57N;095-18W;;;2;;;K8R8;1
 AAHX;--;---;Sabine Pass Coast Guard Station;TX;United States;4;29-44N;093-52W;;;1;;;K8R7;1
-AAHY;--;---;Calcasieu Coast Guard Station;LA;United States;4;29-47N;093-21W;;;1;;;K8R6;1
-AAHZ;--;---;Grand Isle Coast Guard Station;LA;United States;4;29-16N;089-57W;;;2;;;K8R5;1
 AAIA;--;---;Southwest Pass Coast Guard Station;LA;United States;4;28-55N;089-26W;;;1;;;K8R3;1
 AAIB;--;---;Mobile Point Coast Guard Station;AL;United States;4;30-14N;088-02W;;;1;;;K8R1;1
 AAIC;--;---;Pascagoula Coast Guard Station;MS;United States;4;30-22N;088-34W;;;8;;;K8R0;1
@@ -215,23 +174,14 @@ AAIF;--;---;Egg Rock Light Station;ME;United States;4;44-21N;068-08W;;;12;;;K8B9
 AAIG;--;---;Albertville, Albertville Municipal Airport;AL;United States;4;34-13-44N;086-15-20W;;;315;;;K8A0;1
 AAIH;--;---;Point Arena Coast Guard Light Station;CA;United States;4;38-57N;123-44W;;;18;;;K89Q;1
 AAII;--;---;Tillamook Bay Coast Guard Station;OR;United States;4;45-34N;123-55W;;;15;;;K88S;1
-AAIJ;--;---;Samoa , Humboldt Bay;CA;United States;4;40-46N;124-14W;;;2;;;K88Q;1
 AAIK;--;---;Quillayute River Coast Guard Light Station;WA;United States;4;47-54N;124-38W;;;1;;;K87S;1
 AAIL;72;390;Point Piedras Blanca;CA;United States;4;35-39-56N;121-17-05W;;;17;27;P;K87Q;1
 AAIM;--;---;Smith Island Coast Guard Light Station;WA;United States;4;48-19N;122-51W;;;1;;;K86S;1
-AAIN;--;---;St George Reef Coast Guard Light Station;CA;United States;4;41-50N;124-24W;;;45;;;K86Q;1
-AAIO;--;---;Sullivans Island Coast Guard Station;SC;United States;4;32-46N;079-51W;;;3;;;K86J;1
-AAIP;--;---;Siuslaw River Coast Guard Station;OR;United States;4;44-00N;124-07W;;;12;;;K85S;1
 AAIQ;--;---;Santa Cruz Harbor;CA;United States;4;36-58N;122-00W;;;1;;;K85Q;1
 AAIR;--;---;Georgetown Coast Guard Light Station;SC;United States;4;33-13N;079-11W;;;8;;;K85J;1
 AAIS;--;---;Grays Harbor Coast Guard Station;WA;United States;4;46-55N;124-06W;;;6;;;K84S;1
-AAIT;--;---;Blunts Reef Coast Guard Station;CA;United States;4;40-26N;124-30W;;;8;;;K84Q;1
-AAIU;--;---;Folly Beach Long Range Navigation;SC;United States;4;32-41N;079-53W;;;3;;;K84J;1
-AAIV;--;---;Coos Bay Coast Guard Station;OR;United States;4;43-21N;124-20W;;;23;;;K83S;1
-AAIW;--;---;Cape Disappointment;WA;United States;4;46-17N;124-03W;;;55;;;K82S;1
 AAIX;--;---;South Marsh Island;LA;United States;4;28-18N;091-59W;;;1;;;K7R8;1
 AAIY;--;---;Cameron Heliport;LA;United States;4;29-47N;093-18W;;;1;;;K7R5;1
-AAIZ;--;---;Intracoastal City;LA;United States;4;29-47N;092-08W;;;5;;;K7R4;1
 AAJA;--;---;Amelia , Lake Palourd;LA;United States;4;29-42N;091-06W;;;2;;;K7R3;1
 AAJB;--;---;Leeville;LA;United States;4;29-13N;090-14W;;;2;;;K7R2;1
 AAJC;--;---;Venice, Venice Heliport;LA;United States;4;29-15-46N;089-21-48W;29-15-45N;089-21-46W;0;3;;K7R1;1
@@ -246,7 +196,6 @@ AAJK;--;---;OPP,ANDALUSIA;AL;United States;4;31-18N;86-23W;;;94;94;;K79J;1
 AAJL;--;---;South Port , Oak Island Coast Guard Station;NC;United States;4;33-53N;078-01W;;;1;;;K78W;1
 AAJM;--;---;Reidsville, Rockingham County NC Shiloh Airport;NC;United States;4;36-26-14N;079-51-03W;;;211;;;K78N;1
 AAJN;--;---;Caro, Tuscola Area Airport;MI;United States;4;43-27-31N;083-26-43W;;;214;;;K78D;1
-AAJO;--;---;Cape Lookout Coast Guard Station;NC;United States;4;34-36N;076-32W;;;4;;;K77W;1
 AAJP;--;---;Malta;ID;United States;4;42-19N;113-20W;;;1375;;;K77M;1
 AAJQ;--;---;Oak Harbor Airpark;WA;United States;4;48-15N;122-40W;;;58;;;K76S;1
 AAJR;--;---;Burlington , Mt Vern;WA;United States;4;48-28N;122-25W;;;43;;;K75S;1
@@ -256,14 +205,11 @@ AAJU;--;---;DRYDEN-TERRELL COUNTY AIRPORT;TX;United States;4;30-03N;102-13W;;;70
 AAJV;--;---;Huntington Beach;CA;United States;4;33-39N;118-00W;;;35;;;K6L9;1
 AAJW;--;---;Andrews, Andrews-Murphy Airport;NC;United States;4;35-11-40N;083-51-53W;;;518;;;K6A3;1
 AAJX;--;---;Rocksprings, Edwards County Airport;TX;United States;4;29-56-48N;100-10-25W;;;723;;;K69R;1
-AAJY;--;---;Stillpond Coast Guard Station;MD;United States;4;39-20N;076-06W;;;8;;;K67W;1
 AAJZ;--;---;Castle Hill Coast Guard Station;RI;United States;4;41-27N;071-21W;;;15;;;K67B;1
 AAKA;--;---;Cove Point Coast Guard Light Station;MD;United States;4;38-23N;076-23W;;;1;;;K66W;1
 AAKB;--;---;Thomas Point Coast Guard Station;MD;United States;4;38-54N;076-26W;;;1;;;K65W;1
-AAKC;--;---;Parramore Beach;VA;United States;4;37-32N;075-37W;;;1;;;K64W;1
 AAKD;--;---;Milford Haven Coast Guard Station;VA;United States;4;37-29N;076-19W;;;1;;;K63W;1
 AAKE;--;---;Chicago , Calumet Coast Guard Station;IL;United States;4;41-43N;087-32W;;;180;;;K63G;1
-AAKF;--;---;Cape Henry Coast Guard Light Station;VA;United States;4;36-56N;076-00W;;;1;;;K62W;1
 AAKG;--;---;Giddings, Giddings-Lee County Airport;TX;United States;4;30-10-09N;096-58-48W;;;148;;;K62H;1
 AAKH;--;---;Wilmette Marines;IL;United States;4;42-04N;087-41W;;;183;;;K62G;1
 AAKI;--;---;Annapolis Coast Guard Station;MD;United States;4;38-55N;076-28W;;;8;;;K61W;1
@@ -273,29 +219,23 @@ AAKL;--;---;Santa Teresa, Dona Ana County Airport at Santa Teresa;NM;United Stat
 AAKM;--;---;Hillsboro, Hillsboro Municipal Airport;TX;United States;4;32-05-00N;097-05-50W;;;209;;;K5T5;1
 AAKN;--;---;Sunlight;CO;United States;4;39-25-32N;107-22-45W;;;3232;;;K5SM;1
 AAKO;--;---;Wharton, Wharton Regional Airport;TX;United States;4;29-15-15N;096-09-15W;;;31;;;K5R5;1
-AAKP;--;---;East Addition B323;TX;United States;4;28-13N;093-45W;;;26;;;K5R0;1
 AAKQ;--;---;Long Beach ;CA;United States;4;33-46N;118-10W;;;3;;;K5L8;1
-AAKR;--;---;John Day, John Day State Airport;OR;United States;4;44-24-15N;118-57-45W;;;1127;;;K5J0;1
 AAKS;--;---;Pikeville Remote Automatic Meteorological Observing System ;KY;United States;4;37-29N;082-31W;;;446;;;K5I3;1
 AAKT;--;---;Lambertville, Toledo Suburban Airport;MI;United States;4;41-44-09N;083-39-19W;;;204;;;K5G9;1
 AAKU;--;---;Owosso, Owosso Community Airport;MI;United States;4;42-59-34N;084-08-20W;;;224;;;K5D3;1
 AAKV;--;---;Sandy Hook Coast Guard Station;NJ;United States;4;40-28N;074-01W;;;5;;;K56N;1
-AAKW;--;---;Atlantic City Coast Guard Station;NJ;United States;4;39-23N;074-25W;;;4;;;K55N;1
 AAKX;--;---;Grayling, Grayling AAF Airport;MI;United States;4;44-40-49N;084-43-44W;;;353;;;K55D;1
 AAKY;--;---;Castroville , Moss;CA;United States;4;36-48N;121-48W;;;5;;;K54Q;1
 AAKZ;--;---;Manasquan Inl Coast Guard Station;NJ;United States;4;40-06N;074-01W;;;1;;;K54N;1
 AALA;--;---;Point Wilson Coast Guard Light Station;WA;United States;4;48-07N;122-45W;;;1;;;K53S;1
-AALB;--;---;Pillar Pt , El Granda;CA;United States;4;37-30N;122-30W;;;40;;;K53Q;1
 AALC;--;---;Glenwood;MN;United States;4;45-39N;095-23W;;;423;;;K53D;1
 AALD;--;---;Davis Point Aviation Weather Reporting Station ;CA;United States;4;38-03N;122-16W;;;18;;;K52Q;1
 AALE;--;---;Wildwood;NJ;United States;4;39-00N;074-49W;;;2;;;K52N;1
 AALF;--;---;San Francisco Pbs ;CA;United States;4;37-45N;122-42W;;;5;;;K51Q;1
 AALG;--;---;Short Beach Coast Guard Station;NY;United States;4;40-35N;073-33W;;;1;;;K51N;1
-AALH;72;495;Farallon Island;CA;United States;4;37-42N;123-00W;;;12;;;K50Q;1
 AALI;--;---;Rockaway Coast Guard Station;NY;United States;4;40-34N;073-53W;;;3;;;K50N;1
 AALJ;--;---;Durango Aviation Weather Reporting Station;CO;United States;4;37-17N;107-52W;;;2012;;;K4V5;1
 AALK;--;---;Midlothian,Waxahachie, Mid-Way Regional Airport;TX;United States;4;32-27-21N;096-54-44W;;;217;;;K4T6;1
-AALL;--;---;Strevell;ID;United States;4;42-01N;113-15W;;;1612;;;K4SV;1
 AALM;74;619;Superior Valley Gunnery Range;CA;United States;4;36-20N;117-06W;36-20N;117-06W;962;962;;K4SU;1
 AALN;--;---;Torreon;NM;United States;4;35-48N;107-11W;;;2106;;;K4SL;1
 AALO;--;---;Omak;WA;United States;4;48-25N;119-32W;;;374;382;P;K4OM;1
@@ -308,32 +248,26 @@ AALU;--;---;Hanksville ;UT;United States;4;38-22N;110-43W;;;1314;;;K4HV;1
 AALV;--;---;Gilmer, Fox Stephens Field - Gilmer Municipal Airport;TX;United States;4;32-41-56N;094-56-56W;;;127;;;K4F4;1
 AALW;72;568;Douglas;WY;United States;4;42-45N;105-23W;;;1477;;;K4DG;1
 AALX;--;---;Corona , Lincoln;NM;United States;4;34-06N;105-41W;;;1981;;;K4CR;1
-AALY;74;618;Cuddleback Gunnery Range;CA;United States;4;35-16N;117-26W;35-16N;117-26W;864;864;;K4CB;1
 AALZ;--;---;Broadus ;MT;United States;4;45-26N;105-24W;;;922;;;K4BQ;1
 AAMA;--;---;Wilkerson Pass;CO;United States;4;39-03-01N;105-30-52W;;;3438;;;K4BM;1
 AAMB;--;---;Blanding ;UT;United States;4;37-37N;109-28W;;;1840;;;K4BL;1
 AAMC;--;---;Brookings;OR;United States;4;42-03N;124-17W;;;24;;;K4BK;1
 AAMD;--;---;Fort Payne, Isbell Field Airport;AL;United States;4;34-28-25N;085-43-17W;;;267;;;K4A9;1
 AAME;--;---;Preston, Fillmore County Airport;MN;United States;4;43-40-36N;092-10-47W;;;389;;;K49Y;1
-AAMF;--;---;East Moriches Coast Guard Station;NY;United States;4;40-47N;072-45W;;;1;;;K49N;1
 AAMG;--;---;Montauk Point Coast Guard Light Station;NY;United States;4;41-04N;071-56W;;;1;;;K48N;1
 AAMH;--;---;Sutton, Braxton County Airport;WV;United States;4;38-41-13N;080-39-06W;;;387;;;K48I;1
 AAMI;--;---;Canton, Cherokee County Airport;GA;United States;4;34-18-38N;084-25-26W;;;372;;;K47A;1
-AAMJ;--;---;Oracoke Coast Guard Station;NC;United States;4;35-07N;075-59W;;;2;;;K45W;1
 AAMK;--;---;Bay Shore , Fire Island;NY;United States;4;40-38N;073-16W;;;5;;;K45N;1
 AAML;--;---;Rockingham, Rockingham-Hamlet Airport;NC;United States;4;34-53-27N;079-45-32W;;;109;;;K45J;1
 AAMM;--;---;Brant Point Coast Guard Station;MA;United States;4;41-17N;070-05W;;;8;;;K45B;1
-AAMN;--;---;Sault Ste. Marie Coast Guard Station;MI;United States;4;46-30N;084-20W;;;176;;;K44Y;1
 AAMO;74;696;Diamond Shoals Coast Guard Station;NC;United States;4;35-09N;075-18W;;;1;;;K44W;1
 AAMP;--;---;Millbrook , Sky Acres;NY;United States;4;41-42N;073-44W;;;213;;;K44N;1
 AAMQ;--;---;West Point Coast Guard Light Station;WA;United States;4;47-40N;122-26W;;;4;;;K43S;1
 AAMR;--;---;Litchfield Municipal;MN;United States;4;45-06N;094-30W;;;347;;;K43F;1
 AAMS;--;---;Eugene Island;LA;United States;4;28-28N;091-47W;;;30;;;K41I;1
 AAMT;--;---;Bath;MI;United States;4;42-51N;084-29W;;;261;;;K41G;1
-AAMU;--;---;Thunder Bay Island;MI;United States;4;45-04N;083-33W;;;178;;;K40Y;1
 AAMV;--;---;Chester County Airport;PA;United States;4;39-59N;075-52W;;;201;;;K40N;1
 AAMW;--;---;PERRY-FOLEY AIRPORT;FL;United States;4;30-04N;083-35W;30-04-41N;083-34-48W;14;13;;K40J;1
-AAMX;--;---;Grand Canyon, Valle Airport;AZ;United States;4;35-39-03N;112-08-46W;;;1829;;;K40G;1
 AAMY;--;---;Clayton Lake;ME;United States;4;46-37N;069-32W;;;314;;;K40B;1
 AAMZ;--;---;Swansboro , Bogue;NC;United States;4;34-39N;077-06W;;;2;;;K3W4;1
 AANA;--;---;Venice Heliport;LA;United States;4;29-07N;089-12W;;;80;;;K3V8;1
@@ -342,11 +276,8 @@ AANC;--;---;La Grange, Fayette Regional Air Center Airport;TX;United States;4;29
 AAND;--;---;Mineola,Quitman, Wood County Airport;TX;United States;4;32-44-31N;095-29-47W;;;132;;;K3T1;1
 AANE;--;---;Spencer;IA;United States;4;43-10N;095-09W;;;404;408;P;K3SE;1
 AANF;--;---;Aurora State;OR;United States;4;45-15N;122-46W;;;60;;;K3S2;1
-AANG;74;365;Graying Air Force Range;MI;United States;4;44-50N;084-33W;44-50N;084-33W;387;387;;K3RN;1
 AANH;--;---;Bay City, Bay City Municipal Airport;TX;United States;4;28-58N;095-51W;;;14;;;K3R1;1
 AANI;--;---;Lamoni;IA;United States;4;40-37N;093-57W;;;342;;;K3OI;1
-AANJ;--;---;Treasure Island;CA;United States;4;37-48N;122-22W;;;8;;;K3O6;1
-AANK;--;---;Mount Werner;CO;United States;4;40-26-94N;106-44-95W;;;3241;;;K3MW;1
 AANL;--;---;Litchfield, Litchfield Municipal Airport;IL;United States;4;39-09-44N;089-40-28W;;;210;;;K3LF;1
 AANM;--;---;Lincoln, Logan County Airport;IL;United States;4;40-09-31N;089-20-06W;;;182;;;K3LC;1
 AANN;--;---;Newport Beach;CA;United States;4;33-36N;117-53W;;;3;;;K3L3;1
@@ -363,8 +294,6 @@ AANX;--;---;Marshfield Airport;MA;United States;4;42-06N;070-41W;;;3;;;K3B2;1
 AANY;--;---;Greenville, Greenville Municipal Airport;ME;United States;4;45-27-47N;069-33-06W;45-27-44N;069-35-43W;427;;P;K3B1;1
 AANZ;--;---;Newhall;CA;United States;4;34-22N;118-34W;;;427;;;K3A6;1
 AAOA;--;---;Cullman, Folsom Field Airport;AL;United States;4;34-16-07N;086-51-30W;;;294;;;K3A1;1
-AAOB;--;---;Tawas Point Coast Guard Station;MI;United States;4;44-15N;083-26W;;;178;;;K39Y;1
-AAOC;--;---;Saint Ignace;MI;United States;4;45-51N;084-43W;;;176;;;K38Y;1
 AAOD;--;---;Erwin, Harnett County Airport;NC;United States;4;35-22-43N;078-44-01W;;;60;;;K37W;1
 AAOE;--;---;Scituate Coast Guard Station;MA;United States;4;42-12N;070-43W;;;1;;;K37B;1
 AAOF;--;---;Point Betsie , Frankfort;MI;United States;4;44-37N;086-12W;;;183;;;K36Y;1
@@ -372,10 +301,7 @@ AAOG;--;---;Heber, Heber City Municipal-Russ McDonald Field Airport;UT;United St
 AAOH;--;---;Race Point Coast Guard Station;MA;United States;4;42-03N;070-11W;;;1;;;K36B;1
 AAOI;--;---;Merrimac River Coast Guard Station;MA;United States;4;42-49N;070-52W;;;1;;;K35B;1
 AAOJ;--;---;Marquette Coast Guard Light Station;MI;United States;4;46-33N;087-23W;;;203;;;K34Y;1
-AAOK;--;---;Eatons Neck Coast Guard Station;NY;United States;4;40-57N;073-24W;;;1;;;K34N;1
 AAOL;--;---;Gloucester Coast Guard Station;MA;United States;4;42-35N;070-40W;;;1;;;K34B;1
-AAOM;--;---;Port Huron Coast Guard Station;MI;United States;4;43-00N;082-25W;;;177;;;K33G;1
-AAON;--;---;Buzzards Bay Coast Guard Light Station;MA;United States;4;41-23N;071-02W;;;1;;;K33B;1
 AAOO;--;---;Portage Coast Guard Station;MI;United States;4;47-14N;088-38W;;;190;;;K32Y;1
 AAOP;--;---;Little Gulf Island Light Station;CT;United States;4;41-12N;072-06W;;;6;;;K32N;1
 AAOQ;--;---;Eagle Harbor Coast Guard Light Station;MI;United States;4;47-28N;088-10W;;;186;;;K31Y;1
@@ -390,10 +316,7 @@ AAOY;--;---;BUFFALO;SD;United States;4;45-36N;103-33W;45-36-16N;103-32-48W;916;9
 AAOZ;--;---;Gunnison Aviation Weather Reporting Station ;CO;United States;4;38-36N;106-55W;;;2380;;;K2V9;1
 AAPA;--;---;Stanley, Stanley Airport;ID;United States;4;44-12-30N;114-56-04W;;;1952;1980;;K2U7;1
 AAPB;--;---;Willapa Harbor;WA;United States;4;46-42N;123-49W;;;5;;;K2S9;1
-AAPC;--;---;Port Aransas, Mustang Beach Airport;TX;United States;4;27-48-41N;097-05-20W;;;2;;;K2R8;1
-AAPD;74;792;Poinsett Range, Sumpter;SC;United States;4;33-51N;080-29W;33-51N;080-29W;68;68;;K2PJ;1
 AAPE;--;---;Paynesville, Paynesville Municipal Airport;MN;United States;4;45-22-20N;094-44-47W;;;360;;;K2P3;1
-AAPF;--;---;Solana Beach;CA;United States;4;32-59N;117-16W;;;5;;;K2L7;1
 AAPG;--;---;Marina Del Rey;CA;United States;4;33-58N;118-26W;;;8;;;K2L6;1
 AAPH;--;---;Rantoul, Rantoul Natl Aviation Cntr-Frank Elliott Fld Airp.;IL;United States;4;40-17-37N;088-08-33W;;;225;;;K2I5;1
 AAPI;--;---;Columbus , Bolton Field;OH;United States;4;39-54N;083-08W;;;280;;;K2I4;1
@@ -401,27 +324,21 @@ AAPJ;--;---;Huntington B. Oil;CA;United States;4;33-34N;118-08W;;;36;;;K2H1;1
 AAPK;--;---;Galliano, Galliano Heliport;LA;United States;4;29-24-48N;090-17-56W;;;2;;;K2GL;1
 AAPL;--;---;Meadville, Port Meadville Airport;PA;United States;4;41-37-33N;080-12-44W;41-37-33N;080-12-39W;426;428;;K2G6;1
 AAPM;--;---;Bastrop, Morehouse Memorial Airport;LA;United States;4;32-45-21N;091-52-50W;;;51;;;K2F8;1
-AAPN;74;695;Dare County Gunnery Range;NC;United States;4;35-40N;075-54W;35-41N;075-54W;3;3;;K2DP;1
 AAPO;72;269;White Sands;NM;United States;4;32-23N;106-29W;32-24N;106-22W;1244;1244;;K2C2;1
 AAPP;--;---;Portland Head Coast Guard Light Station;ME;United States;4;43-37N;070-12W;;;23;;;K2B8;1
-AAPQ;--;---;Devils Island Light Station;WI;United States;4;47-05N;090-44W;;;192;;;K29Y;1
 AAPR;--;---;Ravenna , Portage County;OH;United States;4;41-13N;081-15W;;;365;;;K29G;1
 AAPS;--;---;Boston , Hull Coast Guard Light Station;MA;United States;4;42-19N;070-53W;;;0;;;K29B;1
 AAPT;--;---;North Manitou Shoal;MI;United States;4;45-01N;085-57W;;;177;;;K28Y;1
 AAPU;--;---;Sabine Pass;TX;United States;4;29-42N;093-57W;;;5;;;K28T;1
-AAPV;--;---;Grncyn Blk52 Supplementary Aviation Weather Reporting Station ;LA;United States;4;27-53N;091-30W;;;1;;;K28K;1
 AAPW;--;---;Oswego Coast Guard Station;NY;United States;4;43-28N;076-31W;;;78;;;K28G;1
-AAPX;--;---;Grand Marais Coast Guard Station;MI;United States;4;46-40N;085-59W;;;183;;;K27Y;1
 AAPY;--;---;Salmon;ID;United States;4;45-11N;113-54W;;;1210;;;K27U;1
 AAPZ;--;---;Lorain Coast Guard Station;OH;United States;4;41-28N;082-11W;;;176;;;K27G;1
-AAQA;--;---;Cape Neddick Coast Guard Light Station;ME;United States;4;43-10N;070-36W;;;12;;;K27B;1
 AAQB;--;---;Elberton, Elbert County Airport-Patz Field;GA;United States;4;34-05-42N;082-48-57W;;;184;;;K27A;1
 AAQC;--;---;Rochester Coast Guard Light Station;NY;United States;4;43-15N;077-36W;;;82;;;K26G;1
 AAQD;--;---;Isle Of Shoals Coast Guard Station;NH;United States;4;42-58N;070-37W;;;1;;;K26B;1
 AAQE;--;---;Edinburg, Edinburg International Airport;TX;United States;4;26-26-31N;098-07-46W;;;24;;;K25R;1
 AAQF;--;---;Erie Coast Guard Station;PA;United States;4;42-07N;080-05W;;;175;;;K25G;1
 AAQG;--;---;Portsmouth Harbor;NH;United States;4;43-04N;070-43W;;;1;;;K25B;1
-AAQH;--;---;Toledo Coast Guard Station;OH;United States;4;41-42N;083-27W;;;180;;;K24G;1
 AAQI;--;---;West Quoddy Head Coast Guard Light Station;ME;United States;4;44-48N;066-57W;;;1;;;K24B;1
 AAQJ;--;---;Cleveland Harbor Coast Guard Station;OH;United States;4;41-30N;081-43W;;;181;;;K23G;1
 AAQK;--;---;Seguin Island Coast Guard Light Station;ME;United States;4;43-40N;069-46W;;;1;;;K23B;1
@@ -432,7 +349,6 @@ AAQO;--;---;Rantoul, Frank Elliott Field Airport;IL;United States;4;40-17-03N;08
 AAQP;--;---;Kremmling, Mc Elroy Airfield;CO;United States;4;40-03-13N;106-22-08W;;;2259;;;K20V;1
 AAQQ;--;---;West Jonesport Coast Guard Station;ME;United States;4;44-32N;067-37W;;;5;;;K20J;1
 AAQR;--;---;Ashtabula Coast Guard Station;OH;United States;4;41-55N;080-48W;;;178;;;K20G;1
-AAQS;--;---;Saint Joseph Coast Guard Station;MI;United States;4;42-07N;086-29W;;;176;;;K20C;1
 AAQT;--;---;Rockland Coast Guard Station;ME;United States;4;44-06N;069-06W;;;1;;;K20B;1
 AAQU;--;---;Wrightsville Beach;NC;United States;4;34-11N;077-49W;;;3;;;K1W9;1
 AAQV;72;614;ST JOHNSBURY FAIRBANKS;VT;United States;4;44-25N;072-01W;44-25-10N;072-01-10W;212;210;;K1V4;1
@@ -443,27 +359,20 @@ AAQZ;--;---;Haleyville, Posey Field Airport;AL;United States;4;34-16-49N;087-36-
 AARA;--;---;Santa Monica Pier;CA;United States;4;34-00N;118-30W;;;2;;;K1L2;1
 AARB;72;460;Elkhart , Elkhart-Morton County Airport;KS;United States;4;37-00N;101-53W;;;1102;1102;P;K1K5;1
 AARC;--;---;Santa Rosa Coast Guard Station;FL;United States;4;30-19N;087-15W;;;2;;;K1J5;1
-AARD;--;---;Cape San Blas Coast Guard Station;FL;United States;4;29-41N;085-22W;;;2;;;K1J4;1
 AARE;--;---;Ponce De Leon Inlet;FL;United States;4;29-04N;080-55W;;;3;;;K1J3;1
-AARF;--;---;Tybee Coast Guard Station;GA;United States;4;32-01N;080-51W;;;2;;;K1J2;1
-AARG;--;---;Saint Simon Island Coast Guard Station;GA;United States;4;31-08N;081-22W;;;1;;;K1J1;1
 AARH;--;---;TRI COUNTY AIRPORT;FL;UNITED STATES;4;30-50N;085-36W;;;26;;;K1J0;1
 AARI;--;---;Effingham, Effingham County Memorial Airport;IL;United States;4;39-04-14N;088-32-00W;;;179;;;K1H2;1
-AARJ;--;---;Mississippi Canyon;LA;United States;4;28-47N;089-03W;;;18;;;K1G7;1
 AARK;--;---;Granite Falls, Granite Falls Municipal Airport,Lenzen-Roe Memorial Field;MN;United States;4;44-45-11N;095-33-21W;;;319;;;K1G2;1
 AARL;--;---;Bridgeport, Bridgeport Municipal Airport;TX;United States;4;33-10-31N;097-49-42W;;;260;;;K1F9;1
 AARM;--;---;Ardmore, Ardmore Downtown Executive Airport;OK;United States;4;34-08-49N;097-07-21W;;;257;;;K1F0;1
 AARN;--;---;Boothville Heliport;LA;United States;4;29-21N;89-26W;;;1;;;K1B7;1
 AARO;--;---;Middlesboro, Middlesboro-Bell County Airport;KY;United States;4;36-36-38N;083-44-14W;;;352;;;K1A6;1
 AARP;--;---;Franklin, Macon County Airport;NC;United States;4;35-13N;083-25W;;;616;;;K1A5;1
-AARQ;--;---;Ship Shoal Platform;LA;United States;4;28-41N;091-13W;;;18;;;K19R;1
 AARR;--;---;Buffalo Coast Guard Station;NY;United States;4;42-53N;078-53W;;;180;;;K19G;1
 AARS;--;---;Mora Municipal Automatic Weather Observing , Reporting System ;MN;United States;4;45-53N;093-16W;;;309;;;K19D;1
 AART;--;---;Muskegon Coast Guard Station;MI;United States;4;43-14N;086-20W;;;182;;;K19C;1
 AARU;--;---;New London Ledge Coast Guard Station;CT;United States;4;41-18N;072-05W;;;8;;;K18N;1
-AARV;--;---;Michigan City Coast Guard Station;IN;United States;4;41-43N;086-55W;;;177;;;K18C;1
 AARW;--;---;Monhegan , Manana Island;ME;United States;4;43-46N;069-20W;;;1;;;K18B;1
-AARX;--;---;Mc Gregor, Isedor Iverson Airport;MN;United States;4;46-37-07N;093-18-35W;;;374;;;K17Y;1
 AARY;--;---;Wadena, Wadena Municipal Airport;MN;United States;4;46-26-48N;095-12-42W;;;418;;;K17W;1
 AARZ;--;---;Ludington Coast Guard Station;MI;United States;4;43-57N;086-28W;;;182;;;K17C;1
 AASA;--;---;Kenosha Coast Guard Station;WI;United States;4;42-35N;087-45W;;;223;;;K16C;1
@@ -473,7 +382,6 @@ AASD;--;---;Halfway Rock Coast Guard Light Station;ME;United States;4;43-39N;070
 AASE;--;---;Todd Field Airport;MN;United States;4;45-54N;94-52W;;;406;;;K14Y;1
 AASF;--;---;Caldwell, Caldwell Municipal Airport;TX;United States;4;30-30-55N;096-42-14W;;;119;;;K14R;1
 AASG;--;---;Frankfort Coast Guard Station;MI;United States;4;44-38N;086-15W;;;174;;;K14C;1
-AASH;--;---;Great Duck Island Coast Guard Light Station;ME;United States;4;44-09N;068-15W;;;1;;;K14B;1
 AASI;--;---;Niagara Coast Guard Station;NY;United States;4;43-16N;079-04W;;;82;;;K13G;1
 AASJ;--;---;Nogales Automatic Meteorological Observing System;AZ;United States;4;31-25N;110-51W;;;1198;;;K13A;1
 AASK;--;---;ANDOVER;NJ;United States;4;41-01N;074-44W;41-00-29N;074-44-22W;178;177;;K12N;1
@@ -484,17 +392,14 @@ AASO;--;---;Blakely, Early County Airport;GA;United States;4;31-23-49N;084-53-42
 AASP;--;---;Sturgeon Bay;WI;United States;4;44-47N;087-19W;;;176;;;K0Y2;1
 AASQ;--;---;Chincoteague;VA;United States;4;37-56N;075-23W;;;2;;;K0W8;1
 AASR;--;---;Custer, Custer County Airport;SD;United States;4;43-43-59N;103-36-41W;43-44-00N;103-36-50W;1711;1725;;K0V1;1
-AASS;--;---;Zuma Beach;CA;United States;4;34-01N;118-49W;;;6;;;K0L3;1
 AAST;--;---;FLORALA AIRPORT;AL;UNITED STATES;4;31-02N;86-18W;;;96;;;K0J4;1
 AASU;--;---;Payson;AZ;United States;4;34-14N;111-20W;;;1498;;;K0E4;1
 AASV;--;---;South Haven, South Haven Area Regional Airport;MI;United States;4;42-21-03N;086-15-22W;;;203;;;K0D1;1
-AASW;--;---;Goat Island Remote Automatic Meteorological Observing System ;ME;United States;4;43-20N;070-24W;;;12;;;K0B9;1
 AASX;--;---;Deer Park, Deer Park Airport;WA;United States;4;47-58-27N;117-25-42W;47-57-44N;117-26-06W;672;668;;K07S;1
 AASY;--;---;Charlotte, Fitch H Beach Airport;MI;United States;4;42-34-28N;084-48-41W;;;271;;;K07G;1
 AASZ;--;---;Gatesville, City-County Airport;TX;United States;4;31-25-16N;097-47-49W;;;276;;;K05F;1
 AATA;--;---;Saguache, Saguache Municipal Airport;CO;United States;4;38-05-50N;106-10-07W;;;2385;;;K04V;1
 AATB;--;---;Hallock;MN;United States;4;48-47N;096-57W;;;250;;;K03Y;1
-AATC;--;---;High Island;LA;United States;4;28-08N;094-24W;;;30;;;K01T;1
 AATD;74;755;Claiborne Range, Airways Facilities Sector ;LA;United States;4;31-08N;092-34W;31-11N;092-38W;67;67;;K01R;1
 AATE;--;---;Biloxi, Keesler Air Force Base, Navu;MS;United States;4;30-24-36N;088-55-09W;30-24-34N;088-55-08W;7;10;;BIX3;1
 AATF;--;---;Biloxi, Keesler Air Force Base, Navu;MS;United States;4;30-24-34N;088-55-08W;30-24-34N;088-55-08W;7;10;;BIX2;1
@@ -1533,7 +1438,6 @@ EGBJ;--;---;Staverton Private ;;United Kingdom;6;51-54N;002-10W;;;29;;;EGBJ;1
 EGCC;03;334;Manchester Airport;;United Kingdom;6;53-21N;002-17W;;;69;0;P;EGCC;1
 EGDB;03;827;Plymouth;;United Kingdom;6;50-21N;004-07W;;;50;0;P;EGDB;1
 EGDC;03;707;Chivenor;;United Kingdom;6;51-05N;004-09W;;;8;0;;EGDC;1
-EGDG;03;817;Saint Mawgan;;United Kingdom;6;50-26N;005-00W;;;119;0;P;EGDG;1
 EGDK;--;---;Kemble Royal Air Force Base ;;United Kingdom;6;51-40N;002-03W;;;133;;;EGDK;1
 EGDL;03;740;Lyneham;;United Kingdom;6;51-30N;001-59W;;;145;0;P;EGDL;1
 EGDM;03;746;Boscombe Down;;United Kingdom;6;51-10N;001-45W;;;124;0;P;EGDM;1
@@ -1578,7 +1482,6 @@ EGOM;03;165;Spadeadam;;United Kingdom;6;55-03N;002-33W;;;325;;;EGOM;1
 EGOP;03;605;Pembrey Sands;;United Kingdom;6;51-43N;004-22W;;;3;;;EGOP;1
 EGOS;03;414;Shawbury;;United Kingdom;6;52-48N;002-40W;;;76;0;P;EGOS;1
 EGOV;03;302;Valley;;United Kingdom;6;53-15N;004-32W;;;1;0;P;EGOV;1
-EGOW;--;---;Woodvale;;United Kingdom;6;53-34-54N;003-03-20W;;;11;;;EGOW;1
 EGOY;03;132;West Freugh;;United Kingdom;6;54-51N;004-57W;;;11;0;;EGOY;1
 EGPA;03;017;Kirkwall Airport;;United Kingdom;6;58-57N;002-54W;;;21;0;P;EGPA;1
 EGPB;03;003;Sumburgh Cape ;;United Kingdom;6;59-53N;001-18W;;;5;;;EGPB;1
@@ -1611,8 +1514,6 @@ EGSY;--;---;Yorkshire and Humberside, Sheffield City;;United Kingdom;6;53-23-39N
 EGTC;--;---;Cranfield;;United Kingdom;6;52-04N;000-37W;;;111;;;EGTC;1
 EGTE;03;839;Exeter Airport;;United Kingdom;6;50-44N;003-25W;;;30;;;EGTE;1
 EGTG;--;---;Filton Private ;;United Kingdom;6;51-31N;002-35W;;;69;;;EGTG;1
-EGTH;--;---;Hatfeild Private ;;United Kingdom;6;51-46N;000-15W;;;77;;;EGTH;1
-EGUA;--;---;Upper Heyford Royal Air Force Base ;;United Kingdom;6;51-56N;001-15W;;;134;;;EGUA;1
 EGUB;03;658;Benson;;United Kingdom;6;51-37N;001-05W;;;63;0;P;EGUB;1
 EGUC;03;502;Aberporth;;United Kingdom;6;52-08N;004-34W;52-08N;004-34W;133;134;P;EGUC;1
 EGUF;03;766;Farnborough Military ;;United Kingdom;6;51-17N;000-46W;;;72;;;EGUF;1
@@ -1625,14 +1526,11 @@ EGUW;03;590;Wattisham;;United Kingdom;6;52-07N;000-58E;;;87;0;P;EGUW;1
 EGUY;03;566;Wyton Royal Air Force Base;;United Kingdom;6;52-21N;000-07W;;;41;;;EGUY;1
 EGVA;03;644;Fairford Royal Air Force Base;;United Kingdom;6;51-41N;001-47W;;;87;;;EGVA;1
 EGVG;--;---;Woodbridge Royal Air Force Base ;;United Kingdom;6;52-05N;001-24E;;;29;;;EGVG;1
-EGVI;--;---;Greenham Common Royal Air Force Base;;United Kingdom;6;51-23N;001-17W;;;122;;;EGVI;1
-EGVJ;--;---;Bentwaters Royal Air Force Base ;;United Kingdom;6;52-08N;001-26E;;;26;;;EGVJ;1
 EGVN;03;649;Brize Norton;;United Kingdom;6;51-45N;001-35W;51-45N;001-35W;88;0;P;EGVN;1
 EGVO;03;761;Odiham;;United Kingdom;6;51-14N;000-57W;;;123;0;;EGVO;1
 EGVP;03;749;Middle Wallop;;United Kingdom;6;51-09N;001-34W;;;91;0;;EGVP;1
 EGWC;--;---;Cosford Royal Air Force Base;;United Kingdom;6;52-38N;002-18W;;;83;;;EGWC;1
 EGWU;03;672;Northolt;;United Kingdom;6;51-33N;000-25W;;;38;0;;EGWU;1
-EGWZ;03;562;Alconbury Royal Air Force Base;;United Kingdom;6;52-22N;000-13W;;;49;;;EGWZ;1
 EGXC;03;391;Coningsby Royal Air Force Base;;United Kingdom;6;53-05N;000-10W;;;7;;;EGXC;1
 EGXD;03;261;Disforth;;United Kingdom;6;54-08N;001-25W;;;36;0;;EGXD;1
 EGXE;03;257;Leeming;;United Kingdom;6;54-18N;001-32W;54-18N;001-32W;40;40;;EGXE;1
@@ -2472,7 +2370,6 @@ KAHN;72;311;ATHENS BEN EPPS AIRPORT;GA;United States;4;33-57N;083-20W;33-57-05N;
 KAIA;--;---;ALLIANCE MUNICIPAL AIRPORT;NE;United States;4;42-03N;102-48W;42-03-51N;102-48-57W;1198;1196;;KAIA;1
 KAID;--;---;Anderson Municipal;IN;United States;4;40-07N;085-37W;;;280;;;KAID;1
 KAIG;--;---;Antigo, Langlade County Airport;WI;United States;4;45-09N;089-06W;;;464;;;KAIG;1
-KAIO;--;---;Atlantic;IA;United States;4;41-24N;095-03W;;;360;;;KAIO;1
 KAIT;--;---;Aitkin, Aitkin Municipal Airport-Steve Kurtz Field;MN;United States;4;46-33N;093-41W;;;367;;;KAIT;1
 KAIZ;--;---;Kaiser Lake Ozark, Lee C Fine Memorial Airport;MO;United States;4;38-06N;092-33W;;;265;;;KAIZ;1
 KAJG;--;---;Mount Carmel, Mount Carmel Municipal Airport;IL;United States;4;38-36-23N;087-43-36W;;;131;;;KAJG;1
@@ -2498,7 +2395,6 @@ KANB;--;---;ANNISTON METRO AIRPORT;AL;United States;4;33-35N;085-51W;33-35-25N;0
 KAND;--;---;ANDERSON COUNTY AIRPORT;SC;United States;4;34-30N;82-43W;34-30-04N;082-42-54W;238;239;;KAND;1
 KANE;--;---;Minneapolis , Blaine;MN;United States;4;45-09N;093-13W;;;278;;;KANE;1
 KANJ;72;734;SAULT STE. MARIE MUNI;MI;United States;4;46-29N;084-21W;46-28-45N;084-21-24W;218;219;;KANJ;1
-KANN;--;---;Annette, Annette Island Airport;AK;United States;4;55-01-49N;131-34-34W;55-01-44N;131-34-38W;36;34;;KANN;1
 KANW;--;---;Ainsworth Municipal;NE;United States;4;42-35N;100-00W;;;789;;;KANW;1
 KAOH;--;---;LIMA ALLEN COUNTY AIRPORT;OH;United States;4;40-42N;84-01W;40-42-17N;084-01-36W;297;296;;KAOH;1
 KAOO;--;---;ALTOONA-BLAIR COUNTY AIRPORT;PA;United States;4;40-18N;78-19W;40-17-37N;078-19-20W;458;455;;KAOO;1
@@ -2551,15 +2447,12 @@ KAVL;72;315;ASHEVILLE REGIONAL AIRPORT;NC;United States;4;35-26N;82-32W;35-26-04
 KAVP;72;513;WILKES-BARRE,SCRANTON INTERNATIONAL ;PA;United States;4;41-20N;75-44W;41-20-10N;075-43-50W;293;291;;KAVP;1
 KAVX;72;292;AVALON CATALINA AIRPORT;CA;United States;4;33-24N;118-25W;33-24-12N;118-24-48W;488;482;;KAVX;1
 KAWG;--;---;Washington;IA;United States;4;41-17N;091-40W;;;230;;;KAWG;1
-KAWH;--;---;Wildhorse Reservation , Elko;NV;United States;4;41-40N;115-47W;;;1902;;;KAWH;1
 KAWI;--;---;Wainwright, Wainwright Airport;AK;United States;4;70-38-19N;160-00-24W;70-38-19N;160-00-24W;9;8;;KAWI;1
 KAWM;--;---;WEST MEMPHIS MUNICIPAL AIRPORT;AR;United States;4;35-08N;090-14W;;;65;;;KAWM;1
 KAWO;--;---;Arlington Municipal;WA;United States;4;48-10N;122-10W;;;42;;;KAWO;1
 KAXA;--;---;Algona;IA;United States;4;43-05N;094-16W;;;372;;;KAXA;1
 KAXN;--;---;CHANDLER FIELD;MN;United States;4;45-52N;095-24W;45-51-55N;095-23-23W;434;433;;KAXN;1
-KAXO;--;---;Grand Isle Supplementary Aviation Weather Reporting Station;LA;United States;4;29-15N;089-58W;;;2;;;KAXO;1
 KAXS;--;---;Altus, Altus,Quartz Mountain Regional Airport;OK;United States;4;34-41-55N;099-20-17W;;;437;;;KAXS;1
-KAYE;--;---;Fort Devens , Ayer;MA;United States;4;42-34N;071-36W;;;82;;;KAYE;1
 KAYS;72;213;Waycross , Ware County, Ga;GA;United States;4;31-15N;082-24W;31-15N;082-24W;46;46;P;KAYS;1
 KAZC;--;---;Colorado City, Colorado City Municipal Airport;AZ;United States;4;36-57N;113-00W;;;1486;;;KAZC;1
 KAZO;--;---;KALAMAZOO,BATTLE CREEK AIRPORT;MI;United States;4;42-14N;085-33W;42-14-22N;085-33-22W;266;272;;KAZO;1
@@ -2572,7 +2465,6 @@ KBAX;--;---;Bad Axe, Huron County Memorial Airport;MI;United States;4;43-46-51N;
 KBAZ;--;---;NEW BRAUNFELS MUNICIPAL AIRPORT;TX;United States;4;29-43N;98-03W;29-42-20N;098-02-08W;198;195;;KBAZ;1
 KBBB;--;---;Benson Municipal;MN;United States;4;45-19N;095-39W;;;317;;;KBBB;1
 KBBD;--;---;Brady, Curtis Field Airport;TX;United States;4;31-10-45N;099-19-26W;;;557;;;KBBD;1
-KBBW;--;---;BROKEN BOW MUNICIPAL AIRPORT;NE;United States;4;41-26N;099-38W;;;776;;;KBBW;1
 KBCB;--;---;Virginia Tech Airport;VA;United States;4;37-13N;080-25W;;;650;;;KBCB;1
 KBCE;--;---;BRYCE CANYON AIRPORT;UT;United States;4;37-42N;112-09W;37-42-05N;112-09-16W;2312;2312;;KBCE;1
 KBCG;--;---;Butte La Rose;LA;United States;4;30-07N;091-33W;;;10;;;KBCG;1
@@ -2606,7 +2498,6 @@ KBIG;--;---;Delta Junction , Ft. Greely, Allen Army Air Field;AK;United States;4
 KBIH;72;480;BISHOP AIRPORT;CA;United States;4;37-22N;118-22W;37-22-15N;118-21-59W;1256;1253;;KBIH;1
 KBIL;72;677;LOGAN INTERNATIONAL AIRPORT;MT;United States;4;45-49N;108-33W;45-48-15N;108-32-09W;1112;1091;;KBIL;1
 KBIS;72;764;BISMARCK MUNICIPAL AIRPORT;ND;United States;4;46-47N;100-45W;46-46-20N;100-45-26W;511;503;;KBIS;1
-KBIT;--;---;Bittercreek;WY;United States;4;41-39N;108-35W;;;2160;;;KBIT;1
 KBIV;--;---;HOLLAND TULIP CITY AIRPORT;MI;United States;4;42-45N;86-06W;42-44-38N;086-06-56W;210;208;;KBIV;1
 KBIX;--;---;Keesler Air Force Base , Biloxi;MS;United States;4;30-25N;088-55W;;;10;;;KBIX;1
 KBJC;--;---;Broomfield , Jeffco;CO;United States;4;39-55N;105-07W;;;1724;;;KBJC;1
@@ -2618,7 +2509,6 @@ KBKE;--;---;BAKER MUNICIPAL AIRPORT;OR;United States;4;44-50N;117-49W;45-50-27N;
 KBKF;--;---;Aurora, Buckley Air Force Base Airport;CO;United States;4;39-42-36N;104-45-29W;;;1726;;;KBKF;1
 KBKL;--;---;CLEVELAND BURKE LAKEFRONT;OH;United States;4;41-32N;81-40W;41-30-44N;081-41-21W;178;184;;KBKL;1
 KBKS;--;---;Falfurrias, Brooks County Airport;TX;United States;4;27-12-24N;098-07-16W;;;34;;;KBKS;1
-KBKT;--;---;Ft. Pickett , Blackstone;VA;United States;4;37-05N;077-57W;;;130;;;KBKT;1
 KBKV;--;---;BROOKSVILLE HERNANDO CO AIRPORT ;FL;United States;4;28-28N;82-27W;28-28-23N;082-27-09W;23;20;;KBKV;1
 KBKW;72;412;RALEIGH COUNTY MEM AIRPORT ;WV;United States;4;37-48N;081-07W;37-47-00N;081-07-16W;763;764;;KBKW;1
 KBKX;--;---;Brookings, Brookings Municipal Airport;SD;United States;4;44-18N;096-49W;;;502;;;KBKX;1
@@ -2628,7 +2518,6 @@ KBLI;--;---;BELLINGHAM INTERNATIONAL  AIRPORT;WA;United States;4;48-48N;122-32W;
 KBLM;--;---;Belmar-Farmingdale;NJ;United States;4;40-11N;074-08W;;;48;;;KBLM;1
 KBLU;--;---;BLUE CANYON AIRPORT;CA;United States;4;39-17N;120-42W;39-16-32N;120-42-29W;1611;1609;;KBLU;1
 KBLV;--;---;Belleville, Scott AFB,MidAmerica Airport;IL;United States;4;38-33N;089-51W;;;140;;;KBLV;1
-KBLX;--;---;Billing Yell Nexrad;MT;United States;4;45-51-14N;108-36-22W;;;1116;;;KBLX;1
 KBMG;--;---;MONROE COUNTY AIRPORT;IN;United States;4;39-09N;086-37W;39-08-51N;086-36-44W;258;257;;KBMG;1
 KBMI;--;---;Bloomington,Normal, Central Illinois Regional Airport at Bloomington-Normal;IL;United States;4;40-28-37N;088-54-57W;;;266;;;KBMI;1
 KBML;72;616;BERLIN MUNICIPAL AIRPORT;NH;United States;4;44-35N;71-11W;44-34-41N;071-10-49W;353;345;;KBML;1
@@ -2680,7 +2569,6 @@ KBXA;--;---;Bogalusa, George R Carr Memorial Air Field;LA;United States;4;30-48-
 KBYG;--;---;BUFFALO JOHNSON COUNTY AIRPORT ;WY;United States;4;44-23N;106-43W;44-22-43N;106-42-55W;1514;1497;;KBYG;1
 KBYH;--;---;Eaker Air Force Base;AR;United States;4;35-58N;089-57W;;;78;;;KBYH;1
 KBYI;--;---;BURLEY MUNICIPAL AIRPORT;ID;United States;4;42-33N;113-46W;42-32-20N;113-46-06W;1265;1264;;KBYI;1
-KBYS;74;611;Fort Irwin,Barstow, Bicycle Lake Army Airfield;CA;United States;4;35-17N;116-37W;35-17N;116-37W;716;716;;KBYS;1
 KBYY;--;---;Bay City, Bay City Municipal Airport;TX;United States;4;28-58-23N;095-51-48W;;;14;;;KBYY;1
 KBZN;--;---;BOZEMAN GALLATIN FIELD;MT;United States;4;45-47N;111-09W;45-46-35N;111-09-15W;1364;1361;;KBZN;1
 KCAD;--;---;Cadillac , Wexford County;MI;United States;4;44-17N;085-25W;;;398;;;KCAD;1
@@ -2697,7 +2585,6 @@ KCBM;--;---;Columbus Air Force Base;MS;United States;4;33-39N;088-27W;;;67;;;KCB
 KCCO;--;---;Newnan, Newnan Coweta County Airport;GA;United States;4;33-18-44N;084-46-13W;;;296;;;KCCO;1
 KCCR;--;---;CONCORD BUCHANAN FIELD;CA;United States;4;38-00N;122-03W;37-59-09N;122-03-16W;7;11;;KCCR;1
 KCCU;--;---;Copper Mountain, Red Cliff Pass;CO;United States;4;39-28-02N;106-09-01W;;;3680;;;KCCU;1
-KCCX;--;---;State College Nexrad;PA;United States;4;40-55N;078-00W;;;758;;;KCCX;1
 KCCY;--;---;Charles City;IA;United States;4;43-04N;092-37W;;;343;;;KCCY;1
 KCDC;--;---;CEDAR CITY MUN AIRPORT;UT;United States;4;37-42N;113-06W;37-42-00N;113-05-30W;1715;1714;;KCDC;1
 KCDD;--;---;Crane Lake, Scotts Seaplane Base;MN;United States;4;48-15-59N;92-29-01W;;;341;;;KCDD;1
@@ -2748,7 +2635,6 @@ KCLT;72;314;CHARLOTTE,DOUGLAS INTERNATIONAL ;NC;United States;4;35-13N;80-57W;35
 KCMA;--;---;CAMARILLO AIRPORT;CA;United States;4;34-13N;119-05W;;;23;;;KCMA;1
 KCMH;72;428;PORT COLUMBUS INTERNATIONAL  AIRPORT;OH;United States;4;40-00N;82-53W;40-00-24N;082-53-15W;248;247;;KCMH;1
 KCMI;--;---;UNIV OF ILLINOIS-WILLARD;IL;United States;4;40-02N;088-16W;40-02-24N;088-16-15W;230;228;;KCMI;1
-KCMS;--;---;Cemetery Separa;WY;United States;4;41-32N;109-28W;;;1949;;;KCMS;1
 KCMX;72;744;HANCOCK HOUGHTON CTY. MEMO;MI;United States;4;47-10N;088-29W;47-10-15N;088-29-46W;334;326;;KCMX;1
 KCMY;--;---;Sparta, Sparta , Fort McCoy Airport;WI;United States;4;43-57-30N;090-44-16W;;;255;;;KCMY;1
 KCNB;--;---;Myers Field Airport;MN;United States;4;44-43N;96-16W;;;364;;;KCNB;1
@@ -2841,7 +2727,6 @@ KDFI;--;---;DEFIANCE MEMORIAL AIRPORT;OH;United States;4;41-20N;84-26W;41-20-04N
 KDFW;72;259;DALLAS,FT. WORTH INTERNATIONAL  AIRPORT ;TX;United States;4;32-54N;097-02W;32-53-07N;097-01-18W;184;174;;KDFW;1
 KDGW;72;568;DOUGLAS CONVERSE COUNTY;WY;United States;4;42-48N;105-23W;42-47-47N;105-23-06W;1502;1499;;KDGW;1
 KDHN;--;---;DOTHAN AIRPORT;AL;United States;4;31-19N;085-27W;31-18-54N;085-26-51W;122;113;;KDHN;1
-KDHS;--;---;Dead Horse;WY;United States;4;44-13N;106-06W;;;1241;;;KDHS;1
 KDHT;--;---;DALHART MUNICIPAL AIRPORT;TX;United States;4;36-01N;102-33W;36-01-16N;102-32-52W;1216;1217;;KDHT;1
 KDIK;--;---;THEODORE ROOSEVELT REGIONAL;ND;United States;4;46-48N;102-48W;46-48-11N;102-47-59W;789;788;;KDIK;1
 KDIX;--;---;Philadelphia NEXRAD;PA;United States;4;39-57N;074-25W;;;70;;;KDIX;1
@@ -2858,7 +2743,6 @@ KDMA;--;---;Davis-Monthan Air Force Base;AZ;United States;4;32-10N;110-53W;;;824
 KDMH;--;---;BALTIMORE DOWNTOWN;MD;United States;4;39-17N;076-37W;;;6;;;KDMH;1
 KDMN;--;---;DEMING MUNICIPAL AIRPORT;NM;United States;4;32-16N;107-43W;32-15-19N;107-43-21W;1315;1311;;KDMN;1
 KDMO;--;---;SEDALIA MEMORIAL AIRPORT;MO;United States;4;38-43N;93-10W;38-42-15N;093-11-00W;277;274;;KDMO;1
-KDMX;--;---;Des Moines Nexrad;IA;United States;4;41-44N;093-43W;;;322;;;KDMX;1
 KDNK;--;---;Ft. Polk, Self Strip;LA;United States;4;31-10N;093-00W;;;114;;;KDNK;1
 KDNL;--;---;AUGUSTA DANIEL FIELD;GA;United States;4;33-28N;82-02W;33-27-56N;082-02-07W;129;130;;KDNL;1
 KDNN;--;---;Dalton, Dalton Municipal Airport;GA;United States;4;34-43-18N;084-52-09W;;;216;;;KDNN;1
@@ -2904,7 +2788,6 @@ KEAA;--;---;Eagle, Eagle Airport;AK;United States;4;64-46-35N;141-09-38W;64-46-3
 KEAR;--;---;Kearney, Kearney Municipal Airport;NE;United States;4;40-44N;099-00W;;;650;;;KEAR;1
 KEAT;--;---;WENATCHEE PANGBORN MEMO;WA;United States;4;47-24N;120-12W;47-24-06N;120-12-21W;379;377;;KEAT;1
 KEAU;--;---;EAU CLAIRE CHIPPEWA VALLEY;WI;United States;4;44-52N;091-29W;;;278;;;KEAU;1
-KEAX;--;---;Pleasant NEXRAD;MO;United States;4;38-49N;094-16W;;;335;;;KEAX;1
 KEBG;--;---;Edinburg, Edinburg International Airport;TX;United States;4;26-26-31N;098-07-46W;;;24;;;KEBG;1
 KEBS;--;---;Webster City;IA;United States;4;42-26N;093-52W;;;342;;;KEBS;1
 KECG;--;---;ELIZABETH CITY C,G REGN AIRPORT ;NC;United States;4;36-15N;076-10W;36-15-50N;076-10-30W;4;11;;KECG;1
@@ -2987,8 +2870,6 @@ KFAY;--;---;FAYETTEVILLE REGIONAL AIRPORT ;NC;United States;4;34-59N;078-53W;34-
 KFBG;74;693;Fort Bragg , Simmons Army Airfield;NC;United States;4;35-08N;078-56W;35-08N;078-56W;74;74;;KFBG;1
 KFBL;--;---;Faribault, Faribault Municipal Airport;MN;United States;4;44-20N;093-19W;;;323;;;KFBL;1
 KFCA;72;779;Kalispell, Glacier Park International Airport;MT;United States;4;48-18-15N;114-15-49W;48-18-33N;114-15-01W;906;908;P;KFCA;1
-KFCH;--;---;Fresno-Chandler;CA;United States;4;36-44N;119-49W;;;85;;;KFCH;1
-KFCL;--;---;Fort Collins Supplementary Aviation Weather Reporting Station ;CO;United States;4;40-35N;105-05W;;;1525;;;KFCL;1
 KFCM;--;---;Minneapolis, Flying Cloud Airport;MN;United States;4;44-49-56N;093-28-13W;44-49-18N;093-27-29W;287;280;;KFCM;1
 KFCS;72;468;Fort Carson;CO;United States;4;38-42N;104-46W;38-42N;104-46W;1789;1789;;KFCS;1
 KFCX;--;---;Roanoke NEXRAD;VA;United States;4;37-01N;080-16W;;;904;;;KFCX;1
@@ -3008,7 +2889,6 @@ KFGN;--;---;Flag Island;MN;United States;4;49-19N;94-54W;;;329;;;KFGN;1
 KFHR;--;---;FRIDAY HARBOR AIRPORT;WA;United States;4;48-31N;123-02W;48-31-31N;123-01-28W;33;32;;KFHR;1
 KFHU;72;273;Fort Huachuca, Libby AAF Ft Huachuca;AZ;United States;4;46-98N;110-20W;;;1438;;;KFHU;1
 KFIG;--;---;CLEARFIELD-LAWRENCE AIRPORT;PA;United States;4;41-03N;078-25W;41-02-51N;078-24-51W;462;462;;KFIG;1
-KFIR;--;---;First Divide;WY;United States;4;41-18N;110-46W;;;2294;;;KFIR;1
 KFIT;--;---;Fitchburg, Fitchburg Municipal Airport;MA;United States;4;42-33-07N;071-45-21W;42-33-15N;071-45-14W;106;103;;KFIT;1
 KFKA;--;---;Preston, Fillmore County Airport;MN;United States;4;43-40-36N;092-10-47W;;;389;;;KFKA;1
 KFKL;--;---;Franklin, Venango Regional Airport;PA;United States;4;41-23N;079-52W;;;469;;;KFKL;1
@@ -3019,7 +2899,6 @@ KFLG;--;---;FLAGSTAFF PULLIAM AIRPORT;AZ;United States;4;35-08N;111-40W;35-08-31
 KFLL;--;---;FORT LAUDERDALE,HOLLYWOOD;FL;United States;4;26-04N;080-09W;26-04-13N;080-09-21W;3;30;;KFLL;1
 KFLO;--;---;FLORENCE REGIONAL AIRPORT;SC;United States;4;34-11N;079-44W;34-11-36N;079-43-45W;45;44;;KFLO;1
 KFLP;--;---;Flippin, Marion County Regional Airport;AR;United States;4;36-18N;092-35W;;;219;;;KFLP;1
-KFLV;--;---;Fort Leavenworth;KS;United States;4;39-22N;094-55W;;;235;;;KFLV;1
 KFME;--;---;Fort Meade , Tipton;MD;United States;4;39-05N;076-46W;;;46;;;KFME;1
 KFMH;72;506;Otis Air National Guard Base;MA;United States;4;41-39N;070-31W;;;40;;;KFMH;1
 KFMN;--;---;FARMINGTON FOUR CORNERS;NM;United States;4;36-45N;108-14W;36-44-21N;108-13-38W;1677;1685;;KFMN;1
@@ -3054,7 +2933,6 @@ KFVE;--;---;NORTHERN AROOSTOOK REGIONAL;ME;United States;4;47-17N;68-18W;47-17-1
 KFVX;--;---;Farmville;VA;United States;4;37-21N;078-26W;;;125;;;KFVX;1
 KFWA;72;533;FORT WAYNE INTERNATIONAL;IN;United States;4;41-00N;85-12W;40-59-11N;085-11-17W;248;248;;KFWA;1
 KFWC;--;---;Fairfield, Fairfield Municipal Airport;IL;United States;4;38-22-43N;088-24-46W;;;133;;;KFWC;1
-KFWD;72;249;Fort Worth;TX;United States;4;32-50N;097-18W;32-50N;097-18W;196;196;;KFWD;1
 KFWN;--;---;SUSSEX AIRPORT;NJ;United States;4;41-12N;074-38W;41-12-02N;074-37-29W;128;133;;KFWN;1
 KFWQ;--;---;Monongahela, Rostraver Airport;PA;United States;4;40-12-35N;079-49-53W;;;374;;;KFWQ;1
 KFWS;--;---;Fort Worth, Forth Worth Spinks Airport;TX;United States;4;32-34N;097-18W;;;213;;;KFWS;1
@@ -3124,7 +3002,6 @@ KGRN;--;---;Gordon Municipal;NE;United States;4;42-48N;102-10W;;;1085;;;KGRN;1
 KGRR;72;635;GERALD R. FORD INTERNATIONAL;MI;United States;4;42-53N;085-31W;42-53-04N;085-31-45W;242;239;;KGRR;1
 KGSB;--;---;Seymour-Johnson Air Force Base;NC;United States;4;35-20N;077-58W;;;33;;;KGSB;1
 KGSH;--;---;GOSHEN MUNICIPAL AIRPORT;IN;United States;4;41-32N;85-47W;41-31-24N;085-47-39W;252;252;;KGSH;1
-KGSM;--;---;Ship Shoal 207A;LA;United States;4;28-32N;090-59W;;;1;;;KGSM;1
 KGSN;--;---;SAIPAN INTERNATIONAL AIRPORT ;;NORTHERN MARIANA ISLAND;;15-07N;145-44E;;;66;;;KGSN;1
 KGSO;72;317;PIEDMONT TRIAD INTERNATIONAL  AIRPORT ;NC;United States;4;36-06N;079-57W;36-05-53N;079-56-38W;282;275;;KGSO;1
 KGSP;72;312;GREER GREENVILLE SPARTBURG;SC;United States;4;34-53N;82-13W;34-53-00N;082-13-13W;296;286;;KGSP;1
@@ -3149,7 +3026,6 @@ KGYR;--;---;Goodyear Municipal;AZ;United States;4;33-25N;112-23W;;;295;;;KGYR;1
 KGYY;--;---;Gary Regional;IN;United States;4;41-37N;087-25W;;;180;;;KGYY;1
 KGZH;--;---;EVERGREEN MIDDLETON FIELD;AL;United States;4;31-25N;87-03W;31-25-10N;087-02-38W;79;78;;KGZH;1
 KHAO;--;---;BUTLER COUNTY REGIONAL AIRPORT ;OH;United States;4;39-22N;84-31W;39-21-47N;084-31-34W;193;188;;KHAO;1
-KHAT;72;304;Cape Hatteras;NC;United States;4;35-16N;075-33W;35-16N;075-33W;2;3;P;KHAT;1
 KHBG;--;---;HATTIESBURG CHAIN MUNICIPAL;MS;United States;4;31-16N;89-15W;31-16-11N;089-15-14W;46;44;;KHBG;1
 KHBI;--;---;Asheboro, Asheboro Municipal Airport;NC;United States;4;35-39-14N;079-53-42W;;;205;;;KHBI;1
 KHBR;--;---;HOBART MUNICIPAL AIRPORT;OK;United States;4;34-59N;99-03W;34-59-19N;099-03-26W;477;473;;KHBR;1
@@ -3248,7 +3124,6 @@ KICR;--;---;WINNER REGIONAL AIRPORT ;SD;UNITED STATES;4;43-23N;99-51W;;;619;;;KI
 KICT;72;450;WICHITA MID-CONTINENT AIRPORT ;KS;United States;4;37-39N;97-26W;37-39-16N;097-26-35W;406;408;;KICT;1
 KIDA;--;---;IDAHO FALLS REGIONAL AIRPORT;ID;United States;4;43-31N;112-04W;43-30-56N;112-03-58W;1445;1453;;KIDA;1
 KIDI;--;---;Indiana , Stewart Field;PA;United States;4;40-38N;079-06W;;;429;;;KIDI;1
-KIDV;--;---;I-25 Divide;WY;United States;4;43-56N;106-39W;;;1531;;;KIDV;1
 KIEN;--;---;PINE RIDGE AIRPORT;SD;United States;4;43-02N;102-31W;43-01-34N;102-31-23W;1015;998;;KIEN;1
 KIER;--;---;Natchitoches, Natchitoches Regional Airport;LA;United States;4;31-44-09N;093-05-57W;;;37;;;KIER;1
 KIFP;--;---;Bullhead City, Laughlin,Bullhead International Airport;AZ;United States;4;35-09-27N;114-33-34W;;;212;;;KIFP;1
@@ -3260,7 +3135,6 @@ KIIB;--;---;Independence, Independence Municipal Airport;IA;United States;4;42-2
 KIIY;--;---;Washington, Washington-Wilkes County Airport;GA;United States;4;33-46-47N;082-48-59W;;;197;;;KIIY;1
 KIJD;--;---;WILLIMANTIC WINDHAM AIRPORT;CT;United States;4;41-45N;072-11W;41-44-21N;072-10-56W;75;75;;KIJD;1
 KIJX;--;---;Jacksonville, Jacksonville Municipal Airport;IL;United States;4;39-46-27N;090-14-19W;;;190;;;KIJX;1
-KIKA;--;---;Inyan Kara;WY;United States;4;44-18N;104-38W;;;1319;;;KIKA;1
 KIKK;--;---;Kankakee, Greater Kankakee Airport;IL;United States;4;41-04-17N;087-50-47W;;;192;;;KIKK;1
 KIKR;--;---;Kirtland, Kirtland Air Force Base Auxiliary Field;NM;United States;4;34-57-00N;106-34-00W;;;1612;1609;;KIKR;1
 KIKV;--;---;Ankeny, Ankeny Regional Airport;IA;United States;4;41-41-24N;093-33-57W;;;275;;;KIKV;1
@@ -3329,7 +3203,6 @@ KJST;--;---;JOHNSTOWN-CAMBRIA CO AIRPORT ;PA;United States;4;40-19N;078-50W;40-1
 KJSV;--;---;Sallisaw, Sallisaw Municipal Airport;OK;United States;4;35-26-17N;094-48-10W;;;161;;;KJSV;1
 KJVL;--;---;Janesville , Rock County;WI;United States;4;42-37N;089-02W;;;246;;;KJVL;1
 KJWG;--;---;Watonga, Watonga Airport;OK;United States;4;35-51-53N;098-25-15W;;;472;;;KJWG;1
-KJWX;--;---;Fort Ritchie;MD;United States;4;39-44N;077-26W;;;275;;;KJWX;1
 KJWY;--;---;Midlothian,Waxahachie, Mid-Way Regional Airport;TX;United States;4;32-27-21N;096-54-44W;;;217;;;KJWY;1
 KJXI;--;---;Gilmer, Fox Stephens Field - Gilmer Municipal Airport;TX;United States;4;32-41-56N;094-56-55W;;;127;;;KJXI;1
 KJXN;--;---;JACKSON COUNTY-REYNOLDS;MI;United States;4;42-16N;084-28W;;;305;;;KJXN;1
@@ -3517,7 +3390,6 @@ KMKT;--;---;Mankato, Mankato Regional Airport;MN;United States;4;44-13N;093-55W;
 KMKX;--;---;Milwaukee NEXRAD;WI;United States;4;42-58N;088-33W;;;312;;;KMKX;1
 KMLB;72;204;MELBOURNE INTERNATIONAL;FL;United States;4;28-06N;080-39W;28-05-57N;080-38-36W;10;10;;KMLB;1
 KMLC;--;---;MCALESTER REGIONAL AIRPORT;OK;United States;4;34-53N;95-47W;34-52-30N;095-46-59W;235;232;;KMLC;1
-KMLD;--;---;Malad City;ID;United States;4;42-10N;112-18W;;;1373;;;KMLD;1
 KMLE;--;---;Omaha, Millard Airport;NE;United States;4;41-11-45N;096-06-44W;;;320;;;KMLE;1
 KMLF;--;---;MILFORD MUNICIPAL AIRPORT;UT;United States;4;38-25N;113-01W;38-25-08N;113-00-34W;1536;1534;;KMLF;1
 KMLI;72;544;MOLINE QUAD-CITY AIRPORT;IL;United States;4;41-27N;90-31W;41-26-33N;090-30-34W;180;184;;KMLI;1
@@ -3548,7 +3420,6 @@ KMPZ;--;---;Mount Pleasant, Mount Pleasant Municipal Airport;IA;United States;4;
 KMQB;--;---;Macomb, Macomb Municipal Airport;IL;United States;4;40-31-13N;090-39-09W;;;216;;;KMQB;1
 KMQE;--;---;MILTON BLUE HILL OBSERV;MA;United States;4;42-13N;071-07W;;;192;;;KMQE;1
 KMQI;--;---;Manteo , Dare County Regional;NC;United States;4;35-55N;075-42W;;;4;;;KMQI;1
-KMQM;--;---;Monida;MT;United States;4;44-34N;112-19W;;;2068;;;KMQM;1
 KMQT;72;743;Marquette;MI;United States;4;46-32N;087-33W;46-34N;087-24W;434;434;P;KMQT;1
 KMQY;--;---;Smyrna, Smyrna Airport;TN;United States;4;36-00-32N;086-31-12W;;;166;;;KMQY;1
 KMRB;--;---;MARTINSBURG EASTERN WV REG;WV;United States;4;39-24N;77-59W;39-23-58N;077-58-50W;170;164;;KMRB;1
@@ -3624,7 +3495,6 @@ KNFL;--;---;FALLON NAVAL AIR STATION;NV;United States;4;39-26N;118-41W;39-25-16N
 KNFW;--;---;NAS FORT WORTH TX;TX;United States;4;32-46N;97-27W;32-46-36N;097-25-54W;198;187;;KNFW;1
 KNGP;--;---;CORPUS CHRISTI NAVAL AIR STN;TX;United States;4;27-41N;097-17W;;;6;;;KNGP;1
 KNGU;--;---;Norfolk, Naval Air Station;VA;United States;4;36-56-01N;076-17-45W;36-56-21N;076-17-34W;4;8;;KNGU;1
-KNGW;--;---;CABINESS FIELD;TX;United States;4;27-70N;97-43W;;;9;;;KNGW;1
 KNGZ;74;506;Alameda Naval Air Station;CA;United States;4;37-47N;122-19W;;;4;9;;KNGZ;1
 KNHK;72;404;NAS PATUXENT RIVER MD;MD;United States;4;38-18N;76-24W;38-17-20N;076-25-23W;12;6;;KNHK;1
 KNHZ;74;392;BRUNSWICK NAVAL AIR STN;ME;United States;4;43-54N;69-56W;43-53-52N;069-56-06W;23;23;;KNHZ;1
@@ -3637,19 +3507,15 @@ KNJW;--;---;MERIDIAN RANGE B;MS;United States;4;32-48N;088-50W;32-47-38N;088-49-
 KNKT;72;309;Cherry Point, Marine Corps Air Station;NC;United States;4;34-53-52N;076-52-51W;34-54-35N;076-53-16W;8;9;;KNKT;1
 KNKX;72;293;MCAS MIRAMAR;CA;United States;4;32-52N;117-09W;32-52-28N;117-08-20W;146;146;;KNKX;1
 KNLC;74;702;LEMOORE NAVAL AIR STATION;CA;United States;4;36-20N;119-57W;36-19-40N;119-56-50W;71;72;;KNLC;1
-KNLT;--;---;Atlantic, Atlantic Field Outlying Landing Field;NC;United States;4;34-52-45N;076-20-10W;34-52-35N;076-20-50W;4;4;;KNLT;1
 KNMM;--;---;MERIDIAN NAVAL AIR STATION;MS;United States;4;32-55N;88-56W;32-33N;088-33W;97;86;;KNMM;1
-KNMT;--;---;McMullen, McMullen Target Site;TX;United States;4;28-14-10N;098-43-27W;28-14-10N;098-43-25W;79;85;;KNMT;1
 KNNZ;--;---;Point Sur;CA;United States;4;36-18N;121-53W;;;34;;;KNNZ;1
 KNOG;--;---;ORANGE GROVE, NALF;TX;United States;4;27-89N;098-04W;27-53-58N;098-02-54W;78;91;;KNOG;1
-KNOW;74;201;Port Angeles Coast Guard Air Station;WA;United States;4;48-08N;123-24W;;;5;9;;KNOW;1
 KNPA;--;---;Pensacola, Naval Air Station;FL;United States;4;30-21-22N;087-19-24W;30-20-51N;087-19-40W;9;10;;KNPA;1
 KNQA;--;---;Millington, Millington Municipal Airport;TN;United States;4;35-21-24N;089-52-13W;;;98;;;KNQA;1
 KNQI;--;---;KINGSVILLE NAS;TX;United States;4;27-50N;097-81W;27-30-20N;097-48-51W;15;15;;KNQI;1
 KNQX;--;---;KEY WEST NAVAL AIR STATION;FL;United States;4;24-35N;81-41W;27-34-49N;081-41-18W;2;6;;KNQX;1
 KNRA;--;---;OLF COUPEVILLE;WA;United States;4;48-11N;122-38W;48-11-27N;122-37-45W;61;59;;KNRA;1
 KNRB;--;---;MAYPORT NAVAL AIR FACILITY;FL;United States;4;30-24N;81-25W;30-23-33N;081-25-02W;5;4;;KNRB;1
-KNRC;--;---;Crows Landing Naval Auxiliary Landing Field;CA;United States;4;37-24N;121-06W;;;50;;;KNRC;1
 KNRS;--;---;IMPERIAL BEACH, NOLF;CA;United States;4;32-34N;117-07W;;;7;5;;KNRS;1
 KNSE;--;---;MILTON WHITING FIELD (NORTH);FL;United States;4;30-44N;87-01W;30-43-04N;087-01-21W;61;60;;KNSE;1
 KNSI;72;291;SAN NICOLAS ISLAND;CA;United States;4;33-14N;119-28W;33-14-25N;119-27-31W;154;153;;KNSI;1
@@ -3756,12 +3622,10 @@ KPAH;72;435;BARKLEY REGIONAL AIRPORT;KY;United States;4;37-03N;088-46W;37-04-07N
 KPAM;74;775;Tyndall Air Force Base;FL;United States;4;30-04N;085-35W;30-04N;085-35W;5;13;;KPAM;1
 KPAO;--;---;Palo Alto Airport;CA;United States;4;37-28N;122-07W;;;2;;;KPAO;1
 KPAQ;--;---;Palmer, Palmer Municipal Airport;AK;United States;4;61-35-46N;149-05-30W;61-35-52N;149-05-29W;70;69;;KPAQ;1
-KPAT;--;---;Pathfinder Hill;WY;United States;4;42-34N;106-51W;;;1912;;;KPAT;1
 KPBF;--;---;PINE BLUFF GRIDER FIELD;AR;United States;4;34-11N;091-56W;34-10-44N;091-56-16W;63;62;;KPBF;1
 KPBG;--;---;PLATTSBURGH INTERNATIONAL  AIRPORT;NY;United States;4;44-39N;073-28W;;;73;;;KPBG;1
 KPBH;--;---;Phillips , Price County;WI;United States;4;45-42N;090-24W;;;449;;;KPBH;1
 KPBI;72;203;PALM BEACH INTERNATIONAL;FL;United States;4;26-41N;80-06W;26-40-40N;080-06-30W;6;6;;KPBI;1
-KPBV;--;---;St. George Island, New St. George Airport;AK;United States;4;56-34-37N;169-39-47W;56-34-37N;169-39-47W;27;34;;KPBV;1
 KPBZ;--;---;Pittsburgh Nexrad;PA;United States;4;40-32N;080-13W;;;386;;;KPBZ;1
 KPCM;--;---;Plant City, Plant City Municipal Airport;FL;United States;4;28-00N;082-09W;;;47;;;KPCM;1
 KPCU;--;---;Picayune , Pearl River;MS;United States;4;30-31N;089-42W;;;19;;;KPCU;1
@@ -3776,7 +3640,6 @@ KPEO;--;---;PENN YAN AIRPORT;NY;United States;4;42-39N;077-03W;42-38-37N;077-03-
 KPEQ;--;---;Pecos, Pecos Municipal Airport;TX;United States;4;31-22-56N;103-30-38W;;;796;;;KPEQ;1
 KPEX;--;---;Paynesville, Paynesville Municipal Airport;MN;United States;4;45-22-20N;094-44-47W;;;360;;;KPEX;1
 KPFC;--;---;Pacific City State;OR;United States;4;45-12N;123-58W;;;2;;;KPFC;1
-KPFN;--;---;PANAMA CITY-BAY CTY INTERNATIONAL ;FL;United States;4;30-12N;085-41W;30-12-22N;085-40-54W;6;12;;KPFN;1
 KPGA;72;371;PAGE MUNICIPAL AIRPORT;AZ;United States;4;36-56N;111-27W;36-55-15N;111-26-53W;1314;1307;;KPGA;1
 KPGD;--;---;PUNTA GORDA CHARLOTTE COUNTY;FL;United States;4;26-55N;82-00W;26-54-57N;081-59-53W;7;7;;KPGD;1
 KPGL;--;---;Pascagoula , Jackson;MS;United States;4;30-24N;088-29W;;;3;;;KPGL;1
@@ -3791,7 +3654,6 @@ KPIA;72;532;GREATER PEORIA REGIONAL AIRPORT ;IL;United States;4;40-40N;89-41W;40
 KPIB;--;---;Hattiesburg,Laurel, Hattiesburg-Laurel Regional Airport;MS;United States;4;31-28N;089-20W;;;91;;;KPIB;1
 KPIE;--;---;ST PETERSBURG,CLEARWATER;FL;United States;4;27-55N;82-41W;27-54-14N;082-41-30W;3;4;;KPIE;1
 KPIH;72;578;POCATELLO REGIONAL AIRPORT;ID;United States;4;42-55N;112-36W;42-54-16N;112-35-24W;1356;1359;;KPIH;1
-KPIL;--;---;PORT ISABEL CAMERON;TX;United States;4;26-10N;97-20W;26-09-34N;097-20-21W;6;5;;KPIL;1
 KPIN;--;---;Piney Creek;WY;United States;4;44-34N;106-49W;;;1392;;;KPIN;1
 KPIR;--;---;PIERRE REGIONAL AIRPORT;SD;United States;4;44-23N;100-17W;44-22-49N;100-17-32W;531;526;;KPIR;1
 KPIT;72;520;GREATER PITTSBURGH INTERNATIONAL ;PA;United States;4;40-29N;80-14W;40-29-41N;080-11-25W;367;357;;KPIT;1
@@ -3843,7 +3705,6 @@ KPTV;--;---;Porterville, Porterville Municipal Airport;CA;United States;4;36-02N
 KPTW;--;---;POTTSTOWN LIMERICK AIRPORT;PA;United States;4;40-14N;075-33W;40-14-31N;075-33-22W;89;89;;KPTW;1
 KPUB;72;464;PUEBLO MEMORIAL AIRPORT;CO;United States;4;38-17N;104-30W;38-17-03N;104-29-43W;1440;1420;;KPUB;1
 KPUC;72;470;PRICE CARBON COUNTY AIRPORT;UT;United States;4;39-37N;110-45W;39-36-41N;110-44-55W;1814;2091;;KPUC;1
-KPUM;--;---;Pumpkin Vine;WY;United States;4;41-03N;105-28W;;;2420;;;KPUM;1
 KPUW;--;---;PULLMAN,MOSCOW RGNL AIRPORT ;WA;United States;4;46-45N;117-07W;46-44-37N;117-06-48W;778;773;;KPUW;1
 KPUX;--;---;Pueblo NEXRAD;CO;United States;4;38-28N;104-11W;;;1620;;;KPUX;1
 KPVC;--;---;Provincetown, Provincetown Municipal Airport;MA;United States;4;42-04N;070-13W;;;2;;;KPVC;1
@@ -4004,7 +3865,6 @@ KSHD;--;---;Staunton , Shenandoah;VA;United States;4;38-16N;078-54W;;;366;;;KSHD
 KSHI;--;---;Ashtabula, Ashtabula County Airport;OH;United States;4;41-46-46N;080-41-48W;41-46-48N;080-42-04W;281;276;;KSHI;1
 KSHL;--;---;Sheldon;IA;United States;4;43-13N;095-50W;;;432;;;KSHL;1
 KSHN;--;---;SHELTON SANDERSON FIELD;WA;United States;4;47-14N;123-08W;47-14-24N;123-08-25W;82;82;;KSHN;1
-KSHP;--;---;Sheppard Air Force Base;TX;United States;4;33-58N;098-29W;;;314;;;KSHP;1
 KSHR;72;666;SHERIDAN COUNTY AIRPORT;WY;United States;4;44-46N;106-58W;44-46-26N;106-58-12W;1226;1202;;KSHR;1
 KSHV;72;248;SHREVEPORT REGIONAL AIRPORT;LA;United States;4;32-27N;93-50W;32-27-02N;093-50-01W;79;80;;KSHV;1
 KSIB;--;---;Sibley Peak;WY;United States;4;42-27N;105-02W;;;1500;;;KSIB;1
@@ -4018,7 +3878,6 @@ KSKA;--;---;Fairchild Air Force Base;WA;United States;4;47-37N;117-39W;;;750;;;K
 KSKC;--;---;Waukesha;WI;United States;4;43-02N;088-14W;;;284;;;KSKC;1
 KSKF;--;---;Kelly Air Force Base;TX;United States;4;29-23N;098-35W;;;210;;;KSKF;1
 KSKX;--;---;Taos, Taos Regional Airport;NM;United States;4;36-27N;105-40W;;;2161;;;KSKX;1
-KSLB;--;---;Storm Lake;IA;United States;4;42-36N;095-14W;;;454;;;KSLB;1
 KSLC;72;572;SALT LAKE CITY INTERNATIONAL  AIRPORT ;UT;United States;4;40-47N;111-58W;40-46-35N;111-57-31W;1288;1286;;KSLC;1
 KSLE;72;694;SALEM MCNARY FIELD;OR;United States;4;44-54N;123-00W;44-54-33N;123-00-25W;64;59;;KSLE;1
 KSLG;--;---;Siloam Springs, Smith Field Airport;AR;United States;4;36-12N;094-29W;;;364;;;KSLG;1
@@ -4040,7 +3899,6 @@ KSNA;--;---;SANTA ANA WAYNE ORANGE CTY;CA;United States;4;33-41N;117-52W;33-40-4
 KSNC;--;---;Chester, Chester Airport;CT;United States;4;41-23-02N;072-30-21W;;;127;;;KSNC;1
 KSNK;--;---;Snyder, Winston Field Airport;TX;United States;4;32-41-36N;100-57-01W;;;741;;;KSNK;1
 KSNL;--;---;Shawnee, Shawnee Municipal Airport;OK;United States;4;35-21-26N;096-56-34W;;;327;;;KSNL;1
-KSNP;--;---;St. Paul Island, St. Paul Island Airport;AK;United States;4;57-09-21N;170-13-15W;57-09-25N;170-13-01W;13;7;;KSNP;1
 KSNS;--;---;SALINAS MUNICIPAL AIRPORT;CA;United States;4;36-40N;121-36W;36-39-37N;121-36-18W;26;30;;KSNS;1
 KSNT;--;---;Stanley, Stanley Ranger Station;ID;United States;4;44-12-31N;114-56-04W;;;1980;;;KSNT;1
 KSNY;72;561;SIDNEY MUNICIPAL AIRPORT;NE;United States;4;41-06N;102-59W;41-06-10N;102-58-56W;1315;1307;;KSNY;1
@@ -4075,7 +3933,6 @@ KSTL;72;434;LAMBERT-ST LOUIS INTERNATIONAL  AIRPORT ;MO;United States;4;38-45N;9
 KSTP;--;---;DOWNTOWN HOLMAN FIELD;MN;United States;4;44-56N;093-03W;44-56-31N;093-03-55W;215;219;;KSTP;1
 KSTS;--;---;SANTA ROSA SONOMA COUNTY;CA;United States;4;38-30N;122-49W;38-30-16N;122-48-17W;38;39;;KSTS;1
 KSTT;--;---;CYRIL E. KING INT'L AIRPORT .;VI;United States;4;18-20N;064-59W;18-20-26N;064-58-30W;7;15;;KSTT;1
-KSTX;--;---;HENRY E. ROHLSEN;VI;United States;4;17-42N;064-48W;17-42-08N;064-47-56W;19;9;;KSTX;1
 KSUA;--;---;Stuart, Witham Field Airport;FL;United States;4;27-10-54N;080-13-16W;;;6;;;KSUA;1
 KSUE;--;---;Sturgeon Bay;WI;United States;4;44-51N;087-25W;;;221;;;KSUE;1
 KSUN;--;---;Hailey, Friedman Memorial Airport;ID;United States;4;43-30N;114-18W;;;1621;;;KSUN;1
@@ -4110,12 +3967,10 @@ KTCL;--;---;TUSCALOOSA REGIONAL AIRPORT;AL;United States;4;33-13N;087-37W;;;52;;
 KTCM;74;206;Tacoma , McChord Air Force Base;WA;United States;4;47-09N;122-29W;47-09N;122-29W;98;87;;KTCM;1
 KTCS;72;271;TRUTH OR CONSEQUENCES MUNI;NM;United States;4;33-14N;107-16W;33-14-17N;107-16-08W;1478;1469;;KTCS;1
 KTDF;--;---;Roxboro, Person County Airport;NC;United States;4;36-17-06N;078-59-03W;;;186;;;KTDF;1
-KTDO;--;---;Toledo-Winlock Memorial;WA;United States;4;46-29N;122-48W;;;113;;;KTDO;1
 KTDZ;--;---;TOLEDO METCALF FIELD;OH;United States;4;41-34N;83-29W;41-33-52N;083-28-34W;190;189;;KTDZ;1
 KTEB;--;---;TETERBORO AIRPORT;NJ;United States;4;40-52N;74-03W;40-51-09N;074-03-19W;3;7;;KTEB;1
 KTEW;--;---;Mason, Mason Jewett Field Airport;MI;United States;4;42-33-57N;084-25-24W;;;280;;;KTEW;1
 KTEX;--;---;Telluride, Telluride Regional Airport;CO;United States;4;37-57-14N;107-54-31W;;;2767;;;KTEX;1
-KTFX;--;---;Great Falls Nexrad;MT;United States;4;47-28N;111-22W;;;1151;;;KTFX;1
 KTHV;--;---;YORK AIRPORT;PA;United States;4;39-55N;076-53W;39-55-22N;076-52-41W;146;144;;KTHV;1
 KTIF;--;---;Thedford, Thomas County Airport;NE;United States;4;41-57-43N;100-34-08W;;;892;;;KTIF;1
 KTIK;72;354;Tinker Air Force Base;OK;United States;4;35-25N;097-23W;35-25N;097-23W;394;397;;KTIK;1
@@ -4127,9 +3982,7 @@ KTKC;--;---;Tracy, Tracy Municipal Airport;MN;United States;4;44-14-56N;095-36-2
 KTKI;--;---;COLLIN CNTY REGIONAL AIRPORT;TX;United States;4;33-11N;096-35W;33-10-39N;096-35-31W;178;179;;KTKI;1
 KTKV;--;---;Tomahawk, Tomahawk Regional Airport;WI;United States;4;45-28-08N;089-48-20W;;;453;;;KTKV;1
 KTLH;72;214;TALLAHASSEE REGIONAL AIRPORT ;FL;United States;4;30-24N;84-21W;30-23-46N;084-21-20W;25;16;;KTLH;1
-KTLX;--;---;Oklahoma City Nexrad;OK;United States;4;35-20N;097-17W;;;338;;;KTLX;1
 KTMB;--;---;KENDALL-TAMIAMI EXEC AIRPORT ;FL;United States;4;25-39N;080-26W;25-38-50N;080-25-35W;3;2;;KTMB;1
-KTMH;--;---;20 Mile Hill;WY;United States;4;43-07N;106-20W;;;1743;;;KTMH;1
 KTNB;--;---;Boone, Watauga County Hospital Heliport;NC;United States;4;36-12N;081-39W;;;959;;;KTNB;1
 KTNU;--;---;Newton Municipal;IA;United States;4;41-41N;093-01W;;;290;;;KTNU;1
 KTNX;--;---;Tonopah Test Range;NV;United States;4;37-48N;116-47W;;;1691;;;KTNX;1
@@ -4173,7 +4026,6 @@ KUCA;--;---;GRIFFISS AIRFIELD;NY;United States;4;43-07N;075-23W;43-08-50N;075-22
 KUCP;--;---;New Castle, New Castle Municipal Airport;PA;United States;4;41-01-31N;080-24-48W;;;327;;;KUCP;1
 KUDG;--;---;Darlington, Darlington County Jetport Airport;SC;United States;4;34-26-57N;079-53-25W;;;59;;;KUDG;1
 KUES;--;---;Waukesha, Waukesha County Airport;WI;United States;4;43-02-28N;088-14-13W;;;278;;;KUES;1
-KUEX;--;---;Grand Island Nexrad;NE;United States;4;40-19N;098-26W;;;626;;;KUEX;1
 KUGN;--;---;CHICAGO,WAUKEGAN REGIONAL;IL;United States;4;42-25N;087-52W;;;222;;;KUGN;1
 KUIL;72;797;QUILLAYUTE STATE AIRPORT;WA;United States;4;47-56N;124-34W;47-56-03N;124-33-32W;59;54;;KUIL;1
 KUIN;--;---;QUINCY MUNI. BALDWIN FIELD;IL;United States;4;39-56N;091-12W;;;234;;;KUIN;1
@@ -4215,7 +4067,6 @@ KVOK;--;---;Volk , Camp Douglas;WI;United States;4;43-56N;090-16W;;;277;;;KVOK;1
 KVPC;--;---;CARTERSVILLE AIRPORT;GA;United States;4;34-08N;084-51W;34-07-22N;084-51-02W;233;222;;KVPC;1
 KVPS;72;221;Valparaiso , Eglin Air Force Base;FL;United States;4;30-29N;086-31W;30-29N;086-31W;26;29;P;KVPS;1
 KVPZ;--;---;VALPARAISO PORTER CO MUNI;IN;United States;4;41-27N;087-00W;41-26-58N;087-00-33W;235;231;;KVPZ;1
-KVQN;--;---;Volens;VA;United States;4;36-57N;078-59W;;;185;;;KVQN;1
 KVQQ;--;---;Jacksonville, Cecil Field Airport;FL;United States;4;30-13-07N;081-52-36W;;;25;;;KVQQ;1
 KVRB;--;---;VERO BEACH MUNICIPAL AIRPORT ;FL;United States;4;27-39N;080-25W;27-39-05N;080-25-04W;7;10;;KVRB;1
 KVRX;--;---;Vermillion Area;LA;United States;4;28-35N;092-27W;;;1;;;KVRX;1
@@ -4303,14 +4154,12 @@ LEBB;08;025;Bilbao , Sondica;;Spain;6;43-18N;002-56W;;;42;37;P;LEBB;1
 LEBG;08;075;Burgos , Villafria;;Spain;6;42-22N;003-38W;;;894;891;P;LEBG;1
 LEBL;08;181;Barcelona , ;;Spain;6;41-17N;002-04E;41-17N;002-04E;4;6;P;LEBL;1
 LEBZ;08;330;Badajoz , Talavera La Real;;Spain;6;38-53N;006-49W;38-53N;006-49W;185;192;P;LEBZ;1
-LECH;08;233;Calamocha;;Spain;6;40-56N;001-18W;;;890;889;;LECH;1
 LECO;08;002;La Coruna , Alvedro;;Spain;6;43-18N;008-23W;43-18N;008-23W;97;103;;LECO;1
 LECV;08;219;Madri-Colmenar;;Spain;6;40-39N;003-44W;;;;;;LECV;1
 LEGA;--;---;Granada , Armilla;;Spain;6;37-08N;003-38-08W;;;700;;;LEGA;1
 LEGE;08;184;Gerona , Costa Brava;;Spain;6;41-54N;002-46E;;;143;129;;LEGE;1
 LEGR;08;419;Granada , ;;Spain;6;37-11N;003-47W;;;567;570;P;LEGR;1
 LEGT;08;224;Madrid , Getafe;;Spain;6;40-18N;003-43W;;;620;617;;LEGT;1
-LEHI;08;335;Hinojosa;;Spain;6;38-31N;005-07W;;;540;540;;LEHI;1
 LEIB;08;373;Ibiza , Es Codola;;Spain;6;38-52N;001-23E;;;7;12;P;LEIB;1
 LEJR;08;451;Jerez De La Frontera;;Spain;6;36-45N;006-04W;;;27;28;P;LEJR;1
 LELC;08;433;Murcia , San Javier;;Spain;6;37-47N;000-48W;37-47N;000-48W;5;3;P;LELC;1
@@ -5224,9 +5073,7 @@ PABV;--;---;Birchwood, Birchwood Airport;AK;United States;4;61-25N;149-31W;;;29;
 PACD;70;316;COLD BAY AIRPORT;AK;United States;4;55-13N;162-44W;55-12-05N;162-42-50W;30;29;;PACD;1
 PACE;--;---;Central, Central;AK;United States;4;65-34-01N;144-46-00W;;;282;;^M;PACE;1
 PACL;--;---;Clear;AK;United States;4;64-18N;149-07W;;;168;;;PACL;1
-PACP;70;360;Cape Saint Elias;AK;United States;4;59-48N;144-36W;;;18;;;PACP;1
 PACR;--;---;Circle City Airport;AK;United States;4;65-50N;144-04W;;;182;;;PACR;1
-PACS;--;---;Cape Sarichef Airport;AK;United States;4;54-36N;164-56W;;;9;;;PACS;1
 PACV;70;296;MERLE K. SMITH AIRPORT;AK;United States;4;60-30N;145-29W;;;13;13;;PACV;1
 PACY;70;298;Yakataga;AK;United States;4;60-05N;142-30W;;;4;11;;PACY;1
 PACZ;70;212;Cape Romanzof, Cape Romanzof LRRS Airport;AK;United States;4;61-47N;166-02W;;;139;;;PACZ;1
@@ -5246,14 +5093,11 @@ PAEM;--;---;Emmonak, Emmonak Airport;AK;United States;4;62-47N;164-30W;;;4;;;PAE
 PAEN;70;259;KENAI MUNICIPAL AIRPORT;AK;United States;4;60-35N;151-14W;60-34-25N;151-14-13W;28;25;;PAEN;1
 PAER;--;---;Merrill Pass West;AK;United States;4;61-15N;153-49W;;;358;;;PAER;1
 PAFA;70;261;Fairbanks, Fairbanks International Airport;AK;United States;4;64-48-14N;147-52-34W;64-49-11N;147-51-29W;132;140;P;PAFA;1
-PAFB;--;---;FT. WAINWRIGHT AAF;AK;United States;4;64-50N;147-35W;;;138;;;PAFB;1
 PAFE;--;---;Kake, Kake Airport;AK;United States;4;56-57N;133-54W;;;52;;;PAFE;1
 PAFK;--;---;Farewell Lake, Farewell Lake Seaplane Base;AK;United States;4;62-32-33N;153-37-21W;;;321;;;PAFK;1
 PAFM;70;171;Ambler, Ambler Airport;AK;United States;4;67-06N;157-51W;;;88;;;PAFM;1
-PAFR;70;270;Ft. Richardson , Bryant U. S. Army Heliport, Ak;AK;United States;4;61-16N;149-39W;61-16N;149-39W;115;115;;PAFR;1
 PAFW;--;---;Farewell Lake;AK;United States;4;62-32N;153-37W;;;323;;;PAFW;1
 PAGA;70;222;Galena, Edward G. Pitka Sr. Airport;AK;United States;4;64-44N;156-56W;64-44N;156-56W;46;49;;PAGA;1
-PAGB;--;---;Galbraith Lake, Galbraith Lake Airport;AK;United States;4;68-29N;149-29W;;;814;;;PAGB;1
 PAGK;70;271;GULKANA AIRPORT;AK;United States;4;62-09N;145-27W;;;481;481;;PAGK;1
 PAGL;--;---;Golovin, Golovin Airport;AK;United States;4;64-32-36N;163-02-22W;;;8;;;PAGL;1
 PAGM;70;204;Gambell, Gambell Airport;AK;United States;4;63-46N;171-44W;;;8;;;PAGM;1
@@ -5276,8 +5120,6 @@ PAIL;70;340;ILIAMNA AIRPORT;AK;United States;4;59-45N;154-55W;;;63;49;;PAIL;1
 PAIM;70;173;Utopia Creek, Indian Mountain LRRS Airport;AK;United States;4;66-59N;153-42W;;;372;;;PAIM;1
 PAIN;--;---;McKinley Park, McKinley National Park Airport;AK;United States;4;63-44N;148-55W;;;524;;;PAIN;1
 PAIW;--;---;Wales;AK;United States;4;65-37N;168-06W;;;7;;;PAIW;1
-PAIZ;--;---;Lazy Mtn , Wolverine;AK;United States;4;61-38N;149-02W;;;236;;;PAIZ;1
-PAJB;--;---;Biorka Island Supplementary Aviation Weather Reporting Station;AK;United States;4;56-51N;135-32W;;;15;;;PAJB;1
 PAJC;--;---;Chignik, Chignik Airport;AK;United States;4;56-18-41N;158-22-24W;;;6;;;PAJC;1
 PAJN;70;381;JUNEAU INTERNATIONAL AIRPORT;AK;United States;4;58-21N;134-34W;58-21-48N;134-34-33W;6;8;;PAJN;1
 PAJO;--;---;Johnstone Point;AK;United States;4;60-29N;146-36W;;;14;;;PAJO;1
@@ -5309,7 +5151,6 @@ PAMY;--;---;Mekoryuk, Mekoryuk Airport;AK;United States;4;60-22N;166-16W;;;15;;;
 PANC;70;273;TED STEVENS ANCHORAGE INTERNATIONAL ;AK;United States;4;61-10N;150-02W;61-10-25N;150-00-39W;44;48;;PANC;1
 PANI;70;232;Aniak, Aniak Airport;AK;United States;4;61-34-53N;159-32-34W;;;27;26;;PANI;1
 PANN;70;260;NENANA MUNICIPAL AIRPORT;AK;United States;4;64-33N;149-04W;;;110;;;PANN;1
-PANR;--;---;Funter Bay Seaplane;AK;United States;4;58-15N;134-54W;;;0;;;PANR;1
 PANT;70;398;ANNETTE ISLAND AIRPORT;AK;United States;4;55-02N;131-35W;55-02N;131-34W;36;34;;PANT;1
 PANV;--;---;Anvik, Anvik Airport;AK;United States;4;62-38-54N;160-11-23W;;;94;;;PANV;1
 PAOH;--;---;Hoonah, Hoonah Seaplane Base;AK;United States;4;58-07N;135-27W;;;0;;;PAOH;1
@@ -5317,7 +5158,6 @@ PAOM;70;200;NOME AIRPORT;AK;United States;4;64-31N;165-26W;64-30-32N;165-25-50W;
 PAOR;70;291;NORTHWAY AIRPORT;AK;United States;4;62-58N;141-56N;62-57-44N;141-56-10W;523;522;;PAOR;1
 PAOT;70;133;WIEN MEMORIAL AIRPORT;AK;United States;4;66-53N;162-36W;66-53-12N;162-36-31W;3;5;;PAOT;1
 PAPB;--;---;ST. GEORGE AIRPORT;AK;United States;4;56-35N;169-40W;;;38;;;PAPB;1
-PAPC;70;119;Port Clarence, Port Clarence Coast Guard Station;AK;United States;4;65-15N;166-51W;;;3;5;;PAPC;1
 PAPG;70;386;Petersburg;AK;United States;4;56-49N;132-58W;;;0;;;PAPG;1
 PAPH;70;333;Port Heiden, Port Heiden Airport;AK;United States;4;56-57N;158-38W;;;29;;P;PAPH;1
 PAPM;--;---;Platinum;AK;United States;4;59-01N;161-49W;;;3;;;PAPM;1
@@ -5345,7 +5185,6 @@ PASW;70;255;Skwentna;AK;United States;4;61-58-38N;151-13-02W;;;46;;;PASW;1
 PASX;--;---;Soldotna;AK;United States;4;60-29N;151-02W;;;33;;;PASX;1
 PASY;70;414;SHEMYA EARECKSON AS;AK;United States;4;52-43N;174-07E;;;30;;;PASY;1
 PATA;70;178;TANANA CALHOUN MEMORIAL AIRPORT ;AK;United States;4;65-10N;152-06W;;;72;67;;PATA;1
-PATC;70;117;Tin City Airways Facilities Sector;AK;United States;4;65-34N;167-55W;;;83;;;PATC;1
 PATE;--;---;Teller;AK;United States;4;65-14N;166-20W;;;90;;;PATE;1
 PATG;--;---;Togiac Village, Togiak Airport;AK;United States;4;59-03N;160-24W;;;6;;;PATG;1
 PATJ;--;---;Tok;AK;United States;4;63-19N;142-43W;;;509;;;PATJ;1
@@ -5368,9 +5207,7 @@ PAWS;--;---;Wasilla, Wasilla Airport;AK;United States;4;61-34-19N;149-32-26W;;;1
 PAXK;--;---;Paxson;AK;United States;4;63-01-58N;145-29-53W;;;823;;;PAXK;1
 PAYA;70;361;YAKUTAT AIRPORT;AK;United States;4;59-30N;139-40W;59-31N;139-40W;10;9;;PAYA;1
 PAZK;--;---;Eureka, Skelton Airport;AK;United States;4;61-56N;147-10W;;;1002;;;PAZK;1
-PBTI;--;---;Barter Island Distant Early Warning ;AK;United States;4;70-08N;143-35W;;;2;;;PBTI;1
 PFYU;70;194;Fort Yukon, Fort Yukon Airport;AK;United States;4;66-34N;145-16W;66-35N;145-05W;433;431;P;PFYU;1
-PGAC;91;217;Guam, Mariana Island;GU;United States;5;13-55N;144-50E;;;111;;;PGAC;1
 PGNT;91;233;Sabanettan , Tinian Island;GU;United States;5;14-96N;145-06E;14-58N;145-36E;80;80;;PGNT;1
 PGRO;91;221;Rota Island, N. Mariana Is, Rota International Airport;GU;United States;5;14-11N;145-15E;;;185;;;PGRO;1
 PGSN;91;232;Saipan Island, Saipan International Airport;Northern Mariana Islands;United States;5;15-07N;145-44E;15-07N;145-45W;66;3;;PGSN;1
@@ -5380,7 +5217,6 @@ PGWT;91;233;Tinian Island, N. Mariana Is, West Tinian Airport;GU;United States;5
 PHBK;91;162;PMRF BARKING SANDS;HI;United States;5;22-02N;159-47W;22-02-00N;159-47-00W;4;3;;PHBK;1
 PHHI;91;170;Wheeler Air Force Base , Oahu;HI;United States;5;21-29N;158-02W;21-29N;158-02W;255;256;;PHHI;1
 PHHN;--;---;Hana, Hana Airport;HI;United States;5;20-47-44N;156-00-52W;;;24;;;PHHN;1
-PHIK;--;---;Hickam Air Force Base , Oahu ;HI;United States;5;21-19N;157-55W;;;4;;;PHIK;1
 PHJH;--;---;Lahaina , West Maui;HI;United States;5;21-01N;156-38W;;;40;;;PHJH;1
 PHJR;91;178;KALAELOA AIRPORT;HI;United States;5;21-19N;158-04W;21-18-20N;158-04-28W;10;15;;PHJR;1
 PHKO;--;---;KONA INTERNATIONAL AIRPORT;HI;United States;5;19-44N;156-03W;19-44-08N;156-02-30W;13;27;;PHKO;1
@@ -5402,7 +5238,6 @@ PKWA;91;366;Kwajalein, Bucholz AAF, Kwajalein KMR ATOL Airport;;Marshall Islands
 PLCH;91;490;Christmas , Cassidy;;New Zealand;5;01-59N;157-29W;;;3;;;PLCH;1
 PLFA;91;487;Fanning Island;;New Zealand;5;03-51N;159-22W;03-54N;159-23W;5;3;;PLFA;1
 PMDY;91;066;Sand Island, Henderson Field Airport;HI;United States;5;28-13N;177-22W;28-13N;177-22W;4;6;;PMDY;1
-POLI;70;063;Oliktok Distant Early Warning ;AK;United States;4;70-30N;149-53W;;;5;;;POLI;1
 PPIZ;70;121;Point Lay, Point Lay LRRS Airport;AK;United States;4;69-43N;163-00W;;;8;;P;PPIZ;1
 PTKK;91;334;Weno Island, Chuuk Int. Airp.;;Micronesia, Federated States of;5;07-28N;151-51E;07-28N;151-51E;3;2;;PTKK;1
 PTKR;--;---;Koror, Palau, NWS Office;;Palau;5;07-20N;134-29E;;;30;;;PTKR;1
@@ -5670,9 +5505,7 @@ SAAG;87;497;Gualeguaychu ;;Argentina;3;33-00S;058-37W;;;23;21;P;SAAG;1
 SAAJ;87;548;Junin ;;Argentina;3;34-33S;060-55W;;;82;81;P;SAAJ;1
 SAAP;87;374;Parana ;;Argentina;3;31-47S;060-29W;;;74;78;P;SAAP;1
 SAAR;87;480;Rosario ;;Argentina;3;32-55S;060-47W;;;25;25;P;SAAR;1
-SAAU;87;385;Villaguay ;;Argentina;3;31-51S;059-05W;;;40;43;;SAAU;1
 SAAV;87;371;Sauce Viejo ;;Argentina;3;31-42S;060-49W;;;17;18;;SAAV;1
-SABA;87;585;Buenos Aires Palermo;;Argentina;3;34-35S;058-29W;;;25;25;;SABA;1
 SABE;87;582;Buenos Aires;;Argentina;3;34-34S;058-25W;;;6;6;;SABE;1
 SACI;87;349;Pilar Observatorio;;Argentina;3;31-40S;063-53W;;;338;338;;SACI;1
 SACO;87;344;Cordoba ;;Argentina;3;31-19S;064-13W;31-19S;064-13W;484;474;P;SACO;1
@@ -5690,12 +5523,9 @@ SAMJ;87;305;Jachal;;Argentina;3;30-15S;068-45W;;;1165;1165;;SAMJ;1
 SAMM;87;506;Malargue ;;Argentina;3;35-30S;069-35W;;;1426;1425;P;SAMM;1
 SAMR;87;509;San Rafael ;;Argentina;3;34-35S;068-24W;34-35S;068-24W;745;748;P;SAMR;1
 SAMS;87;412;San Carlos de Bariloche;;Argentina;3;33-46S;069-02W;;;940;940;;SAMS;1
-SAMU;87;405;Uspallata;;Argentina;3;32-36S;069-20W;;;1844;1891;;SAMU;1
 SANC;87;222;Catamarca ;;Argentina;3;28-36S;065-46W;;;454;454;P;SANC;1
 SANE;87;129;Santiago Del Estero;;Argentina;3;27-46S;064-18W;;;198;199;P;SANE;1
-SANI;87;211;Tinogasta;;Argentina;3;28-04S;067-34W;;;1201;1201;;SANI;1
 SANL;87;217;La Rioja;;Argentina;3;29-23S;066-49W;;;438;429;P;SANL;1
-SANO;87;214;Chilecito;;Argentina;3;29-13S;067-26W;;;950;;;SANO;1
 SANT;87;121;Tucuman ;;Argentina;3;26-51S;065-06W;;;440;450;P;SANT;1
 SANU;87;311;San Juan ;;Argentina;3;31-34S;068-52W;;;597;598;P;SANU;1
 SANW;87;257;Ceres ;;Argentina;3;29-53S;061-57W;29-53S;061-57W;87;88;P;SANW;1
@@ -5717,7 +5547,6 @@ SASA;87;047;Salta ;;Argentina;3;24-51S;065-29W;24-51S;065-29W;1238;1221;P;SASA;1
 SASJ;87;046;Jujuy ;;Argentina;3;24-23S;065-05W;;;921;905;P;SASJ;1
 SASO;87;016;Oran ;;Argentina;3;23-09S;064-19W;;;357;357;;SASO;1
 SASQ;87;007;La Quiaca Observatorio;;Argentina;3;22-06S;065-36W;;;3462;3459;;SASQ;1
-SASR;87;065;Rivadavia;;Argentina;3;24-10S;062-54W;;;205;205;;SASR;1
 SAST;87;022;Tartagal ;;Argentina;3;22-39S;063-49W;;;450;450;P;SAST;1
 SATK;87;078;Las Lomitas, Formosa;;Argentina;3;24-42S;060-35W;24-42S;060-35W;130;130;P;SATK;1
 SATR;--;---;Reconquista, SF;;Argentina;3;29-12-37S;059-41-27W;;;49;;;SATR;1
@@ -5730,15 +5559,12 @@ SAVP;87;814;Paso De Indios;;Argentina;3;43-49S;068-53W;;;460;460;;SAVP;1
 SAVT;87;828;Trelew ;;Argentina;3;43-12S;065-16W;;;39;43;P;SAVT;1
 SAVV;87;791;Viedma ;;Argentina;3;40-51S;063-01W;;;6;7;P;SAVV;1
 SAVY;--;---;Puerto Madryn;;Argentina;3;42-45-33S;065-06-10W;;;136;;;SAVY;1
-SAWA;87;903;Lago Argentino ;;Argentina;3;50-20S;072-18W;;;223;220;P;SAWA;1
 SAWD;87;896;Puerto Deseado ;;Argentina;3;47-44S;065-55W;47-44S;065-55W;81;80;;SAWD;1
 SAWE;87;934;Rio Grande B. A.;;Argentina;3;53-48S;067-45W;53-48S;067-45W;13;22;;SAWE;1
 SAWG;87;925;Rio Gallegos ;;Argentina;3;51-37S;069-17W;;;20;19;P;SAWG;1
 SAWH;87;938;Ushuaia ;;Argentina;3;54-48S;068-19W;54-48S;068-19W;16;14;P;SAWH;1
 SAWJ;87;909;San Julian ;;Argentina;3;49-19S;067-45W;;;58;62;P;SAWJ;1
 SAWP;87;852;Perito Moreno ;;Argentina;3;46-31S;071-01W;;;429;429;P;SAWP;1
-SAWR;87;880;Gobernador Gregores ;;Argentina;3;48-47S;070-10W;;;358;357;;SAWR;1
-SAWU;87;912;Santa Cruz ;;Argentina;3;50-01S;068-34W;;;113;111;;SAWU;1
 SAZA;87;642;Azul Airport;;Argentina;3;36-45S;059-50W;36-44S;059-50W;132;132;;SAZA;1
 SAZB;87;750;Bahia Blanca ;;Argentina;3;38-44S;062-10W;;;75;83;P;SAZB;1
 SAZD;87;648;Dolores;;Argentina;3;36-21S;057-44W;;;10;9;P;SAZD;1
