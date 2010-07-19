@@ -19,27 +19,6 @@ log=list()
 def cday(date):			#Day of the year
 	return date.strftime('%j')
 
-def gparser(city, country, lib):	#Gets weather from google in case station is not working
-
-#Cargar libreria goo
-#La estacion esta en la libreria?
-#Si ->consultar datos
-#No ->generar log
-	result=''
-	if country in lib:
-		if city in lib[country]:
-			try:
-				result=pywapi.get_weather_from_google(city+','+country)
-			except:
-				print '\nNo Google data for '+ city
-		else:
-			print '------------> %s not found in %s\n' %(city, country)
-			log.append(city+','+country+'\n')
-	else:
-		print '------------> %s not found in countries' % country
-			
-	return result
-
 def tomonth(month):
 	if month=='Jan': return 1
 	if month=='Feb': return 2
@@ -80,9 +59,6 @@ home=os.getcwd()
 f=open(home+'/Doc/stations.lib','r')
 library = pickle.load(f)		#Dictionary of dictionaries with monitored stations
 f.close()
-f=open(home+'/Doc/google.lib','r')
-goolib=pickle.load(f)
-f.close()
 
 for name in library:
 	obs=''
@@ -100,7 +76,7 @@ for name in library:
 					report = line.strip()
 					obs = Metar.Metar(line)
 		except :
-			print "Error retrieving",url,"\n"
+			print "Error retrieving METAR: ",url,"\n"
 
 	if report=='':												#No data, lets ask WUNDERGROUND
 		print "No metar data for ",station['metar'],"\n"					#First parse station location to look for climate data
@@ -134,14 +110,14 @@ for name in library:
 			print 'Saving '+current+'/'+entry_name
 
 			fil=open(current+'/'+entry_name, 'w')
-			fil.writelines('Metar\n'+str(obs)+'\nGoogle\n' + str(goo))
+			fil.writelines('Metar\n'+str(obs))
 			fil.close
 	else:
 		print '############# No Data at all for %s #################' % (station['city'] + ' ' +station ['country'] + ':' + name + '\n' )
-		#print goo
+		log.append("%s"%(station['city'] + ' ' +station ['country'] + ':' + name + '\n' ))
 
-now=datetime.datetime.now()
-print str(now)
+
+print str(datetime.datetime.now())
 
 f=open('getlog.txt','w')
 f.writelines(log)
